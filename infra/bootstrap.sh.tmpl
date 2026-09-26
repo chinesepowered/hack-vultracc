@@ -82,7 +82,7 @@ if ! command -v uv >/dev/null; then
   curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR=/usr/local/bin INSTALLER_NO_MODIFY_PATH=1 sh
 fi
 
-if [ "__ROLE__" = "sandbox" ]; then
+if [ "__ROLE__" = "sandbox" ] || [ "__ROLE__" = "all" ]; then
   curl -fsSL https://gvisor.dev/archive.key | gpg --dearmor -o /usr/share/keyrings/gvisor-archive-keyring.gpg
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/gvisor-archive-keyring.gpg] https://storage.googleapis.com/gvisor/releases release main" > /etc/apt/sources.list.d/gvisor.list
   apt-get update -q && apt-get install -y -q runsc
@@ -92,7 +92,7 @@ if [ "__ROLE__" = "sandbox" ]; then
   mkdir -p /var/lib/tieout/sandboxes && chmod 711 /var/lib/tieout /var/lib/tieout/sandboxes
 fi
 
-if [ "__ROLE__" = "control" ]; then
+if [ "__ROLE__" = "control" ] || [ "__ROLE__" = "all" ]; then
   docker pull caddy:2.8 || true
   docker pull python:3.12-slim || true
 fi

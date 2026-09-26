@@ -103,7 +103,7 @@ def assert_ours(label: str) -> None:
 
 # ------------------------------------------------------------------ plans
 def pick_plan(min_cpu: int, min_ram_mb: int, prefer: tuple[str, ...] = ("vc2", "vhf", "voc", "vhp")) -> dict:
-    plans = [p for p in list_all("/plans", "plans", {"type": "all"}) if REGION in (p.get("locations") or [])]
+    plans = [p for p in list_all("/plans", "plans", {"type": "all"}) if REGION.upper() in [x.upper() for x in (p.get("locations") or [])]]
     ok = [p for p in plans if p.get("vcpu_count", 0) >= min_cpu and p.get("ram", 0) >= min_ram_mb and not p.get("id", "").startswith(("vcg", "vbm"))]
     if not ok:
         raise SystemExit(f"no plan in {REGION} with >= {min_cpu} vCPU and {min_ram_mb} MB")
@@ -189,7 +189,8 @@ def ensure_database(st: dict, vpc_id: str) -> dict:
     db = next((d for d in list_all("/databases", "databases") if d.get("label") == label), None)
     if db is None:
         plans = list_all("/databases/plans", "plans", {"engine": "pg", "region": REGION})
-        plans = [p for p in plans if REGION in (p.get("locations") or [REGION])]
+        plans = [p for p in plans if REGION.upper() in [x.upper() for x in (p.get("locations") or [REGION])]
+                 and p.get("ram", 0) >= 2048 and p.get("number_of_nodes", 1) == 1]
         plans.sort(key=lambda p: float(p.get("monthly_cost", 1e9)))
         plan = plans[0]
         body = {"database_engine": "pg", "database_engine_version": "16", "region": REGION, "plan": plan["id"], "label": label, "tag": TAG,
@@ -274,7 +275,12 @@ def wait_instance(st: dict, host: str) -> dict:
     return inst
 
 
+def _limit(exc: Exception) -> bool:
+    return "monthly fee limit" in str(exc).lower()
+
+
 def up() -> None:
+    """Create what is missing, in priority order. Tolerates the account's monthly fee limit (creates what fits)."""
     st = load_state()
     api("GET", "/account")
     vpc = ensure_vpc(st)
@@ -287,32 +293,57 @@ def up() -> None:
     save_state(st)
     ensure_object_storage(st)
     save_state(st)
-    ensure_database(st, vpc["id"])
-    save_state(st)
-    cp_plan = pick_plan(2, 4096)
-    sbx_plan = pick_plan(8, 16384)
-    ensure_instance(st, "tieout-cp", "control", "cp", cp_plan, fw_cp, vpc["id"])
-    ensure_instance(st, "tieout-sbx-1", "sandbox", "sbx1", sbx_plan, fw_sbx, vpc["id"])
-    save_state(st)
-    for h in ("cp", "sbx1"):
+    blocked = []
+    plans = {p["id"]: p for p in list_all("/plans", "plans", {"type": "all"})}
+    cp_plan = plans.get(os.environ.get("CP_PLAN", "vc2-2c-4gb")) or pick_plan(2, 4096)
+    sbx_plan = plans.get(os.environ.get("SBX_PLAN", "")) or pick_plan(8, 16384)
+    for label, role, host, plan, fw in (("tieout-cp", "all", "cp", cp_plan, fw_cp), ("tieout-sbx-1", "sandbox", "sbx1", sbx_plan, fw_sbx)):
+        try:
+            ensure_instance(st, label, role, host, plan, fw, vpc["id"])
+            save_state(st)
+        except VultrError as exc:
+            if not _limit(exc):
+                raise
+            blocked.append(label)
+            print(f"blocked by the account monthly fee limit: {label} ({plan['id']}, ${plan.get('monthly_cost')}/mo)")
+    if "tieout-sbx-1" not in blocked:
+        try:
+            ensure_database(st, vpc["id"])
+            save_state(st)
+        except VultrError as exc:
+            if not _limit(exc):
+                raise
+            blocked.append("tieout-pg")
+            print("blocked by the account monthly fee limit: tieout-pg")
+    else:
+        blocked.append("tieout-pg")
+    for h in [h for h in ("cp", "sbx1") if h in st.get("instances", {})]:
         wait_instance(st, h)
         save_state(st)
-    db = wait_database(st)
-    cp_ip = st["instances"]["cp"]["main_ip"]
-    try:
-        api("PUT", f"/databases/{st['database']['id']}", json={"trusted_ips": [f"{cp_ip}/32", st["vpc"]["subnet"]]})
-    except VultrError as exc:
-        print("warning: could not set trusted IPs:", exc)
-    domain = f"{cp_ip.replace('.', '-')}.sslip.io"
-    st["domain"] = domain
-    save_state(st)
-    set_key(str(ENV_PATH), "APP_BASE_URL", f"https://{domain}")
+    if "cp" in st.get("instances", {}):
+        cp_ip = st["instances"]["cp"]["main_ip"]
+        st["domain"] = f"{cp_ip.replace('.', '-')}.sslip.io"
+        set_key(str(ENV_PATH), "APP_BASE_URL", f"https://{st['domain']}")
+    if "database" in st and "tieout-pg" not in blocked:
+        db = wait_database(st)
+        if "cp" in st.get("instances", {}):
+            try:
+                api("PUT", f"/databases/{st['database']['id']}", json={"trusted_ips": [f"{st['instances']['cp']['main_ip']}/32", st["vpc"]["subnet"]]})
+            except VultrError as exc:
+                print("warning: could not set trusted IPs:", exc)
+        print(f"database host: {db.get('host')} public: {db.get('public_host')}")
     for k in ("SESSION_SECRET", "SANDBOX_RUNNER_TOKEN_VULTR"):
         if not os.environ.get(k):
-            set_key(str(ENV_PATH), k, secrets.token_urlsafe(40))
-    print(json.dumps(st, indent=2))
-    print(f"database host: {db.get('host')} public: {db.get('public_host')}")
-    print(f"next: uv run infra/deploy.py   (public URL will be https://{domain})")
+            v = secrets.token_urlsafe(40)
+            set_key(str(ENV_PATH), k, v)
+            os.environ[k] = v
+    st["blocked"] = blocked
+    save_state(st)
+    print(json.dumps({k: v for k, v in st.items() if k != "firewalls"}, indent=2))
+    if blocked:
+        print("BLOCKED:", ", ".join(blocked))
+        sys.exit(3)
+    print(f"next: uv run infra/deploy.py   (public URL will be https://{st['domain']})")
 
 
 def status() -> None:

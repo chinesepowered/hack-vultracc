@@ -19,3 +19,4 @@ media/work/
 .local-storage/
 *.db
 .secrets/
+infra/state.json

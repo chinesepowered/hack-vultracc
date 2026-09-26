@@ -14,7 +14,7 @@
 
 	# API and server-sent events (no buffering for SSE)
 	handle /api/* {
-		reverse_proxy api:8000 {
+		reverse_proxy {$TIEOUT_UPSTREAM:api:8000} {
 			flush_interval -1
 			transport http {
 				read_timeout 10m

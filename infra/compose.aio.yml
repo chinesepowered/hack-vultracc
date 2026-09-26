@@ -1,0 +1,54 @@
+# All-in-one fallback (only when a single VM fits the account limit): Caddy, API and Postgres on one host.
+# Everything except Caddy binds to 127.0.0.1. Sandboxes still run as gVisor containers via the runner (systemd).
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tieout
+      POSTGRES_DB: tieout
+      POSTGRES_PASSWORD: ${LOCAL_PG_PASSWORD}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tieout"]
+      interval: 5s
+      retries: 20
+
+  api:
+    build:
+      context: ..
+      dockerfile: apps/api/Dockerfile
+      args:
+        GIT_SHA: ${GIT_SHA:-dev}
+    image: tieout-api:${GIT_SHA:-dev}
+    restart: unless-stopped
+    network_mode: host
+    env_file: /etc/tieout/cp.env
+    environment:
+      COOKIE_SECURE: "1"
+    command: ["uvicorn", "tieout.main:app", "--host", "127.0.0.1", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "127.0.0.1", "--timeout-keep-alive", "75"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  caddy:
+    image: caddy:2.8
+    restart: unless-stopped
+    network_mode: host
+    depends_on: [api]
+    environment:
+      TIEOUT_DOMAIN: ${TIEOUT_DOMAIN}
+      TIEOUT_UPSTREAM: 127.0.0.1:8000
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ../apps/web/dist:/srv/web:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:
