@@ -66,7 +66,8 @@ interface DockerSummary { Runtime: string; NetworkMode: string; ReadonlyRootfs: 
 interface FileRef { name: string; sha256: string; bytes: number; content_type?: string }
 interface Approval { id: string; decision: "approved" | "rejected"; comment: string; reviewer_name: string;
   reviewer_email: string; ts: string; signed_sha256: string }
-interface UntrustedText { file: string; row: number; preview: string; reason: string }
+interface UntrustedText { file: string; row: number; preview: string; reason: string;
+  classifier?: { model: string; verdict: "unsafe" | "safe" | "unknown" | "error"; raw: string } }   // Nemotron 3.5 Content Safety second opinion
 
 interface RunDetail extends RunSummary {
   period: string; model_id: string | null; image_digest: string | null;

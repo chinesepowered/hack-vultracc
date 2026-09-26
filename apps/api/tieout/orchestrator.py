@@ -24,7 +24,7 @@ from .llm import LLM
 from .runner_client import RunnerClient
 from .serializers import batch_dict, run_summary
 from .storage import content_type, run_key, storage
-from .untrusted import scan_inputs
+from .untrusted import classify, scan_inputs
 
 log = logging.getLogger("tieout.orchestrator")
 MATCHED_RE = re.compile(r"matched (\d+) of (\d+) bank lines")
@@ -200,7 +200,7 @@ class Orchestrator:
                     for r in refs:
                         s.add(InputFile(client_id=client_id, run_id=run_id, period=period, kind=r["name"].rsplit(".", 1)[0],
                                         name=r["name"], object_key=r["object_key"], sha256=r["sha256"], bytes=r["bytes"]))
-                untrusted = scan_inputs(inputs)
+                untrusted = await classify(scan_inputs(inputs))
                 summary = await asyncio.to_thread(self._update_run, run_id, status="running", started_at=utcnow(), sandbox_state="starting",
                                                   inputs_json=[{k: r[k] for k in ("name", "sha256", "bytes")} for r in refs],
                                                   untrusted_json=untrusted)

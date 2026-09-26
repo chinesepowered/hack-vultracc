@@ -43,3 +43,28 @@ def scan_inputs(inputs: dict[str, bytes]) -> list[dict]:
         if name.endswith(".csv"):
             out.extend(scan_csv(name, data))
     return out
+
+
+async def classify(items: list[dict]) -> list[dict]:
+    """Second opinion from Nemotron 3.5 Content Safety (Vultr Serverless Inference) on flagged text.
+
+    Returns the items with a "classifier" field; failures leave the item unchanged.
+    """
+    from .config import settings
+    from .llm import LLM
+
+    if not settings.model_safety or not items:
+        return items
+    llm = LLM(model=settings.model_safety, fallback_model=settings.model_safety, timeout=20)
+    out = []
+    for it in items[:5]:
+        try:
+            resp = await llm.client.chat.completions.create(model=settings.model_safety, max_tokens=64, temperature=0,
+                                                            messages=[{"role": "user", "content": it["preview"]}])
+            text = (resp.choices[0].message.content or "").strip()
+            verdict = "unsafe" if "unsafe" in text.lower() else ("safe" if "safe" in text.lower() else "unknown")
+            it = it | {"classifier": {"model": settings.model_safety, "verdict": verdict, "raw": text[:120]}}
+        except Exception as exc:  # the pattern flag stands on its own
+            it = it | {"classifier": {"model": settings.model_safety, "verdict": "error", "raw": str(exc)[:120]}}
+        out.append(it)
+    return out + items[5:]
