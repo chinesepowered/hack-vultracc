@@ -10,6 +10,17 @@ Tieout runs each client's reconciliation as real Python inside that client's own
 - **Hackathon:** Vultr "The Agent Arena", problem statement 1, Blast Radius Zero
 - **Submission text:** [SUBMISSION.md](SUBMISSION.md)
 
+## Screenshots
+
+| | |
+|---|---|
+| ![Login with demo accounts](media/screenshots/login.png) | ![September close dashboard: 12 client sandboxes](media/screenshots/dashboard.png) |
+| **Login.** One-click demo accounts for each role. | **Close September.** One sandbox per client, live progress, ground-truth check. |
+| ![Run detail: agent steps, matching view, approval](media/screenshots/run-detail.png) | ![Blast radius panel with the prompt-injection callout](media/screenshots/blast-radius.png) |
+| **Run detail.** The agent's real code and output, the matching view, signed approval. | **Blast radius.** Attested from inside the sandbox; the injected memo is flagged and treated as data. |
+
+![How it works](media/screenshots/how-it-works.png)
+
 ## Demo accounts
 
 | Role | Email | Password | Can |
