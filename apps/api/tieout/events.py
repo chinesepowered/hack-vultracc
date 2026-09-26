@@ -10,11 +10,18 @@ import asyncio
 import hashlib
 import json
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import select
 
 from .db import AuditLog, RunEvent, session, utcnow
+
+
+def iso_utc(dt: datetime) -> str:
+    """Canonical UTC timestamp string (databases may return naive or local-zone datetimes)."""
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc).isoformat()
 
 
 def canon(obj) -> bytes:
@@ -64,12 +71,12 @@ class EventLog:
     def _write(self, etype: str, payload: dict) -> dict:
         self.seq += 1
         ts: datetime = utcnow()
-        body = {"run_id": self.run_id, "seq": self.seq, "ts": ts.isoformat(), "type": etype, "payload": payload}
+        body = {"run_id": self.run_id, "seq": self.seq, "ts": iso_utc(ts), "type": etype, "payload": payload}
         digest = chain_hash(self.prev, body)
         with session() as s:
             s.add(RunEvent(run_id=self.run_id, seq=self.seq, ts=ts, type=etype, payload_json=json.loads(canon(payload)),
                            sha256=digest, prev_sha256=self.prev))
-        rec = {"seq": self.seq, "ts": ts.isoformat(), "type": etype, "payload": json.loads(canon(payload)), "sha256": digest,
+        rec = {"seq": self.seq, "ts": iso_utc(ts), "type": etype, "payload": json.loads(canon(payload)), "sha256": digest,
                "prev_sha256": self.prev}
         self.prev = digest
         return rec
@@ -82,7 +89,7 @@ class EventLog:
 def verify_run_chain(events: list[RunEvent]) -> bool:
     prev = None
     for e in events:
-        body = {"run_id": e.run_id, "seq": e.seq, "ts": e.ts.isoformat(), "type": e.type, "payload": e.payload_json}
+        body = {"run_id": e.run_id, "seq": e.seq, "ts": iso_utc(e.ts), "type": e.type, "payload": e.payload_json}
         if e.prev_sha256 != prev or chain_hash(prev, body) != e.sha256:
             return False
         prev = e.sha256
@@ -97,7 +104,7 @@ def _audit_write(actor: str, action: str, target: str, detail: dict) -> None:
         last = s.execute(select(AuditLog).order_by(AuditLog.seq.desc()).limit(1)).scalar_one_or_none()
         prev = last.sha256 if last else None
         ts = utcnow()
-        body = {"ts": ts.isoformat(), "actor": actor, "action": action, "target": target, "detail": json.loads(canon(detail))}
+        body = {"ts": iso_utc(ts), "actor": actor, "action": action, "target": target, "detail": json.loads(canon(detail))}
         s.add(AuditLog(ts=ts, actor=actor, action=action, target=target, detail_json=body["detail"], sha256=chain_hash(prev, body),
                        prev_sha256=prev))
 
@@ -110,7 +117,7 @@ async def audit(actor: str, action: str, target: str = "", detail: dict | None =
 def verify_audit_chain(rows: list[AuditLog]) -> bool:
     prev = None
     for r in rows:
-        body = {"ts": r.ts.isoformat(), "actor": r.actor, "action": r.action, "target": r.target, "detail": r.detail_json}
+        body = {"ts": iso_utc(r.ts), "actor": r.actor, "action": r.action, "target": r.target, "detail": r.detail_json}
         if r.prev_sha256 != prev or chain_hash(prev, body) != r.sha256:
             return False
         prev = r.sha256
