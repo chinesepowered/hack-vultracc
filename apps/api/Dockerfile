@@ -13,7 +13,7 @@ COPY apps/api/tieout apps/api/tieout
 COPY prompts prompts
 COPY data/demo data/demo
 ARG GIT_SHA=dev
-RUN echo "$GIT_SHA" > apps/api/GIT_SHA && cd apps/api && uv sync --frozen --no-dev
+RUN echo "$GIT_SHA" > apps/api/GIT_SHA
 ENV PATH=/opt/venv/bin:$PATH PROMPTS_DIR=/srv/tieout/prompts DEMO_DATA_DIR=/srv/tieout/data/demo WEB_DIST=/srv/web
 WORKDIR /srv/tieout/apps/api
 EXPOSE 8000
