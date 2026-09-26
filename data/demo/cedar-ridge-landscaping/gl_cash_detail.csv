@@ -1,0 +1,286 @@
+Line ID,Posting Date,JE Number,Memo,Counterparty,Check #,Contra Account,Amount,Running Balance
+GL-21805,09/01/2026,CD-906000,Fuel - Tri County Fuel,Tri County Fuel,,6900,(96.41),35702.00
+GL-21806,09/01/2026,CD-210001,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(595.32),35106.68
+GL-21807,09/01/2026,CR-311002,Deposit - Northpoint Clinic check 2768,Northpoint Clinic,,1200,1853.03,36959.71
+GL-21808,09/01/2026,CR-971003,Payment - Sequoia Grocers INV-4590,Sequoia Grocers,,1200,1971.76,38931.47
+GL-21809,09/01/2026,CR-175004,PaySwift payout 9/1,PaySwift,,4100,3149.44,42080.91
+GL-21810,09/01/2026,CR-647005,PaySwift payout 9/1,PaySwift,,4100,1601.86,43682.77
+GL-21811,09/01/2026,CD-841006,Wire to Tri County Fuel,Tri County Fuel,,2000,(1312.53),42370.24
+GL-21812,09/01/2026,CR-840007,Payment - Evergreen Charter School INV-7960,Evergreen Charter School,,1200,3004.77,45375.01
+GL-21813,09/01/2026,CD-897008,Check #2363 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2363,2000,(832.86),44542.15
+GL-21814,09/02/2026,CD-915009,Check #2311 Valley Stone and Soil,Valley Stone and Soil,2311,2000,(2306.94),42235.21
+GL-21815,09/02/2026,CD-786010,Check #2320 Valley Stone and Soil,Valley Stone and Soil,2320,2000,(2042.04),40193.17
+GL-21816,09/02/2026,CR-115011,Deposit - Two Rivers Market check 7783,Two Rivers Market,,1200,1829.22,42022.39
+GL-21817,09/02/2026,CD-919012,Check #2334 Tri County Fuel,Tri County Fuel,2334,2000,(160.47),41861.92
+GL-21818,09/02/2026,CR-466013,Deposit - Delacroix Events check 5862,Delacroix Events,,1200,7291.92,49153.84
+GL-21819,09/02/2026,CD-393014,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(480.92),48672.92
+GL-21820,09/02/2026,CD-205015,Fuel - Tri County Fuel,Tri County Fuel,,6900,(36.00),48636.92
+GL-21821,09/02/2026,CD-431016,Tri County Fuel inv 45446,Tri County Fuel,,2000,(527.77),48109.15
+GL-21822,09/02/2026,CD-486017,Tri County Fuel inv 63074,Tri County Fuel,,2000,(263.18),47845.97
+GL-21823,09/02/2026,CR-732018,PaySwift payout 9/2,PaySwift,,4100,833.06,48679.03
+GL-21824,09/02/2026,CD-294019,Check #2353 Tri County Fuel,Tri County Fuel,2353,2000,(107.70),48571.33
+GL-21825,09/02/2026,CD-369020,Check #2355 Valley Stone and Soil,Valley Stone and Soil,2355,2000,(3056.61),45514.72
+GL-21826,09/03/2026,CD-844021,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,(1259.52),44255.20
+GL-21827,09/03/2026,CD-183022,Fuel - Tri County Fuel,Tri County Fuel,,6900,(188.08),44067.12
+GL-21828,09/03/2026,CR-735023,PaySwift payout 9/3,PaySwift,,4100,1360.22,45427.34
+GL-21829,09/03/2026,CD-228024,Valley Stone and Soil inv 58115,Valley Stone and Soil,,2000,(3438.63),41988.71
+GL-21830,09/03/2026,CR-362025,Payment - Oakmont Hotel Group INV-8185,Oakmont Hotel Group,,1200,2661.33,44650.04
+GL-21831,09/03/2026,CD-313026,Check #2335 Tri County Fuel,Tri County Fuel,2335,2000,(192.28),44457.76
+GL-21832,09/03/2026,CD-968027,Tri County Fuel inv 30284,Tri County Fuel,,2000,(244.66),44213.10
+GL-21833,09/03/2026,CR-328028,PaySwift payout 9/3,PaySwift,,4100,1804.03,46017.13
+GL-21834,09/03/2026,CD-124029,Check #2354 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2354,2000,(1304.55),44712.58
+GL-21835,09/03/2026,CR-240030,PaySwift payout 9/3,PaySwift,,4100,1643.86,46356.44
+GL-21836,09/03/2026,CD-605031,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(520.35),45836.09
+GL-21837,09/03/2026,CR-482032,PaySwift payout 9/3,PaySwift,,4100,2744.38,48580.47
+GL-21838,09/04/2026,CR-124033,Deposit - Lindqvist Family Trust check 9602,Lindqvist Family Trust,,1200,6780.35,55360.82
+GL-21839,09/04/2026,CD-534034,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(735.95),54624.87
+GL-21840,09/04/2026,CD-272035,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(189.05),54435.82
+GL-21841,09/04/2026,CD-857036,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(900.77),53535.05
+GL-21842,09/04/2026,CD-268037,Check #2339 Tri County Fuel,Tri County Fuel,2339,2000,(465.68),53069.37
+GL-21843,09/04/2026,CR-780038,Deposit - Lindqvist Family Trust check 6419,Lindqvist Family Trust,,1200,1721.20,54790.57
+GL-21844,09/04/2026,CD-413039,Greenleaf Nursery Wholesale inv 31728,Greenleaf Nursery Wholesale,,2000,(1385.67),53404.90
+GL-21845,09/04/2026,CD-870040,Ridgeline Equipment Rental inv 6438,Ridgeline Equipment Rental,,2000,(966.27),52438.63
+GL-21846,09/04/2026,CR-278041,Payment - Presidio Property Partners INV-3153,Presidio Property Partners,,1200,1599.14,54037.77
+GL-21847,09/04/2026,CR-312042,Payment - Sequoia Grocers INV-6083,Sequoia Grocers,,1200,4659.58,58697.35
+GL-21848,09/04/2026,CR-311043,Deposit - Sequoia Grocers check 4346,Sequoia Grocers,,1200,4645.95,63343.30
+GL-21849,09/04/2026,CD-777044,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(430.22),62913.08
+GL-21850,09/04/2026,CD-962045,Valley Stone and Soil inv 1649,Valley Stone and Soil,,2000,(2653.61),60259.47
+GL-21851,09/04/2026,CD-197046,Check #2364 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2364,2000,(680.07),59579.40
+GL-21852,09/05/2026,CD-646047,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,(8994.57),50584.83
+GL-21853,09/05/2026,CD-308048,Greenleaf Nursery Wholesale inv 41690,Greenleaf Nursery Wholesale,,2000,(739.73),49845.10
+GL-21854,09/05/2026,CD-135049,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(955.62),48889.48
+GL-21855,09/05/2026,CR-244050,Deposit - Presidio Property Partners check 2877,Presidio Property Partners,,1200,6709.65,55599.13
+GL-21856,09/05/2026,CD-658051,Check #2361 Valley Stone and Soil,Valley Stone and Soil,2361,2000,(2950.61),52648.52
+GL-21857,09/05/2026,CD-342052,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(285.15),52363.37
+GL-21858,09/06/2026,CD-134053,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(427.78),51935.59
+GL-21859,09/06/2026,CD-955054,Tri County Fuel inv 38521,Tri County Fuel,,2000,(262.36),51673.23
+GL-21860,09/06/2026,CD-973055,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(361.03),51312.20
+GL-21861,09/06/2026,CD-130056,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(1165.96),50146.24
+GL-21862,09/06/2026,CR-662057,Payment - Delacroix Events INV-8470,Delacroix Events,,1200,8719.48,58865.72
+GL-21863,09/06/2026,CD-480058,Valley Stone and Soil inv 30925,Valley Stone and Soil,,2000,(2769.25),56096.47
+GL-21864,09/06/2026,CD-920059,Greenleaf Nursery Wholesale inv 82335,Greenleaf Nursery Wholesale,,2000,(2358.66),53737.81
+GL-21865,09/06/2026,CR-471060,PaySwift payout 9/6,PaySwift,,4100,3603.20,57341.01
+GL-21866,09/06/2026,CR-994061,Payment - Evergreen Charter School INV-2104,Evergreen Charter School,,1200,5879.54,63220.55
+GL-21867,09/06/2026,CD-307062,Check #2346 Tri County Fuel,Tri County Fuel,2346,2000,(473.12),62747.43
+GL-21868,09/06/2026,CD-817063,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(8423.77),54323.66
+GL-21869,09/06/2026,CD-684064,Valley Stone and Soil inv 54382,Valley Stone and Soil,,2000,(1057.90),53265.76
+GL-21870,09/06/2026,CD-394065,Check #2359 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2359,2000,(227.11),53038.65
+GL-21871,09/07/2026,CR-523066,PaySwift payout 9/7,PaySwift,,4100,1355.08,54393.73
+GL-21872,09/07/2026,CD-721067,Fuel - Tri County Fuel,Tri County Fuel,,6900,(120.97),54272.76
+GL-21873,09/07/2026,CD-326068,Tri County Fuel inv 85552,Tri County Fuel,,2000,(537.89),53734.87
+GL-21874,09/07/2026,CD-495069,Check #2316 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2316,2000,(2313.04),51421.83
+GL-21875,09/07/2026,CD-462070,Check #2319 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2319,2000,(202.57),51219.26
+GL-21876,09/07/2026,CD-629071,Tri County Fuel inv 43325,Tri County Fuel,,2000,(597.88),50621.38
+GL-21877,09/07/2026,CD-454072,Check #2329 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2329,2000,(2525.89),48095.49
+GL-21878,09/07/2026,CR-848073,Payment - Sequoia Grocers INV-3974,Sequoia Grocers,,1200,5048.51,53144.00
+GL-21879,09/07/2026,CD-901074,Tri County Fuel inv 9623,Tri County Fuel,,2000,(392.51),52751.49
+GL-21880,09/07/2026,CD-652075,Check #2345 Tri County Fuel,Tri County Fuel,2345,2000,(80.35),52671.14
+GL-21881,09/07/2026,CD-926076,Check #2347 Tri County Fuel,Tri County Fuel,2347,2000,(532.82),52138.32
+GL-21882,09/07/2026,CR-891077,Deposit - Oakmont Hotel Group check 9518,Oakmont Hotel Group,,1200,1238.27,53376.59
+GL-21883,09/07/2026,CR-387078,PaySwift payout 9/7,PaySwift,,4100,3705.93,57082.52
+GL-21884,09/07/2026,CR-992079,PaySwift payout 9/7,PaySwift,,4100,2048.95,59131.47
+GL-21885,09/07/2026,CD-991080,Ridgeline Equipment Rental inv 72594,Ridgeline Equipment Rental,,2000,(757.64),58373.83
+GL-21886,09/07/2026,CD-825081,Check #2358 Valley Stone and Soil,Valley Stone and Soil,2358,2000,(3961.85),54411.98
+GL-21887,09/08/2026,CD-788082,Accounting software - CloudLedger,CloudLedger,,6800,(152.07),54259.91
+GL-21888,09/08/2026,CR-873083,Deposit - Sequoia Grocers check 7704,Sequoia Grocers,,1200,6719.93,60979.84
+GL-21889,09/08/2026,CD-681084,Check #2313 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2313,2000,(1617.61),59362.23
+GL-21890,09/08/2026,CD-813085,Check #2322 Tri County Fuel,Tri County Fuel,2322,2000,(247.06),59115.17
+GL-21891,09/08/2026,CD-580086,Fuel - Tri County Fuel,Tri County Fuel,,6900,(32.33),59082.84
+GL-21892,09/08/2026,CD-611087,Wire to Tri County Fuel,Tri County Fuel,,2000,(921.50),58161.34
+GL-21893,09/08/2026,CD-856088,Check #2342 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2342,2000,(3003.50),55157.84
+GL-21894,09/08/2026,CR-469089,Payment - Northpoint Clinic INV-6145,Northpoint Clinic,,1200,317.94,55475.78
+GL-21895,09/08/2026,CD-445090,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(252.55),55223.23
+GL-21896,09/08/2026,CD-460091,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(8164.48),47058.75
+GL-21897,09/09/2026,CR-315092,Deposit - Evergreen Charter School check 2005,Evergreen Charter School,,1200,471.96,47530.71
+GL-21898,09/09/2026,CR-697093,Deposit - Oakmont Hotel Group check 8358,Oakmont Hotel Group,,1200,8496.46,56027.17
+GL-21899,09/09/2026,CR-254094,PaySwift payout 9/9,PaySwift,,4100,1568.48,57595.65
+GL-21900,09/09/2026,CD-630095,Check #2326 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2326,2000,(306.92),57288.73
+GL-21901,09/09/2026,CD-708096,Check #2336 Valley Stone and Soil,Valley Stone and Soil,2336,2000,(1485.68),55803.05
+GL-21902,09/09/2026,CD-761097,Check #2337 Tri County Fuel,Tri County Fuel,2337,2000,(453.14),55349.91
+GL-21903,09/09/2026,CR-572098,Payment - Northpoint Clinic INV-6748,Northpoint Clinic,,1200,7539.70,62889.61
+GL-21904,09/09/2026,CD-662099,Check #2348 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2348,2000,(934.47),61955.14
+GL-21905,09/09/2026,CD-553100,Check #2350 Valley Stone and Soil,Valley Stone and Soil,2350,2000,(2538.16),59416.98
+GL-21906,09/09/2026,CR-274101,Deposit - Delacroix Events check 7489,Delacroix Events,,1200,7431.87,66848.85
+GL-21907,09/09/2026,CD-523102,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(829.97),66018.88
+GL-21908,09/09/2026,CD-798103,Wire to Tri County Fuel,Tri County Fuel,,2000,(1040.29),64978.59
+GL-21909,09/10/2026,CD-690104,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(1180.66),63797.93
+GL-21910,09/10/2026,CD-334105,Fuel - Tri County Fuel,Tri County Fuel,,6900,(39.34),63758.59
+GL-21911,09/10/2026,CD-554106,Fuel - Tri County Fuel,Tri County Fuel,,6900,(49.47),63709.12
+GL-21912,09/10/2026,CR-808107,Deposit - Northpoint Clinic check 7935,Northpoint Clinic,,1200,2089.76,65798.88
+GL-21913,09/10/2026,CD-829108,Wire to Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,2000,(7030.01),58768.87
+GL-21914,09/10/2026,CD-918109,Check #2323 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2323,2000,(1571.85),57197.02
+GL-21915,09/10/2026,CR-596110,Payment - Sequoia Grocers INV-9777,Sequoia Grocers,,1200,6026.93,63223.95
+GL-21916,09/10/2026,CD-513111,Check #2330 Valley Stone and Soil,Valley Stone and Soil,2330,2000,(673.76),62550.19
+GL-21917,09/10/2026,CD-399112,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(2737.21),59812.98
+GL-21918,09/10/2026,CD-632113,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(1105.94),58707.04
+GL-21919,09/10/2026,CD-314114,Check #2343 Tri County Fuel,Tri County Fuel,2343,2000,(368.79),58338.25
+GL-21920,09/10/2026,CD-105115,Check #2352 Valley Stone and Soil,Valley Stone and Soil,2352,2000,(2713.27),55624.98
+GL-21921,09/10/2026,CD-869116,Valley Stone and Soil inv 57687,Valley Stone and Soil,,2000,(3382.15),52242.83
+GL-21922,09/10/2026,CD-531117,Check #2357 Tri County Fuel,Tri County Fuel,2357,2000,(443.67),51799.16
+GL-21923,09/11/2026,CD-673118,Check #2318 Tri County Fuel,Tri County Fuel,2318,2000,(160.87),51638.29
+GL-21924,09/11/2026,CD-814119,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(662.19),50976.10
+GL-21925,09/11/2026,CD-185120,Check #2321 Tri County Fuel,Tri County Fuel,2321,2000,(596.24),50379.86
+GL-21926,09/11/2026,CR-156121,Deposit - Lindqvist Family Trust check 9809,Lindqvist Family Trust,,1200,9384.99,59764.85
+GL-21927,09/11/2026,CD-264122,Fuel - Tri County Fuel,Tri County Fuel,,6900,(180.20),59584.65
+GL-21928,09/11/2026,CR-278123,Payment - Delacroix Events INV-7668,Delacroix Events,,1200,1690.77,61275.42
+GL-21929,09/11/2026,CD-734124,Check #2344 Tri County Fuel,Tri County Fuel,2344,2000,(240.55),61034.87
+GL-21930,09/11/2026,CR-490125,Payment - Northpoint Clinic INV-7127,Northpoint Clinic,,1200,7973.52,69008.39
+GL-21931,09/11/2026,CD-482126,Wire to Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,2000,(4512.17),64496.22
+GL-21932,09/11/2026,CD-396127,Check #2356 Valley Stone and Soil,Valley Stone and Soil,2356,2000,(662.00),63834.22
+GL-21933,09/11/2026,CD-729128,Wire to Tri County Fuel,Tri County Fuel,,2000,(1216.71),62617.51
+GL-21934,09/11/2026,CD-621129,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(3846.82),58770.69
+GL-21935,09/12/2026,CD-723130,Ridgeline Equipment Rental inv 53895,Ridgeline Equipment Rental,,2000,(280.43),58490.26
+GL-21936,09/12/2026,CD-375131,Check #2317 Valley Stone and Soil,Valley Stone and Soil,2317,2000,(1485.96),57004.30
+GL-21937,09/12/2026,CR-600132,Payment - Lindqvist Family Trust INV-8317,Lindqvist Family Trust,,1200,3999.57,61003.87
+GL-21938,09/12/2026,CD-131133,Fuel - Tri County Fuel,Tri County Fuel,,6900,(161.76),60842.11
+GL-21939,09/12/2026,CD-222134,Fuel - Tri County Fuel,Tri County Fuel,,6900,(168.16),60673.95
+GL-21940,09/12/2026,CR-370135,Deposit - Northpoint Clinic check 4521,Northpoint Clinic,,1200,1609.32,62283.27
+GL-21941,09/12/2026,CD-387136,Check #2351 Tri County Fuel,Tri County Fuel,2351,2000,(112.49),62170.78
+GL-21942,09/12/2026,CD-924137,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(6955.55),55215.23
+GL-21943,09/12/2026,CD-987138,Greenleaf Nursery Wholesale inv 65316,Greenleaf Nursery Wholesale,,2000,(1300.29),53914.94
+GL-21944,09/12/2026,CD-137139,Greenleaf Nursery Wholesale inv 57547,Greenleaf Nursery Wholesale,,2000,(1155.41),52759.53
+GL-21945,09/13/2026,CD-793140,Fuel - Tri County Fuel,Tri County Fuel,,6900,(33.12),52726.41
+GL-21946,09/13/2026,CR-234141,PaySwift payout 9/13,PaySwift,,4100,363.89,53090.30
+GL-21947,09/13/2026,CD-526142,Check #2324 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2324,2000,(1247.03),51843.27
+GL-21948,09/13/2026,CD-460143,Check #2331 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2331,2000,(1308.31),50534.96
+GL-21949,09/13/2026,CR-893144,Deposit - Lindqvist Family Trust check 5867,Lindqvist Family Trust,,1200,8917.63,59452.59
+GL-21950,09/13/2026,CR-715145,Deposit - Two Rivers Market check 4184,Two Rivers Market,,1200,7793.54,67246.13
+GL-21951,09/13/2026,CR-115146,Payment - Northpoint Clinic INV-7612,Northpoint Clinic,,1200,5350.71,72596.84
+GL-21952,09/13/2026,CD-877147,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(287.54),72309.30
+GL-21953,09/13/2026,CD-636148,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(549.44),71759.86
+GL-21954,09/13/2026,CD-114149,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(7118.74),64641.12
+GL-21955,09/13/2026,CD-191150,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(547.80),64093.32
+GL-21956,09/13/2026,CR-858151,Deposit - Two Rivers Market check 6010,Two Rivers Market,,1200,4720.46,68813.78
+GL-21957,09/13/2026,CD-902152,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(466.63),68347.15
+GL-21958,09/13/2026,CD-793153,Check #2360 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2360,2000,(1270.47),67076.68
+GL-21959,09/14/2026,CD-418154,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,(675.12),66401.56
+GL-21960,09/14/2026,CD-244155,Check #2312 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2312,2000,(271.33),66130.23
+GL-21961,09/14/2026,CD-542156,Tri County Fuel inv 3443,Tri County Fuel,,2000,(364.86),65765.37
+GL-21962,09/14/2026,CR-224157,Payment - Northpoint Clinic INV-1043,Northpoint Clinic,,1200,4509.39,70274.76
+GL-21963,09/14/2026,CD-300158,Fuel - Tri County Fuel,Tri County Fuel,,6900,(167.14),70107.62
+GL-21964,09/14/2026,CD-595159,Valley Stone and Soil inv 8356,Valley Stone and Soil,,2000,(3198.96),66908.66
+GL-21965,09/14/2026,CD-841160,Check #2338 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2338,2000,(2030.27),64878.39
+GL-21966,09/14/2026,CR-913161,PaySwift payout 9/14,PaySwift,,4100,4070.97,68949.36
+GL-21967,09/14/2026,CD-439162,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(498.46),68450.90
+GL-21968,09/14/2026,CR-765163,Deposit - Evergreen Charter School check 5265,Evergreen Charter School,,1200,1464.52,69915.42
+GL-21969,09/14/2026,CR-780164,PaySwift payout 9/14,PaySwift,,4100,1655.88,71571.30
+GL-21970,09/14/2026,CD-559165,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(655.89),70915.41
+GL-21971,09/14/2026,CD-500166,Check #2349 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2349,2000,(2172.10),68743.31
+GL-21972,09/14/2026,CR-381167,Payment - Northpoint Clinic INV-4773,Northpoint Clinic,,1200,7213.48,75956.79
+GL-21973,09/14/2026,CR-724168,PaySwift payout 9/14,PaySwift,,4100,2488.56,78445.35
+GL-21974,09/15/2026,PR-876169,Payroll run 9/15,Ledgerly Payroll,,6200,(20297.27),58148.08
+GL-21975,09/15/2026,CR-309170,PaySwift payout 9/15,PaySwift,,4100,2471.92,60620.00
+GL-21976,09/15/2026,CD-460171,Check #2314 Tri County Fuel,Tri County Fuel,2314,2000,(110.79),60509.21
+GL-21977,09/15/2026,CD-751172,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(460.60),60048.61
+GL-21978,09/15/2026,CD-390173,Tri County Fuel inv 21945,Tri County Fuel,,2000,(416.64),59631.97
+GL-21979,09/15/2026,CD-101174,Wire to Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,2000,(6002.86),53629.11
+GL-21980,09/15/2026,CD-667175,Ridgeline Equipment Rental inv 25883,Ridgeline Equipment Rental,,2000,(477.41),53151.70
+GL-21981,09/15/2026,CR-678176,PaySwift payout 9/15,PaySwift,,4100,1601.08,54752.78
+GL-21982,09/15/2026,CR-658177,PaySwift payout 9/15,PaySwift,,4100,599.66,55352.44
+GL-21983,09/16/2026,CD-886178,Tri County Fuel inv 4039,Tri County Fuel,,2000,(445.84),54906.60
+GL-21984,09/16/2026,CD-661179,Check #2315 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2315,2000,(1817.20),53089.40
+GL-21985,09/16/2026,CD-490180,Check #2327 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2327,2000,(2108.04),50981.36
+GL-21986,09/16/2026,CD-908181,Valley Stone and Soil inv 60249,Valley Stone and Soil,,2000,(2627.43),48353.93
+GL-21987,09/16/2026,CD-432182,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(305.32),48048.61
+GL-21988,09/16/2026,CD-880183,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(2342.83),45705.78
+GL-21989,09/16/2026,CD-238184,Fuel - Tri County Fuel,Tri County Fuel,,6900,(141.77),45564.01
+GL-21990,09/16/2026,CD-240185,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(4969.81),40594.20
+GL-21991,09/17/2026,CR-553186,Payment - Two Rivers Market INV-6743,Two Rivers Market,,1200,1439.48,42033.68
+GL-21992,09/17/2026,CD-191187,Check #2325 Valley Stone and Soil,Valley Stone and Soil,2325,2000,(860.71),41172.97
+GL-21993,09/17/2026,CD-687188,Fuel - Tri County Fuel,Tri County Fuel,,6900,(44.39),41128.58
+GL-21994,09/17/2026,CD-581189,Check #2328 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2328,2000,(2654.95),38473.63
+GL-21995,09/17/2026,CD-533190,Check #2332 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2332,2000,(2062.62),36411.01
+GL-21996,09/17/2026,CD-734191,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(311.63),36099.38
+GL-21997,09/17/2026,CD-552192,Check #2333 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2333,2000,(1541.37),34558.01
+GL-21998,09/17/2026,CD-616193,Check #2340 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2340,2000,(1616.34),32941.67
+GL-21999,09/17/2026,CR-736194,PaySwift payout 9/17,PaySwift,,4100,3083.09,36024.76
+GL-22000,09/17/2026,CD-609195,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(425.26),35599.50
+GL-22001,09/17/2026,CR-650196,Payment - Presidio Property Partners INV-9072,Presidio Property Partners,,1200,6982.18,42581.68
+GL-22002,09/17/2026,CR-123197,Deposit - Two Rivers Market check 1394,Two Rivers Market,,1200,2477.16,45058.84
+GL-22003,09/17/2026,CD-741198,Check #2362 Tri County Fuel,Tri County Fuel,2362,2000,(619.88),44438.96
+GL-22004,09/18/2026,CR-657199,PaySwift payout 9/18,PaySwift,,4100,2484.11,46923.07
+GL-22005,09/18/2026,CD-733200,Wire to Tri County Fuel,Tri County Fuel,,2000,(1294.86),45628.21
+GL-22006,09/18/2026,CD-218201,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(134.32),45493.89
+GL-22007,09/18/2026,CD-476202,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(8521.16),36972.73
+GL-22008,09/18/2026,CR-184203,Payment - Presidio Property Partners INV-8274,Presidio Property Partners,,1200,2332.71,39305.44
+GL-22009,09/18/2026,CD-450204,Valley Stone and Soil inv 91034,Valley Stone and Soil,,2000,(2871.36),36434.08
+GL-22010,09/18/2026,CR-135205,PaySwift payout 9/18,PaySwift,,4100,1705.96,38140.04
+GL-22011,09/18/2026,CD-744206,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(545.36),37594.68
+GL-22012,09/19/2026,CD-607207,Greenleaf Nursery Wholesale inv 3010,Greenleaf Nursery Wholesale,,2000,(774.90),36819.78
+GL-22013,09/19/2026,CR-147208,Deposit - Evergreen Charter School check 8935,Evergreen Charter School,,1200,574.59,37394.37
+GL-22014,09/19/2026,CD-448209,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(838.25),36556.12
+GL-22015,09/19/2026,CR-892210,PaySwift payout 9/19,PaySwift,,4100,1547.83,38103.95
+GL-22016,09/19/2026,CR-391211,PaySwift payout 9/19,PaySwift,,4100,4036.13,42140.08
+GL-22017,09/19/2026,CD-531212,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(786.94),41353.14
+GL-22018,09/19/2026,CD-456213,Check #2341 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2341,2000,(1349.38),40003.76
+GL-22019,09/19/2026,CR-301214,Payment - Sequoia Grocers INV-7660,Sequoia Grocers,,1200,971.18,40974.94
+GL-22020,09/19/2026,CD-155215,Wire to Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,2000,(6765.33),34209.61
+GL-22021,09/19/2026,CR-201216,PaySwift payout 9/19,PaySwift,,4100,760.03,34969.64
+GL-22022,09/19/2026,CR-102217,PaySwift payout 9/19,PaySwift,,4100,656.55,35626.19
+GL-22023,09/20/2026,CD-398218,Loan payment - First Coast Bank,First Coast Bank,,2500,(2367.78),33258.41
+GL-22024,09/20/2026,CR-392219,PaySwift payout 9/20,PaySwift,,4100,3577.83,36836.24
+GL-22025,09/20/2026,CR-143220,PaySwift payout 9/20,PaySwift,,4100,2712.99,39549.23
+GL-22026,09/20/2026,CD-213221,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(96.46),39452.77
+GL-22027,09/20/2026,CD-289222,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(1858.94),37593.83
+GL-22028,09/20/2026,CD-935223,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(8937.94),28655.89
+GL-22029,09/20/2026,CD-617224,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(1168.38),27487.51
+GL-22030,09/20/2026,CD-794225,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(270.99),27216.52
+GL-22031,09/20/2026,CR-908226,PaySwift payout 9/20,PaySwift,,4100,1928.06,29144.58
+GL-22032,09/21/2026,CD-914227,Fuel - Tri County Fuel,Tri County Fuel,,6900,(83.46),29061.12
+GL-22033,09/21/2026,CD-840228,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(231.44),28829.68
+GL-22034,09/21/2026,CD-457229,Valley Stone and Soil inv 60500,Valley Stone and Soil,,2000,(1843.14),26986.54
+GL-22035,09/21/2026,CR-258230,Payment - Northpoint Clinic INV-4549,Northpoint Clinic,,1200,5295.36,32281.90
+GL-22036,09/21/2026,CR-621231,PaySwift payout 9/21,PaySwift,,4100,364.18,32646.08
+GL-22037,09/21/2026,CD-791232,Tri County Fuel inv 44257,Tri County Fuel,,2000,(487.30),32158.78
+GL-22038,09/21/2026,CD-552233,Plants - Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,5000,(512.36),31646.42
+GL-22039,09/21/2026,CR-363234,Payment - Evergreen Charter School INV-2738,Evergreen Charter School,,1200,561.63,32208.05
+GL-22040,09/21/2026,CR-267235,PaySwift payout 9/21,PaySwift,,4100,2742.25,34950.30
+GL-22041,09/22/2026,CD-345236,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,(4086.71),30863.59
+GL-22042,09/22/2026,CD-484237,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(4927.70),25935.89
+GL-22043,09/22/2026,CD-782238,Ridgeline Equipment Rental inv 28641,Ridgeline Equipment Rental,,2000,(626.44),25309.45
+GL-22044,09/22/2026,CD-431239,Greenleaf Nursery Wholesale inv 8124,Greenleaf Nursery Wholesale,,2000,(1150.21),24159.24
+GL-22045,09/22/2026,CR-746240,Deposit - Two Rivers Market check 7006,Two Rivers Market,,1200,4527.90,28687.14
+GL-22046,09/22/2026,CD-854241,Tri County Fuel inv 53082,Tri County Fuel,,2000,(540.69),28146.45
+GL-22047,09/22/2026,CD-799242,Ridgeline Equipment Rental inv 42718,Ridgeline Equipment Rental,,2000,(687.16),27459.29
+GL-22048,09/23/2026,CD-282243,Valley Stone and Soil inv 12907,Valley Stone and Soil,,2000,(3126.16),24333.13
+GL-22049,09/23/2026,CR-919244,PaySwift payout 9/23,PaySwift,,4100,2194.68,26527.81
+GL-22050,09/23/2026,CR-753245,PaySwift payout 9/23,PaySwift,,4100,2619.73,29147.54
+GL-22051,09/23/2026,CD-478246,Tri County Fuel inv 89686,Tri County Fuel,,2000,(278.88),28868.66
+GL-22052,09/23/2026,CD-908247,Fuel - Tri County Fuel,Tri County Fuel,,6900,(25.96),28842.70
+GL-22053,09/23/2026,CR-993248,PaySwift payout 9/23,PaySwift,,4100,3559.02,32401.72
+GL-22054,09/23/2026,CD-754249,Materials - Valley Stone and Soil,Valley Stone and Soil,,5000,(912.55),31489.17
+GL-22055,09/23/2026,CD-873250,Check #2366 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2366,2000,(2383.39),29105.78
+GL-22056,09/24/2026,CR-547251,PaySwift payout 9/24,PaySwift,,4100,3203.40,32309.18
+GL-22057,09/24/2026,CR-479252,PaySwift payout 9/24,PaySwift,,4100,973.29,33282.47
+GL-22058,09/24/2026,CR-668253,Deposit - Lindqvist Family Trust check 2599,Lindqvist Family Trust,,1200,7176.67,40459.14
+GL-22059,09/24/2026,CD-826254,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(7830.97),32628.17
+GL-22060,09/24/2026,CR-956255,PaySwift payout 9/24,PaySwift,,4100,1209.61,33837.78
+GL-22061,09/24/2026,CR-680256,Payment - Delacroix Events INV-9617,Delacroix Events,,1200,1121.91,34959.69
+GL-22062,09/24/2026,CD-144257,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(467.64),34492.05
+GL-22063,09/24/2026,CD-955258,Greenleaf Nursery Wholesale inv 2961,Greenleaf Nursery Wholesale,,2000,(1742.51),32749.54
+GL-22064,09/24/2026,CR-777259,PaySwift payout 9/24,PaySwift,,4100,3190.72,35940.26
+GL-22065,09/24/2026,CR-126260,PaySwift payout 9/24,PaySwift,,4100,3532.63,39472.89
+GL-22066,09/24/2026,CD-349261,Check #2367 Ridgeline Equipment Rental,Ridgeline Equipment Rental,2367,2000,(1249.09),38223.80
+GL-22067,09/25/2026,CD-300262,Valley Stone and Soil inv 30982,Valley Stone and Soil,,2000,(1703.52),36520.28
+GL-22068,09/25/2026,CR-485263,Payment - Two Rivers Market INV-4760,Two Rivers Market,,1200,8856.86,45377.14
+GL-22069,09/25/2026,CR-246264,Payment - Evergreen Charter School INV-5364,Evergreen Charter School,,1200,5167.27,50544.41
+GL-22070,09/25/2026,CR-268265,PaySwift payout 9/25,PaySwift,,4100,3005.47,53549.88
+GL-22071,09/25/2026,CD-256266,Fuel - Tri County Fuel,Tri County Fuel,,6900,(151.00),53398.88
+GL-22072,09/25/2026,CD-219267,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(494.72),52904.16
+GL-22073,09/25/2026,CD-808268,Equipment rental - Ridgeline Equipment Rental,Ridgeline Equipment Rental,,6600,(582.23),52321.93
+GL-22074,09/25/2026,CD-169269,Greenleaf Nursery Wholesale inv 97457,Greenleaf Nursery Wholesale,,2000,(1265.70),51056.23
+GL-22075,09/25/2026,CR-455270,Payment - Evergreen Charter School INV-9815,Evergreen Charter School,,1200,2165.18,53221.41
+GL-22076,09/25/2026,CD-698271,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(2133.71),51087.70
+GL-22077,09/25/2026,CD-464272,Tri County Fuel inv 87331,Tri County Fuel,,2000,(257.12),50830.58
+GL-22078,09/26/2026,CD-940273,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(3549.91),47280.67
+GL-22079,09/26/2026,CD-930274,Valley Stone and Soil inv 55083,Valley Stone and Soil,,2000,(1450.79),45829.88
+GL-22080,09/26/2026,CD-255275,Wire to Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,,2000,(5062.96),40766.92
+GL-22081,09/26/2026,CD-392276,Wire to Tri County Fuel,Tri County Fuel,,2000,(1354.39),39412.53
+GL-22082,09/26/2026,CD-827277,Wire to Ridgeline Equipment Rental,Ridgeline Equipment Rental,,2000,(1914.85),37497.68
+GL-22083,09/26/2026,CR-875278,Deposit - Evergreen Charter School check 5737,Evergreen Charter School,,1200,5602.65,43100.33
+GL-22084,09/26/2026,CD-883279,Valley Stone and Soil inv 15457,Valley Stone and Soil,,2000,(3802.97),39297.36
+GL-22085,09/26/2026,CR-729280,Deposit - Oakmont Hotel Group check 4722,Oakmont Hotel Group,,1200,6064.68,45362.04
+GL-22086,09/26/2026,CR-991281,Deposit - Two Rivers Market check 6776,Two Rivers Market,,1200,8313.64,53675.68
+GL-22087,09/27/2026,CD-989282,Wire to Valley Stone and Soil,Valley Stone and Soil,,2000,(8585.52),45090.16
+GL-22088,09/28/2026,CD-750283,Check #2365 Greenleaf Nursery Wholesale,Greenleaf Nursery Wholesale,2365,2000,(1570.90),43519.26
+GL-22089,09/29/2026,PR-621284,Payroll run 9/29,Ledgerly Payroll,,6200,(12187.44),31331.82

@@ -1,0 +1,317 @@
+Entry No,Date,Journal,Description,Payee/Payor,Num,Offset Account,Debit,Credit,Balance
+GL-53460,2026-09-01,CD-709000,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,5553.94,55870.66
+GL-53461,2026-09-01,CD-357001,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,2615.46,53255.20
+GL-53462,2026-09-01,CD-782002,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,420.60,52834.60
+GL-53463,2026-09-01,CD-727003,Check #3123 Kindred Pet Food Supply,Kindred Pet Food Supply,3123,2000,,1076.60,51758.00
+GL-53464,2026-09-01,CD-513004,Kindred Pet Food Supply inv 16286,Kindred Pet Food Supply,,2000,,311.69,51446.31
+GL-53465,2026-09-01,CD-123005,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,89.99,51356.32
+GL-53466,2026-09-01,CD-488006,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,2088.80,49267.52
+GL-53467,2026-09-01,CR-567007,Deposit - Kestrel Media check 9677,Kestrel Media,,1200,2023.21,,51290.73
+GL-53468,2026-09-01,CR-942008,Deposit - Bayline Offices check 9341,Bayline Offices,,1200,3076.73,,54367.46
+GL-53469,2026-09-01,CD-240009,Harborview Lab Services inv 52010,Harborview Lab Services,,2000,,1166.08,53201.38
+GL-53470,2026-09-01,CR-251010,Deposit - Marin Wellness Center check 5059,Marin Wellness Center,,1200,2904.55,,56105.93
+GL-53471,2026-09-01,CR-583011,Deposit - Evergreen Charter School check 8884,Evergreen Charter School,,1200,3808.93,,59914.86
+GL-53472,2026-09-01,CR-449012,PaySwift payout 9/1,PaySwift,,4100,865.72,,60780.58
+GL-53473,2026-09-01,CD-835013,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,428.81,60351.77
+GL-53474,2026-09-01,CD-990014,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,657.70,59694.07
+GL-53475,2026-09-01,CR-676015,Deposit - Kestrel Media check 9568,Kestrel Media,,1200,3151.40,,62845.47
+GL-53476,2026-09-01,CD-818016,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,881.88,61963.59
+GL-53477,2026-09-01,CR-257017,Payment - Lindqvist Family Trust INV-8446,Lindqvist Family Trust,,1200,844.45,,62808.04
+GL-53478,2026-09-02,CR-673018,Deposit - Evergreen Charter School check 5859,Evergreen Charter School,,1200,3489.49,,66297.53
+GL-53479,2026-09-02,CR-891019,PaySwift payout 9/2,PaySwift,,4100,1414.52,,67712.05
+GL-53480,2026-09-02,CD-475020,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,363.78,67348.27
+GL-53481,2026-09-02,CD-292021,Wire to Seabright Medical Waste,Seabright Medical Waste,,2000,,436.96,66911.31
+GL-53482,2026-09-02,CD-947022,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,72.19,66839.12
+GL-53483,2026-09-02,CR-898023,Payment - Juniper Tech Labs INV-3183,Juniper Tech Labs,,1200,859.52,,67698.64
+GL-53484,2026-09-02,CD-948024,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,108.56,67590.08
+GL-53485,2026-09-02,CD-535025,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,385.31,67204.77
+GL-53486,2026-09-02,CD-157026,Check #3139 Harborview Lab Services,Harborview Lab Services,3139,2000,,1362.95,65841.82
+GL-53487,2026-09-02,CR-772027,Deposit - Evergreen Charter School check 7795,Evergreen Charter School,,1200,1693.38,,67535.20
+GL-53488,2026-09-02,CR-338028,PaySwift payout 9/2,PaySwift,,4100,540.41,,68075.61
+GL-53489,2026-09-02,CD-534029,Check #3146 Kindred Pet Food Supply,Kindred Pet Food Supply,3146,2000,,667.13,67408.48
+GL-53490,2026-09-02,CD-209030,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,212.90,67195.58
+GL-53491,2026-09-03,CD-887031,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,,804.37,66391.21
+GL-53492,2026-09-03,CD-255032,Kindred Pet Food Supply inv 69245,Kindred Pet Food Supply,,2000,,1179.64,65211.57
+GL-53493,2026-09-03,CR-310033,Deposit - Bayline Offices check 5614,Bayline Offices,,1200,3204.88,,68416.45
+GL-53494,2026-09-03,CR-643034,PaySwift payout 9/3,PaySwift,,4100,468.64,,68885.09
+GL-53495,2026-09-03,CR-255035,PaySwift payout 9/3,PaySwift,,4100,1232.34,,70117.43
+GL-53496,2026-09-03,CD-481036,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,22.06,70095.37
+GL-53497,2026-09-03,CD-682037,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,463.16,69632.21
+GL-53498,2026-09-03,CD-966038,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,1125.77,68506.44
+GL-53499,2026-09-03,CD-934039,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,25.02,68481.42
+GL-53500,2026-09-03,CD-421040,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,45.15,68436.27
+GL-53501,2026-09-04,CD-145041,Check #3127 Harborview Lab Services,Harborview Lab Services,3127,2000,,724.38,67711.89
+GL-53502,2026-09-04,CD-792042,Check #3132 Kindred Pet Food Supply,Kindred Pet Food Supply,3132,2000,,442.08,67269.81
+GL-53503,2026-09-04,CR-120043,PaySwift payout 9/4,PaySwift,,4100,1366.84,,68636.65
+GL-53504,2026-09-04,CD-353044,Wire to Seabright Medical Waste,Seabright Medical Waste,,2000,,499.83,68136.82
+GL-53505,2026-09-04,CD-696045,Seabright Medical Waste inv 97878,Seabright Medical Waste,,2000,,195.06,67941.76
+GL-53506,2026-09-04,CD-807046,Check #3136 Kindred Pet Food Supply,Kindred Pet Food Supply,3136,2000,,272.36,67669.40
+GL-53507,2026-09-04,CD-237047,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,2017.03,65652.37
+GL-53508,2026-09-04,CR-324048,PaySwift payout 9/4,PaySwift,,4100,445.74,,66098.11
+GL-53509,2026-09-04,CD-703049,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,358.18,65739.93
+GL-53510,2026-09-04,CD-582050,Kindred Pet Food Supply inv 4512,Kindred Pet Food Supply,,2000,,844.29,64895.64
+GL-53511,2026-09-04,CD-276051,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,33.43,64862.21
+GL-53512,2026-09-04,CD-529052,Kindred Pet Food Supply inv 18777,Kindred Pet Food Supply,,2000,,526.62,64335.59
+GL-53513,2026-09-04,CD-518053,Check #3159 Seabright Medical Waste,Seabright Medical Waste,3159,2000,,235.16,64100.43
+GL-53514,2026-09-05,CD-777054,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,,5661.83,58438.60
+GL-53515,2026-09-05,CR-909055,Payment - Bayline Offices INV-4556,Bayline Offices,,1200,2641.17,,61079.77
+GL-53516,2026-09-05,CD-678056,Check #3122 Harborview Lab Services,Harborview Lab Services,3122,2000,,623.74,60456.03
+GL-53517,2026-09-05,CD-982057,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,2792.20,57663.83
+GL-53518,2026-09-05,CD-338058,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,3114.21,54549.62
+GL-53519,2026-09-05,CD-812059,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,1043.48,53506.14
+GL-53520,2026-09-05,CD-549060,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,410.20,53095.94
+GL-53521,2026-09-05,CD-636061,Check #3147 Harborview Lab Services,Harborview Lab Services,3147,2000,,541.29,52554.65
+GL-53522,2026-09-05,CD-440062,Check #3156 Coastal Vet Distributors,Coastal Vet Distributors,3156,2000,,2316.93,50237.72
+GL-53523,2026-09-05,CD-182063,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,7154.53,43083.19
+GL-53524,2026-09-05,CD-652064,Harborview Lab Services inv 82637,Harborview Lab Services,,2000,,680.90,42402.29
+GL-53525,2026-09-06,CD-881065,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,4817.33,37584.96
+GL-53526,2026-09-06,CR-496066,Payment - Juniper Tech Labs INV-5899,Juniper Tech Labs,,1200,4013.91,,41598.87
+GL-53527,2026-09-06,CD-804067,Check #3126 Kindred Pet Food Supply,Kindred Pet Food Supply,3126,2000,,780.27,40818.60
+GL-53528,2026-09-06,CR-617068,Payment - Kestrel Media INV-5037,Kestrel Media,,1200,2011.95,,42830.55
+GL-53529,2026-09-06,CD-923069,Harborview Lab Services inv 92838,Harborview Lab Services,,2000,,817.62,42012.93
+GL-53530,2026-09-06,CD-788070,Check #3129 Kindred Pet Food Supply,Kindred Pet Food Supply,3129,2000,,648.40,41364.53
+GL-53531,2026-09-06,CD-520071,Coastal Vet Distributors inv 7179,Coastal Vet Distributors,,2000,,3712.11,37652.42
+GL-53532,2026-09-06,CR-959072,PaySwift payout 9/6,PaySwift,,4100,1641.86,,39294.28
+GL-53533,2026-09-06,CD-397073,Check #3138 Coastal Vet Distributors,Coastal Vet Distributors,3138,2000,,508.33,38785.95
+GL-53534,2026-09-06,CD-532074,Check #3140 Seabright Medical Waste,Seabright Medical Waste,3140,2000,,190.65,38595.30
+GL-53535,2026-09-06,CR-338075,PaySwift payout 9/6,PaySwift,,4100,1681.47,,40276.77
+GL-53536,2026-09-06,CD-223076,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,247.07,40029.70
+GL-53537,2026-09-06,CD-398077,Check #3151 Seabright Medical Waste,Seabright Medical Waste,3151,2000,,248.39,39781.31
+GL-53538,2026-09-07,CD-328078,Check #3121 Seabright Medical Waste,Seabright Medical Waste,3121,2000,,103.25,39678.06
+GL-53539,2026-09-07,CR-899079,Deposit - Juniper Tech Labs check 2041,Juniper Tech Labs,,1200,3296.40,,42974.46
+GL-53540,2026-09-07,CD-122080,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,80.28,42894.18
+GL-53541,2026-09-07,CR-489081,Deposit - Lindqvist Family Trust check 6782,Lindqvist Family Trust,,1200,869.49,,43763.67
+GL-53542,2026-09-07,CD-928082,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,408.95,43354.72
+GL-53543,2026-09-07,CD-916083,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,150.63,43204.09
+GL-53544,2026-09-07,CR-450084,PaySwift payout 9/7,PaySwift,,4100,1014.57,,44218.66
+GL-53545,2026-09-07,CR-110085,PaySwift payout 9/7,PaySwift,,4100,716.61,,44935.27
+GL-53546,2026-09-07,CD-732086,Seabright Medical Waste inv 20848,Seabright Medical Waste,,2000,,234.34,44700.93
+GL-53547,2026-09-07,CR-907087,PaySwift payout 9/7,PaySwift,,4100,1310.73,,46011.66
+GL-53548,2026-09-07,CD-927088,Coastal Vet Distributors inv 40344,Coastal Vet Distributors,,2000,,3405.23,42606.43
+GL-53549,2026-09-07,CD-381089,Check #3162 Coastal Vet Distributors,Coastal Vet Distributors,3162,2000,,565.19,42041.24
+GL-53550,2026-09-07,CD-883090,Harborview Lab Services inv 54708,Harborview Lab Services,,2000,,1240.73,40800.51
+GL-53551,2026-09-07,CD-345091,Harborview Lab Services inv 54708,Harborview Lab Services,,2000,,1240.73,39559.78
+GL-53552,2026-09-08,CD-720092,Accounting software - CloudLedger,CloudLedger,,6800,,99.59,39460.19
+GL-53553,2026-09-08,CD-606093,Check #3120 Harborview Lab Services,Harborview Lab Services,3120,2000,,564.56,38895.63
+GL-53554,2026-09-08,CR-191094,PaySwift payout 9/8,PaySwift,,4100,1294.50,,40190.13
+GL-53555,2026-09-08,CR-410095,Payment - Lindqvist Family Trust INV-6022,Lindqvist Family Trust,,1200,1457.67,,41647.80
+GL-53556,2026-09-08,CD-240096,Coastal Vet Distributors inv 70988,Coastal Vet Distributors,,2000,,1966.61,39681.19
+GL-53557,2026-09-08,CD-616097,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,5474.35,34206.84
+GL-53558,2026-09-08,CD-347098,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,49.95,34156.89
+GL-53559,2026-09-08,CR-725099,PaySwift payout 9/8,PaySwift,,4100,657.17,,34814.06
+GL-53560,2026-09-09,CR-682100,PaySwift payout 9/9,PaySwift,,4100,905.82,,35719.88
+GL-53561,2026-09-09,CR-710101,PaySwift payout 9/9,PaySwift,,4100,1678.13,,37398.01
+GL-53562,2026-09-09,CD-340102,Check #3125 Kindred Pet Food Supply,Kindred Pet Food Supply,3125,2000,,1039.18,36358.83
+GL-53563,2026-09-09,CR-314103,PaySwift payout 9/9,PaySwift,,4100,1274.07,,37632.90
+GL-53564,2026-09-09,CR-857104,Deposit - Kestrel Media check 3676,Kestrel Media,,1200,1338.33,,38971.23
+GL-53565,2026-09-09,CD-576105,Harborview Lab Services inv 14734,Harborview Lab Services,,2000,,899.24,38071.99
+GL-53566,2026-09-09,CD-714106,Wire to Seabright Medical Waste,Seabright Medical Waste,,2000,,436.93,37635.06
+GL-53567,2026-09-09,CD-448107,Wire to Seabright Medical Waste,Seabright Medical Waste,,2000,,383.48,37251.58
+GL-53568,2026-09-09,CD-805108,Check #3142 Harborview Lab Services,Harborview Lab Services,3142,2000,,1388.46,35863.12
+GL-53569,2026-09-09,CD-723109,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,1677.13,34185.99
+GL-53570,2026-09-09,CR-806110,PaySwift payout 9/9,PaySwift,,4100,1285.25,,35471.24
+GL-53571,2026-09-09,CR-406111,Deposit - Coastside Realty check 1715,Coastside Realty,,1200,2844.99,,38316.23
+GL-53572,2026-09-09,CD-512112,Check #3149 Kindred Pet Food Supply,Kindred Pet Food Supply,3149,2000,,900.76,37415.47
+GL-53573,2026-09-09,CR-181113,PaySwift payout 9/9,PaySwift,,4100,1263.63,,38679.10
+GL-53574,2026-09-09,CR-475114,Payment - Kestrel Media INV-4890,Kestrel Media,,1200,1855.94,,40535.04
+GL-53575,2026-09-09,CR-122115,Deposit - Rivera Catering check 6758,Rivera Catering,,1200,141.92,,40676.96
+GL-53576,2026-09-10,CR-110116,Payment - Kestrel Media INV-6792,Kestrel Media,,1200,3800.14,,44477.10
+GL-53577,2026-09-10,CD-480117,Seabright Medical Waste inv 80337,Seabright Medical Waste,,2000,,177.10,44300.00
+GL-53578,2026-09-10,CD-793118,Coastal Vet Distributors inv 67229,Coastal Vet Distributors,,2000,,761.77,43538.23
+GL-53579,2026-09-10,CR-456119,PaySwift payout 9/10,PaySwift,,4100,1518.32,,45056.55
+GL-53580,2026-09-10,CD-240120,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,25.41,45031.14
+GL-53581,2026-09-10,CR-917121,Deposit - Juniper Tech Labs check 4766,Juniper Tech Labs,,1200,349.80,,45380.94
+GL-53582,2026-09-10,CR-621122,PaySwift payout 9/10,PaySwift,,4100,305.19,,45686.13
+GL-53583,2026-09-10,CD-902123,Check #3143 Coastal Vet Distributors,Coastal Vet Distributors,3143,2000,,2974.19,42711.94
+GL-53584,2026-09-10,CR-223124,PaySwift payout 9/10,PaySwift,,4100,1544.89,,44256.83
+GL-53585,2026-09-10,CR-522125,PaySwift payout 9/10,PaySwift,,4100,1582.92,,45839.75
+GL-53586,2026-09-10,CR-521126,PaySwift payout 9/10,PaySwift,,4100,1513.91,,47353.66
+GL-53587,2026-09-10,CD-466127,Check #3145 Harborview Lab Services,Harborview Lab Services,3145,2000,,1271.53,46082.13
+GL-53588,2026-09-10,CR-910128,Payment - Lindqvist Family Trust INV-4139,Lindqvist Family Trust,,1200,1990.81,,48072.94
+GL-53589,2026-09-10,CD-365129,Check #3152 Kindred Pet Food Supply,Kindred Pet Food Supply,3152,2000,,502.53,47570.41
+GL-53590,2026-09-10,CD-923130,Check #3153 Kindred Pet Food Supply,Kindred Pet Food Supply,3153,2000,,1224.39,46346.02
+GL-53591,2026-09-10,CD-998131,Check #3155 Seabright Medical Waste,Seabright Medical Waste,3155,2000,,138.08,46207.94
+GL-53592,2026-09-10,CR-260132,Deposit - Evergreen Charter School check 8030,Evergreen Charter School,,1200,530.09,,46738.03
+GL-53593,2026-09-10,CR-767133,Deposit - Bayline Offices check 3126,Bayline Offices,,1200,2242.06,,48980.09
+GL-53594,2026-09-11,CD-837134,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,1803.81,47176.28
+GL-53595,2026-09-11,CR-662135,Deposit - Bayline Offices check 6784,Bayline Offices,,1200,2789.91,,49966.19
+GL-53596,2026-09-11,CD-918136,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,77.62,49888.57
+GL-53597,2026-09-11,CD-270137,Check #3128 Seabright Medical Waste,Seabright Medical Waste,3128,2000,,219.36,49669.21
+GL-53598,2026-09-11,CR-285138,Deposit - Marin Wellness Center check 1405,Marin Wellness Center,,1200,3789.59,,53458.80
+GL-53599,2026-09-11,CD-409139,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,477.62,52981.18
+GL-53600,2026-09-11,CD-602140,Kindred Pet Food Supply inv 61264,Kindred Pet Food Supply,,2000,,523.19,52457.99
+GL-53601,2026-09-11,CR-218141,Deposit - Marin Wellness Center check 8240,Marin Wellness Center,,1200,2976.35,,55434.34
+GL-53602,2026-09-11,CD-635142,Check #3134 Coastal Vet Distributors,Coastal Vet Distributors,3134,2000,,486.86,54947.48
+GL-53603,2026-09-11,CD-258143,Check #3135 Seabright Medical Waste,Seabright Medical Waste,3135,2000,,228.88,54718.60
+GL-53604,2026-09-11,CD-865144,Check #3137 Kindred Pet Food Supply,Kindred Pet Food Supply,3137,2000,,167.58,54551.02
+GL-53605,2026-09-11,CR-544145,Payment - Marin Wellness Center INV-5957,Marin Wellness Center,,1200,357.38,,54908.40
+GL-53606,2026-09-11,CD-437146,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,26.52,54881.88
+GL-53607,2026-09-11,CD-174147,Kindred Pet Food Supply inv 1826,Kindred Pet Food Supply,,2000,,855.65,54026.23
+GL-53608,2026-09-11,CR-545148,PaySwift payout 9/11,PaySwift,,4100,686.44,,54712.67
+GL-53609,2026-09-11,CD-253149,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,2009.53,52703.14
+GL-53610,2026-09-11,CD-861150,Harborview Lab Services inv 39235,Harborview Lab Services,,2000,,582.85,52120.29
+GL-53611,2026-09-11,CD-556151,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,1206.74,50913.55
+GL-53612,2026-09-12,CR-887152,PaySwift payout 9/12,PaySwift,,4100,549.17,,51462.72
+GL-53613,2026-09-12,CD-725153,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,47.12,51415.60
+GL-53614,2026-09-12,CR-193154,PaySwift payout 9/12,PaySwift,,4100,1592.48,,53008.08
+GL-53615,2026-09-12,CR-275155,PaySwift payout 9/12,PaySwift,,4100,1417.79,,54425.87
+GL-53616,2026-09-12,CR-607156,Payment - Lindqvist Family Trust INV-4365,Lindqvist Family Trust,,1200,3898.84,,58324.71
+GL-53617,2026-09-12,CD-871157,Check #3141 Kindred Pet Food Supply,Kindred Pet Food Supply,3141,2000,,511.59,57813.12
+GL-53618,2026-09-12,CD-314158,Coastal Vet Distributors inv 74978,Coastal Vet Distributors,,2000,,3267.52,54545.60
+GL-53619,2026-09-12,CR-822159,Deposit - Marin Wellness Center check 7527,Marin Wellness Center,,1200,2018.51,,56564.11
+GL-53620,2026-09-12,CD-756160,Seabright Medical Waste inv 60910,Seabright Medical Waste,,2000,,158.40,56405.71
+GL-53621,2026-09-12,CR-386161,PaySwift payout 9/12,PaySwift,,4100,1182.09,,57587.80
+GL-53622,2026-09-12,CR-423162,Payment - Kestrel Media INV-2111,Kestrel Media,,1200,2449.76,,60037.56
+GL-53623,2026-09-13,CR-867163,Deposit - Kestrel Media check 9259,Kestrel Media,,1200,1329.70,,61367.26
+GL-53624,2026-09-13,CR-986164,PaySwift payout 9/13,PaySwift,,4100,289.93,,61657.19
+GL-53625,2026-09-13,CD-564165,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,2552.30,59104.89
+GL-53626,2026-09-13,CD-831166,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,5348.64,53756.25
+GL-53627,2026-09-13,CD-861167,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,167.43,53588.82
+GL-53628,2026-09-13,CD-631168,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,239.63,53349.19
+GL-53629,2026-09-13,CR-240169,Deposit - Marin Wellness Center check 9131,Marin Wellness Center,,1200,1466.45,,54815.64
+GL-53630,2026-09-14,CD-230170,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,,1203.44,53612.20
+GL-53631,2026-09-14,CR-391171,PaySwift payout 9/14,PaySwift,,4100,441.31,,54053.51
+GL-53632,2026-09-14,CR-976172,Deposit - Coastside Realty check 4570,Coastside Realty,,1200,827.60,,54881.11
+GL-53633,2026-09-14,CR-539173,Payment - Marin Wellness Center INV-5349,Marin Wellness Center,,1200,109.11,,54990.22
+GL-53634,2026-09-14,CD-696174,Harborview Lab Services inv 33070,Harborview Lab Services,,2000,,1234.85,53755.37
+GL-53635,2026-09-14,CR-524175,Deposit - Juniper Tech Labs check 8607,Juniper Tech Labs,,1200,3654.21,,57409.58
+GL-53636,2026-09-14,CD-758176,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,298.49,57111.09
+GL-53637,2026-09-14,CR-641177,Payment - Kestrel Media INV-5613,Kestrel Media,,1200,2231.46,,59342.55
+GL-53638,2026-09-14,CR-946178,Deposit - Juniper Tech Labs check 3928,Juniper Tech Labs,,1200,763.71,,60106.26
+GL-53639,2026-09-14,CD-137179,Check #3133 Harborview Lab Services,Harborview Lab Services,3133,2000,,506.08,59600.18
+GL-53640,2026-09-14,CD-718180,Kindred Pet Food Supply inv 45258,Kindred Pet Food Supply,,2000,,1244.74,58355.44
+GL-53641,2026-09-14,CD-888181,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,23.61,58331.83
+GL-53642,2026-09-14,CD-854182,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,2435.47,55896.36
+GL-53643,2026-09-14,CR-804183,Deposit - Kestrel Media check 3001,Kestrel Media,,1200,3563.29,,59459.65
+GL-53644,2026-09-14,CD-909184,Check #3150 Kindred Pet Food Supply,Kindred Pet Food Supply,3150,2000,,266.76,59192.89
+GL-53645,2026-09-14,CD-785185,Kindred Pet Food Supply inv 87507,Kindred Pet Food Supply,,2000,,422.02,58770.87
+GL-53646,2026-09-14,CD-218186,Check #3157 Coastal Vet Distributors,Coastal Vet Distributors,3157,2000,,3334.29,55436.58
+GL-53647,2026-09-15,PR-298187,Payroll run 9/15,Ledgerly Payroll,,6200,,14680.03,40756.55
+GL-53648,2026-09-15,CR-610188,Deposit - Marin Wellness Center check 4877,Marin Wellness Center,,1200,1361.58,,42118.13
+GL-53649,2026-09-15,CR-917189,PaySwift payout 9/15,PaySwift,,4100,1725.50,,43843.63
+GL-53650,2026-09-15,CD-120190,Check #3131 Harborview Lab Services,Harborview Lab Services,3131,2000,,615.95,43227.68
+GL-53651,2026-09-15,CR-432191,Payment - Evergreen Charter School INV-1847,Evergreen Charter School,,1200,3705.72,,46933.40
+GL-53652,2026-09-15,CD-339192,Harborview Lab Services inv 44085,Harborview Lab Services,,2000,,191.58,46741.82
+GL-53653,2026-09-15,CD-156193,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,4888.23,41853.59
+GL-53654,2026-09-15,CD-563194,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,2110.15,39743.44
+GL-53655,2026-09-15,CD-526195,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,376.63,39366.81
+GL-53656,2026-09-15,CR-389196,PaySwift payout 9/15,PaySwift,,4100,700.12,,40066.93
+GL-53657,2026-09-15,CD-795197,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,16.81,40050.12
+GL-53658,2026-09-16,CR-802198,PaySwift payout 9/16,PaySwift,,4100,294.17,,40344.29
+GL-53659,2026-09-16,CD-875199,Check #3130 Harborview Lab Services,Harborview Lab Services,3130,2000,,876.67,39467.62
+GL-53660,2026-09-16,CR-802200,PaySwift payout 9/16,PaySwift,,4100,953.31,,40420.93
+GL-53661,2026-09-16,CR-944201,Deposit - Kestrel Media check 3364,Kestrel Media,,1200,1689.60,,42110.53
+GL-53662,2026-09-16,CR-494202,PaySwift payout 9/16,PaySwift,,4100,1341.84,,43452.37
+GL-53663,2026-09-16,CD-729203,Coastal Vet Distributors inv 68534,Coastal Vet Distributors,,2000,,349.35,43103.02
+GL-53664,2026-09-16,CD-756204,Check #3144 Kindred Pet Food Supply,Kindred Pet Food Supply,3144,2000,,887.57,42215.45
+GL-53665,2026-09-16,CD-537205,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,1931.24,40284.21
+GL-53666,2026-09-16,CD-686206,Harborview Lab Services inv 61005,Harborview Lab Services,,2000,,1340.06,38944.15
+GL-53667,2026-09-16,CD-289207,Harborview Lab Services inv 59525,Harborview Lab Services,,2000,,1383.54,37560.61
+GL-53668,2026-09-17,CD-717208,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,177.64,37382.97
+GL-53669,2026-09-17,CR-462209,Payment - Juniper Tech Labs INV-6380,Juniper Tech Labs,,1200,1599.26,,38982.23
+GL-53670,2026-09-17,CD-461210,Wire to Kindred Pet Food Supply,Kindred Pet Food Supply,,2000,,2666.76,36315.47
+GL-53671,2026-09-17,CD-383211,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,164.71,36150.76
+GL-53672,2026-09-17,CR-657212,Payment - Coastside Realty INV-4604,Coastside Realty,,1200,3003.41,,39154.17
+GL-53673,2026-09-17,CD-952213,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,425.88,38728.29
+GL-53674,2026-09-17,CD-730214,Seabright Medical Waste inv 57620,Seabright Medical Waste,,2000,,205.10,38523.19
+GL-53675,2026-09-17,CR-693215,PaySwift payout 9/17,PaySwift,,4100,1032.56,,39555.75
+GL-53676,2026-09-17,CD-900216,Check #3148 Kindred Pet Food Supply,Kindred Pet Food Supply,3148,2000,,931.95,38623.80
+GL-53677,2026-09-17,CR-267217,Payment - Lindqvist Family Trust INV-1599,Lindqvist Family Trust,,1200,3793.33,,42417.13
+GL-53678,2026-09-17,CD-839218,Check #3154 Harborview Lab Services,Harborview Lab Services,3154,2000,,425.42,41991.71
+GL-53679,2026-09-17,CR-344219,Deposit - Kestrel Media check 1742,Kestrel Media,,1200,2279.73,,44271.44
+GL-53680,2026-09-18,CD-180220,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,383.71,43887.73
+GL-53681,2026-09-18,CD-980221,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,408.13,43479.60
+GL-53682,2026-09-18,CD-710222,Check #3124 Harborview Lab Services,Harborview Lab Services,3124,2000,,838.96,42640.64
+GL-53683,2026-09-18,CD-919223,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,1266.10,41374.54
+GL-53684,2026-09-18,CR-484224,PaySwift payout 9/18,PaySwift,,4100,1705.28,,43079.82
+GL-53685,2026-09-18,CD-865225,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,266.80,42813.02
+GL-53686,2026-09-18,CR-410226,Payment - Marin Wellness Center INV-8301,Marin Wellness Center,,1200,2328.08,,45141.10
+GL-53687,2026-09-18,CD-698227,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,465.42,44675.68
+GL-53688,2026-09-18,CR-890228,PaySwift payout 9/18,PaySwift,,4100,203.69,,44879.37
+GL-53689,2026-09-18,CD-858229,Harborview Lab Services inv 87482,Harborview Lab Services,,2000,,425.47,44453.90
+GL-53690,2026-09-18,CD-344230,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,260.75,44193.15
+GL-53691,2026-09-18,CR-206231,Deposit - Marin Wellness Center check 8560,Marin Wellness Center,,1200,3565.51,,47758.66
+GL-53692,2026-09-18,CD-514232,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,186.20,47572.46
+GL-53693,2026-09-18,CD-490233,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,459.69,47112.77
+GL-53694,2026-09-18,CD-777234,Check #3158 Seabright Medical Waste,Seabright Medical Waste,3158,2000,,256.05,46856.72
+GL-53695,2026-09-18,CD-741235,Check #3161 Harborview Lab Services,Harborview Lab Services,3161,2000,,1364.77,45491.95
+GL-53696,2026-09-19,CD-344236,Kindred Pet Food Supply inv 5067,Kindred Pet Food Supply,,2000,,971.84,44520.11
+GL-53697,2026-09-19,CR-950237,Payment - Rivera Catering INV-3294,Rivera Catering,,1200,1715.43,,46235.54
+GL-53698,2026-09-19,CR-721238,PaySwift payout 9/19,PaySwift,,4100,900.58,,47136.12
+GL-53699,2026-09-19,CD-179239,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,1077.71,46058.41
+GL-53700,2026-09-19,CD-979240,Seabright Medical Waste inv 84442,Seabright Medical Waste,,2000,,176.03,45882.38
+GL-53701,2026-09-19,CR-693241,PaySwift payout 9/19,PaySwift,,4100,449.34,,46331.72
+GL-53702,2026-09-19,CD-347242,Kindred Pet Food Supply inv 3891,Kindred Pet Food Supply,,2000,,290.35,46041.37
+GL-53703,2026-09-19,CR-786243,Payment - Coastside Realty INV-4429,Coastside Realty,,1200,3972.35,,50013.72
+GL-53704,2026-09-19,CD-107244,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,406.57,49607.15
+GL-53705,2026-09-19,CD-518245,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,159.76,49447.39
+GL-53706,2026-09-19,CR-481246,Deposit - Evergreen Charter School check 6048,Evergreen Charter School,,1200,2567.30,,52014.69
+GL-53707,2026-09-19,CD-877247,Check #3160 Coastal Vet Distributors,Coastal Vet Distributors,3160,2000,,1750.21,50264.48
+GL-53708,2026-09-20,CD-136248,Loan payment - First Coast Bank,First Coast Bank,,2500,,1133.71,49130.77
+GL-53709,2026-09-20,CR-434249,Payment - Kestrel Media INV-2275,Kestrel Media,,1200,2965.77,,52096.54
+GL-53710,2026-09-20,CD-322250,Kindred Pet Food Supply inv 29137,Kindred Pet Food Supply,,2000,,640.72,51455.82
+GL-53711,2026-09-20,CR-760251,Payment - Juniper Tech Labs INV-5088,Juniper Tech Labs,,1200,505.22,,51961.04
+GL-53712,2026-09-20,CD-798252,Harborview Lab Services inv 47756,Harborview Lab Services,,2000,,520.79,51440.25
+GL-53713,2026-09-20,CR-371253,PaySwift payout 9/20,PaySwift,,4100,799.99,,52240.24
+GL-53714,2026-09-20,CD-955254,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,78.89,52161.35
+GL-53715,2026-09-20,CR-589255,Deposit - Evergreen Charter School check 8475,Evergreen Charter School,,1200,2625.31,,54786.66
+GL-53716,2026-09-20,CR-255256,Deposit - Juniper Tech Labs check 2592,Juniper Tech Labs,,1200,3868.77,,58655.43
+GL-53717,2026-09-20,CD-353257,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,138.02,58517.41
+GL-53718,2026-09-20,CD-358258,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,66.35,58451.06
+GL-53719,2026-09-20,CD-633259,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,330.18,58120.88
+GL-53720,2026-09-20,CR-880260,Deposit - Coastside Realty check 2212,Coastside Realty,,1200,2553.25,,60674.13
+GL-53721,2026-09-21,CR-428261,PaySwift payout 9/21,PaySwift,,4100,712.81,,61386.94
+GL-53722,2026-09-21,CD-485262,Coastal Vet Distributors inv 62863,Coastal Vet Distributors,,2000,,2906.90,58480.04
+GL-53723,2026-09-21,CR-226263,PaySwift payout 9/21,PaySwift,,4100,1669.21,,60149.25
+GL-53724,2026-09-21,CR-301264,PaySwift payout 9/21,PaySwift,,4100,797.50,,60946.75
+GL-53725,2026-09-21,CR-819265,Deposit - Kestrel Media check 9461,Kestrel Media,,1200,298.82,,61245.57
+GL-53726,2026-09-21,CR-462266,PaySwift payout 9/21,PaySwift,,4100,1425.45,,62671.02
+GL-53727,2026-09-21,CR-562267,Payment - Kestrel Media INV-2340,Kestrel Media,,1200,1248.24,,63919.26
+GL-53728,2026-09-21,CR-883268,Deposit - Juniper Tech Labs check 6169,Juniper Tech Labs,,1200,2295.63,,66214.89
+GL-53729,2026-09-21,CD-602269,Coastal Vet Distributors inv 6398,Coastal Vet Distributors,,2000,,391.89,65823.00
+GL-53730,2026-09-21,CD-622270,Kindred Pet Food Supply inv 23822,Kindred Pet Food Supply,,2000,,1163.63,64659.37
+GL-53731,2026-09-22,CD-717271,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,,3977.05,60682.32
+GL-53732,2026-09-22,CD-766272,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,319.15,60363.17
+GL-53733,2026-09-22,CR-372273,Payment - Bayline Offices INV-2698,Bayline Offices,,1200,3627.91,,63991.08
+GL-53734,2026-09-22,CD-876274,Kindred Pet Food Supply inv 55616,Kindred Pet Food Supply,,2000,,1086.35,62904.73
+GL-53735,2026-09-22,CD-973275,Retail food - Kindred Pet Food Supply,Kindred Pet Food Supply,,5000,,330.73,62574.00
+GL-53736,2026-09-22,CR-425276,Payment - Juniper Tech Labs INV-2739,Juniper Tech Labs,,1200,1369.18,,63943.18
+GL-53737,2026-09-22,CR-728277,PaySwift payout 9/22,PaySwift,,4100,1632.45,,65575.63
+GL-53738,2026-09-22,CR-925278,PaySwift payout 9/22,PaySwift,,4100,277.61,,65853.24
+GL-53739,2026-09-22,CD-277279,Seabright Medical Waste inv 71833,Seabright Medical Waste,,2000,,219.50,65633.74
+GL-53740,2026-09-22,CR-346280,PaySwift payout 9/22,PaySwift,,4100,1015.64,,66649.38
+GL-53741,2026-09-22,CR-962281,Payment - Rivera Catering INV-1310,Rivera Catering,,1200,381.22,,67030.60
+GL-53742,2026-09-23,CR-305282,PaySwift payout 9/23,PaySwift,,4100,661.23,,67691.83
+GL-53743,2026-09-23,CD-830283,Seabright Medical Waste inv 94458,Seabright Medical Waste,,2000,,259.56,67432.27
+GL-53744,2026-09-23,CD-977284,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,67.96,67364.31
+GL-53745,2026-09-23,CD-916285,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,40.73,67323.58
+GL-53746,2026-09-23,CR-998286,Payment - Bayline Offices INV-5083,Bayline Offices,,1200,1431.67,,68755.25
+GL-53747,2026-09-23,CR-833287,Payment - Bayline Offices INV-8829,Bayline Offices,,1200,3240.82,,71996.07
+GL-53748,2026-09-23,CD-387288,Seabright Medical Waste inv 14745,Seabright Medical Waste,,2000,,173.39,71822.68
+GL-53749,2026-09-23,CD-551289,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,383.45,71439.23
+GL-53750,2026-09-23,CR-711290,PaySwift payout 9/23,PaySwift,,4100,420.10,,71859.33
+GL-53751,2026-09-23,CR-716291,Payment - Marin Wellness Center INV-4853,Marin Wellness Center,,1200,1886.99,,73746.32
+GL-53752,2026-09-23,CD-199292,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,409.22,73337.10
+GL-53753,2026-09-23,CR-901293,Deposit - Rivera Catering check 4451,Rivera Catering,,1200,4045.67,,77382.77
+GL-53754,2026-09-24,CR-870294,PaySwift payout 9/24,PaySwift,,4100,1635.98,,79018.75
+GL-53755,2026-09-24,CD-530295,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,2136.48,76882.27
+GL-53756,2026-09-24,CD-498296,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,341.54,76540.73
+GL-53757,2026-09-24,CD-304297,Lab fees - Harborview Lab Services,Harborview Lab Services,,5000,,346.03,76194.70
+GL-53758,2026-09-24,CD-520298,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,17.97,76176.73
+GL-53759,2026-09-24,CR-513299,Payment - Juniper Tech Labs INV-1538,Juniper Tech Labs,,1200,3294.47,,79471.20
+GL-53760,2026-09-24,CR-859300,PaySwift payout 9/24,PaySwift,,4100,1607.76,,81078.96
+GL-53761,2026-09-24,CD-563301,Waste disposal - Seabright Medical Waste,Seabright Medical Waste,,6600,,55.02,81023.94
+GL-53762,2026-09-25,CR-653302,PaySwift payout 9/25,PaySwift,,4100,1568.56,,82592.50
+GL-53763,2026-09-25,CD-381303,Kindred Pet Food Supply inv 81576,Kindred Pet Food Supply,,2000,,1018.59,81573.91
+GL-53764,2026-09-25,CD-716304,Kindred Pet Food Supply inv 35879,Kindred Pet Food Supply,,2000,,462.28,81111.63
+GL-53765,2026-09-25,CR-515305,PaySwift payout 9/25,PaySwift,,4100,1221.92,,82333.55
+GL-53766,2026-09-25,CD-390306,Pharmaceuticals - Coastal Vet Distributors,Coastal Vet Distributors,,5000,,866.70,81466.85
+GL-53767,2026-09-25,CD-453307,Seabright Medical Waste inv 89181,Seabright Medical Waste,,2000,,127.86,81338.99
+GL-53768,2026-09-25,CD-966308,Kindred Pet Food Supply inv 36620,Kindred Pet Food Supply,,2000,,334.94,81004.05
+GL-53769,2026-09-26,CD-632309,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,6972.28,74031.77
+GL-53770,2026-09-26,CD-741310,Wire to Seabright Medical Waste,Seabright Medical Waste,,2000,,435.38,73596.39
+GL-53771,2026-09-26,CD-351311,Wire to Harborview Lab Services,Harborview Lab Services,,2000,,1501.50,72094.89
+GL-53772,2026-09-27,CD-836312,Wire to Coastal Vet Distributors,Coastal Vet Distributors,,2000,,7925.01,64169.88
+GL-53773,2026-09-28,CD-894313,Check #3163 Kindred Pet Food Supply,Kindred Pet Food Supply,3163,2000,,688.71,63481.17
+GL-53774,2026-09-29,PR-393314,Payroll run 9/29,Ledgerly Payroll,,6200,,8298.13,55183.04
+GL-53775,2026-09-30,CD-376315,Check #3164 Kindred Pet Food Supply,Kindred Pet Food Supply,3164,2000,,1040.33,54142.71

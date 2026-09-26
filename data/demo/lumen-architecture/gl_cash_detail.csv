@@ -1,0 +1,165 @@
+Line ID,Posting Date,JE Number,Memo,Counterparty,Check #,Contra Account,Amount,Running Balance
+GL-29196,09/01/2026,CD-149000,Check #3391 Vectorform Software,Vectorform Software,3391,2000,(1551.11),175158.66
+GL-29197,09/01/2026,CD-431001,Check #3398 Blueprint Reprographics,Blueprint Reprographics,3398,2000,(200.39),174958.27
+GL-29198,09/01/2026,CD-716002,Vectorform Software inv 11507,Vectorform Software,,2000,(2325.27),172633.00
+GL-29199,09/01/2026,CR-711003,PaySwift payout 9/1,PaySwift,,4100,1909.35,174542.35
+GL-29200,09/01/2026,CR-413004,PaySwift payout 9/1,PaySwift,,4100,3200.28,177742.63
+GL-29201,09/01/2026,CR-774005,PaySwift payout 9/1,PaySwift,,4100,2457.08,180199.71
+GL-29202,09/02/2026,CR-842006,PaySwift payout 9/2,PaySwift,,4100,1555.46,181755.17
+GL-29203,09/02/2026,CD-532007,Vectorform Software inv 82196,Vectorform Software,,2000,(1268.40),180486.77
+GL-29204,09/02/2026,CD-722008,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(424.80),180061.97
+GL-29205,09/02/2026,CD-547009,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(11000.61),169061.36
+GL-29206,09/02/2026,CR-124010,Deposit - Two Rivers Market check 1381,Two Rivers Market,,1200,8013.36,177074.72
+GL-29207,09/03/2026,CD-286011,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,(861.45),176213.27
+GL-29208,09/03/2026,CR-439012,PaySwift payout 9/3,PaySwift,,4100,3242.17,179455.44
+GL-29209,09/03/2026,CD-385013,Check #3406 Vectorform Software,Vectorform Software,3406,2000,(651.88),178803.56
+GL-29210,09/03/2026,CD-698014,Design software - Vectorform Software,Vectorform Software,,6800,(643.56),178160.00
+GL-29211,09/03/2026,CD-894015,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(1956.18),176203.82
+GL-29212,09/03/2026,CR-598016,PaySwift payout 9/3,PaySwift,,4100,1156.46,177360.28
+GL-29213,09/03/2026,CR-844017,PaySwift payout 9/3,PaySwift,,4100,1951.41,179311.69
+GL-29214,09/03/2026,CD-384018,Wire to Blueprint Reprographics,Blueprint Reprographics,,2000,(1147.74),178163.95
+GL-29215,09/03/2026,CD-962019,Wire to Vectorform Software,Vectorform Software,,2000,(4150.89),174013.06
+GL-29216,09/04/2026,CD-510020,Vectorform Software inv 29782,Vectorform Software,,2000,(1011.35),173001.71
+GL-29217,09/04/2026,CR-884021,Deposit - Anchor Point Condos HOA check 6523,Anchor Point Condos HOA,,1200,4931.65,177933.36
+GL-29218,09/04/2026,CD-447022,Check #3401 Blueprint Reprographics,Blueprint Reprographics,3401,2000,(608.54),177324.82
+GL-29219,09/04/2026,CD-393023,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(13775.15),163549.67
+GL-29220,09/04/2026,CD-308024,Wire to Blueprint Reprographics,Blueprint Reprographics,,2000,(1545.18),162004.49
+GL-29221,09/04/2026,CD-956025,Design software - Vectorform Software,Vectorform Software,,6800,(573.66),161430.83
+GL-29222,09/04/2026,CD-929026,Check #3412 Blueprint Reprographics,Blueprint Reprographics,3412,2000,(77.20),161353.63
+GL-29223,09/05/2026,CD-234027,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,(8477.99),152875.64
+GL-29224,09/05/2026,CD-160028,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(1670.13),151205.51
+GL-29225,09/05/2026,CD-395029,Check #3395 Vectorform Software,Vectorform Software,3395,2000,(963.14),150242.37
+GL-29226,09/05/2026,CD-250030,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(8961.92),141280.45
+GL-29227,09/05/2026,CD-652031,Check #3416 Blueprint Reprographics,Blueprint Reprographics,3416,2000,(358.51),140921.94
+GL-29228,09/06/2026,CR-654032,Deposit - Two Rivers Market check 5519,Two Rivers Market,,1200,1717.32,142639.26
+GL-29229,09/06/2026,CD-352033,Vectorform Software inv 51568,Vectorform Software,,2000,(988.49),141650.77
+GL-29230,09/06/2026,CD-337034,Structa Engineering Consultants inv 58766,Structa Engineering Consultants,,2000,(2801.57),138849.20
+GL-29231,09/06/2026,CR-140035,Payment - Two Rivers Market INV-8227,Two Rivers Market,,1200,3395.49,142244.69
+GL-29232,09/06/2026,CD-501036,Blueprint Reprographics inv 43624,Blueprint Reprographics,,2000,(601.98),141642.71
+GL-29233,09/06/2026,CD-493037,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(107.28),141535.43
+GL-29234,09/07/2026,CR-346038,Deposit - Two Rivers Market check 6351,Two Rivers Market,,1200,3515.43,145050.86
+GL-29235,09/07/2026,CD-745039,Check #3409 Structa Engineering Consultants,Structa Engineering Consultants,3409,2000,(2057.29),142993.57
+GL-29236,09/07/2026,CD-780040,Blueprint Reprographics inv 54815,Blueprint Reprographics,,2000,(245.07),142748.50
+GL-29237,09/07/2026,CD-271041,Design software - Vectorform Software,Vectorform Software,,6800,(711.60),142036.90
+GL-29238,09/08/2026,CD-737042,Accounting software - CloudLedger,CloudLedger,,6800,(81.79),141955.11
+GL-29239,09/08/2026,CR-395043,PaySwift payout 9/8,PaySwift,,4100,837.78,142792.89
+GL-29240,09/08/2026,CD-444044,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(179.44),142613.45
+GL-29241,09/08/2026,CD-320045,Structa Engineering Consultants inv 92819,Structa Engineering Consultants,,2000,(1062.97),141550.48
+GL-29242,09/08/2026,CD-399046,Design software - Vectorform Software,Vectorform Software,,6800,(588.65),140961.83
+GL-29243,09/08/2026,CD-413047,Check #3408 Blueprint Reprographics,Blueprint Reprographics,3408,2000,(357.65),140604.18
+GL-29244,09/08/2026,CR-811048,PaySwift payout 9/8,PaySwift,,4100,2882.68,143486.86
+GL-29245,09/09/2026,CD-409049,Check #3392 Vectorform Software,Vectorform Software,3392,2000,(901.73),142585.13
+GL-29246,09/09/2026,CD-830050,Check #3403 Blueprint Reprographics,Blueprint Reprographics,3403,2000,(730.53),141854.60
+GL-29247,09/09/2026,CR-465051,PaySwift payout 9/9,PaySwift,,4100,2358.10,144212.70
+GL-29248,09/09/2026,CR-909052,PaySwift payout 9/9,PaySwift,,4100,1423.81,145636.51
+GL-29249,09/09/2026,CD-506053,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(265.03),145371.48
+GL-29250,09/09/2026,CR-854054,PaySwift payout 9/9,PaySwift,,4100,1588.04,146959.52
+GL-29251,09/09/2026,CD-542055,Check #3413 Vectorform Software,Vectorform Software,3413,2000,(1719.80),145239.72
+GL-29252,09/10/2026,CD-183056,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(113.75),145125.97
+GL-29253,09/10/2026,CR-180057,Deposit - Sequoia Grocers check 2884,Sequoia Grocers,,1200,4657.43,149783.40
+GL-29254,09/10/2026,CR-540058,PaySwift payout 9/10,PaySwift,,4100,2512.10,152295.50
+GL-29255,09/10/2026,CR-180059,Deposit - Two Rivers Market check 6108,Two Rivers Market,,1200,6705.14,159000.64
+GL-29256,09/10/2026,CR-879060,Deposit - Two Rivers Market check 7334,Two Rivers Market,,1200,2660.18,161660.82
+GL-29257,09/10/2026,CD-319061,Blueprint Reprographics inv 58436,Blueprint Reprographics,,2000,(603.05),161057.77
+GL-29258,09/10/2026,CD-574062,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(170.24),160887.53
+GL-29259,09/10/2026,CD-984063,Design software - Vectorform Software,Vectorform Software,,6800,(427.57),160459.96
+GL-29260,09/11/2026,CD-598064,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(68.82),160391.14
+GL-29261,09/11/2026,CR-631065,PaySwift payout 9/11,PaySwift,,4100,854.25,161245.39
+GL-29262,09/11/2026,CD-750066,Check #3397 Blueprint Reprographics,Blueprint Reprographics,3397,2000,(158.69),161086.70
+GL-29263,09/11/2026,CR-175067,PaySwift payout 9/11,PaySwift,,4100,2795.19,163881.89
+GL-29264,09/11/2026,CD-361068,Check #3400 Blueprint Reprographics,Blueprint Reprographics,3400,2000,(156.01),163725.88
+GL-29265,09/11/2026,CR-862069,Payment - Anchor Point Condos HOA INV-3917,Anchor Point Condos HOA,,1200,6407.92,170133.80
+GL-29266,09/11/2026,CD-517070,Design software - Vectorform Software,Vectorform Software,,6800,(504.74),169629.06
+GL-29267,09/11/2026,CR-415071,Payment - Sequoia Grocers INV-1493,Sequoia Grocers,,1200,7682.68,177311.74
+GL-29268,09/11/2026,CR-504072,Deposit - Coastside Realty check 2332,Coastside Realty,,1200,4125.81,181437.55
+GL-29269,09/12/2026,CD-326073,Check #3390 Structa Engineering Consultants,Structa Engineering Consultants,3390,2000,(1528.22),179909.33
+GL-29270,09/12/2026,CD-722074,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(66.72),179842.61
+GL-29271,09/12/2026,CD-311075,Wire to Vectorform Software,Vectorform Software,,2000,(4520.42),175322.19
+GL-29272,09/12/2026,CR-438076,PaySwift payout 9/12,PaySwift,,4100,2174.57,177496.76
+GL-29273,09/12/2026,CD-694077,Design software - Vectorform Software,Vectorform Software,,6800,(190.58),177306.18
+GL-29274,09/12/2026,CD-616078,Check #3407 Blueprint Reprographics,Blueprint Reprographics,3407,2000,(741.70),176564.48
+GL-29275,09/12/2026,CD-475079,Check #3410 Structa Engineering Consultants,Structa Engineering Consultants,3410,2000,(2761.06),173803.42
+GL-29276,09/13/2026,CD-589080,Design software - Vectorform Software,Vectorform Software,,6800,(106.04),173697.38
+GL-29277,09/13/2026,CD-852081,Check #3393 Structa Engineering Consultants,Structa Engineering Consultants,3393,2000,(1665.82),172031.56
+GL-29278,09/13/2026,CD-497082,Design software - Vectorform Software,Vectorform Software,,6800,(117.74),171913.82
+GL-29279,09/13/2026,CD-899083,Check #3402 Blueprint Reprographics,Blueprint Reprographics,3402,2000,(245.19),171668.63
+GL-29280,09/13/2026,CD-393084,Vectorform Software inv 51277,Vectorform Software,,2000,(925.00),170743.63
+GL-29281,09/14/2026,CD-432085,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,(580.32),170163.31
+GL-29282,09/14/2026,CD-759086,Check #3394 Vectorform Software,Vectorform Software,3394,2000,(933.33),169229.98
+GL-29283,09/14/2026,CD-818087,Check #3396 Vectorform Software,Vectorform Software,3396,2000,(412.83),168817.15
+GL-29284,09/14/2026,CR-325088,PaySwift payout 9/14,PaySwift,,4100,2036.99,170854.14
+GL-29285,09/14/2026,CD-215089,Blueprint Reprographics inv 46538,Blueprint Reprographics,,2000,(327.42),170526.72
+GL-29286,09/14/2026,CD-928090,Check #3415 Vectorform Software,Vectorform Software,3415,2000,(2158.37),168368.35
+GL-29287,09/14/2026,CR-639091,Deposit - Presidio Property Partners retainer,Presidio Property Partners,,4100,4152.25,172520.60
+GL-29288,09/15/2026,PR-318092,Payroll run 9/15,Ledgerly Payroll,,6200,(8186.45),164334.15
+GL-29289,09/15/2026,CD-689093,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(685.38),163648.77
+GL-29290,09/15/2026,CR-984094,Payment - Hilltop Unified PTA INV-3772,Hilltop Unified PTA,,1200,6098.04,169746.81
+GL-29291,09/15/2026,CD-309095,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(70.59),169676.22
+GL-29292,09/15/2026,CD-165096,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(402.61),169273.61
+GL-29293,09/15/2026,CD-114097,Design software - Vectorform Software,Vectorform Software,,6800,(131.55),169142.06
+GL-29294,09/16/2026,CR-538098,PaySwift payout 9/16,PaySwift,,4100,3059.82,172201.88
+GL-29295,09/16/2026,CR-397099,Payment - Coastside Realty INV-7554,Coastside Realty,,1200,1307.44,173509.32
+GL-29296,09/16/2026,CD-594100,Wire to Blueprint Reprographics,Blueprint Reprographics,,2000,(1437.52),172071.80
+GL-29297,09/16/2026,CR-582101,Deposit - Anchor Point Condos HOA check 3406,Anchor Point Condos HOA,,1200,2278.99,174350.79
+GL-29298,09/16/2026,CD-684102,Vectorform Software inv 54025,Vectorform Software,,2000,(847.97),173502.82
+GL-29299,09/16/2026,CR-523103,Payment - Lindqvist Family Trust INV-8309,Lindqvist Family Trust,,1200,4540.67,178043.49
+GL-29300,09/17/2026,CR-674104,Deposit - Presidio Property Partners check 3407,Presidio Property Partners,,1200,6407.36,184450.85
+GL-29301,09/17/2026,CD-461105,Check #3405 Structa Engineering Consultants,Structa Engineering Consultants,3405,2000,(6700.35),177750.50
+GL-29302,09/17/2026,CR-709106,PaySwift payout 9/17,PaySwift,,4100,1645.79,179396.29
+GL-29303,09/17/2026,CD-773107,Check #3411 Structa Engineering Consultants,Structa Engineering Consultants,3411,2000,(5016.42),174379.87
+GL-29304,09/18/2026,CD-779108,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(1856.42),172523.45
+GL-29305,09/18/2026,CR-729109,PaySwift payout 9/18,PaySwift,,4100,3272.17,175795.62
+GL-29306,09/18/2026,CR-459110,Deposit - Sequoia Grocers check 9217,Sequoia Grocers,,1200,2789.28,178584.90
+GL-29307,09/18/2026,CD-233111,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(7663.11),170921.79
+GL-29308,09/19/2026,CR-168112,Deposit - Juniper Tech Labs check 3761,Juniper Tech Labs,,1200,3156.78,174078.57
+GL-29309,09/19/2026,CR-302113,Deposit - Two Rivers Market check 2235,Two Rivers Market,,1200,4095.82,178174.39
+GL-29310,09/19/2026,CD-931114,Check #3399 Structa Engineering Consultants,Structa Engineering Consultants,3399,2000,(1935.58),176238.81
+GL-29311,09/19/2026,CD-626115,Check #3404 Vectorform Software,Vectorform Software,3404,2000,(1387.53),174851.28
+GL-29312,09/19/2026,CD-952116,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(2101.00),172750.28
+GL-29313,09/19/2026,CD-540117,Wire to Vectorform Software,Vectorform Software,,2000,(2467.79),170282.49
+GL-29314,09/19/2026,CD-725118,Check #3414 Vectorform Software,Vectorform Software,3414,2000,(1636.90),168645.59
+GL-29315,09/19/2026,CD-301119,Blueprint Reprographics inv 12027,Blueprint Reprographics,,2000,(289.56),168356.03
+GL-29316,09/19/2026,CD-456120,Design software - Vectorform Software,Vectorform Software,,6800,(395.61),167960.42
+GL-29317,09/20/2026,CD-387121,Loan payment - First Coast Bank,First Coast Bank,,2500,(1450.91),166509.51
+GL-29318,09/20/2026,CR-108122,PaySwift payout 9/20,PaySwift,,4100,423.90,166933.41
+GL-29319,09/20/2026,CD-510123,Blueprint Reprographics inv 52641,Blueprint Reprographics,,2000,(368.85),166564.56
+GL-29320,09/20/2026,CR-406124,Deposit - Two Rivers Market check 5722,Two Rivers Market,,1200,7870.78,174435.34
+GL-29321,09/20/2026,CD-260125,Blueprint Reprographics inv 88820,Blueprint Reprographics,,2000,(378.47),174056.87
+GL-29322,09/20/2026,CD-519126,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(150.55),173906.32
+GL-29323,09/20/2026,CD-859127,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(11610.54),162295.78
+GL-29324,09/21/2026,CD-539128,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(10673.19),151622.59
+GL-29325,09/21/2026,CD-859129,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(44.78),151577.81
+GL-29326,09/21/2026,CR-654130,Deposit - Anchor Point Condos HOA check 7484,Anchor Point Condos HOA,,1200,4676.94,156254.75
+GL-29327,09/21/2026,CD-605131,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(936.04),155318.71
+GL-29328,09/21/2026,CR-773132,Deposit - Juniper Tech Labs check 8395,Juniper Tech Labs,,1200,3233.62,158552.33
+GL-29329,09/21/2026,CR-164133,Payment - Lindqvist Family Trust INV-4039,Lindqvist Family Trust,,1200,4668.11,163220.44
+GL-29330,09/22/2026,CD-875134,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,(3679.90),159540.54
+GL-29331,09/22/2026,CR-608135,Payment - Sequoia Grocers INV-4706,Sequoia Grocers,,1200,3278.03,162818.57
+GL-29332,09/22/2026,CR-398136,PaySwift payout 9/22,PaySwift,,4100,1355.24,164173.81
+GL-29333,09/22/2026,CR-607137,Deposit - Anchor Point Condos HOA check 8312,Anchor Point Condos HOA,,1200,4594.18,168767.99
+GL-29334,09/22/2026,CR-770138,PaySwift payout 9/22,PaySwift,,4100,3114.02,171882.01
+GL-29335,09/22/2026,CD-261139,Wire to Structa Engineering Consultants,Structa Engineering Consultants,,2000,(7848.76),164033.25
+GL-29336,09/22/2026,CD-690140,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(122.66),163910.59
+GL-29337,09/23/2026,CR-777141,Deposit - Sequoia Grocers check 7780,Sequoia Grocers,,1200,1417.03,165327.62
+GL-29338,09/23/2026,CR-716142,Payment - Anchor Point Condos HOA INV-2855,Anchor Point Condos HOA,,1200,3215.88,168543.50
+GL-29339,09/23/2026,CD-698143,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(112.60),168430.90
+GL-29340,09/23/2026,CD-490144,Structa Engineering Consultants inv 61688,Structa Engineering Consultants,,2000,(5147.49),163283.41
+GL-29341,09/23/2026,CD-307145,Vectorform Software inv 5693,Vectorform Software,,2000,(1405.76),161877.65
+GL-29342,09/23/2026,CR-299146,PaySwift payout 9/23,PaySwift,,4100,938.80,162816.45
+GL-29343,09/23/2026,CR-510147,Deposit - Presidio Property Partners check 9624,Presidio Property Partners,,1200,7050.86,169867.31
+GL-29344,09/24/2026,CD-431148,Structa Engineering Consultants inv 15329,Structa Engineering Consultants,,2000,(6278.83),163588.48
+GL-29345,09/24/2026,CR-948149,Payment - Juniper Tech Labs INV-7958,Juniper Tech Labs,,1200,2946.05,166534.53
+GL-29346,09/24/2026,CD-669150,Blueprint Reprographics inv 74198,Blueprint Reprographics,,2000,(345.09),166189.44
+GL-29347,09/24/2026,CD-939151,Check #3418 Blueprint Reprographics,Blueprint Reprographics,3418,2000,(511.76),165677.68
+GL-29348,09/25/2026,CD-684152,Printing - Blueprint Reprographics,Blueprint Reprographics,,6400,(67.17),165610.51
+GL-29349,09/25/2026,CD-578153,Engineering consultants - Structa Engineering Consultants,Structa Engineering Consultants,,6500,(568.73),165041.78
+GL-29350,09/26/2026,CR-462154,Deposit - Juniper Tech Labs check 9516,Juniper Tech Labs,,1200,7961.49,173003.27
+GL-29351,09/26/2026,CR-824155,Payment - Two Rivers Market INV-9319,Two Rivers Market,,1200,4916.09,177919.36
+GL-29352,09/26/2026,CR-640156,Payment - Two Rivers Market INV-3599,Two Rivers Market,,1200,1560.44,179479.80
+GL-29353,09/26/2026,CD-202157,Blueprint Reprographics inv 80753,Blueprint Reprographics,,2000,(666.08),178813.72
+GL-29354,09/26/2026,CR-271158,Deposit - Presidio Property Partners check 9017,Presidio Property Partners,,1200,1735.43,180549.15
+GL-29355,09/27/2026,CD-645159,Wire to Blueprint Reprographics,Blueprint Reprographics,,2000,(1033.42),179515.73
+GL-29356,09/27/2026,CD-415160,Wire to Blueprint Reprographics,Blueprint Reprographics,,2000,(998.23),178517.50
+GL-29357,09/28/2026,CD-194161,Check #3417 Vectorform Software,Vectorform Software,3417,2000,(1032.70),177484.80
+GL-29358,09/29/2026,PR-294162,Payroll run 9/29,Ledgerly Payroll,,6200,(11236.73),166248.07
+GL-29359,09/30/2026,CR-676163,Deposit - Coastside Realty check 3803,Coastside Realty,,1200,859.45,167107.52

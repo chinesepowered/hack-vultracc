@@ -1,0 +1,106 @@
+{
+  "client_id": "cedar-ridge-landscaping",
+  "period": "2026-09",
+  "bank_opening_balance": "36877.40",
+  "bank_ending_balance": "36010.81",
+  "gl_opening_balance": "35798.41",
+  "gl_ending_balance": "31331.82",
+  "adjusted_bank_balance": "30600.96",
+  "adjusted_book_balance": "30600.96",
+  "difference": "0.00",
+  "bank_line_count": 287,
+  "gl_line_count": 285,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "22.00",
+      "effect": "-22.00",
+      "side": "book",
+      "bank_ref": "40808451950",
+      "gl_ref": null,
+      "date": "2026-09-28",
+      "description": "OUTGOING WIRE TRANSFER FEE"
+    },
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "35.00",
+      "effect": "-35.00",
+      "side": "book",
+      "bank_ref": "30484184274",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "ACCOUNT ANALYSIS CHARGE"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1249.09",
+      "effect": "-1249.09",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-22066",
+      "check_no": "2367",
+      "date": "2026-09-24",
+      "description": "Check #2367 Ridgeline Equipment Rental"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1570.90",
+      "effect": "-1570.90",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-22088",
+      "check_no": "2365",
+      "date": "2026-09-28",
+      "description": "Check #2365 Greenleaf Nursery Wholesale"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "206.47",
+      "effect": "-206.47",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "AUG-7431",
+      "check_no": "2308",
+      "date": "2026-08-28",
+      "description": "Check #2308 Greenleaf Nursery Wholesale"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "2383.39",
+      "effect": "-2383.39",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-22055",
+      "check_no": "2366",
+      "date": "2026-09-23",
+      "description": "Check #2366 Greenleaf Nursery Wholesale"
+    },
+    {
+      "kind": "unidentified",
+      "amount": "673.86",
+      "effect": "-673.86",
+      "side": "book",
+      "bank_ref": "19053379122",
+      "gl_ref": null,
+      "date": "2026-09-09",
+      "description": "ACH DEBIT 7701656 WEB PMT"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "22.00",
+      "kind": "bank_fee_unrecorded"
+    },
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "35.00",
+      "kind": "bank_fee_unrecorded"
+    }
+  ],
+  "status": "needs_review",
+  "injection_bank_refs": [],
+  "notes": "287 bank lines, 285 ledger lines, 7 planted exceptions, 3 bank lines expected unmatched"
+}

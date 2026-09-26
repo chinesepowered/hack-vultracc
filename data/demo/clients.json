@@ -1,0 +1,102 @@
+{
+  "firm": "Harbor & Pine CPA",
+  "period": "2026-09",
+  "clients": [
+    {
+      "client_id": "blue-harbor-coffee",
+      "name": "Blue Harbor Coffee Roasters",
+      "industry": "Coffee roaster and cafe",
+      "exceptions": 6,
+      "bank_lines": 419,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "juniper-lane-dental",
+      "name": "Juniper Lane Dental Group",
+      "industry": "Dental practice",
+      "exceptions": 5,
+      "bank_lines": 236,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "cedar-ridge-landscaping",
+      "name": "Cedar Ridge Landscaping",
+      "industry": "Landscaping contractor",
+      "exceptions": 7,
+      "bank_lines": 287,
+      "status": "needs_review"
+    },
+    {
+      "client_id": "alder-finch-law",
+      "name": "Alder & Finch Law Group",
+      "industry": "Law office",
+      "exceptions": 5,
+      "bank_lines": 174,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "tidewater-veterinary",
+      "name": "Tidewater Veterinary Clinic",
+      "industry": "Veterinary clinic",
+      "exceptions": 5,
+      "bank_lines": 318,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "northgate-auto-repair",
+      "name": "Northgate Auto Repair",
+      "industry": "Auto repair shop",
+      "exceptions": 5,
+      "bank_lines": 263,
+      "status": "needs_review"
+    },
+    {
+      "client_id": "stillwater-yoga",
+      "name": "Stillwater Yoga Studio",
+      "industry": "Fitness studio",
+      "exceptions": 4,
+      "bank_lines": 158,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "copperline-electric",
+      "name": "Copperline Electric Co.",
+      "industry": "Electrical contractor",
+      "exceptions": 7,
+      "bank_lines": 241,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "saltbox-bakery",
+      "name": "Saltbox Bakery",
+      "industry": "Bakery and cafe",
+      "exceptions": 5,
+      "bank_lines": 402,
+      "status": "needs_review"
+    },
+    {
+      "client_id": "brightwater-pt",
+      "name": "Brightwater Physical Therapy",
+      "industry": "Physical therapy clinic",
+      "exceptions": 7,
+      "bank_lines": 207,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "ironwood-brewing",
+      "name": "Ironwood Brewing Company",
+      "industry": "Craft brewery and taproom",
+      "exceptions": 6,
+      "bank_lines": 588,
+      "status": "reconciled"
+    },
+    {
+      "client_id": "lumen-architecture",
+      "name": "Lumen Architecture Studio",
+      "industry": "Architecture firm",
+      "exceptions": 6,
+      "bank_lines": 166,
+      "status": "needs_review"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "client_id": "saltbox-bakery",
+  "name": "Saltbox Bakery",
+  "industry": "Bakery and cafe",
+  "firm": "Harbor & Pine CPA",
+  "period": "2026-09",
+  "period_start": "2026-09-01",
+  "period_end": "2026-09-30",
+  "gl_cash_account": "1010",
+  "bank_account_name": "Business Checking",
+  "materiality": "200.00",
+  "chart_of_accounts": [
+    {
+      "number": "1010",
+      "name": "Cash - Operating"
+    },
+    {
+      "number": "1200",
+      "name": "Accounts Receivable"
+    },
+    {
+      "number": "1300",
+      "name": "Inventory"
+    },
+    {
+      "number": "2000",
+      "name": "Accounts Payable"
+    },
+    {
+      "number": "2200",
+      "name": "Payroll Liabilities"
+    },
+    {
+      "number": "2300",
+      "name": "Sales Tax Payable"
+    },
+    {
+      "number": "2500",
+      "name": "Loan Payable"
+    },
+    {
+      "number": "4000",
+      "name": "Sales Revenue"
+    },
+    {
+      "number": "4100",
+      "name": "Service Revenue"
+    },
+    {
+      "number": "4900",
+      "name": "Interest Income"
+    },
+    {
+      "number": "5000",
+      "name": "Cost of Goods Sold"
+    },
+    {
+      "number": "6000",
+      "name": "Rent Expense"
+    },
+    {
+      "number": "6050",
+      "name": "Utilities"
+    },
+    {
+      "number": "6100",
+      "name": "Bank Fees"
+    },
+    {
+      "number": "6200",
+      "name": "Payroll Expense"
+    },
+    {
+      "number": "6300",
+      "name": "Insurance"
+    },
+    {
+      "number": "6400",
+      "name": "Supplies"
+    },
+    {
+      "number": "6500",
+      "name": "Professional Fees"
+    },
+    {
+      "number": "6600",
+      "name": "Repairs and Maintenance"
+    },
+    {
+      "number": "6700",
+      "name": "Marketing"
+    },
+    {
+      "number": "6800",
+      "name": "Software and Subscriptions"
+    },
+    {
+      "number": "6900",
+      "name": "Vehicle Expense"
+    },
+    {
+      "number": "7000",
+      "name": "Taxes and Licenses"
+    },
+    {
+      "number": "9999",
+      "name": "Suspense"
+    }
+  ],
+  "files": {
+    "bank_statement": "bank_statement.csv",
+    "gl_cash_detail": "gl_cash_detail.csv",
+    "prior_outstanding": "prior_outstanding.csv"
+  }
+}

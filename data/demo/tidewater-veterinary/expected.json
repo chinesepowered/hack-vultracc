@@ -1,0 +1,91 @@
+{
+  "client_id": "tidewater-veterinary",
+  "period": "2026-09",
+  "bank_opening_balance": "57120.09",
+  "bank_ending_balance": "54852.42",
+  "gl_opening_balance": "61424.60",
+  "gl_ending_balance": "54142.71",
+  "adjusted_bank_balance": "53123.38",
+  "adjusted_book_balance": "53123.38",
+  "difference": "0.00",
+  "bank_line_count": 318,
+  "gl_line_count": 316,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "18.00",
+      "effect": "-18.00",
+      "side": "book",
+      "bank_ref": "60016411857",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "SERVICE FEE"
+    },
+    {
+      "kind": "duplicate_entry",
+      "amount": "1240.73",
+      "effect": "1240.73",
+      "side": "book",
+      "bank_ref": null,
+      "gl_ref": "GL-53551",
+      "date": "2026-09-07",
+      "description": "Harborview Lab Services inv 54708"
+    },
+    {
+      "kind": "nsf_check",
+      "amount": "2242.06",
+      "effect": "-2242.06",
+      "side": "book",
+      "bank_ref": "82006372909",
+      "gl_ref": null,
+      "date": "2026-09-16",
+      "description": "RETURNED ITEM NSF CHK 3126",
+      "related_bank_ref": "72716469492"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1040.33",
+      "effect": "-1040.33",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-53775",
+      "check_no": "3164",
+      "date": "2026-09-30",
+      "description": "Check #3164 Kindred Pet Food Supply"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "688.71",
+      "effect": "-688.71",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-53773",
+      "check_no": "3163",
+      "date": "2026-09-28",
+      "description": "Check #3163 Kindred Pet Food Supply"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "18.00",
+      "kind": "bank_fee_unrecorded"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "2000",
+      "amount": "1240.73",
+      "kind": "duplicate_entry"
+    },
+    {
+      "debit_account": "1200",
+      "credit_account": "1010",
+      "amount": "2242.06",
+      "kind": "nsf_check"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "318 bank lines, 316 ledger lines, 5 planted exceptions, 2 bank lines expected unmatched"
+}

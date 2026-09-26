@@ -1,0 +1,118 @@
+{
+  "client_id": "brightwater-pt",
+  "period": "2026-09",
+  "bank_opening_balance": "64018.90",
+  "bank_ending_balance": "65926.65",
+  "gl_opening_balance": "64695.42",
+  "gl_ending_balance": "64132.66",
+  "adjusted_bank_balance": "64979.10",
+  "adjusted_book_balance": "64979.10",
+  "difference": "0.00",
+  "bank_line_count": 207,
+  "gl_line_count": 205,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "15.00",
+      "effect": "-15.00",
+      "side": "book",
+      "bank_ref": "16674028031",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "SERVICE FEE"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "489.33",
+      "effect": "489.33",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-32273",
+      "date": "2026-09-30",
+      "description": "Deposit - Fairway Senior Living check 1183"
+    },
+    {
+      "kind": "duplicate_entry",
+      "amount": "1269.11",
+      "effect": "1269.11",
+      "side": "book",
+      "bank_ref": null,
+      "gl_ref": "GL-32149",
+      "date": "2026-09-10",
+      "description": "Motion Rehab Equipment inv 71073"
+    },
+    {
+      "kind": "interest_unrecorded",
+      "amount": "42.33",
+      "effect": "42.33",
+      "side": "book",
+      "bank_ref": "18754013329",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "689.23",
+      "effect": "-689.23",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-32261",
+      "check_no": "7330",
+      "date": "2026-09-24",
+      "description": "Check #7330 Motion Rehab Equipment"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "747.65",
+      "effect": "-747.65",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-32271",
+      "check_no": "7331",
+      "date": "2026-09-28",
+      "description": "Check #7331 Clinicore Medical Supply"
+    },
+    {
+      "kind": "transposition",
+      "amount": "450.00",
+      "effect": "-450.00",
+      "side": "book",
+      "bank_ref": "41733457044",
+      "gl_ref": "GL-32131",
+      "date": "2026-09-08",
+      "description": "Check #7329 Clinicore Medical Supply",
+      "bank_amount": "-2830.50",
+      "gl_amount": "-2380.50"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "15.00",
+      "kind": "bank_fee_unrecorded"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "2000",
+      "amount": "1269.11",
+      "kind": "duplicate_entry"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "4900",
+      "amount": "42.33",
+      "kind": "interest_unrecorded"
+    },
+    {
+      "debit_account": "6400",
+      "credit_account": "1010",
+      "amount": "450.00",
+      "kind": "transposition"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "207 bank lines, 205 ledger lines, 7 planted exceptions, 3 bank lines expected unmatched"
+}

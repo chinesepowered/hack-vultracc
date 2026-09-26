@@ -1,0 +1,155 @@
+Entry No,Date,Journal,Description,Name,Check No,Split,Amount,Balance
+GL-33154,09/01/2026,CR-111000,PaySwift payout 9/1,PaySwift,,4000,585.27,17944.89
+GL-33155,09/01/2026,CD-486001,Check #1105 Sunrise Linen Service,Sunrise Linen Service,1105,2000,-111.40,17833.49
+GL-33156,09/01/2026,CD-709002,Check #1107 Lotus Mat Supply,Lotus Mat Supply,1107,2000,-406.84,17426.65
+GL-33157,09/01/2026,CR-567003,PaySwift payout 9/1,PaySwift,,4000,1127.95,18554.60
+GL-33158,09/01/2026,CD-924004,Lotus Mat Supply inv 8748,Lotus Mat Supply,,2000,-417.25,18137.35
+GL-33159,09/01/2026,CR-965005,Payment - Hilltop Unified PTA INV-7234,Hilltop Unified PTA,,1200,1007.77,19145.12
+GL-33160,09/01/2026,CD-395006,Check #1118 Lotus Mat Supply,Lotus Mat Supply,1118,2000,-474.65,18670.47
+GL-33161,09/02/2026,CR-857007,PaySwift payout 9/2,PaySwift,,4000,463.57,19134.04
+GL-33162,09/02/2026,CR-342008,PaySwift payout 9/2,PaySwift,,4000,1005.22,20139.26
+GL-33163,09/02/2026,CR-537009,PaySwift payout 9/2,PaySwift,,4000,1011.09,21150.35
+GL-33164,09/02/2026,CD-932010,Quietwave Sound Systems inv 97393,Quietwave Sound Systems,,2000,-85.34,21065.01
+GL-33165,09/02/2026,CR-553011,PaySwift payout 9/2,PaySwift,,4000,1261.42,22326.43
+GL-33166,09/02/2026,CR-804012,PaySwift payout 9/2,PaySwift,,4000,445.30,22771.73
+GL-33167,09/02/2026,CR-261013,PaySwift payout 9/2,PaySwift,,4000,259.50,23031.23
+GL-33168,09/02/2026,CD-935014,Check #1115 Lotus Mat Supply,Lotus Mat Supply,1115,2000,-223.54,22807.69
+GL-33169,09/02/2026,CD-283015,Sunrise Linen Service inv 61796,Sunrise Linen Service,,2000,-84.05,22723.64
+GL-33170,09/02/2026,CR-418016,PaySwift payout 9/2,PaySwift,,4000,951.84,23675.48
+GL-33171,09/02/2026,CR-967017,PaySwift payout 9/2,PaySwift,,4000,1002.45,24677.93
+GL-33172,09/02/2026,CD-429018,Check #1117 Sunrise Linen Service,Sunrise Linen Service,1117,2000,-181.35,24496.58
+GL-33173,09/02/2026,CD-488019,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-1431.78,23064.80
+GL-33174,09/03/2026,CD-450020,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,-1138.51,21926.29
+GL-33175,09/03/2026,CD-433021,Equipment - Quietwave Sound Systems,Quietwave Sound Systems,,6600,-121.04,21805.25
+GL-33176,09/03/2026,CR-154022,PaySwift payout 9/3,PaySwift,,4000,312.79,22118.04
+GL-33177,09/03/2026,CD-284023,Wire to Sunrise Linen Service,Sunrise Linen Service,,2000,-292.18,21825.86
+GL-33178,09/03/2026,CR-801024,PaySwift payout 9/3,PaySwift,,4000,780.84,22606.70
+GL-33179,09/03/2026,CR-689025,PaySwift payout 9/3,PaySwift,,4000,335.36,22942.06
+GL-33180,09/03/2026,CD-916026,Check #1113 Quietwave Sound Systems,Quietwave Sound Systems,1113,2000,-419.93,22522.13
+GL-33181,09/03/2026,CR-102027,PaySwift payout 9/3,PaySwift,,4000,941.89,23464.02
+GL-33182,09/03/2026,CR-959028,PaySwift payout 9/3,PaySwift,,4000,516.18,23980.20
+GL-33183,09/03/2026,CR-768029,PaySwift payout 9/3,PaySwift,,4000,126.22,24106.42
+GL-33184,09/04/2026,CR-591030,Deposit - Hilltop Unified PTA check 5831,Hilltop Unified PTA,,1200,405.34,24511.76
+GL-33185,09/04/2026,CR-139031,PaySwift payout 9/4,PaySwift,,4000,578.59,25090.35
+GL-33186,09/04/2026,CD-582032,Check #1108 Quietwave Sound Systems,Quietwave Sound Systems,1108,2000,-131.34,24959.01
+GL-33187,09/04/2026,CR-228033,Payment - Juniper Tech Labs INV-3473,Juniper Tech Labs,,1200,1677.69,26636.70
+GL-33188,09/05/2026,CD-615034,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,-5718.96,20917.74
+GL-33189,09/05/2026,CR-259035,PaySwift payout 9/5,PaySwift,,4000,995.60,21913.34
+GL-33190,09/05/2026,CD-646036,Check #1106 Sunrise Linen Service,Sunrise Linen Service,1106,2000,-125.12,21788.22
+GL-33191,09/05/2026,CD-175037,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-77.36,21710.86
+GL-33192,09/05/2026,CR-458038,PaySwift payout 9/5,PaySwift,,4000,752.32,22463.18
+GL-33193,09/05/2026,CD-859039,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-17.21,22445.97
+GL-33194,09/05/2026,CR-584040,PaySwift payout 9/5,PaySwift,,4000,234.68,22680.65
+GL-33195,09/06/2026,CD-431041,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-23.55,22657.10
+GL-33196,09/06/2026,CD-430042,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-33.91,22623.19
+GL-33197,09/06/2026,CR-332043,PaySwift payout 9/6,PaySwift,,4000,1220.96,23844.15
+GL-33198,09/06/2026,CD-517044,Check #1111 Lotus Mat Supply,Lotus Mat Supply,1111,2000,-306.35,23537.80
+GL-33199,09/06/2026,CR-913045,PaySwift payout 9/6,PaySwift,,4000,1210.35,24748.15
+GL-33200,09/06/2026,CR-406046,PaySwift payout 9/6,PaySwift,,4000,978.48,25726.63
+GL-33201,09/06/2026,CR-607047,PaySwift payout 9/6,PaySwift,,4000,824.01,26550.64
+GL-33202,09/06/2026,CR-519048,PaySwift payout 9/6,PaySwift,,4000,1082.80,27633.44
+GL-33203,09/07/2026,CR-884049,PaySwift payout 9/7,PaySwift,,4000,131.22,27764.66
+GL-33204,09/07/2026,CR-575050,PaySwift payout 9/7,PaySwift,,4000,853.22,28617.88
+GL-33205,09/07/2026,CD-241051,Lotus Mat Supply inv 54870,Lotus Mat Supply,,2000,-190.78,28427.10
+GL-33206,09/07/2026,CD-947052,Quietwave Sound Systems inv 96553,Quietwave Sound Systems,,2000,-296.09,28131.01
+GL-33207,09/07/2026,CD-234053,Sunrise Linen Service inv 93878,Sunrise Linen Service,,2000,-169.88,27961.13
+GL-33208,09/07/2026,CD-958054,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-1034.58,26926.55
+GL-33209,09/08/2026,CD-564055,Accounting software - CloudLedger,CloudLedger,,6800,-73.85,26852.70
+GL-33210,09/08/2026,CD-311056,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-183.02,26669.68
+GL-33211,09/08/2026,CD-519057,Wire to Sunrise Linen Service,Sunrise Linen Service,,2000,-415.05,26254.63
+GL-33212,09/08/2026,CR-198058,PaySwift payout 9/8,PaySwift,,4000,586.77,26841.40
+GL-33213,09/08/2026,CD-799059,Sunrise Linen Service inv 10284,Sunrise Linen Service,,2000,-183.26,26658.14
+GL-33214,09/08/2026,CD-972060,Quietwave Sound Systems inv 41840,Quietwave Sound Systems,,2000,-289.69,26368.45
+GL-33215,09/08/2026,CR-336061,PaySwift payout 9/8,PaySwift,,4000,696.32,27064.77
+GL-33216,09/09/2026,CR-319062,PaySwift payout 9/9,PaySwift,,4000,194.57,27259.34
+GL-33217,09/09/2026,CR-458063,PaySwift payout 9/9,PaySwift,,4000,390.50,27649.84
+GL-33218,09/09/2026,CD-952064,Check #1109 Sunrise Linen Service,Sunrise Linen Service,1109,2000,-227.50,27422.34
+GL-33219,09/09/2026,CR-161065,PaySwift payout 9/9,PaySwift,,4000,982.29,28404.63
+GL-33220,09/10/2026,CD-304066,Lotus Mat Supply inv 42098,Lotus Mat Supply,,2000,-113.46,28291.17
+GL-33221,09/10/2026,CD-305067,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-66.43,28224.74
+GL-33222,09/10/2026,CD-911068,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-71.76,28152.98
+GL-33223,09/10/2026,CD-951069,Check #1116 Sunrise Linen Service,Sunrise Linen Service,1116,2000,-254.38,27898.60
+GL-33224,09/10/2026,CD-226070,Sunrise Linen Service inv 52454,Sunrise Linen Service,,2000,-245.34,27653.26
+GL-33225,09/11/2026,CD-980071,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-705.82,26947.44
+GL-33226,09/11/2026,CR-996072,PaySwift payout 9/11,PaySwift,,4000,1041.87,27989.31
+GL-33227,09/11/2026,CD-116073,Wire to Quietwave Sound Systems,Quietwave Sound Systems,,2000,-578.15,27411.16
+GL-33228,09/11/2026,CR-899074,PaySwift payout 9/11,PaySwift,,4000,1172.60,28583.76
+GL-33229,09/12/2026,CD-940075,Wire to Quietwave Sound Systems,Quietwave Sound Systems,,2000,-891.05,27692.71
+GL-33230,09/12/2026,CR-303076,PaySwift payout 9/12,PaySwift,,4000,186.78,27879.49
+GL-33231,09/12/2026,CD-827077,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-198.13,27681.36
+GL-33232,09/12/2026,CR-141078,PaySwift payout 9/12,PaySwift,,4000,537.51,28218.87
+GL-33233,09/12/2026,CD-145079,Check #1112 Lotus Mat Supply,Lotus Mat Supply,1112,2000,-207.73,28011.14
+GL-33234,09/12/2026,CD-946080,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-1232.27,26778.87
+GL-33235,09/12/2026,CD-990081,Wire to Sunrise Linen Service,Sunrise Linen Service,,2000,-346.78,26432.09
+GL-33236,09/13/2026,CR-464082,PaySwift payout 9/13,PaySwift,,4000,766.64,27198.73
+GL-33237,09/13/2026,CR-339083,PaySwift payout 9/13,PaySwift,,4000,573.01,27771.74
+GL-33238,09/13/2026,CD-343084,Lotus Mat Supply inv 11461,Lotus Mat Supply,,2000,-527.50,27244.24
+GL-33239,09/13/2026,CD-810085,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-55.11,27189.13
+GL-33240,09/13/2026,CD-333086,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-216.32,26972.81
+GL-33241,09/13/2026,CR-821087,PaySwift payout 9/13,PaySwift,,4000,940.91,27913.72
+GL-33242,09/13/2026,CR-443088,PaySwift payout 9/13,PaySwift,,4000,814.64,28728.36
+GL-33243,09/13/2026,CD-604089,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-162.40,28565.96
+GL-33244,09/14/2026,CD-870090,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,-637.22,27928.74
+GL-33245,09/14/2026,CR-150091,PaySwift payout 9/14,PaySwift,,4000,1243.70,29172.44
+GL-33246,09/14/2026,CD-463092,Lotus Mat Supply inv 49436,Lotus Mat Supply,,2000,-328.51,28843.93
+GL-33247,09/14/2026,CD-686093,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-210.50,28633.43
+GL-33248,09/14/2026,CD-593094,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-928.79,27704.64
+GL-33249,09/14/2026,CD-266095,Quietwave Sound Systems inv 95826,Quietwave Sound Systems,,2000,-70.23,27634.41
+GL-33250,09/14/2026,CD-439096,Check #1114 Lotus Mat Supply,Lotus Mat Supply,1114,2000,-592.61,27041.80
+GL-33251,09/14/2026,CD-965097,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-68.92,26972.88
+GL-33252,09/15/2026,PR-380098,Payroll run 9/15,Ledgerly Payroll,,6200,-8740.85,18232.03
+GL-33253,09/15/2026,CR-849099,PaySwift payout 9/15,PaySwift,,4000,1302.38,19534.41
+GL-33254,09/15/2026,CR-895100,PaySwift payout 9/15,PaySwift,,4000,408.90,19943.31
+GL-33255,09/15/2026,CR-961101,PaySwift payout 9/15,PaySwift,,4000,432.39,20375.70
+GL-33256,09/15/2026,CD-192102,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-75.38,20300.32
+GL-33257,09/15/2026,CR-353103,PaySwift payout 9/15,PaySwift,,4000,955.06,21255.38
+GL-33258,09/15/2026,CD-632104,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-1478.35,19777.03
+GL-33259,09/15/2026,CR-519105,Deposit - Juniper Tech Labs check 4791,Juniper Tech Labs,,1200,1948.93,21725.96
+GL-33260,09/15/2026,CR-423106,PaySwift payout 9/15,PaySwift,,4000,1249.97,22975.93
+GL-33261,09/15/2026,CD-867107,Check #1119 Sunrise Linen Service,Sunrise Linen Service,1119,2000,-125.40,22850.53
+GL-33262,09/16/2026,CR-871108,PaySwift payout 9/16,PaySwift,,4000,414.53,23265.06
+GL-33263,09/16/2026,CD-665109,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-27.30,23237.76
+GL-33264,09/16/2026,CD-960110,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-26.38,23211.38
+GL-33265,09/16/2026,CR-244111,PaySwift payout 9/16,PaySwift,,4000,159.71,23371.09
+GL-33266,09/17/2026,CR-859112,Deposit - Sequoia Grocers check 3125,Sequoia Grocers,,1200,2661.82,26032.91
+GL-33267,09/17/2026,CD-486113,Sunrise Linen Service inv 45359,Sunrise Linen Service,,2000,-102.88,25930.03
+GL-33268,09/18/2026,CD-103114,Check #1110 Sunrise Linen Service,Sunrise Linen Service,1110,2000,-187.03,25743.00
+GL-33269,09/18/2026,CR-383115,PaySwift payout 9/18,PaySwift,,4000,794.04,26537.04
+GL-33270,09/18/2026,CR-377116,PaySwift payout 9/18,PaySwift,,4000,1244.03,27781.07
+GL-33271,09/18/2026,CR-325117,PaySwift payout 9/18,PaySwift,,4000,783.01,28564.08
+GL-33272,09/19/2026,CR-555118,PaySwift payout 9/19,PaySwift,,4000,499.28,29063.36
+GL-33273,09/19/2026,CD-417119,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-217.28,28846.08
+GL-33274,09/20/2026,CD-131120,Loan payment - First Coast Bank,First Coast Bank,,2500,-1970.11,26875.97
+GL-33275,09/20/2026,CR-270121,PaySwift payout 9/20,PaySwift,,4000,1103.36,27979.33
+GL-33276,09/20/2026,CR-136122,Deposit - Hilltop Unified PTA check 4452,Hilltop Unified PTA,,1200,1383.07,29362.40
+GL-33277,09/20/2026,CD-274123,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-14.61,29347.79
+GL-33278,09/20/2026,CD-641124,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-1376.31,27971.48
+GL-33279,09/20/2026,CD-691125,Wire to Sunrise Linen Service,Sunrise Linen Service,,2000,-462.20,27509.28
+GL-33280,09/21/2026,CD-430126,Equipment - Quietwave Sound Systems,Quietwave Sound Systems,,6600,-138.59,27370.69
+GL-33281,09/21/2026,CD-527127,Equipment - Quietwave Sound Systems,Quietwave Sound Systems,,6600,-27.17,27343.52
+GL-33282,09/22/2026,CD-428128,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,-4813.38,22530.14
+GL-33283,09/22/2026,CD-247129,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-41.12,22489.02
+GL-33284,09/22/2026,CD-510130,Retail mats - Lotus Mat Supply,Lotus Mat Supply,,5000,-131.18,22357.84
+GL-33285,09/22/2026,CR-712131,PaySwift payout 9/22,PaySwift,,4000,616.56,22974.40
+GL-33286,09/22/2026,CR-421132,Payment - Juniper Tech Labs INV-8071,Juniper Tech Labs,,1200,987.28,23961.68
+GL-33287,09/22/2026,CR-162133,PaySwift payout 9/22,PaySwift,,4000,354.40,24316.08
+GL-33288,09/22/2026,CR-596134,Deposit - Kestrel Media check 9029,Kestrel Media,,1200,2702.11,27018.19
+GL-33289,09/22/2026,CD-200135,Towel service - Sunrise Linen Service,Sunrise Linen Service,,6400,-81.40,26936.79
+GL-33290,09/23/2026,CR-625136,PaySwift payout 9/23,PaySwift,,4000,442.89,27379.68
+GL-33291,09/23/2026,CR-133137,PaySwift payout 9/23,PaySwift,,4000,933.50,28313.18
+GL-33292,09/23/2026,CD-151138,Equipment - Quietwave Sound Systems,Quietwave Sound Systems,,6600,-76.95,28236.23
+GL-33293,09/23/2026,CR-877139,PaySwift payout 9/23,PaySwift,,4000,383.46,28619.69
+GL-33294,09/24/2026,CR-118140,PaySwift payout 9/24,PaySwift,,4000,464.33,29084.02
+GL-33295,09/24/2026,CR-603141,PaySwift payout 9/24,PaySwift,,4000,872.50,29956.52
+GL-33296,09/24/2026,CR-333142,PaySwift payout 9/24,PaySwift,,4000,226.88,30183.40
+GL-33297,09/25/2026,CR-547143,PaySwift payout 9/25,PaySwift,,4000,985.80,31169.20
+GL-33298,09/25/2026,CD-483144,Equipment - Quietwave Sound Systems,Quietwave Sound Systems,,6600,-54.31,31114.89
+GL-33299,09/25/2026,CR-715145,PaySwift payout 9/25,PaySwift,,4000,987.79,32102.68
+GL-33300,09/26/2026,CR-859146,Deposit - Sequoia Grocers check 1343,Sequoia Grocers,,1200,1732.37,33835.05
+GL-33301,09/26/2026,CD-767147,Quietwave Sound Systems inv 77086,Quietwave Sound Systems,,2000,-222.94,33612.11
+GL-33302,09/26/2026,CR-175148,Payment - Evergreen Charter School INV-6487,Evergreen Charter School,,1200,773.01,34385.12
+GL-33303,09/26/2026,CD-645149,Wire to Lotus Mat Supply,Lotus Mat Supply,,2000,-1523.57,32861.55
+GL-33304,09/26/2026,CR-251150,Payment - Juniper Tech Labs INV-2335,Juniper Tech Labs,,1200,550.95,33412.50
+GL-33305,09/27/2026,CD-545151,Check #1120 Lotus Mat Supply,Lotus Mat Supply,1120,2000,-151.22,33261.28
+GL-33306,09/29/2026,PR-845152,Payroll run 9/29,Ledgerly Payroll,,6200,-19845.61,13415.67
+GL-33307,09/30/2026,CR-551153,Deposit - Evergreen Charter School check 7354,Evergreen Charter School,,1200,1316.36,14732.03

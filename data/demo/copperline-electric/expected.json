@@ -1,0 +1,108 @@
+{
+  "client_id": "copperline-electric",
+  "period": "2026-09",
+  "bank_opening_balance": "133760.51",
+  "bank_ending_balance": "136181.54",
+  "gl_opening_balance": "127388.84",
+  "gl_ending_balance": "129601.02",
+  "adjusted_bank_balance": "130652.64",
+  "adjusted_book_balance": "130652.64",
+  "difference": "0.00",
+  "bank_line_count": 241,
+  "gl_line_count": 243,
+  "exceptions": [
+    {
+      "kind": "deposit_in_transit",
+      "amount": "1923.52",
+      "effect": "1923.52",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33774",
+      "date": "2026-09-30",
+      "description": "Deposit - Oakmont Hotel Group check 5522"
+    },
+    {
+      "kind": "duplicate_entry",
+      "amount": "1321.62",
+      "effect": "1321.62",
+      "side": "book",
+      "bank_ref": null,
+      "gl_ref": "GL-33615",
+      "date": "2026-09-09",
+      "description": "Safehold Equipment Rental inv 84884"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1533.28",
+      "effect": "-1533.28",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33773",
+      "check_no": "6658",
+      "date": "2026-09-29",
+      "description": "Check #6658 Safehold Equipment Rental"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1724.15",
+      "effect": "-1724.15",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33772",
+      "check_no": "6657",
+      "date": "2026-09-29",
+      "description": "Check #6657 Safehold Equipment Rental"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "336.60",
+      "effect": "-336.60",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "AUG-1112",
+      "check_no": "6616",
+      "date": "2026-08-25",
+      "description": "Check #6616 Tri County Fuel"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "3858.39",
+      "effect": "-3858.39",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33770",
+      "check_no": "6659",
+      "date": "2026-09-28",
+      "description": "Check #6659 Voltline Electrical Supply"
+    },
+    {
+      "kind": "transposition",
+      "amount": "270.00",
+      "effect": "-270.00",
+      "side": "book",
+      "bank_ref": "44006099176",
+      "gl_ref": "GL-33662",
+      "date": "2026-09-14",
+      "description": "Check #6656 Safehold Equipment Rental",
+      "bank_amount": "-2636.50",
+      "gl_amount": "-2366.50"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "1010",
+      "credit_account": "2000",
+      "amount": "1321.62",
+      "kind": "duplicate_entry"
+    },
+    {
+      "debit_account": "6600",
+      "credit_account": "1010",
+      "amount": "270.00",
+      "kind": "transposition"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "241 bank lines, 243 ledger lines, 7 planted exceptions, 1 bank lines expected unmatched"
+}

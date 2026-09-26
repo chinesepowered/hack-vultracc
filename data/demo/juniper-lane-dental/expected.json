@@ -1,0 +1,84 @@
+{
+  "client_id": "juniper-lane-dental",
+  "period": "2026-09",
+  "bank_opening_balance": "91544.12",
+  "bank_ending_balance": "98052.88",
+  "gl_opening_balance": "92057.30",
+  "gl_ending_balance": "101746.34",
+  "adjusted_bank_balance": "104211.80",
+  "adjusted_book_balance": "104211.80",
+  "difference": "0.00",
+  "bank_line_count": 236,
+  "gl_line_count": 235,
+  "exceptions": [
+    {
+      "kind": "deposit_in_transit",
+      "amount": "7488.74",
+      "effect": "7488.74",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-50624",
+      "date": "2026-09-30",
+      "description": "Deposit - Evergreen Charter School check 3528"
+    },
+    {
+      "kind": "duplicate_entry",
+      "amount": "2452.04",
+      "effect": "2452.04",
+      "side": "book",
+      "bank_ref": null,
+      "gl_ref": "GL-50484",
+      "date": "2026-09-11",
+      "description": "Orchard Lab Partners inv 74746"
+    },
+    {
+      "kind": "interest_unrecorded",
+      "amount": "13.42",
+      "effect": "13.42",
+      "side": "book",
+      "bank_ref": "B0236",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1150.50",
+      "effect": "-1150.50",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-50623",
+      "check_no": "5238",
+      "date": "2026-09-30",
+      "description": "Check #5238 Clearview Imaging Service"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "179.32",
+      "effect": "-179.32",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-50599",
+      "check_no": "5237",
+      "date": "2026-09-23",
+      "description": "Check #5237 Keystone Uniform Rental"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "1010",
+      "credit_account": "2000",
+      "amount": "2452.04",
+      "kind": "duplicate_entry"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "4900",
+      "amount": "13.42",
+      "kind": "interest_unrecorded"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "236 bank lines, 235 ledger lines, 5 planted exceptions, 1 bank lines expected unmatched"
+}

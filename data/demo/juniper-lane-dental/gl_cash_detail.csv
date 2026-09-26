@@ -1,0 +1,236 @@
+Entry No,Date,Journal,Description,Payee/Payor,Num,Offset Account,Debit,Credit,Balance
+GL-50390,2026-09-01,CR-369000,PaySwift payout 9/1,PaySwift,,4100,1992.38,,94049.68
+GL-50391,2026-09-01,CD-420001,Check #5216 Keystone Uniform Rental,Keystone Uniform Rental,5216,2000,,82.93,93966.75
+GL-50392,2026-09-01,CR-482002,PaySwift payout 9/1,PaySwift,,4100,315.18,,94281.93
+GL-50393,2026-09-01,CR-537003,Deposit - Presidio Property Partners check 7606,Presidio Property Partners,,1200,4745.13,,99027.06
+GL-50394,2026-09-01,CD-130004,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,385.31,98641.75
+GL-50395,2026-09-01,CR-818005,PaySwift payout 9/1,PaySwift,,4100,1789.02,,100430.77
+GL-50396,2026-09-01,CD-876006,Check #5231 Brightline Dental Supply,Brightline Dental Supply,5231,2000,,1033.48,99397.29
+GL-50397,2026-09-01,CD-670007,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,115.66,99281.63
+GL-50398,2026-09-02,CD-558008,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,69.89,99211.74
+GL-50399,2026-09-02,CR-819009,PaySwift payout 9/2,PaySwift,,4100,965.33,,100177.07
+GL-50400,2026-09-02,CD-369010,Check #5220 Keystone Uniform Rental,Keystone Uniform Rental,5220,2000,,171.81,100005.26
+GL-50401,2026-09-02,CD-113011,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,113.58,99891.68
+GL-50402,2026-09-02,CD-909012,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,656.41,99235.27
+GL-50403,2026-09-02,CR-378013,Payment - Delacroix Events INV-5750,Delacroix Events,,1200,191.93,,99427.20
+GL-50404,2026-09-02,CR-475014,PaySwift payout 9/2,PaySwift,,4100,466.87,,99894.07
+GL-50405,2026-09-02,CD-971015,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,579.79,99314.28
+GL-50406,2026-09-02,CD-942016,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,2974.03,96340.25
+GL-50407,2026-09-03,CD-424017,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,,977.48,95362.77
+GL-50408,2026-09-03,CR-696018,Payment - Delacroix Events INV-9215,Delacroix Events,,1200,4809.41,,100172.18
+GL-50409,2026-09-03,CD-608019,Check #5210 Brightline Dental Supply,Brightline Dental Supply,5210,2000,,1424.37,98747.81
+GL-50410,2026-09-03,CD-271020,Orchard Lab Partners inv 90335,Orchard Lab Partners,,2000,,2992.11,95755.70
+GL-50411,2026-09-03,CD-781021,Check #5217 Orchard Lab Partners,Orchard Lab Partners,5217,2000,,970.77,94784.93
+GL-50412,2026-09-03,CR-397022,PaySwift payout 9/3,PaySwift,,4100,696.41,,95481.34
+GL-50413,2026-09-03,CR-181023,Deposit - Juniper Tech Labs check 1464,Juniper Tech Labs,,1200,704.43,,96185.77
+GL-50414,2026-09-03,CR-940024,Payment - Evergreen Charter School INV-7993,Evergreen Charter School,,1200,3173.11,,99358.88
+GL-50415,2026-09-03,CD-310025,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,284.37,99074.51
+GL-50416,2026-09-04,CD-581026,Clearview Imaging Service inv 86498,Clearview Imaging Service,,2000,,1596.42,97478.09
+GL-50417,2026-09-04,CD-648027,Check #5215 Brightline Dental Supply,Brightline Dental Supply,5215,2000,,261.95,97216.14
+GL-50418,2026-09-04,CR-801028,PaySwift payout 9/4,PaySwift,,4100,1543.56,,98759.70
+GL-50419,2026-09-04,CD-391029,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,176.30,98583.40
+GL-50420,2026-09-04,CR-712030,PaySwift payout 9/4,PaySwift,,4100,1170.36,,99753.76
+GL-50421,2026-09-04,CD-805031,Wire to Brightline Dental Supply,Brightline Dental Supply,,2000,,4770.13,94983.63
+GL-50422,2026-09-04,CD-119032,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,2035.99,92947.64
+GL-50423,2026-09-04,CD-657033,Check #5230 Clearview Imaging Service,Clearview Imaging Service,5230,2000,,1389.67,91557.97
+GL-50424,2026-09-04,CD-881034,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,439.41,91118.56
+GL-50425,2026-09-04,CR-616035,PaySwift payout 9/4,PaySwift,,4100,1624.72,,92743.28
+GL-50426,2026-09-05,CD-207036,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,,8355.19,84388.09
+GL-50427,2026-09-05,CR-351037,PaySwift payout 9/5,PaySwift,,4100,772.79,,85160.88
+GL-50428,2026-09-05,CD-697038,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,23.69,85137.19
+GL-50429,2026-09-05,CR-476039,Deposit - Hilltop Unified PTA check 6069,Hilltop Unified PTA,,1200,4704.45,,89841.64
+GL-50430,2026-09-05,CR-263040,Deposit - Delacroix Events check 1513,Delacroix Events,,1200,4011.07,,93852.71
+GL-50431,2026-09-05,CD-391041,Check #5222 Keystone Uniform Rental,Keystone Uniform Rental,5222,2000,,63.69,93789.02
+GL-50432,2026-09-05,CD-245042,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,572.40,93216.62
+GL-50433,2026-09-05,CD-579043,Check #5226 Clearview Imaging Service,Clearview Imaging Service,5226,2000,,1252.85,91963.77
+GL-50434,2026-09-05,CD-329044,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,3348.40,88615.37
+GL-50435,2026-09-05,CD-910045,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,57.83,88557.54
+GL-50436,2026-09-05,CD-658046,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,750.44,87807.10
+GL-50437,2026-09-06,CD-177047,Clearview Imaging Service inv 11435,Clearview Imaging Service,,2000,,1239.22,86567.88
+GL-50438,2026-09-06,CD-461048,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,11.28,86556.60
+GL-50439,2026-09-06,CR-670049,PaySwift payout 9/6,PaySwift,,4100,791.83,,87348.43
+GL-50440,2026-09-06,CR-890050,Deposit - Hilltop Unified PTA check 6166,Hilltop Unified PTA,,1200,986.42,,88334.85
+GL-50441,2026-09-06,CR-564051,PaySwift payout 9/6,PaySwift,,4100,1830.96,,90165.81
+GL-50442,2026-09-06,CD-727052,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,675.67,89490.14
+GL-50443,2026-09-06,CR-734053,PaySwift payout 9/6,PaySwift,,4100,1113.39,,90603.53
+GL-50444,2026-09-06,CR-154054,Deposit - Delacroix Events check 5936,Delacroix Events,,1200,3755.20,,94358.73
+GL-50445,2026-09-06,CR-608055,PaySwift payout 9/6,PaySwift,,4100,530.23,,94888.96
+GL-50446,2026-09-06,CD-410056,Check #5228 Orchard Lab Partners,Orchard Lab Partners,5228,2000,,968.21,93920.75
+GL-50447,2026-09-06,CR-936057,Deposit - Evergreen Charter School check 8103,Evergreen Charter School,,1200,969.05,,94889.80
+GL-50448,2026-09-06,CD-617058,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,90.04,94799.76
+GL-50449,2026-09-07,CR-981059,PaySwift payout 9/7,PaySwift,,4100,1607.73,,96407.49
+GL-50450,2026-09-07,CR-124060,PaySwift payout 9/7,PaySwift,,4100,1587.06,,97994.55
+GL-50451,2026-09-07,CR-151061,PaySwift payout 9/7,PaySwift,,4100,732.08,,98726.63
+GL-50452,2026-09-07,CR-670062,PaySwift payout 9/7,PaySwift,,4100,1703.56,,100430.19
+GL-50453,2026-09-08,CD-102063,Accounting software - CloudLedger,CloudLedger,,6800,,110.14,100320.05
+GL-50454,2026-09-08,CD-327064,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,2651.71,97668.34
+GL-50455,2026-09-08,CR-287065,PaySwift payout 9/8,PaySwift,,4100,305.18,,97973.52
+GL-50456,2026-09-08,CD-244066,Brightline Dental Supply inv 74071,Brightline Dental Supply,,2000,,1756.03,96217.49
+GL-50457,2026-09-08,CD-807067,Clearview Imaging Service inv 40671,Clearview Imaging Service,,2000,,836.08,95381.41
+GL-50458,2026-09-09,CD-766068,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,443.97,94937.44
+GL-50459,2026-09-09,CR-167069,PaySwift payout 9/9,PaySwift,,4100,997.65,,95935.09
+GL-50460,2026-09-09,CD-173070,Check #5219 Clearview Imaging Service,Clearview Imaging Service,5219,2000,,1518.18,94416.91
+GL-50461,2026-09-09,CR-239071,Payment - Delacroix Events INV-1283,Delacroix Events,,1200,5112.33,,99529.24
+GL-50462,2026-09-09,CD-197072,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,275.96,99253.28
+GL-50463,2026-09-09,CR-492073,PaySwift payout 9/9,PaySwift,,4100,1106.89,,100360.17
+GL-50464,2026-09-09,CR-182074,PaySwift payout 9/9,PaySwift,,4100,1975.11,,102335.28
+GL-50465,2026-09-09,CD-923075,Brightline Dental Supply inv 60778,Brightline Dental Supply,,2000,,2295.99,100039.29
+GL-50466,2026-09-09,CD-286076,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,73.95,99965.34
+GL-50467,2026-09-09,CD-519077,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,51.72,99913.62
+GL-50468,2026-09-09,CD-918078,Wire to Brightline Dental Supply,Brightline Dental Supply,,2000,,3016.77,96896.85
+GL-50469,2026-09-09,CR-421079,PaySwift payout 9/9,PaySwift,,4100,676.56,,97573.41
+GL-50470,2026-09-09,CD-105080,Check #5236 Keystone Uniform Rental,Keystone Uniform Rental,5236,2000,,212.09,97361.32
+GL-50471,2026-09-10,CD-350081,Check #5213 Brightline Dental Supply,Brightline Dental Supply,5213,2000,,2087.46,95273.86
+GL-50472,2026-09-10,CD-460082,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,297.76,94976.10
+GL-50473,2026-09-10,CR-870083,Deposit - Delacroix Events check 3799,Delacroix Events,,1200,3352.37,,98328.47
+GL-50474,2026-09-10,CD-428084,Wire to Brightline Dental Supply,Brightline Dental Supply,,2000,,3609.85,94718.62
+GL-50475,2026-09-10,CR-573085,PaySwift payout 9/10,PaySwift,,4100,224.41,,94943.03
+GL-50476,2026-09-10,CD-490086,Wire to Orchard Lab Partners,Orchard Lab Partners,,2000,,6505.70,88437.33
+GL-50477,2026-09-10,CD-497087,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,69.27,88368.06
+GL-50478,2026-09-11,CD-640088,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,183.48,88184.58
+GL-50479,2026-09-11,CR-505089,PaySwift payout 9/11,PaySwift,,4100,1324.43,,89509.01
+GL-50480,2026-09-11,CD-559090,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,621.60,88887.41
+GL-50481,2026-09-11,CD-994091,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,13.14,88874.27
+GL-50482,2026-09-11,CD-755092,Keystone Uniform Rental inv 99674,Keystone Uniform Rental,,2000,,172.08,88702.19
+GL-50483,2026-09-11,CD-813093,Orchard Lab Partners inv 74746,Orchard Lab Partners,,2000,,2452.04,86250.15
+GL-50484,2026-09-11,CD-352094,Orchard Lab Partners inv 74746,Orchard Lab Partners,,2000,,2452.04,83798.11
+GL-50485,2026-09-12,CD-339095,Check #5214 Clearview Imaging Service,Clearview Imaging Service,5214,2000,,1294.94,82503.17
+GL-50486,2026-09-12,CD-750096,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,29.55,82473.62
+GL-50487,2026-09-12,CD-524097,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,495.29,81978.33
+GL-50488,2026-09-12,CD-228098,Check #5221 Orchard Lab Partners,Orchard Lab Partners,5221,2000,,2541.68,79436.65
+GL-50489,2026-09-12,CD-245099,Wire to Keystone Uniform Rental,Keystone Uniform Rental,,2000,,319.18,79117.47
+GL-50490,2026-09-12,CD-836100,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,403.72,78713.75
+GL-50491,2026-09-12,CR-584101,Payment - Northpoint Clinic INV-1554,Northpoint Clinic,,1200,2186.83,,80900.58
+GL-50492,2026-09-12,CD-954102,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,861.28,80039.30
+GL-50493,2026-09-12,CR-740103,Payment - Marin Wellness Center INV-6838,Marin Wellness Center,,1200,3517.84,,83557.14
+GL-50494,2026-09-13,CD-778104,Keystone Uniform Rental inv 78747,Keystone Uniform Rental,,2000,,130.92,83426.22
+GL-50495,2026-09-13,CD-379105,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,378.94,83047.28
+GL-50496,2026-09-13,CD-838106,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,147.66,82899.62
+GL-50497,2026-09-13,CR-502107,PaySwift payout 9/13,PaySwift,,4100,1910.06,,84809.68
+GL-50498,2026-09-13,CD-388108,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,41.10,84768.58
+GL-50499,2026-09-13,CD-159109,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,243.50,84525.08
+GL-50500,2026-09-13,CR-730110,PaySwift payout 9/13,PaySwift,,4100,191.51,,84716.59
+GL-50501,2026-09-13,CD-170111,Check #5235 Keystone Uniform Rental,Keystone Uniform Rental,5235,2000,,181.94,84534.65
+GL-50502,2026-09-14,CD-171112,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,,670.14,83864.51
+GL-50503,2026-09-14,CD-353113,Check #5211 Keystone Uniform Rental,Keystone Uniform Rental,5211,2000,,212.83,83651.68
+GL-50504,2026-09-14,CR-562114,Payment - Delacroix Events INV-6418,Delacroix Events,,1200,2287.51,,85939.19
+GL-50505,2026-09-14,CR-323115,PaySwift payout 9/14,PaySwift,,4100,1847.05,,87786.24
+GL-50506,2026-09-14,CD-604116,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,170.66,87615.58
+GL-50507,2026-09-14,CD-202117,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,243.60,87371.98
+GL-50508,2026-09-14,CR-250118,PaySwift payout 9/14,PaySwift,,4100,1281.36,,88653.34
+GL-50509,2026-09-14,CD-627119,Keystone Uniform Rental inv 57527,Keystone Uniform Rental,,2000,,139.52,88513.82
+GL-50510,2026-09-14,CD-628120,Check #5223 Clearview Imaging Service,Clearview Imaging Service,5223,2000,,384.95,88128.87
+GL-50511,2026-09-14,CR-778121,Deposit - Oakmont Hotel Group check 7173,Oakmont Hotel Group,,1200,2194.55,,90323.42
+GL-50512,2026-09-14,CD-643122,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,54.68,90268.74
+GL-50513,2026-09-14,CD-405123,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,169.29,90099.45
+GL-50514,2026-09-14,CD-979124,Check #5234 Orchard Lab Partners,Orchard Lab Partners,5234,2000,,2724.17,87375.28
+GL-50515,2026-09-14,CD-416125,Wire to Brightline Dental Supply,Brightline Dental Supply,,2000,,2883.32,84491.96
+GL-50516,2026-09-15,PR-730126,Payroll run 9/15,Ledgerly Payroll,,6200,,16389.71,68102.25
+GL-50517,2026-09-15,CD-338127,Wire to Orchard Lab Partners,Orchard Lab Partners,,2000,,3163.58,64938.67
+GL-50518,2026-09-15,CR-626128,PaySwift payout 9/15,PaySwift,,4100,1560.91,,66499.58
+GL-50519,2026-09-15,CR-774129,Deposit - Evergreen Charter School check 9063,Evergreen Charter School,,1200,1230.83,,67730.41
+GL-50520,2026-09-15,CR-683130,Deposit - Evergreen Charter School check 6343,Evergreen Charter School,,1200,3996.61,,71727.02
+GL-50521,2026-09-15,CR-323131,Deposit - Hilltop Unified PTA check 8525,Hilltop Unified PTA,,1200,2069.85,,73796.87
+GL-50522,2026-09-15,CD-480132,Wire to Brightline Dental Supply,Brightline Dental Supply,,2000,,2469.50,71327.37
+GL-50523,2026-09-15,CR-304133,PaySwift payout 9/15,PaySwift,,4100,1867.49,,73194.86
+GL-50524,2026-09-15,CR-136134,PaySwift payout 9/15,PaySwift,,4100,1833.56,,75028.42
+GL-50525,2026-09-15,CD-702135,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,476.23,74552.19
+GL-50526,2026-09-15,CD-919136,Check #5232 Keystone Uniform Rental,Keystone Uniform Rental,5232,2000,,209.13,74343.06
+GL-50527,2026-09-16,CD-610137,Check #5218 Keystone Uniform Rental,Keystone Uniform Rental,5218,2000,,86.78,74256.28
+GL-50528,2026-09-16,CR-114138,Payment - Juniper Tech Labs INV-2310,Juniper Tech Labs,,1200,2429.95,,76686.23
+GL-50529,2026-09-16,CD-445139,Check #5225 Brightline Dental Supply,Brightline Dental Supply,5225,2000,,501.25,76184.98
+GL-50530,2026-09-16,CD-749140,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,424.69,75760.29
+GL-50531,2026-09-16,CD-871141,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,345.11,75415.18
+GL-50532,2026-09-17,CR-342142,PaySwift payout 9/17,PaySwift,,4100,1096.91,,76512.09
+GL-50533,2026-09-17,CR-739143,PaySwift payout 9/17,PaySwift,,4100,1962.78,,78474.87
+GL-50534,2026-09-17,CD-945144,Clearview Imaging Service inv 60198,Clearview Imaging Service,,2000,,704.42,77770.45
+GL-50535,2026-09-17,CR-165145,Payment - Marin Wellness Center INV-5471,Marin Wellness Center,,1200,2768.96,,80539.41
+GL-50536,2026-09-17,CD-255146,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,708.66,79830.75
+GL-50537,2026-09-17,CR-855147,PaySwift payout 9/17,PaySwift,,4100,613.11,,80443.86
+GL-50538,2026-09-17,CR-386148,PaySwift payout 9/17,PaySwift,,4100,1072.45,,81516.31
+GL-50539,2026-09-17,CR-596149,Deposit - Hilltop Unified PTA check 8617,Hilltop Unified PTA,,1200,4351.10,,85867.41
+GL-50540,2026-09-17,CR-720150,PaySwift payout 9/17,PaySwift,,4100,1916.80,,87784.21
+GL-50541,2026-09-17,CD-374151,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,41.07,87743.14
+GL-50542,2026-09-18,CD-189152,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,149.24,87593.90
+GL-50543,2026-09-18,CD-725153,Keystone Uniform Rental inv 20259,Keystone Uniform Rental,,2000,,234.00,87359.90
+GL-50544,2026-09-18,CD-233154,Brightline Dental Supply inv 20646,Brightline Dental Supply,,2000,,1576.87,85783.03
+GL-50545,2026-09-18,CD-393155,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,246.64,85536.39
+GL-50546,2026-09-18,CR-513156,Deposit - Juniper Tech Labs check 1204,Juniper Tech Labs,,1200,637.95,,86174.34
+GL-50547,2026-09-18,CD-897157,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,602.71,85571.63
+GL-50548,2026-09-18,CD-443158,Check #5227 Clearview Imaging Service,Clearview Imaging Service,5227,2000,,1154.74,84416.89
+GL-50549,2026-09-18,CD-376159,Wire to Orchard Lab Partners,Orchard Lab Partners,,2000,,3332.50,81084.39
+GL-50550,2026-09-18,CD-764160,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,224.61,80859.78
+GL-50551,2026-09-18,CD-207161,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,824.08,80035.70
+GL-50552,2026-09-18,CD-848162,Clearview Imaging Service inv 24590,Clearview Imaging Service,,2000,,644.26,79391.44
+GL-50553,2026-09-18,CD-921163,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,613.08,78778.36
+GL-50554,2026-09-18,CD-605164,Orchard Lab Partners inv 2280,Orchard Lab Partners,,2000,,2298.38,76479.98
+GL-50555,2026-09-18,CR-609165,Deposit - Oakmont Hotel Group check 8547,Oakmont Hotel Group,,1200,1821.69,,78301.67
+GL-50556,2026-09-18,CR-268166,PaySwift payout 9/18,PaySwift,,4100,955.06,,79256.73
+GL-50557,2026-09-19,CR-845167,Deposit - Marin Wellness Center check 1549,Marin Wellness Center,,1200,4649.51,,83906.24
+GL-50558,2026-09-19,CD-733168,Check #5212 Keystone Uniform Rental,Keystone Uniform Rental,5212,2000,,205.67,83700.57
+GL-50559,2026-09-19,CR-373169,Payment - Oakmont Hotel Group INV-6063,Oakmont Hotel Group,,1200,439.06,,84139.63
+GL-50560,2026-09-19,CD-414170,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,704.01,83435.62
+GL-50561,2026-09-19,CD-243171,Check #5224 Clearview Imaging Service,Clearview Imaging Service,5224,2000,,649.09,82786.53
+GL-50562,2026-09-19,CD-899172,Check #5229 Keystone Uniform Rental,Keystone Uniform Rental,5229,2000,,144.53,82642.00
+GL-50563,2026-09-19,CD-136173,Clearview Imaging Service inv 35988,Clearview Imaging Service,,2000,,499.99,82142.01
+GL-50564,2026-09-19,CD-796174,Check #5233 Keystone Uniform Rental,Keystone Uniform Rental,5233,2000,,89.98,82052.03
+GL-50565,2026-09-19,CD-703175,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,18.77,82033.26
+GL-50566,2026-09-20,CD-536176,Loan payment - First Coast Bank,First Coast Bank,,2500,,1412.74,80620.52
+GL-50567,2026-09-20,CR-151177,Payment - Delacroix Events INV-3321,Delacroix Events,,1200,3680.53,,84301.05
+GL-50568,2026-09-20,CD-130178,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,323.35,83977.70
+GL-50569,2026-09-20,CD-452179,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,205.51,83772.19
+GL-50570,2026-09-20,CD-758180,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,351.46,83420.73
+GL-50571,2026-09-20,CR-533181,PaySwift payout 9/20,PaySwift,,4100,276.13,,83696.86
+GL-50572,2026-09-20,CR-306182,Deposit - Hilltop Unified PTA check 8205,Hilltop Unified PTA,,1200,2036.70,,85733.56
+GL-50573,2026-09-20,CR-123183,PaySwift payout 9/20,PaySwift,,4100,1624.50,,87358.06
+GL-50574,2026-09-20,CR-707184,Payment - Oakmont Hotel Group INV-2094,Oakmont Hotel Group,,1200,1773.73,,89131.79
+GL-50575,2026-09-20,CR-416185,Deposit - Oakmont Hotel Group check 4069,Oakmont Hotel Group,,1200,1912.94,,91044.73
+GL-50576,2026-09-20,CD-904186,Wire to Keystone Uniform Rental,Keystone Uniform Rental,,2000,,436.70,90608.03
+GL-50577,2026-09-20,CD-301187,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,24.17,90583.86
+GL-50578,2026-09-21,CD-576188,Keystone Uniform Rental inv 79266,Keystone Uniform Rental,,2000,,239.06,90344.80
+GL-50579,2026-09-21,CD-141189,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,118.13,90226.67
+GL-50580,2026-09-21,CD-266190,Keystone Uniform Rental inv 35324,Keystone Uniform Rental,,2000,,147.76,90078.91
+GL-50581,2026-09-21,CD-609191,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,33.16,90045.75
+GL-50582,2026-09-21,CR-773192,PaySwift payout 9/21,PaySwift,,4100,652.97,,90698.72
+GL-50583,2026-09-21,CR-110193,Payment - Evergreen Charter School INV-7023,Evergreen Charter School,,1200,2565.30,,93264.02
+GL-50584,2026-09-22,CD-276194,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,,1062.85,92201.17
+GL-50585,2026-09-22,CD-396195,Uniform service - Keystone Uniform Rental,Keystone Uniform Rental,,6400,,70.08,92131.09
+GL-50586,2026-09-22,CR-332196,Payment - Northpoint Clinic INV-9762,Northpoint Clinic,,1200,4437.50,,96568.59
+GL-50587,2026-09-22,CR-725197,PaySwift payout 9/22,PaySwift,,4100,1283.92,,97852.51
+GL-50588,2026-09-22,CD-689198,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,363.05,97489.46
+GL-50589,2026-09-22,CD-291199,Keystone Uniform Rental inv 59403,Keystone Uniform Rental,,2000,,223.18,97266.28
+GL-50590,2026-09-23,CR-300200,PaySwift payout 9/23,PaySwift,,4100,513.43,,97779.71
+GL-50591,2026-09-23,CR-452201,Payment - Juniper Tech Labs INV-8221,Juniper Tech Labs,,1200,5039.39,,102819.10
+GL-50592,2026-09-23,CR-703202,Deposit - Oakmont Hotel Group check 1295,Oakmont Hotel Group,,1200,2468.83,,105287.93
+GL-50593,2026-09-23,CR-678203,Payment - Evergreen Charter School INV-7816,Evergreen Charter School,,1200,446.44,,105734.37
+GL-50594,2026-09-23,CR-163204,Payment - Northpoint Clinic INV-1334,Northpoint Clinic,,1200,2428.51,,108162.88
+GL-50595,2026-09-23,CR-264205,PaySwift payout 9/23,PaySwift,,4100,715.37,,108878.25
+GL-50596,2026-09-23,CR-755206,Payment - Hilltop Unified PTA INV-2965,Hilltop Unified PTA,,1200,4223.52,,113101.77
+GL-50597,2026-09-23,CR-976207,PaySwift payout 9/23,PaySwift,,4100,2127.76,,115229.53
+GL-50598,2026-09-23,CD-783208,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,62.68,115166.85
+GL-50599,2026-09-23,CD-746209,Check #5237 Keystone Uniform Rental,Keystone Uniform Rental,5237,2000,,179.32,114987.53
+GL-50600,2026-09-24,CD-995210,Clinical supplies - Brightline Dental Supply,Brightline Dental Supply,,6400,,689.29,114298.24
+GL-50601,2026-09-24,CR-704211,PaySwift payout 9/24,PaySwift,,4100,1141.05,,115439.29
+GL-50602,2026-09-24,CD-870212,Imaging maintenance - Clearview Imaging Service,Clearview Imaging Service,,6600,,340.08,115099.21
+GL-50603,2026-09-24,CD-261213,Brightline Dental Supply inv 7572,Brightline Dental Supply,,2000,,1300.27,113798.94
+GL-50604,2026-09-24,CD-972214,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,99.07,113699.87
+GL-50605,2026-09-24,CR-728215,Deposit - Marin Wellness Center check 3463,Marin Wellness Center,,1200,3646.02,,117345.89
+GL-50606,2026-09-24,CD-820216,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,2898.52,114447.37
+GL-50607,2026-09-24,CR-414217,Payment - Marin Wellness Center INV-8983,Marin Wellness Center,,1200,1872.46,,116319.83
+GL-50608,2026-09-24,CR-734218,PaySwift payout 9/24,PaySwift,,4100,1027.05,,117346.88
+GL-50609,2026-09-24,CD-930219,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,3464.80,113882.08
+GL-50610,2026-09-24,CR-921220,PaySwift payout 9/24,PaySwift,,4100,483.55,,114365.63
+GL-50611,2026-09-24,CR-666221,PaySwift payout 9/24,PaySwift,,4100,1722.10,,116087.73
+GL-50612,2026-09-24,CD-847222,Wire to Orchard Lab Partners,Orchard Lab Partners,,2000,,5439.03,110648.70
+GL-50613,2026-09-25,CD-423223,Wire to Clearview Imaging Service,Clearview Imaging Service,,2000,,3280.26,107368.44
+GL-50614,2026-09-25,CD-143224,Lab fees - Orchard Lab Partners,Orchard Lab Partners,,5000,,912.81,106455.63
+GL-50615,2026-09-25,CR-813225,PaySwift payout 9/25,PaySwift,,4100,781.23,,107236.86
+GL-50616,2026-09-25,CR-587226,PaySwift payout 9/25,PaySwift,,4100,490.11,,107726.97
+GL-50617,2026-09-25,CD-266227,Wire to Keystone Uniform Rental,Keystone Uniform Rental,,2000,,341.82,107385.15
+GL-50618,2026-09-25,CR-531228,Deposit - Northpoint Clinic check 8456,Northpoint Clinic,,1200,290.49,,107675.64
+GL-50619,2026-09-26,CD-835229,Clearview Imaging Service inv 6610,Clearview Imaging Service,,2000,,440.81,107234.83
+GL-50620,2026-09-26,CR-734230,Deposit - Presidio Property Partners check 1942,Presidio Property Partners,,1200,2783.29,,110018.12
+GL-50621,2026-09-27,CD-789231,Wire to Brightline Dental Supply,Brightline Dental Supply,,2000,,4185.53,105832.59
+GL-50622,2026-09-29,PR-710232,Payroll run 9/29,Ledgerly Payroll,,6200,,10424.49,95408.10
+GL-50623,2026-09-30,CD-460233,Check #5238 Clearview Imaging Service,Clearview Imaging Service,5238,2000,,1150.50,94257.60
+GL-50624,2026-09-30,CR-660234,Deposit - Evergreen Charter School check 3528,Evergreen Charter School,,1200,7488.74,,101746.34

@@ -1,0 +1,105 @@
+{
+  "client_id": "blue-harbor-coffee",
+  "period": "2026-09",
+  "bank_opening_balance": "48210.55",
+  "bank_ending_balance": "47945.40",
+  "gl_opening_balance": "48199.96",
+  "gl_ending_balance": "50179.65",
+  "adjusted_bank_balance": "49569.65",
+  "adjusted_book_balance": "49569.65",
+  "difference": "0.00",
+  "bank_line_count": 419,
+  "gl_line_count": 416,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "35.00",
+      "effect": "-35.00",
+      "side": "book",
+      "bank_ref": "66481389816",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "ACCOUNT ANALYSIS CHARGE"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "1858.96",
+      "effect": "1858.96",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-34978",
+      "date": "2026-09-30",
+      "description": "Deposit - Rivera Catering check 4361"
+    },
+    {
+      "kind": "nsf_check",
+      "amount": "845.00",
+      "effect": "-845.00",
+      "side": "book",
+      "bank_ref": "22788048582",
+      "gl_ref": null,
+      "date": "2026-09-16",
+      "description": "RETURNED ITEM NSF CHK 6978",
+      "related_bank_ref": "71630834100"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "200.58",
+      "effect": "-200.58",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-34975",
+      "check_no": "1084",
+      "date": "2026-09-27",
+      "description": "Check #1084 Northshore Roastworks Parts"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "34.13",
+      "effect": "-34.13",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-34977",
+      "check_no": "1085",
+      "date": "2026-09-30",
+      "description": "Check #1085 Redline Couriers"
+    },
+    {
+      "kind": "transposition",
+      "amount": "270.00",
+      "effect": "270.00",
+      "side": "book",
+      "bank_ref": "11525271051",
+      "gl_ref": "GL-34718",
+      "date": "2026-09-10",
+      "description": "Check #1083 Foghorn Pastry Co",
+      "bank_amount": "-1250.00",
+      "gl_amount": "-1520.00"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "35.00",
+      "kind": "bank_fee_unrecorded"
+    },
+    {
+      "debit_account": "1200",
+      "credit_account": "1010",
+      "amount": "845.00",
+      "kind": "nsf_check"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "5000",
+      "amount": "270.00",
+      "kind": "transposition"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [
+    "59270255481"
+  ],
+  "notes": "419 bank lines, 416 ledger lines, 6 planted exceptions, 3 bank lines expected unmatched"
+}

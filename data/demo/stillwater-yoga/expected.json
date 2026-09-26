@@ -1,0 +1,73 @@
+{
+  "client_id": "stillwater-yoga",
+  "period": "2026-09",
+  "bank_opening_balance": "14302.18",
+  "bank_ending_balance": "13551.31",
+  "gl_opening_balance": "17359.62",
+  "gl_ending_balance": "14732.03",
+  "adjusted_bank_balance": "14716.45",
+  "adjusted_book_balance": "14716.45",
+  "difference": "0.00",
+  "bank_line_count": 158,
+  "gl_line_count": 154,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "35.00",
+      "effect": "-35.00",
+      "side": "book",
+      "bank_ref": "B0158",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "MONTHLY MAINTENANCE FEE"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "1316.36",
+      "effect": "1316.36",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33307",
+      "date": "2026-09-30",
+      "description": "Deposit - Evergreen Charter School check 7354"
+    },
+    {
+      "kind": "interest_unrecorded",
+      "amount": "19.42",
+      "effect": "19.42",
+      "side": "book",
+      "bank_ref": "B0157",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "INTEREST EARNED"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "151.22",
+      "effect": "-151.22",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33305",
+      "check_no": "1120",
+      "date": "2026-09-27",
+      "description": "Check #1120 Lotus Mat Supply"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "35.00",
+      "kind": "bank_fee_unrecorded"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "4900",
+      "amount": "19.42",
+      "kind": "interest_unrecorded"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "158 bank lines, 154 ledger lines, 4 planted exceptions, 2 bank lines expected unmatched"
+}

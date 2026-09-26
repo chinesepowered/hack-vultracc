@@ -11,3 +11,7 @@ build/
 .ruff_cache/
 .DS_Store
 *.log
+media/*.mp4
+media/work/
+*.egg-info/
+.coverage

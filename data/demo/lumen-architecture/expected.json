@@ -1,0 +1,96 @@
+{
+  "client_id": "lumen-architecture",
+  "period": "2026-09",
+  "bank_opening_balance": "175230.42",
+  "bank_ending_balance": "168028.44",
+  "gl_opening_balance": "176709.77",
+  "gl_ending_balance": "167107.52",
+  "adjusted_bank_balance": "167343.43",
+  "adjusted_book_balance": "167343.43",
+  "difference": "0.00",
+  "bank_line_count": 166,
+  "gl_line_count": 164,
+  "exceptions": [
+    {
+      "kind": "deposit_in_transit",
+      "amount": "859.45",
+      "effect": "859.45",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-29359",
+      "date": "2026-09-30",
+      "description": "Deposit - Coastside Realty check 3803"
+    },
+    {
+      "kind": "interest_unrecorded",
+      "amount": "46.51",
+      "effect": "46.51",
+      "side": "book",
+      "bank_ref": "22427773228",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "INTEREST CREDIT"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1032.70",
+      "effect": "-1032.70",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-29357",
+      "check_no": "3417",
+      "date": "2026-09-28",
+      "description": "Check #3417 Vectorform Software"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "511.76",
+      "effect": "-511.76",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-29347",
+      "check_no": "3418",
+      "date": "2026-09-24",
+      "description": "Check #3418 Blueprint Reprographics"
+    },
+    {
+      "kind": "transposition",
+      "amount": "360.00",
+      "effect": "360.00",
+      "side": "book",
+      "bank_ref": "93021289380",
+      "gl_ref": "GL-29287",
+      "date": "2026-09-14",
+      "description": "Deposit - Presidio Property Partners retainer",
+      "bank_amount": "4512.25",
+      "gl_amount": "4152.25"
+    },
+    {
+      "kind": "unidentified",
+      "amount": "170.60",
+      "effect": "-170.60",
+      "side": "book",
+      "bank_ref": "22526214616",
+      "gl_ref": null,
+      "date": "2026-09-28",
+      "description": "ACH DEBIT 5795601 WEB PMT"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "1010",
+      "credit_account": "4900",
+      "amount": "46.51",
+      "kind": "interest_unrecorded"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "4100",
+      "amount": "360.00",
+      "kind": "transposition"
+    }
+  ],
+  "status": "needs_review",
+  "injection_bank_refs": [],
+  "notes": "166 bank lines, 164 ledger lines, 6 planted exceptions, 3 bank lines expected unmatched"
+}

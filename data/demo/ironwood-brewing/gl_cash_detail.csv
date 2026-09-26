@@ -1,0 +1,588 @@
+Entry No,Date,Journal,Description,Payee/Payor,Num,Offset Account,Debit,Credit,Balance
+GL-32626,2026-09-01,CR-373000,PaySwift payout 9/1,PaySwift,,4000,2479.64,,103326.85
+GL-32627,2026-09-01,CR-430001,PaySwift payout 9/1,PaySwift,,4000,725.33,,104052.18
+GL-32628,2026-09-01,CD-241002,Hopyard Growers Co-op inv 64882,Hopyard Growers Co-op,,2000,,2887.83,101164.35
+GL-32629,2026-09-01,CD-616003,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,757.17,100407.18
+GL-32630,2026-09-01,CR-167004,PaySwift payout 9/1,PaySwift,,4000,1752.14,,102159.32
+GL-32631,2026-09-01,CR-926005,PaySwift payout 9/1,PaySwift,,4000,966.81,,103126.13
+GL-32632,2026-09-01,CD-561006,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,666.23,102459.90
+GL-32633,2026-09-01,CD-750007,Check #9170 Brewline Lab Testing,Brewline Lab Testing,9170,2000,,380.74,102079.16
+GL-32634,2026-09-01,CD-280008,Canwell Packaging inv 48096,Canwell Packaging,,2000,,2983.81,99095.35
+GL-32635,2026-09-01,CR-715009,PaySwift payout 9/1,PaySwift,,4000,1693.77,,100789.12
+GL-32636,2026-09-01,CD-378010,Brewline Lab Testing inv 71092,Brewline Lab Testing,,2000,,352.59,100436.53
+GL-32637,2026-09-01,CR-196011,Payment - Lindqvist Family Trust INV-1104,Lindqvist Family Trust,,1200,1412.54,,101849.07
+GL-32638,2026-09-01,CR-845012,PaySwift payout 9/1,PaySwift,,4000,1139.94,,102989.01
+GL-32639,2026-09-01,CD-602013,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,108.52,102880.49
+GL-32640,2026-09-01,CD-682014,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,919.11,101961.38
+GL-32641,2026-09-01,CD-174015,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,338.49,101622.89
+GL-32642,2026-09-01,CD-431016,Wire to Cascade Malt House,Cascade Malt House,,2000,,6805.46,94817.43
+GL-32643,2026-09-01,CD-643017,Canwell Packaging inv 29799,Canwell Packaging,,2000,,3598.52,91218.91
+GL-32644,2026-09-01,CR-625018,PaySwift payout 9/1,PaySwift,,4000,1447.25,,92666.16
+GL-32645,2026-09-01,CD-785019,Tri County CO2 Gas inv 33489,Tri County CO2 Gas,,2000,,199.03,92467.13
+GL-32646,2026-09-01,CD-624020,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1334.28,91132.85
+GL-32647,2026-09-01,CD-845021,Malt - Cascade Malt House,Cascade Malt House,,5000,,219.73,90913.12
+GL-32648,2026-09-01,CR-537022,PaySwift payout 9/1,PaySwift,,4000,1829.73,,92742.85
+GL-32649,2026-09-01,CD-972023,Hopyard Growers Co-op inv 15964,Hopyard Growers Co-op,,2000,,1660.09,91082.76
+GL-32650,2026-09-01,CD-832024,Wire to Tri County CO2 Gas,Tri County CO2 Gas,,2000,,922.39,90160.37
+GL-32651,2026-09-01,CD-809025,Check #9196 Tri County CO2 Gas,Tri County CO2 Gas,9196,2000,,434.96,89725.41
+GL-32652,2026-09-01,CR-785026,PaySwift payout 9/1,PaySwift,,4000,513.54,,90238.95
+GL-32653,2026-09-02,CR-612027,PaySwift payout 9/2,PaySwift,,4000,1735.97,,91974.92
+GL-32654,2026-09-02,CD-188028,Check #9154 Cascade Malt House,Cascade Malt House,9154,2000,,1836.55,90138.37
+GL-32655,2026-09-02,CD-413029,Hopyard Growers Co-op inv 48325,Hopyard Growers Co-op,,2000,,3102.27,87036.10
+GL-32656,2026-09-02,CD-891030,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1099.44,85936.66
+GL-32657,2026-09-02,CR-316031,PaySwift payout 9/2,PaySwift,,4000,804.02,,86740.68
+GL-32658,2026-09-02,CR-695032,PaySwift payout 9/2,PaySwift,,4000,1182.77,,87923.45
+GL-32659,2026-09-02,CD-183033,Malt - Cascade Malt House,Cascade Malt House,,5000,,960.38,86963.07
+GL-32660,2026-09-02,CR-435034,PaySwift payout 9/2,PaySwift,,4000,971.99,,87935.06
+GL-32661,2026-09-02,CR-243035,PaySwift payout 9/2,PaySwift,,4000,1851.55,,89786.61
+GL-32662,2026-09-02,CR-125036,PaySwift payout 9/2,PaySwift,,4000,1196.55,,90983.16
+GL-32663,2026-09-02,CD-533037,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,1232.81,89750.35
+GL-32664,2026-09-02,CD-680038,Check #9166 Cascade Malt House,Cascade Malt House,9166,2000,,2198.82,87551.53
+GL-32665,2026-09-02,CD-238039,Canwell Packaging inv 66084,Canwell Packaging,,2000,,3734.44,83817.09
+GL-32666,2026-09-02,CR-155040,PaySwift payout 9/2,PaySwift,,4000,1539.51,,85356.60
+GL-32667,2026-09-02,CD-893041,Check #9173 Canwell Packaging,Canwell Packaging,9173,2000,,949.40,84407.20
+GL-32668,2026-09-02,CD-762042,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,838.05,83569.15
+GL-32669,2026-09-02,CD-831043,Malt - Cascade Malt House,Cascade Malt House,,5000,,75.58,83493.57
+GL-32670,2026-09-02,CD-700044,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,751.31,82742.26
+GL-32671,2026-09-02,CD-501045,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,151.35,82590.91
+GL-32672,2026-09-02,CD-877046,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,25.88,82565.03
+GL-32673,2026-09-02,CR-862047,Payment - Two Rivers Market INV-5387,Two Rivers Market,,1200,2220.14,,84785.17
+GL-32674,2026-09-02,CR-626048,PaySwift payout 9/2,PaySwift,,4000,1471.01,,86256.18
+GL-32675,2026-09-02,CD-685049,Check #9195 Brewline Lab Testing,Brewline Lab Testing,9195,2000,,209.67,86046.51
+GL-32676,2026-09-02,CR-121050,PaySwift payout 9/2,PaySwift,,4000,1025.09,,87071.60
+GL-32677,2026-09-02,CR-675051,PaySwift payout 9/2,PaySwift,,4000,1559.79,,88631.39
+GL-32678,2026-09-02,CR-236052,PaySwift payout 9/2,PaySwift,,4000,2460.96,,91092.35
+GL-32679,2026-09-03,CD-254053,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,,435.36,90656.99
+GL-32680,2026-09-03,CR-864054,PaySwift payout 9/3,PaySwift,,4000,1808.59,,92465.58
+GL-32681,2026-09-03,CR-132055,Deposit - Rivera Catering check 8558,Rivera Catering,,1200,1750.03,,94215.61
+GL-32682,2026-09-03,CD-993056,Tri County CO2 Gas inv 59929,Tri County CO2 Gas,,2000,,282.21,93933.40
+GL-32683,2026-09-03,CR-776057,PaySwift payout 9/3,PaySwift,,4000,2113.56,,96046.96
+GL-32684,2026-09-03,CD-127058,Check #9160 Hopyard Growers Co-op,Hopyard Growers Co-op,9160,2000,,1522.80,94524.16
+GL-32685,2026-09-03,CR-542059,PaySwift payout 9/3,PaySwift,,4000,729.12,,95253.28
+GL-32686,2026-09-03,CD-481060,Malt - Cascade Malt House,Cascade Malt House,,5000,,1527.99,93725.29
+GL-32687,2026-09-03,CD-149061,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,169.32,93555.97
+GL-32688,2026-09-03,CR-878062,PaySwift payout 9/3,PaySwift,,4000,2354.89,,95910.86
+GL-32689,2026-09-03,CR-125063,PaySwift payout 9/3,PaySwift,,4000,665.62,,96576.48
+GL-32690,2026-09-03,CD-675064,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,1078.02,95498.46
+GL-32691,2026-09-03,CR-276065,PaySwift payout 9/3,PaySwift,,4000,2538.42,,98036.88
+GL-32692,2026-09-03,CR-884066,PaySwift payout 9/3,PaySwift,,4000,1621.96,,99658.84
+GL-32693,2026-09-03,CR-256067,PaySwift payout 9/3,PaySwift,,4000,719.05,,100377.89
+GL-32694,2026-09-03,CR-747068,PaySwift payout 9/3,PaySwift,,4000,904.69,,101282.58
+GL-32695,2026-09-03,CR-409069,PaySwift payout 9/3,PaySwift,,4000,2171.78,,103454.36
+GL-32696,2026-09-03,CD-514070,Wire to Canwell Packaging,Canwell Packaging,,2000,,4947.03,98507.33
+GL-32697,2026-09-03,CR-191071,PaySwift payout 9/3,PaySwift,,4000,819.29,,99326.62
+GL-32698,2026-09-04,CR-997072,PaySwift payout 9/4,PaySwift,,4000,1698.74,,101025.36
+GL-32699,2026-09-04,CD-402073,Check #9153 Hopyard Growers Co-op,Hopyard Growers Co-op,9153,2000,,1200.14,99825.22
+GL-32700,2026-09-04,CR-377074,PaySwift payout 9/4,PaySwift,,4000,754.86,,100580.08
+GL-32701,2026-09-04,CD-969075,Check #9164 Canwell Packaging,Canwell Packaging,9164,2000,,603.84,99976.24
+GL-32702,2026-09-04,CR-423076,PaySwift payout 9/4,PaySwift,,4000,1917.73,,101893.97
+GL-32703,2026-09-04,CR-347077,PaySwift payout 9/4,PaySwift,,4000,741.76,,102635.73
+GL-32704,2026-09-04,CD-251078,Tri County CO2 Gas inv 40155,Tri County CO2 Gas,,2000,,198.10,102437.63
+GL-32705,2026-09-04,CR-152079,Deposit - Juniper Tech Labs check 2743,Juniper Tech Labs,,1200,5534.05,,107971.68
+GL-32706,2026-09-04,CD-225080,Malt - Cascade Malt House,Cascade Malt House,,5000,,789.93,107181.75
+GL-32707,2026-09-04,CR-943081,PaySwift payout 9/4,PaySwift,,4000,1289.33,,108471.08
+GL-32708,2026-09-04,CD-236082,Wire to Canwell Packaging,Canwell Packaging,,2000,,7981.26,100489.82
+GL-32709,2026-09-04,CR-556083,PaySwift payout 9/4,PaySwift,,4000,955.33,,101445.15
+GL-32710,2026-09-04,CR-369084,PaySwift payout 9/4,PaySwift,,4000,1389.90,,102835.05
+GL-32711,2026-09-04,CR-720085,PaySwift payout 9/4,PaySwift,,4000,2581.45,,105416.50
+GL-32712,2026-09-04,CR-147086,PaySwift payout 9/4,PaySwift,,4000,1315.46,,106731.96
+GL-32713,2026-09-04,CD-727087,Canwell Packaging inv 82644,Canwell Packaging,,2000,,3364.50,103367.46
+GL-32714,2026-09-04,CR-910088,Payment - Coastside Realty INV-3962,Coastside Realty,,1200,5798.73,,109166.19
+GL-32715,2026-09-04,CD-162089,Malt - Cascade Malt House,Cascade Malt House,,5000,,679.77,108486.42
+GL-32716,2026-09-04,CR-970090,PaySwift payout 9/4,PaySwift,,4000,1052.83,,109539.25
+GL-32717,2026-09-04,CR-855091,Deposit - Oakmont Hotel Group check 9269,Oakmont Hotel Group,,1200,5039.12,,114578.37
+GL-32718,2026-09-04,CR-156092,PaySwift payout 9/4,PaySwift,,4000,2390.56,,116968.93
+GL-32719,2026-09-04,CD-304093,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1337.27,115631.66
+GL-32720,2026-09-04,CR-100094,PaySwift payout 9/4,PaySwift,,4000,715.48,,116347.14
+GL-32721,2026-09-04,CD-965095,Brewline Lab Testing inv 32394,Brewline Lab Testing,,2000,,299.97,116047.17
+GL-32722,2026-09-04,CR-878096,PaySwift payout 9/4,PaySwift,,4000,2247.41,,118294.58
+GL-32723,2026-09-04,CD-304097,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,878.57,117416.01
+GL-32724,2026-09-05,CD-566098,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,,8331.79,109084.22
+GL-32725,2026-09-05,CR-988099,Payment - Coastside Realty INV-5350,Coastside Realty,,1200,1469.22,,110553.44
+GL-32726,2026-09-05,CR-546100,PaySwift payout 9/5,PaySwift,,4000,894.56,,111448.00
+GL-32727,2026-09-05,CR-241101,PaySwift payout 9/5,PaySwift,,4000,2382.88,,113830.88
+GL-32728,2026-09-05,CD-760102,Wire to Cascade Malt House,Cascade Malt House,,2000,,6443.23,107387.65
+GL-32729,2026-09-05,CR-550103,PaySwift payout 9/5,PaySwift,,4000,609.86,,107997.51
+GL-32730,2026-09-05,CD-829104,Check #9158 Brewline Lab Testing,Brewline Lab Testing,9158,2000,,209.92,107787.59
+GL-32731,2026-09-05,CR-146105,Deposit - Two Rivers Market check 3990,Two Rivers Market,,1200,2269.25,,110056.84
+GL-32732,2026-09-05,CR-419106,Payment - Two Rivers Market INV-9801,Two Rivers Market,,1200,5272.44,,115329.28
+GL-32733,2026-09-05,CR-805107,PaySwift payout 9/5,PaySwift,,4000,1107.05,,116436.33
+GL-32734,2026-09-05,CD-648108,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,125.41,116310.92
+GL-32735,2026-09-05,CR-191109,PaySwift payout 9/5,PaySwift,,4000,804.87,,117115.79
+GL-32736,2026-09-05,CR-459110,Deposit - Juniper Tech Labs check 7633,Juniper Tech Labs,,1200,168.60,,117284.39
+GL-32737,2026-09-05,CR-223111,PaySwift payout 9/5,PaySwift,,4000,1133.17,,118417.56
+GL-32738,2026-09-05,CD-180112,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1141.49,117276.07
+GL-32739,2026-09-05,CD-175113,Canwell Packaging inv 43182,Canwell Packaging,,2000,,3088.73,114187.34
+GL-32740,2026-09-05,CR-557114,PaySwift payout 9/5,PaySwift,,4000,1989.96,,116177.30
+GL-32741,2026-09-05,CD-863115,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,779.75,115397.55
+GL-32742,2026-09-05,CD-199116,Check #9188 Hopyard Growers Co-op,Hopyard Growers Co-op,9188,2000,,562.97,114834.58
+GL-32743,2026-09-05,CD-955117,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,127.99,114706.59
+GL-32744,2026-09-05,CD-133118,Tri County CO2 Gas inv 26712,Tri County CO2 Gas,,2000,,205.80,114500.79
+GL-32745,2026-09-05,CR-339119,PaySwift payout 9/5,PaySwift,,4000,1423.27,,115924.06
+GL-32746,2026-09-05,CR-827120,PaySwift payout 9/5,PaySwift,,4000,1743.94,,117668.00
+GL-32747,2026-09-05,CD-582121,Check #9209 Brewline Lab Testing,Brewline Lab Testing,9209,2000,,385.66,117282.34
+GL-32748,2026-09-06,CD-963122,Check #9150 Tri County CO2 Gas,Tri County CO2 Gas,9150,2000,,340.44,116941.90
+GL-32749,2026-09-06,CD-992123,Malt - Cascade Malt House,Cascade Malt House,,5000,,936.20,116005.70
+GL-32750,2026-09-06,CD-856124,Malt - Cascade Malt House,Cascade Malt House,,5000,,1337.29,114668.41
+GL-32751,2026-09-06,CD-130125,Check #9161 Canwell Packaging,Canwell Packaging,9161,2000,,2187.76,112480.65
+GL-32752,2026-09-06,CD-596126,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,680.29,111800.36
+GL-32753,2026-09-06,CD-518127,Check #9169 Tri County CO2 Gas,Tri County CO2 Gas,9169,2000,,281.52,111518.84
+GL-32754,2026-09-06,CD-727128,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1020.44,110498.40
+GL-32755,2026-09-06,CD-995129,Brewline Lab Testing inv 84652,Brewline Lab Testing,,2000,,197.01,110301.39
+GL-32756,2026-09-06,CD-230130,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,439.29,109862.10
+GL-32757,2026-09-06,CD-596131,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1186.91,108675.19
+GL-32758,2026-09-06,CD-692132,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,983.98,107691.21
+GL-32759,2026-09-06,CR-638133,PaySwift payout 9/6,PaySwift,,4000,1456.80,,109148.01
+GL-32760,2026-09-06,CD-680134,Check #9182 Cascade Malt House,Cascade Malt House,9182,2000,,4338.47,104809.54
+GL-32761,2026-09-06,CD-375135,Brewline Lab Testing inv 45978,Brewline Lab Testing,,2000,,262.77,104546.77
+GL-32762,2026-09-06,CD-287136,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,18.78,104527.99
+GL-32763,2026-09-06,CD-995137,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,146.64,104381.35
+GL-32764,2026-09-06,CD-494138,Canwell Packaging inv 6084,Canwell Packaging,,2000,,3146.26,101235.09
+GL-32765,2026-09-06,CD-447139,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,723.04,100512.05
+GL-32766,2026-09-06,CD-911140,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,534.96,99977.09
+GL-32767,2026-09-06,CD-737141,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,84.59,99892.50
+GL-32768,2026-09-06,CR-691142,PaySwift payout 9/6,PaySwift,,4000,2103.02,,101995.52
+GL-32769,2026-09-06,CR-457143,PaySwift payout 9/6,PaySwift,,4000,992.82,,102988.34
+GL-32770,2026-09-07,CD-302144,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1017.13,101971.21
+GL-32771,2026-09-07,CR-395145,PaySwift payout 9/7,PaySwift,,4000,2369.43,,104340.64
+GL-32772,2026-09-07,CR-522146,PaySwift payout 9/7,PaySwift,,4000,1823.26,,106163.90
+GL-32773,2026-09-07,CD-145147,Check #9155 Canwell Packaging,Canwell Packaging,9155,2000,,3317.60,102846.30
+GL-32774,2026-09-07,CD-411148,Check #9156 Hopyard Growers Co-op,Hopyard Growers Co-op,9156,2000,,3339.94,99506.36
+GL-32775,2026-09-07,CR-867149,PaySwift payout 9/7,PaySwift,,4000,1572.22,,101078.58
+GL-32776,2026-09-07,CD-742150,Check #9162 Brewline Lab Testing,Brewline Lab Testing,9162,2000,,109.78,100968.80
+GL-32777,2026-09-07,CR-541151,PaySwift payout 9/7,PaySwift,,4000,899.67,,101868.47
+GL-32778,2026-09-07,CR-492152,PaySwift payout 9/7,PaySwift,,4000,915.37,,102783.84
+GL-32779,2026-09-07,CD-622153,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,488.42,102295.42
+GL-32780,2026-09-07,CD-220154,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,23.72,102271.70
+GL-32781,2026-09-07,CD-887155,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1233.20,101038.50
+GL-32782,2026-09-07,CR-204156,PaySwift payout 9/7,PaySwift,,4000,2102.72,,103141.22
+GL-32783,2026-09-07,CD-451157,Check #9183 Canwell Packaging,Canwell Packaging,9183,2000,,3444.68,99696.54
+GL-32784,2026-09-07,CR-712158,PaySwift payout 9/7,PaySwift,,4000,1671.55,,101368.09
+GL-32785,2026-09-07,CD-981159,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,77.05,101291.04
+GL-32786,2026-09-07,CD-520160,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,96.87,101194.17
+GL-32787,2026-09-07,CR-462161,PaySwift payout 9/7,PaySwift,,4000,1100.88,,102295.05
+GL-32788,2026-09-07,CR-686162,PaySwift payout 9/7,PaySwift,,4000,1444.65,,103739.70
+GL-32789,2026-09-07,CD-153163,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,157.36,103582.34
+GL-32790,2026-09-07,CD-335164,Check #9205 Brewline Lab Testing,Brewline Lab Testing,9205,2000,,404.81,103177.53
+GL-32791,2026-09-07,CD-360165,Malt - Cascade Malt House,Cascade Malt House,,5000,,1299.62,101877.91
+GL-32792,2026-09-07,CD-135166,Check #9208 Tri County CO2 Gas,Tri County CO2 Gas,9208,2000,,459.77,101418.14
+GL-32793,2026-09-08,CD-692167,Accounting software - CloudLedger,CloudLedger,,6800,,113.49,101304.65
+GL-32794,2026-09-08,CR-496168,PaySwift payout 9/8,PaySwift,,4000,2486.56,,103791.21
+GL-32795,2026-09-08,CR-236169,PaySwift payout 9/8,PaySwift,,4000,1080.26,,104871.47
+GL-32796,2026-09-08,CD-680170,Malt - Cascade Malt House,Cascade Malt House,,5000,,1177.85,103693.62
+GL-32797,2026-09-08,CR-722171,Deposit - Oakmont Hotel Group check 9092,Oakmont Hotel Group,,1200,1089.20,,104782.82
+GL-32798,2026-09-08,CR-218172,PaySwift payout 9/8,PaySwift,,4000,463.40,,105246.22
+GL-32799,2026-09-08,CD-558173,Malt - Cascade Malt House,Cascade Malt House,,5000,,201.25,105044.97
+GL-32800,2026-09-08,CR-751174,PaySwift payout 9/8,PaySwift,,4000,2497.57,,107542.54
+GL-32801,2026-09-08,CD-112175,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,67.24,107475.30
+GL-32802,2026-09-08,CD-788176,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,45.88,107429.42
+GL-32803,2026-09-08,CR-315177,PaySwift payout 9/8,PaySwift,,4000,2307.21,,109736.63
+GL-32804,2026-09-08,CR-257178,PaySwift payout 9/8,PaySwift,,4000,1089.97,,110826.60
+GL-32805,2026-09-08,CR-765179,Payment - Two Rivers Market INV-4171,Two Rivers Market,,1200,5827.39,,116653.99
+GL-32806,2026-09-08,CR-907180,Deposit - Coastside Realty check 5357,Coastside Realty,,1200,863.85,,117517.84
+GL-32807,2026-09-08,CD-718181,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,85.63,117432.21
+GL-32808,2026-09-08,CD-588182,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,52.16,117380.05
+GL-32809,2026-09-08,CD-319183,Malt - Cascade Malt House,Cascade Malt House,,5000,,1429.39,115950.66
+GL-32810,2026-09-08,CD-615184,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,85.03,115865.63
+GL-32811,2026-09-08,CD-584185,Check #9202 Tri County CO2 Gas,Tri County CO2 Gas,9202,2000,,223.25,115642.38
+GL-32812,2026-09-08,CD-377186,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,25.76,115616.62
+GL-32813,2026-09-09,CD-480187,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1295.30,114321.32
+GL-32814,2026-09-09,CD-453188,Brewline Lab Testing inv 2007,Brewline Lab Testing,,2000,,371.21,113950.11
+GL-32815,2026-09-09,CD-653189,Cascade Malt House inv 30862,Cascade Malt House,,2000,,4277.26,109672.85
+GL-32816,2026-09-09,CD-139190,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,109.80,109563.05
+GL-32817,2026-09-09,CD-641191,Check #9171 Hopyard Growers Co-op,Hopyard Growers Co-op,9171,2000,,696.79,108866.26
+GL-32818,2026-09-09,CD-870192,Check #9174 Hopyard Growers Co-op,Hopyard Growers Co-op,9174,2000,,3150.92,105715.34
+GL-32819,2026-09-09,CD-260193,Check #9176 Tri County CO2 Gas,Tri County CO2 Gas,9176,2000,,174.99,105540.35
+GL-32820,2026-09-09,CR-452194,PaySwift payout 9/9,PaySwift,,4000,1681.14,,107221.49
+GL-32821,2026-09-09,CD-882195,Brewline Lab Testing inv 48848,Brewline Lab Testing,,2000,,388.93,106832.56
+GL-32822,2026-09-09,CR-920196,PaySwift payout 9/9,PaySwift,,4000,1231.21,,108063.77
+GL-32823,2026-09-09,CR-158197,PaySwift payout 9/9,PaySwift,,4000,310.93,,108374.70
+GL-32824,2026-09-09,CD-635198,Check #9185 Hopyard Growers Co-op,Hopyard Growers Co-op,9185,2000,,1848.35,106526.35
+GL-32825,2026-09-09,CR-203199,Deposit - Oakmont Hotel Group check 2171,Oakmont Hotel Group,,1200,4149.33,,110675.68
+GL-32826,2026-09-09,CD-962200,Malt - Cascade Malt House,Cascade Malt House,,5000,,532.36,110143.32
+GL-32827,2026-09-09,CR-957201,PaySwift payout 9/9,PaySwift,,4000,2110.49,,112253.81
+GL-32828,2026-09-09,CD-350202,Hopyard Growers Co-op inv 87566,Hopyard Growers Co-op,,2000,,2466.84,109786.97
+GL-32829,2026-09-09,CR-539203,PaySwift payout 9/9,PaySwift,,4000,2180.73,,111967.70
+GL-32830,2026-09-09,CR-702204,PaySwift payout 9/9,PaySwift,,4000,1422.81,,113390.51
+GL-32831,2026-09-09,CD-891205,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,29.91,113360.60
+GL-32832,2026-09-09,CR-618206,PaySwift payout 9/9,PaySwift,,4000,1304.39,,114664.99
+GL-32833,2026-09-09,CR-789207,PaySwift payout 9/9,PaySwift,,4000,2412.68,,117077.67
+GL-32834,2026-09-09,CR-689208,PaySwift payout 9/9,PaySwift,,4000,645.45,,117723.12
+GL-32835,2026-09-09,CR-841209,PaySwift payout 9/9,PaySwift,,4000,1350.75,,119073.87
+GL-32836,2026-09-09,CR-389210,PaySwift payout 9/9,PaySwift,,4000,2233.48,,121307.35
+GL-32837,2026-09-09,CR-567211,PaySwift payout 9/9,PaySwift,,4000,1136.68,,122444.03
+GL-32838,2026-09-09,CD-351212,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,44.58,122399.45
+GL-32839,2026-09-09,CD-196213,Tri County CO2 Gas inv 64413,Tri County CO2 Gas,,2000,,510.75,121888.70
+GL-32840,2026-09-09,CD-324214,Hopyard Growers Co-op inv 5432,Hopyard Growers Co-op,,2000,,973.61,120915.09
+GL-32841,2026-09-09,CR-342215,PaySwift payout 9/9,PaySwift,,4000,1486.02,,122401.11
+GL-32842,2026-09-09,CR-203216,Deposit - Oakmont Hotel Group check 9391,Oakmont Hotel Group,,1200,1560.18,,123961.29
+GL-32843,2026-09-10,CD-369217,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,18.74,123942.55
+GL-32844,2026-09-10,CD-246218,Brewline Lab Testing inv 7675,Brewline Lab Testing,,2000,,339.75,123602.80
+GL-32845,2026-09-10,CD-627219,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,42.88,123559.92
+GL-32846,2026-09-10,CR-519220,PaySwift payout 9/10,PaySwift,,4000,1698.32,,125258.24
+GL-32847,2026-09-10,CD-423221,Tri County CO2 Gas inv 75295,Tri County CO2 Gas,,2000,,144.83,125113.41
+GL-32848,2026-09-10,CR-982222,Payment - Evergreen Charter School INV-5479,Evergreen Charter School,,1200,5223.99,,130337.40
+GL-32849,2026-09-10,CR-172223,PaySwift payout 9/10,PaySwift,,4000,705.58,,131042.98
+GL-32850,2026-09-10,CD-526224,Check #9175 Cascade Malt House,Cascade Malt House,9175,2000,,3617.49,127425.49
+GL-32851,2026-09-10,CD-135225,Check #9179 Hopyard Growers Co-op,Hopyard Growers Co-op,9179,2000,,2664.48,124761.01
+GL-32852,2026-09-10,CR-389226,PaySwift payout 9/10,PaySwift,,4000,1206.78,,125967.79
+GL-32853,2026-09-10,CD-403227,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,77.96,125889.83
+GL-32854,2026-09-10,CR-912228,PaySwift payout 9/10,PaySwift,,4000,2325.12,,128214.95
+GL-32855,2026-09-10,CD-557229,Cascade Malt House inv 74391,Cascade Malt House,,2000,,4072.09,124142.86
+GL-32856,2026-09-10,CR-782230,PaySwift payout 9/10,PaySwift,,4000,1261.64,,125404.50
+GL-32857,2026-09-10,CD-288231,Malt - Cascade Malt House,Cascade Malt House,,5000,,1088.17,124316.33
+GL-32858,2026-09-10,CD-686232,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,454.78,123861.55
+GL-32859,2026-09-10,CD-752233,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,814.22,123047.33
+GL-32860,2026-09-10,CR-304234,PaySwift payout 9/10,PaySwift,,4000,1157.07,,124204.40
+GL-32861,2026-09-10,CD-117235,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,674.74,123529.66
+GL-32862,2026-09-10,CR-847236,PaySwift payout 9/10,PaySwift,,4000,2413.78,,125943.44
+GL-32863,2026-09-10,CR-409237,PaySwift payout 9/10,PaySwift,,4000,1944.48,,127887.92
+GL-32864,2026-09-10,CD-501238,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,114.42,127773.50
+GL-32865,2026-09-10,CR-795239,PaySwift payout 9/10,PaySwift,,4000,1964.11,,129737.61
+GL-32866,2026-09-10,CD-541240,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,883.55,128854.06
+GL-32867,2026-09-10,CD-297241,Check #9204 Cascade Malt House,Cascade Malt House,9204,2000,,1955.65,126898.41
+GL-32868,2026-09-10,CR-341242,PaySwift payout 9/10,PaySwift,,4000,1360.03,,128258.44
+GL-32869,2026-09-11,CD-798243,Check #9152 Tri County CO2 Gas,Tri County CO2 Gas,9152,2000,,509.65,127748.79
+GL-32870,2026-09-11,CD-509244,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,112.03,127636.76
+GL-32871,2026-09-11,CR-692245,PaySwift payout 9/11,PaySwift,,4000,2074.28,,129711.04
+GL-32872,2026-09-11,CD-375246,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,287.99,129423.05
+GL-32873,2026-09-11,CD-418247,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,600.85,128822.20
+GL-32874,2026-09-11,CD-227248,Wire to Tri County CO2 Gas,Tri County CO2 Gas,,2000,,1049.35,127772.85
+GL-32875,2026-09-11,CD-936249,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,71.68,127701.17
+GL-32876,2026-09-11,CD-931250,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,5513.64,122187.53
+GL-32877,2026-09-11,CD-785251,Hopyard Growers Co-op inv 95364,Hopyard Growers Co-op,,2000,,3704.72,118482.81
+GL-32878,2026-09-11,CD-863252,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,68.01,118414.80
+GL-32879,2026-09-11,CD-229253,Malt - Cascade Malt House,Cascade Malt House,,5000,,1245.24,117169.56
+GL-32880,2026-09-11,CR-668254,PaySwift payout 9/11,PaySwift,,4000,1123.64,,118293.20
+GL-32881,2026-09-11,CR-736255,PaySwift payout 9/11,PaySwift,,4000,918.38,,119211.58
+GL-32882,2026-09-11,CD-890256,Check #9192 Cascade Malt House,Cascade Malt House,9192,2000,,3901.79,115309.79
+GL-32883,2026-09-11,CD-802257,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,21.20,115288.59
+GL-32884,2026-09-11,CD-273258,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1259.91,114028.68
+GL-32885,2026-09-11,CR-686259,PaySwift payout 9/11,PaySwift,,4000,2207.35,,116236.03
+GL-32886,2026-09-11,CD-387260,Malt - Cascade Malt House,Cascade Malt House,,5000,,1156.61,115079.42
+GL-32887,2026-09-11,CR-472261,PaySwift payout 9/11,PaySwift,,4000,1848.67,,116928.09
+GL-32888,2026-09-11,CD-773262,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,617.62,116310.47
+GL-32889,2026-09-12,CD-859263,Malt - Cascade Malt House,Cascade Malt House,,5000,,884.81,115425.66
+GL-32890,2026-09-12,CD-169264,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,82.48,115343.18
+GL-32891,2026-09-12,CD-233265,Malt - Cascade Malt House,Cascade Malt House,,5000,,833.27,114509.91
+GL-32892,2026-09-12,CD-112266,Malt - Cascade Malt House,Cascade Malt House,,5000,,657.09,113852.82
+GL-32893,2026-09-12,CD-224267,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,180.20,113672.62
+GL-32894,2026-09-12,CD-694268,Check #9165 Canwell Packaging,Canwell Packaging,9165,2000,,1969.13,111703.49
+GL-32895,2026-09-12,CR-414269,PaySwift payout 9/12,PaySwift,,4000,1800.72,,113504.21
+GL-32896,2026-09-12,CR-438270,PaySwift payout 9/12,PaySwift,,4000,314.57,,113818.78
+GL-32897,2026-09-12,CD-611271,Hopyard Growers Co-op inv 3718,Hopyard Growers Co-op,,2000,,1000.79,112817.99
+GL-32898,2026-09-12,CD-145272,Tri County CO2 Gas inv 54651,Tri County CO2 Gas,,2000,,325.28,112492.71
+GL-32899,2026-09-12,CR-752273,PaySwift payout 9/12,PaySwift,,4000,2541.19,,115033.90
+GL-32900,2026-09-12,CD-916274,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,273.00,114760.90
+GL-32901,2026-09-12,CR-500275,PaySwift payout 9/12,PaySwift,,4000,862.27,,115623.17
+GL-32902,2026-09-12,CD-919276,Check #9193 Brewline Lab Testing,Brewline Lab Testing,9193,2000,,250.96,115372.21
+GL-32903,2026-09-12,CR-594277,PaySwift payout 9/12,PaySwift,,4000,2013.50,,117385.71
+GL-32904,2026-09-12,CD-808278,Check #9199 Cascade Malt House,Cascade Malt House,9199,2000,,4515.98,112869.73
+GL-32905,2026-09-12,CD-752279,Check #9211 Cascade Malt House,Cascade Malt House,9211,2000,,2995.90,109873.83
+GL-32906,2026-09-13,CR-303280,Deposit - Evergreen Charter School check 4100,Evergreen Charter School,,1200,5399.84,,115273.67
+GL-32907,2026-09-13,CD-911281,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,101.08,115172.59
+GL-32908,2026-09-13,CD-740282,Wire to Tri County CO2 Gas,Tri County CO2 Gas,,2000,,968.43,114204.16
+GL-32909,2026-09-13,CR-215283,Deposit - Rivera Catering check 4984,Rivera Catering,,1200,5115.87,,119320.03
+GL-32910,2026-09-13,CR-602284,PaySwift payout 9/13,PaySwift,,4000,2134.30,,121454.33
+GL-32911,2026-09-13,CR-839285,PaySwift payout 9/13,PaySwift,,4000,1076.46,,122530.79
+GL-32912,2026-09-13,CD-918286,Hopyard Growers Co-op inv 11574,Hopyard Growers Co-op,,2000,,3753.28,118777.51
+GL-32913,2026-09-13,CD-447287,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,621.86,118155.65
+GL-32914,2026-09-13,CD-996288,Tri County CO2 Gas inv 38425,Tri County CO2 Gas,,2000,,446.10,117709.55
+GL-32915,2026-09-13,CR-818289,PaySwift payout 9/13,PaySwift,,4000,1664.47,,119374.02
+GL-32916,2026-09-13,CR-336290,PaySwift payout 9/13,PaySwift,,4000,2486.62,,121860.64
+GL-32917,2026-09-13,CD-251291,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,287.39,121573.25
+GL-32918,2026-09-13,CD-653292,Cascade Malt House inv 17430,Cascade Malt House,,2000,,3487.24,118086.01
+GL-32919,2026-09-13,CD-187293,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,43.59,118042.42
+GL-32920,2026-09-13,CD-105294,Canwell Packaging inv 13530,Canwell Packaging,,2000,,3217.56,114824.86
+GL-32921,2026-09-13,CD-383295,Malt - Cascade Malt House,Cascade Malt House,,5000,,1239.72,113585.14
+GL-32922,2026-09-13,CD-394296,Wire to Cascade Malt House,Cascade Malt House,,2000,,10332.51,103252.63
+GL-32923,2026-09-13,CR-122297,PaySwift payout 9/13,PaySwift,,4000,452.73,,103705.36
+GL-32924,2026-09-13,CD-456298,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1146.24,102559.12
+GL-32925,2026-09-13,CD-806299,Check #9203 Tri County CO2 Gas,Tri County CO2 Gas,9203,2000,,391.39,102167.73
+GL-32926,2026-09-13,CR-539300,PaySwift payout 9/13,PaySwift,,4000,1155.67,,103323.40
+GL-32927,2026-09-14,CD-799301,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,,1518.38,101805.02
+GL-32928,2026-09-14,CD-871302,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,65.91,101739.11
+GL-32929,2026-09-14,CD-602303,Check #9163 Tri County CO2 Gas,Tri County CO2 Gas,9163,2000,,277.49,101461.62
+GL-32930,2026-09-14,CD-136304,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,846.86,100614.76
+GL-32931,2026-09-14,CD-355305,Wire to Cascade Malt House,Cascade Malt House,,2000,,6439.26,94175.50
+GL-32932,2026-09-14,CR-903306,PaySwift payout 9/14,PaySwift,,4000,572.80,,94748.30
+GL-32933,2026-09-14,CR-227307,Payment - Juniper Tech Labs INV-2154,Juniper Tech Labs,,1200,4377.04,,99125.34
+GL-32934,2026-09-14,CR-315308,PaySwift payout 9/14,PaySwift,,4000,1664.43,,100789.77
+GL-32935,2026-09-14,CR-917309,Deposit - Two Rivers Market check 9379,Two Rivers Market,,1200,3444.63,,104234.40
+GL-32936,2026-09-14,CR-954310,PaySwift payout 9/14,PaySwift,,4000,482.00,,104716.40
+GL-32937,2026-09-14,CD-496311,Check #9181 Tri County CO2 Gas,Tri County CO2 Gas,9181,2000,,142.48,104573.92
+GL-32938,2026-09-14,CR-812312,PaySwift payout 9/14,PaySwift,,4000,1968.61,,106542.53
+GL-32939,2026-09-14,CD-706313,Hopyard Growers Co-op inv 93941,Hopyard Growers Co-op,,2000,,1798.23,104744.30
+GL-32940,2026-09-14,CD-579314,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,229.56,104514.74
+GL-32941,2026-09-14,CR-111315,Payment - Lindqvist Family Trust INV-6252,Lindqvist Family Trust,,1200,2336.03,,106850.77
+GL-32942,2026-09-14,CD-986316,Check #9190 Cascade Malt House,Cascade Malt House,9190,2000,,3184.03,103666.74
+GL-32943,2026-09-14,CR-568317,PaySwift payout 9/14,PaySwift,,4000,2298.15,,105964.89
+GL-32944,2026-09-14,CD-735318,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,6311.06,99653.83
+GL-32945,2026-09-14,CR-336319,Deposit - Lindqvist Family Trust check 7954,Lindqvist Family Trust,,1200,5579.44,,105233.27
+GL-32946,2026-09-14,CR-534320,Payment - Oakmont Hotel Group INV-6571,Oakmont Hotel Group,,1200,1230.74,,106464.01
+GL-32947,2026-09-15,PR-799321,Payroll run 9/15,Ledgerly Payroll,,6200,,11186.51,95277.50
+GL-32948,2026-09-15,CR-598322,PaySwift payout 9/15,PaySwift,,4000,1679.74,,96957.24
+GL-32949,2026-09-15,CD-444323,Check #9167 Tri County CO2 Gas,Tri County CO2 Gas,9167,2000,,514.22,96443.02
+GL-32950,2026-09-15,CR-662324,PaySwift payout 9/15,PaySwift,,4000,1797.07,,98240.09
+GL-32951,2026-09-15,CD-135325,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,817.79,97422.30
+GL-32952,2026-09-15,CR-733326,PaySwift payout 9/15,PaySwift,,4000,847.86,,98270.16
+GL-32953,2026-09-15,CD-580327,Check #9177 Tri County CO2 Gas,Tri County CO2 Gas,9177,2000,,478.44,97791.72
+GL-32954,2026-09-15,CD-778328,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,173.30,97618.42
+GL-32955,2026-09-15,CR-949329,PaySwift payout 9/15,PaySwift,,4000,1546.78,,99165.20
+GL-32956,2026-09-15,CR-124330,PaySwift payout 9/15,PaySwift,,4000,628.88,,99794.08
+GL-32957,2026-09-15,CR-180331,PaySwift payout 9/15,PaySwift,,4000,1246.42,,101040.50
+GL-32958,2026-09-15,CR-932332,PaySwift payout 9/15,PaySwift,,4000,1108.79,,102149.29
+GL-32959,2026-09-15,CR-728333,PaySwift payout 9/15,PaySwift,,4000,338.50,,102487.79
+GL-32960,2026-09-15,CD-152334,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,5777.16,96710.63
+GL-32961,2026-09-15,CR-905335,Deposit - Oakmont Hotel Group check 6427,Oakmont Hotel Group,,1200,1696.86,,98407.49
+GL-32962,2026-09-15,CD-167336,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,60.37,98347.12
+GL-32963,2026-09-15,CD-158337,Wire to Tri County CO2 Gas,Tri County CO2 Gas,,2000,,600.73,97746.39
+GL-32964,2026-09-15,CR-315338,PaySwift payout 9/15,PaySwift,,4000,617.50,,98363.89
+GL-32965,2026-09-15,CD-924339,Check #9200 Tri County CO2 Gas,Tri County CO2 Gas,9200,2000,,498.97,97864.92
+GL-32966,2026-09-15,CR-261340,PaySwift payout 9/15,PaySwift,,4000,618.39,,98483.31
+GL-32967,2026-09-16,CR-352341,PaySwift payout 9/16,PaySwift,,4000,553.73,,99037.04
+GL-32968,2026-09-16,CD-848342,Check #9159 Canwell Packaging,Canwell Packaging,9159,2000,,1938.47,97098.57
+GL-32969,2026-09-16,CR-337343,PaySwift payout 9/16,PaySwift,,4000,2384.10,,99482.67
+GL-32970,2026-09-16,CR-269344,Deposit - Delacroix Events check 6764,Delacroix Events,,1200,1031.79,,100514.46
+GL-32971,2026-09-16,CD-688345,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,1252.98,99261.48
+GL-32972,2026-09-16,CD-722346,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,26.61,99234.87
+GL-32973,2026-09-16,CR-538347,PaySwift payout 9/16,PaySwift,,4000,992.11,,100226.98
+GL-32974,2026-09-16,CD-778348,Check #9168 Brewline Lab Testing,Brewline Lab Testing,9168,2000,,337.66,99889.32
+GL-32975,2026-09-16,CD-967349,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,839.09,99050.23
+GL-32976,2026-09-16,CR-614350,PaySwift payout 9/16,PaySwift,,4000,479.50,,99529.73
+GL-32977,2026-09-16,CD-688351,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,139.47,99390.26
+GL-32978,2026-09-16,CR-727352,PaySwift payout 9/16,PaySwift,,4000,2468.58,,101858.84
+GL-32979,2026-09-16,CD-152353,Check #9178 Canwell Packaging,Canwell Packaging,9178,2000,,1295.82,100563.02
+GL-32980,2026-09-16,CD-903354,Check #9180 Canwell Packaging,Canwell Packaging,9180,2000,,3933.84,96629.18
+GL-32981,2026-09-16,CD-588355,Malt - Cascade Malt House,Cascade Malt House,,5000,,1047.55,95581.63
+GL-32982,2026-09-16,CD-420356,Canwell Packaging inv 95305,Canwell Packaging,,2000,,3721.87,91859.76
+GL-32983,2026-09-16,CD-325357,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,85.87,91773.89
+GL-32984,2026-09-16,CD-738358,Cascade Malt House inv 74475,Cascade Malt House,,2000,,3593.93,88179.96
+GL-32985,2026-09-16,CR-681359,PaySwift payout 9/16,PaySwift,,4000,344.08,,88524.04
+GL-32986,2026-09-16,CD-896360,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,113.21,88410.83
+GL-32987,2026-09-16,CR-664361,PaySwift payout 9/16,PaySwift,,4000,442.70,,88853.53
+GL-32988,2026-09-16,CD-328362,Cascade Malt House inv 93974,Cascade Malt House,,2000,,894.01,87959.52
+GL-32989,2026-09-16,CR-356363,PaySwift payout 9/16,PaySwift,,4000,881.76,,88841.28
+GL-32990,2026-09-16,CD-672364,Check #9198 Hopyard Growers Co-op,Hopyard Growers Co-op,9198,2000,,1280.24,87561.04
+GL-32991,2026-09-16,CR-289365,PaySwift payout 9/16,PaySwift,,4000,1998.35,,89559.39
+GL-32992,2026-09-16,CD-346366,Malt - Cascade Malt House,Cascade Malt House,,5000,,1120.11,88439.28
+GL-32993,2026-09-16,CR-413367,PaySwift payout 9/16,PaySwift,,4000,1182.38,,89621.66
+GL-32994,2026-09-16,CR-520368,PaySwift payout 9/16,PaySwift,,4000,1813.73,,91435.39
+GL-32995,2026-09-16,CR-106369,PaySwift payout 9/16,PaySwift,,4000,648.81,,92084.20
+GL-32996,2026-09-16,CD-527370,Hopyard Growers Co-op inv 44075,Hopyard Growers Co-op,,2000,,984.17,91100.03
+GL-32997,2026-09-16,CD-685371,Check #9210 Cascade Malt House,Cascade Malt House,9210,2000,,3518.95,87581.08
+GL-32998,2026-09-17,CD-216372,Malt - Cascade Malt House,Cascade Malt House,,5000,,1437.30,86143.78
+GL-32999,2026-09-17,CR-111373,Deposit - Juniper Tech Labs check 5368,Juniper Tech Labs,,1200,3857.37,,90001.15
+GL-33000,2026-09-17,CR-578374,PaySwift payout 9/17,PaySwift,,4000,2002.29,,92003.44
+GL-33001,2026-09-17,CD-806375,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,133.03,91870.41
+GL-33002,2026-09-17,CD-350376,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,253.20,91617.21
+GL-33003,2026-09-17,CR-638377,PaySwift payout 9/17,PaySwift,,4000,2086.47,,93703.68
+GL-33004,2026-09-17,CD-472378,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,87.21,93616.47
+GL-33005,2026-09-17,CD-134379,Cascade Malt House inv 83819,Cascade Malt House,,2000,,2397.17,91219.30
+GL-33006,2026-09-17,CD-105380,Canwell Packaging inv 1540,Canwell Packaging,,2000,,3186.52,88032.78
+GL-33007,2026-09-17,CR-395381,PaySwift payout 9/17,PaySwift,,4000,2557.32,,90590.10
+GL-33008,2026-09-17,CD-462382,Check #9186 Hopyard Growers Co-op,Hopyard Growers Co-op,9186,2000,,3309.57,87280.53
+GL-33009,2026-09-17,CR-493383,PaySwift payout 9/17,PaySwift,,4000,2222.07,,89502.60
+GL-33010,2026-09-17,CR-885384,PaySwift payout 9/17,PaySwift,,4000,499.42,,90002.02
+GL-33011,2026-09-17,CD-293385,Check #9189 Brewline Lab Testing,Brewline Lab Testing,9189,2000,,337.92,89664.10
+GL-33012,2026-09-17,CD-282386,Hopyard Growers Co-op inv 74436,Hopyard Growers Co-op,,2000,,3380.54,86283.56
+GL-33013,2026-09-17,CR-460387,PaySwift payout 9/17,PaySwift,,4000,1200.00,,87483.56
+GL-33014,2026-09-17,CR-208388,PaySwift payout 9/17,PaySwift,,4000,291.93,,87775.49
+GL-33015,2026-09-17,CD-352389,Check #9191 Tri County CO2 Gas,Tri County CO2 Gas,9191,2000,,436.61,87338.88
+GL-33016,2026-09-17,CD-895390,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,713.08,86625.80
+GL-33017,2026-09-17,CD-105391,Check #9197 Brewline Lab Testing,Brewline Lab Testing,9197,2000,,197.51,86428.29
+GL-33018,2026-09-17,CR-507392,PaySwift payout 9/17,PaySwift,,4000,2582.07,,89010.36
+GL-33019,2026-09-17,CD-782393,Tri County CO2 Gas inv 22199,Tri County CO2 Gas,,2000,,117.84,88892.52
+GL-33020,2026-09-17,CD-107394,Malt - Cascade Malt House,Cascade Malt House,,5000,,102.28,88790.24
+GL-33021,2026-09-17,CR-443395,PaySwift payout 9/17,PaySwift,,4000,511.01,,89301.25
+GL-33022,2026-09-18,CD-322396,Check #9151 Hopyard Growers Co-op,Hopyard Growers Co-op,9151,2000,,1975.01,87326.24
+GL-33023,2026-09-18,CD-372397,Canwell Packaging inv 89448,Canwell Packaging,,2000,,1832.82,85493.42
+GL-33024,2026-09-18,CD-364398,Check #9157 Cascade Malt House,Cascade Malt House,9157,2000,,502.19,84991.23
+GL-33025,2026-09-18,CD-886399,Malt - Cascade Malt House,Cascade Malt House,,5000,,566.51,84424.72
+GL-33026,2026-09-18,CR-815400,PaySwift payout 9/18,PaySwift,,4000,1979.72,,86404.44
+GL-33027,2026-09-18,CR-900401,PaySwift payout 9/18,PaySwift,,4000,2102.13,,88506.57
+GL-33028,2026-09-18,CD-105402,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,394.26,88112.31
+GL-33029,2026-09-18,CD-550403,Check #9172 Canwell Packaging,Canwell Packaging,9172,2000,,1113.51,86998.80
+GL-33030,2026-09-18,CR-787404,PaySwift payout 9/18,PaySwift,,4000,1368.11,,88366.91
+GL-33031,2026-09-18,CR-173405,PaySwift payout 9/18,PaySwift,,4000,1679.26,,90046.17
+GL-33032,2026-09-18,CD-596406,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,146.76,89899.41
+GL-33033,2026-09-18,CD-608407,Check #9187 Brewline Lab Testing,Brewline Lab Testing,9187,2000,,165.52,89733.89
+GL-33034,2026-09-18,CD-630408,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,25.01,89708.88
+GL-33035,2026-09-18,CD-377409,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,7678.07,82030.81
+GL-33036,2026-09-18,CD-377410,Malt - Cascade Malt House,Cascade Malt House,,5000,,1319.46,80711.35
+GL-33037,2026-09-18,CD-697411,Cascade Malt House inv 71422,Cascade Malt House,,2000,,1975.78,78735.57
+GL-33038,2026-09-18,CD-533412,Check #9194 Brewline Lab Testing,Brewline Lab Testing,9194,2000,,141.43,78594.14
+GL-33039,2026-09-18,CR-312413,PaySwift payout 9/18,PaySwift,,4000,2016.39,,80610.53
+GL-33040,2026-09-18,CR-487414,Payment - Rivera Catering INV-6525,Rivera Catering,,1200,3074.81,,83685.34
+GL-33041,2026-09-18,CD-336415,Hopyard Growers Co-op inv 79577,Hopyard Growers Co-op,,2000,,842.25,82843.09
+GL-33042,2026-09-18,CD-409416,Check #9201 Tri County CO2 Gas,Tri County CO2 Gas,9201,2000,,278.97,82564.12
+GL-33043,2026-09-18,CD-212417,Brewline Lab Testing inv 36865,Brewline Lab Testing,,2000,,286.54,82277.58
+GL-33044,2026-09-18,CD-585418,Check #9206 Brewline Lab Testing,Brewline Lab Testing,9206,2000,,335.12,81942.46
+GL-33045,2026-09-18,CD-307419,Wire to Canwell Packaging,Canwell Packaging,,2000,,5221.29,76721.17
+GL-33046,2026-09-18,CD-492420,Tri County CO2 Gas inv 38579,Tri County CO2 Gas,,2000,,490.72,76230.45
+GL-33047,2026-09-18,CD-245421,Check #9207 Brewline Lab Testing,Brewline Lab Testing,9207,2000,,242.56,75987.89
+GL-33048,2026-09-18,CR-745422,Deposit - Delacroix Events check 6549,Delacroix Events,,1200,3722.14,,79710.03
+GL-33049,2026-09-19,CR-689423,PaySwift payout 9/19,PaySwift,,4000,1296.34,,81006.37
+GL-33050,2026-09-19,CD-825424,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,511.36,80495.01
+GL-33051,2026-09-19,CR-914425,Deposit - Juniper Tech Labs check 1207,Juniper Tech Labs,,1200,1736.47,,82231.48
+GL-33052,2026-09-19,CR-884426,PaySwift payout 9/19,PaySwift,,4000,1637.37,,83868.85
+GL-33053,2026-09-19,CR-477427,PaySwift payout 9/19,PaySwift,,4000,1230.79,,85099.64
+GL-33054,2026-09-19,CR-493428,PaySwift payout 9/19,PaySwift,,4000,1670.33,,86769.97
+GL-33055,2026-09-19,CR-271429,PaySwift payout 9/19,PaySwift,,4000,2452.49,,89222.46
+GL-33056,2026-09-19,CR-279430,Payment - Coastside Realty INV-6546,Coastside Realty,,1200,769.13,,89991.59
+GL-33057,2026-09-19,CR-749431,PaySwift payout 9/19,PaySwift,,4000,2198.88,,92190.47
+GL-33058,2026-09-19,CD-965432,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,1045.52,91144.95
+GL-33059,2026-09-19,CR-710433,PaySwift payout 9/19,PaySwift,,4000,2076.70,,93221.65
+GL-33060,2026-09-19,CR-872434,PaySwift payout 9/19,PaySwift,,4000,2085.79,,95307.44
+GL-33061,2026-09-19,CD-907435,Check #9184 Brewline Lab Testing,Brewline Lab Testing,9184,2000,,238.71,95068.73
+GL-33062,2026-09-19,CD-567436,Canwell Packaging inv 9409,Canwell Packaging,,2000,,3733.73,91335.00
+GL-33063,2026-09-19,CR-463437,PaySwift payout 9/19,PaySwift,,4000,1988.80,,93323.80
+GL-33064,2026-09-19,CR-398438,PaySwift payout 9/19,PaySwift,,4000,2486.28,,95810.08
+GL-33065,2026-09-19,CR-254439,PaySwift payout 9/19,PaySwift,,4000,2260.82,,98070.90
+GL-33066,2026-09-19,CD-369440,Wire to Canwell Packaging,Canwell Packaging,,2000,,8480.73,89590.17
+GL-33067,2026-09-19,CD-427441,Tri County CO2 Gas inv 44630,Tri County CO2 Gas,,2000,,266.57,89323.60
+GL-33068,2026-09-20,CD-408442,Loan payment - First Coast Bank,First Coast Bank,,2500,,1623.88,87699.72
+GL-33069,2026-09-20,CR-840443,PaySwift payout 9/20,PaySwift,,4000,1377.65,,89077.37
+GL-33070,2026-09-20,CD-515444,Brewline Lab Testing inv 83343,Brewline Lab Testing,,2000,,300.84,88776.53
+GL-33071,2026-09-20,CD-422445,Canwell Packaging inv 97020,Canwell Packaging,,2000,,3400.37,85376.16
+GL-33072,2026-09-20,CR-958446,PaySwift payout 9/20,PaySwift,,4000,1769.29,,87145.45
+GL-33073,2026-09-20,CD-137447,Brewline Lab Testing inv 91833,Brewline Lab Testing,,2000,,287.13,86858.32
+GL-33074,2026-09-20,CD-551448,Cascade Malt House inv 80079,Cascade Malt House,,2000,,3210.65,83647.67
+GL-33075,2026-09-20,CD-449449,Brewline Lab Testing inv 44768,Brewline Lab Testing,,2000,,260.12,83387.55
+GL-33076,2026-09-20,CD-980450,Brewline Lab Testing inv 29985,Brewline Lab Testing,,2000,,266.01,83121.54
+GL-33077,2026-09-20,CR-614451,PaySwift payout 9/20,PaySwift,,4000,2575.74,,85697.28
+GL-33078,2026-09-20,CR-970452,PaySwift payout 9/20,PaySwift,,4000,515.34,,86212.62
+GL-33079,2026-09-20,CD-369453,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1056.57,85156.05
+GL-33080,2026-09-20,CR-889454,PaySwift payout 9/20,PaySwift,,4000,2522.27,,87678.32
+GL-33081,2026-09-20,CD-246455,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,1121.11,86557.21
+GL-33082,2026-09-20,CR-883456,PaySwift payout 9/20,PaySwift,,4000,672.90,,87230.11
+GL-33083,2026-09-20,CR-305457,PaySwift payout 9/20,PaySwift,,4000,1804.71,,89034.82
+GL-33084,2026-09-20,CR-252458,PaySwift payout 9/20,PaySwift,,4000,295.13,,89329.95
+GL-33085,2026-09-20,CR-681459,PaySwift payout 9/20,PaySwift,,4000,2103.50,,91433.45
+GL-33086,2026-09-20,CR-806460,PaySwift payout 9/20,PaySwift,,4000,1801.26,,93234.71
+GL-33087,2026-09-20,CR-525461,PaySwift payout 9/20,PaySwift,,4000,2285.87,,95520.58
+GL-33088,2026-09-20,CR-699462,PaySwift payout 9/20,PaySwift,,4000,2049.96,,97570.54
+GL-33089,2026-09-20,CD-756463,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,207.15,97363.39
+GL-33090,2026-09-20,CD-987464,Canwell Packaging inv 20151,Canwell Packaging,,2000,,3868.45,93494.94
+GL-33091,2026-09-20,CD-276465,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,118.23,93376.71
+GL-33092,2026-09-20,CR-524466,PaySwift payout 9/20,PaySwift,,4000,1209.07,,94585.78
+GL-33093,2026-09-20,CR-665467,PaySwift payout 9/20,PaySwift,,4000,1382.29,,95968.07
+GL-33094,2026-09-21,CR-923468,PaySwift payout 9/21,PaySwift,,4000,387.57,,96355.64
+GL-33095,2026-09-21,CR-209469,PaySwift payout 9/21,PaySwift,,4000,2471.11,,98826.75
+GL-33096,2026-09-21,CD-399470,Malt - Cascade Malt House,Cascade Malt House,,5000,,1402.52,97424.23
+GL-33097,2026-09-21,CD-823471,Hopyard Growers Co-op inv 95623,Hopyard Growers Co-op,,2000,,1212.38,96211.85
+GL-33098,2026-09-21,CR-228472,PaySwift payout 9/21,PaySwift,,4000,2212.81,,98424.66
+GL-33099,2026-09-21,CD-236473,Canwell Packaging inv 78236,Canwell Packaging,,2000,,759.61,97665.05
+GL-33100,2026-09-21,CD-331474,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,666.84,96998.21
+GL-33101,2026-09-21,CD-909475,Brewline Lab Testing inv 60199,Brewline Lab Testing,,2000,,190.22,96807.99
+GL-33102,2026-09-21,CR-373476,Deposit - Evergreen Charter School check 5973,Evergreen Charter School,,1200,4912.88,,101720.87
+GL-33103,2026-09-21,CD-123477,Wire to Cascade Malt House,Cascade Malt House,,2000,,10125.95,91594.92
+GL-33104,2026-09-21,CD-259478,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,4134.56,87460.36
+GL-33105,2026-09-21,CR-959479,PaySwift payout 9/21,PaySwift,,4000,1055.27,,88515.63
+GL-33106,2026-09-21,CD-967480,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,938.22,87577.41
+GL-33107,2026-09-21,CD-941481,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,193.61,87383.80
+GL-33108,2026-09-21,CR-643482,Deposit - Rivera Catering check 8111,Rivera Catering,,1200,2187.49,,89571.29
+GL-33109,2026-09-21,CR-962483,PaySwift payout 9/21,PaySwift,,4000,1914.33,,91485.62
+GL-33110,2026-09-21,CD-204484,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,72.41,91413.21
+GL-33111,2026-09-21,CR-802485,PaySwift payout 9/21,PaySwift,,4000,468.01,,91881.22
+GL-33112,2026-09-21,CR-955486,PaySwift payout 9/21,PaySwift,,4000,1045.99,,92927.21
+GL-33113,2026-09-21,CD-669487,Wire to Canwell Packaging,Canwell Packaging,,2000,,7924.54,85002.67
+GL-33114,2026-09-21,CD-179488,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,809.72,84192.95
+GL-33115,2026-09-21,CR-796489,PaySwift payout 9/21,PaySwift,,4000,2394.77,,86587.72
+GL-33116,2026-09-21,CR-511490,PaySwift payout 9/21,PaySwift,,4000,2168.26,,88755.98
+GL-33117,2026-09-21,CD-497491,Canwell Packaging inv 43236,Canwell Packaging,,2000,,3395.99,85359.99
+GL-33118,2026-09-22,CD-194492,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,,5140.76,80219.23
+GL-33119,2026-09-22,CR-272493,PaySwift payout 9/22,PaySwift,,4000,386.92,,80606.15
+GL-33120,2026-09-22,CD-133494,Tri County CO2 Gas inv 63777,Tri County CO2 Gas,,2000,,372.01,80234.14
+GL-33121,2026-09-22,CD-328495,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,160.46,80073.68
+GL-33122,2026-09-22,CR-948496,PaySwift payout 9/22,PaySwift,,4000,1502.99,,81576.67
+GL-33123,2026-09-22,CR-793497,PaySwift payout 9/22,PaySwift,,4000,1340.12,,82916.79
+GL-33124,2026-09-22,CD-805498,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,760.84,82155.95
+GL-33125,2026-09-22,CR-217499,PaySwift payout 9/22,PaySwift,,4000,1295.20,,83451.15
+GL-33126,2026-09-22,CR-243500,PaySwift payout 9/22,PaySwift,,4000,939.59,,84390.74
+GL-33127,2026-09-22,CR-614501,PaySwift payout 9/22,PaySwift,,4000,509.57,,84900.31
+GL-33128,2026-09-22,CD-812502,Wire to Canwell Packaging,Canwell Packaging,,2000,,4786.69,80113.62
+GL-33129,2026-09-22,CD-616503,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,69.79,80043.83
+GL-33130,2026-09-22,CD-988504,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,44.95,79998.88
+GL-33131,2026-09-22,CR-617505,PaySwift payout 9/22,PaySwift,,4000,2341.44,,82340.32
+GL-33132,2026-09-22,CR-661506,Deposit - Coastside Realty check 9769,Coastside Realty,,1200,5836.31,,88176.63
+GL-33133,2026-09-22,CR-880507,PaySwift payout 9/22,PaySwift,,4000,1507.83,,89684.46
+GL-33134,2026-09-22,CD-258508,Hopyard Growers Co-op inv 55131,Hopyard Growers Co-op,,2000,,1464.82,88219.64
+GL-33135,2026-09-22,CR-182509,PaySwift payout 9/22,PaySwift,,4000,402.65,,88622.29
+GL-33136,2026-09-22,CR-947510,PaySwift payout 9/22,PaySwift,,4000,971.53,,89593.82
+GL-33137,2026-09-22,CD-858511,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,6225.30,83368.52
+GL-33138,2026-09-22,CR-403512,PaySwift payout 9/22,PaySwift,,4000,349.46,,83717.98
+GL-33139,2026-09-22,CR-798513,PaySwift payout 9/22,PaySwift,,4000,1450.75,,85168.73
+GL-33140,2026-09-22,CD-276514,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,477.07,84691.66
+GL-33141,2026-09-22,CR-845515,PaySwift payout 9/22,PaySwift,,4000,1540.25,,86231.91
+GL-33142,2026-09-22,CD-908516,Wire to Cascade Malt House,Cascade Malt House,,2000,,9976.00,76255.91
+GL-33143,2026-09-23,CR-646517,PaySwift payout 9/23,PaySwift,,4000,1342.18,,77598.09
+GL-33144,2026-09-23,CD-785518,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,16.60,77581.49
+GL-33145,2026-09-23,CD-557519,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,100.30,77481.19
+GL-33146,2026-09-23,CR-734520,PaySwift payout 9/23,PaySwift,,4000,1863.61,,79344.80
+GL-33147,2026-09-23,CR-131521,PaySwift payout 9/23,PaySwift,,4000,2275.44,,81620.24
+GL-33148,2026-09-23,CR-916522,PaySwift payout 9/23,PaySwift,,4000,2583.06,,84203.30
+GL-33149,2026-09-23,CR-230523,PaySwift payout 9/23,PaySwift,,4000,2181.01,,86384.31
+GL-33150,2026-09-23,CR-159524,PaySwift payout 9/23,PaySwift,,4000,311.78,,86696.09
+GL-33151,2026-09-23,CD-195525,Lab testing - Brewline Lab Testing,Brewline Lab Testing,,6500,,138.69,86557.40
+GL-33152,2026-09-23,CR-290526,PaySwift payout 9/23,PaySwift,,4000,1374.65,,87932.05
+GL-33153,2026-09-23,CD-436527,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,1045.65,86886.40
+GL-33154,2026-09-23,CR-887528,PaySwift payout 9/23,PaySwift,,4000,2585.96,,89472.36
+GL-33155,2026-09-23,CD-786529,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,526.38,88945.98
+GL-33156,2026-09-23,CR-942530,PaySwift payout 9/23,PaySwift,,4000,976.13,,89922.11
+GL-33157,2026-09-23,CD-570531,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,5103.20,84818.91
+GL-33158,2026-09-23,CD-264532,Tri County CO2 Gas inv 19494,Tri County CO2 Gas,,2000,,511.85,84307.06
+GL-33159,2026-09-23,CR-471533,PaySwift payout 9/23,PaySwift,,4000,723.30,,85030.36
+GL-33160,2026-09-23,CR-536534,PaySwift payout 9/23,PaySwift,,4000,2575.48,,87605.84
+GL-33161,2026-09-23,CD-889535,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,1033.68,86572.16
+GL-33162,2026-09-23,CD-225536,Cans and labels - Canwell Packaging,Canwell Packaging,,5000,,564.29,86007.87
+GL-33163,2026-09-23,CR-349537,PaySwift payout 9/23,PaySwift,,4000,2230.46,,88238.33
+GL-33164,2026-09-23,CR-355538,PaySwift payout 9/23,PaySwift,,4000,2331.71,,90570.04
+GL-33165,2026-09-23,CD-381539,Tri County CO2 Gas inv 10386,Tri County CO2 Gas,,2000,,129.83,90440.21
+GL-33166,2026-09-24,CD-537540,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,962.46,89477.75
+GL-33167,2026-09-24,CR-249541,PaySwift payout 9/24,PaySwift,,4000,730.68,,90208.43
+GL-33168,2026-09-24,CR-913542,PaySwift payout 9/24,PaySwift,,4000,932.02,,91140.45
+GL-33169,2026-09-24,CD-289543,Cascade Malt House inv 28105,Cascade Malt House,,2000,,3972.52,87167.93
+GL-33170,2026-09-24,CR-231544,PaySwift payout 9/24,PaySwift,,4000,1865.08,,89033.01
+GL-33171,2026-09-24,CD-656545,Brewline Lab Testing inv 23637,Brewline Lab Testing,,2000,,297.09,88735.92
+GL-33172,2026-09-24,CD-352546,Hops - Hopyard Growers Co-op,Hopyard Growers Co-op,,5000,,922.52,87813.40
+GL-33173,2026-09-24,CD-335547,Tri County CO2 Gas inv 70318,Tri County CO2 Gas,,2000,,377.16,87436.24
+GL-33174,2026-09-24,CR-637548,PaySwift payout 9/24,PaySwift,,4000,2203.56,,89639.80
+GL-33175,2026-09-24,CR-794549,PaySwift payout 9/24,PaySwift,,4000,2095.73,,91735.53
+GL-33176,2026-09-24,CR-359550,PaySwift payout 9/24,PaySwift,,4000,2083.13,,93818.66
+GL-33177,2026-09-24,CR-464551,Deposit - Delacroix Events check 1561,Delacroix Events,,1200,4160.85,,97979.51
+GL-33178,2026-09-24,CR-687552,Deposit - Lindqvist Family Trust check 8269,Lindqvist Family Trust,,1200,4930.99,,102910.50
+GL-33179,2026-09-24,CR-435553,PaySwift payout 9/24,PaySwift,,4000,2558.37,,105468.87
+GL-33180,2026-09-25,CR-744554,PaySwift payout 9/25,PaySwift,,4000,984.14,,106453.01
+GL-33181,2026-09-25,CD-693555,Malt - Cascade Malt House,Cascade Malt House,,5000,,391.78,106061.23
+GL-33182,2026-09-25,CR-865556,PaySwift payout 9/25,PaySwift,,4000,2199.39,,108260.62
+GL-33183,2026-09-25,CR-737557,PaySwift payout 9/25,PaySwift,,4000,1513.54,,109774.16
+GL-33184,2026-09-25,CR-142558,Payment - Oakmont Hotel Group INV-1119,Oakmont Hotel Group,,1200,5825.13,,115599.29
+GL-33185,2026-09-25,CD-646559,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,143.29,115456.00
+GL-33186,2026-09-25,CD-273560,Hopyard Growers Co-op inv 33963,Hopyard Growers Co-op,,2000,,2929.30,112526.70
+GL-33187,2026-09-25,CR-450561,PaySwift payout 9/25,PaySwift,,4000,2527.31,,115054.01
+GL-33188,2026-09-25,CR-832562,PaySwift payout 9/25,PaySwift,,4000,1546.91,,116600.92
+GL-33189,2026-09-25,CR-143563,PaySwift payout 9/25,PaySwift,,4000,1471.09,,118072.01
+GL-33190,2026-09-25,CD-608564,Wire to Tri County CO2 Gas,Tri County CO2 Gas,,2000,,575.65,117496.36
+GL-33191,2026-09-25,CR-141565,PaySwift payout 9/25,PaySwift,,4000,1091.60,,118587.96
+GL-33192,2026-09-25,CR-241566,PaySwift payout 9/25,PaySwift,,4000,195.35,,118783.31
+GL-33193,2026-09-25,CD-279567,Cascade Malt House inv 70583,Cascade Malt House,,2000,,1920.28,116863.03
+GL-33194,2026-09-25,CR-956568,PaySwift payout 9/25,PaySwift,,4000,2228.35,,119091.38
+GL-33195,2026-09-25,CR-468569,PaySwift payout 9/25,PaySwift,,4000,692.57,,119783.95
+GL-33196,2026-09-25,CD-506570,Tri County CO2 Gas inv 57133,Tri County CO2 Gas,,2000,,410.07,119373.88
+GL-33197,2026-09-25,CR-500571,PaySwift payout 9/25,PaySwift,,4000,521.33,,119895.21
+GL-33198,2026-09-25,CR-833572,PaySwift payout 9/25,PaySwift,,4000,1489.79,,121385.00
+GL-33199,2026-09-25,CD-452573,CO2 - Tri County CO2 Gas,Tri County CO2 Gas,,5000,,46.33,121338.67
+GL-33200,2026-09-25,CR-364574,Payment - Evergreen Charter School INV-6881,Evergreen Charter School,,1200,5775.40,,127114.07
+GL-33201,2026-09-25,CR-186575,Payment - Two Rivers Market INV-4012,Two Rivers Market,,1200,918.39,,128032.46
+GL-33202,2026-09-25,CD-488576,Cascade Malt House inv 53262,Cascade Malt House,,2000,,4326.22,123706.24
+GL-33203,2026-09-25,CR-555577,PaySwift payout 9/25,PaySwift,,4000,2509.01,,126215.25
+GL-33204,2026-09-26,CD-946578,Wire to Hopyard Growers Co-op,Hopyard Growers Co-op,,2000,,5368.21,120847.04
+GL-33205,2026-09-26,CR-621579,Deposit - Rivera Catering check 5801,Rivera Catering,,1200,4287.79,,125134.83
+GL-33206,2026-09-26,CD-124580,Hopyard Growers Co-op inv 78374,Hopyard Growers Co-op,,2000,,2006.88,123127.95
+GL-33207,2026-09-27,CD-334581,Wire to Brewline Lab Testing,Brewline Lab Testing,,2000,,733.36,122394.59
+GL-33208,2026-09-27,CD-237582,Check #9213 Brewline Lab Testing,Brewline Lab Testing,9213,2000,,258.85,122135.74
+GL-33209,2026-09-27,CD-748583,Check #9214 Brewline Lab Testing,Brewline Lab Testing,9214,2000,,244.56,121891.18
+GL-33210,2026-09-29,PR-567584,Payroll run 9/29,Ledgerly Payroll,,6200,,15375.99,106515.19
+GL-33211,2026-09-29,CD-891585,Check #9212 Hopyard Growers Co-op,Hopyard Growers Co-op,9212,2000,,2596.73,103918.46
+GL-33212,2026-09-30,CR-163586,Deposit - Juniper Tech Labs check 3815,Juniper Tech Labs,,1200,889.19,,104807.65

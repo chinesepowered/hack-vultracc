@@ -1,0 +1,400 @@
+Line ID,Posting Date,JE Number,Memo,Counterparty,Check #,Contra Account,Amount,Running Balance
+GL-59617,09/01/2026,CR-697000,PaySwift payout 9/1,PaySwift,,4000,444.66,27320.46
+GL-59618,09/01/2026,CD-540001,Check #2052 Summit Paper Goods,Summit Paper Goods,2052,2000,(104.86),27215.60
+GL-59619,09/01/2026,CD-381002,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(215.27),27000.33
+GL-59620,09/01/2026,CD-673003,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(133.34),26866.99
+GL-59621,09/01/2026,CD-114004,Check #2064 Pacific Crest Dairy,Pacific Crest Dairy,2064,2000,(1067.59),25799.40
+GL-59622,09/01/2026,CD-780005,Check #2071 Golden Mill Flour,Golden Mill Flour,2071,2000,(641.97),25157.43
+GL-59623,09/01/2026,CR-348006,PaySwift payout 9/1,PaySwift,,4000,364.25,25521.68
+GL-59624,09/01/2026,CD-666007,Check #2076 Pacific Crest Dairy,Pacific Crest Dairy,2076,2000,(233.20),25288.48
+GL-59625,09/01/2026,CD-585008,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(832.57),24455.91
+GL-59626,09/01/2026,CR-806009,PaySwift payout 9/1,PaySwift,,4000,1057.68,25513.59
+GL-59627,09/01/2026,CD-182010,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(142.44),25371.15
+GL-59628,09/01/2026,CD-299011,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(57.54),25313.61
+GL-59629,09/01/2026,CR-372012,PaySwift payout 9/1,PaySwift,,4000,576.82,25890.43
+GL-59630,09/02/2026,CD-293013,Check #2053 Summit Paper Goods,Summit Paper Goods,2053,2000,(411.96),25478.47
+GL-59631,09/02/2026,CD-348014,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(329.35),25149.12
+GL-59632,09/02/2026,CR-534015,Payment - Hilltop Unified PTA INV-8095,Hilltop Unified PTA,,1200,447.50,25596.62
+GL-59633,09/02/2026,CR-472016,PaySwift payout 9/2,PaySwift,,4000,87.06,25683.68
+GL-59634,09/02/2026,CD-222017,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(105.32),25578.36
+GL-59635,09/02/2026,CD-682018,Check #2075 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2075,2000,(181.24),25397.12
+GL-59636,09/02/2026,CR-805019,PaySwift payout 9/2,PaySwift,,4000,993.62,26390.74
+GL-59637,09/02/2026,CD-726020,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1890.98),24499.76
+GL-59638,09/02/2026,CR-662021,PaySwift payout 9/2,PaySwift,,4000,588.00,25087.76
+GL-59639,09/02/2026,CD-737022,Check #2083 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2083,2000,(407.50),24680.26
+GL-59640,09/02/2026,CR-163023,PaySwift payout 9/2,PaySwift,,4000,384.27,25064.53
+GL-59641,09/02/2026,CR-435024,PaySwift payout 9/2,PaySwift,,4000,605.35,25669.88
+GL-59642,09/03/2026,CD-974025,Insurance premium - Bayshore Mutual,Bayshore Mutual Insurance,,6300,(1088.27),24581.61
+GL-59643,09/03/2026,CD-598026,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(1775.93),22805.68
+GL-59644,09/03/2026,CD-753027,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(158.82),22646.86
+GL-59645,09/03/2026,CD-461028,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(79.33),22567.53
+GL-59646,09/03/2026,CR-501029,PaySwift payout 9/3,PaySwift,,4000,971.25,23538.78
+GL-59647,09/03/2026,CD-439030,Check #2070 Summit Paper Goods,Summit Paper Goods,2070,2000,(304.43),23234.35
+GL-59648,09/03/2026,CD-548031,Summit Paper Goods inv 26203,Summit Paper Goods,,2000,(424.04),22810.31
+GL-59649,09/03/2026,CD-463032,Check #2080 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2080,2000,(128.01),22682.30
+GL-59650,09/03/2026,CD-896033,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(80.28),22602.02
+GL-59651,09/03/2026,CD-664034,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(129.70),22472.32
+GL-59652,09/03/2026,CD-874035,Summit Paper Goods inv 34765,Summit Paper Goods,,2000,(367.43),22104.89
+GL-59653,09/03/2026,CR-279036,PaySwift payout 9/3,PaySwift,,4000,120.59,22225.48
+GL-59654,09/03/2026,CR-921037,Deposit - Coastside Realty check 3820,Coastside Realty,,1200,1636.65,23862.13
+GL-59655,09/03/2026,CR-452038,Deposit - Hilltop Unified PTA check 4858,Hilltop Unified PTA,,1200,1458.95,25321.08
+GL-59656,09/03/2026,CR-191039,Payment - Hilltop Unified PTA INV-4684,Hilltop Unified PTA,,1200,1511.11,26832.19
+GL-59657,09/03/2026,CR-503040,PaySwift payout 9/3,PaySwift,,4000,515.22,27347.41
+GL-59658,09/03/2026,CD-695041,Pacific Crest Dairy inv 49401,Pacific Crest Dairy,,2000,(959.69),26387.72
+GL-59659,09/03/2026,CR-396042,PaySwift payout 9/3,PaySwift,,4000,901.26,27288.98
+GL-59660,09/03/2026,CD-868043,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(72.36),27216.62
+GL-59661,09/04/2026,CD-551044,Pacific Crest Dairy inv 99458,Pacific Crest Dairy,,2000,(283.80),26932.82
+GL-59662,09/04/2026,CD-466045,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(755.86),26176.96
+GL-59663,09/04/2026,CR-220046,PaySwift payout 9/4,PaySwift,,4000,858.17,27035.13
+GL-59664,09/04/2026,CD-259047,Check #2057 Pacific Crest Dairy,Pacific Crest Dairy,2057,2000,(838.10),26197.03
+GL-59665,09/04/2026,CD-417048,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(329.22),25867.81
+GL-59666,09/04/2026,CR-122049,PaySwift payout 9/4,PaySwift,,4000,438.68,26306.49
+GL-59667,09/04/2026,CD-106050,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(93.18),26213.31
+GL-59668,09/04/2026,CR-478051,Deposit - Fairway Senior Living check 6858,Fairway Senior Living,,1200,1826.48,28039.79
+GL-59669,09/04/2026,CR-166052,Deposit - Rivera Catering check 9901,Rivera Catering,,1200,2231.36,30271.15
+GL-59670,09/04/2026,CD-293053,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(1031.12),29240.03
+GL-59671,09/04/2026,CD-605054,Summit Paper Goods inv 71785,Summit Paper Goods,,2000,(364.72),28875.31
+GL-59672,09/04/2026,CD-906055,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(445.70),28429.61
+GL-59673,09/04/2026,CR-405056,PaySwift payout 9/4,PaySwift,,4000,335.43,28765.04
+GL-59674,09/04/2026,CR-939057,PaySwift payout 9/4,PaySwift,,4000,501.54,29266.58
+GL-59675,09/04/2026,CD-643058,Golden Mill Flour inv 95738,Golden Mill Flour,,2000,(346.83),28919.75
+GL-59676,09/04/2026,CR-465059,PaySwift payout 9/4,PaySwift,,4000,465.28,29385.03
+GL-59677,09/04/2026,CR-330060,PaySwift payout 9/4,PaySwift,,4000,806.37,30191.40
+GL-59678,09/04/2026,CD-135061,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(349.96),29841.44
+GL-59679,09/04/2026,CD-267062,Check #2084 Summit Paper Goods,Summit Paper Goods,2084,2000,(158.24),29683.20
+GL-59680,09/04/2026,CD-810063,Check #2085 Summit Paper Goods,Summit Paper Goods,2085,2000,(414.00),29269.20
+GL-59681,09/04/2026,CR-351064,PaySwift payout 9/4,PaySwift,,4000,803.64,30072.84
+GL-59682,09/04/2026,CR-418065,PaySwift payout 9/4,PaySwift,,4000,351.08,30423.92
+GL-59683,09/05/2026,CD-606066,September rent - Meridian Property Mgmt,Meridian Property Mgmt,,6000,(7828.93),22594.99
+GL-59684,09/05/2026,CR-292067,PaySwift payout 9/5,PaySwift,,4000,994.47,23589.46
+GL-59685,09/05/2026,CD-925068,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(101.21),23488.25
+GL-59686,09/05/2026,CR-733069,PaySwift payout 9/5,PaySwift,,4000,953.91,24442.16
+GL-59687,09/05/2026,CR-319070,PaySwift payout 9/5,PaySwift,,4000,722.90,25165.06
+GL-59688,09/05/2026,CD-515071,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(104.14),25060.92
+GL-59689,09/05/2026,CD-508072,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(59.05),25001.87
+GL-59690,09/05/2026,CD-828073,Golden Mill Flour inv 97416,Golden Mill Flour,,2000,(201.82),24800.05
+GL-59691,09/05/2026,CR-990074,Deposit - Coastside Realty check 7198,Coastside Realty,,1200,414.47,25214.52
+GL-59692,09/05/2026,CD-489075,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1188.90),24025.62
+GL-59693,09/06/2026,CR-555076,PaySwift payout 9/6,PaySwift,,4000,1059.37,25084.99
+GL-59694,09/06/2026,CR-177077,PaySwift payout 9/6,PaySwift,,4000,413.24,25498.23
+GL-59695,09/06/2026,CR-459078,PaySwift payout 9/6,PaySwift,,4000,940.94,26439.17
+GL-59696,09/06/2026,CR-978079,PaySwift payout 9/6,PaySwift,,4000,863.49,27302.66
+GL-59697,09/06/2026,CR-122080,PaySwift payout 9/6,PaySwift,,4000,240.26,27542.92
+GL-59698,09/06/2026,CR-659081,Deposit - Juniper Tech Labs check 5766,Juniper Tech Labs,,1200,374.92,27917.84
+GL-59699,09/06/2026,CR-423082,PaySwift payout 9/6,PaySwift,,4000,752.08,28669.92
+GL-59700,09/06/2026,CR-970083,PaySwift payout 9/6,PaySwift,,4000,460.05,29129.97
+GL-59701,09/06/2026,CR-304084,PaySwift payout 9/6,PaySwift,,4000,102.11,29232.08
+GL-59702,09/06/2026,CD-777085,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(363.70),28868.38
+GL-59703,09/06/2026,CD-420086,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(949.63),27918.75
+GL-59704,09/06/2026,CR-794087,PaySwift payout 9/6,PaySwift,,4000,425.20,28343.95
+GL-59705,09/06/2026,CD-576088,Sweetbay Sugar Supply inv 16215,Sweetbay Sugar Supply,,2000,(72.04),28271.91
+GL-59706,09/06/2026,CD-155089,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(766.81),27505.10
+GL-59707,09/06/2026,CR-399090,Deposit - Fairway Senior Living check 9880,Fairway Senior Living,,1200,600.83,28105.93
+GL-59708,09/06/2026,CR-559091,PaySwift payout 9/6,PaySwift,,4000,910.25,29016.18
+GL-59709,09/07/2026,CR-701092,PaySwift payout 9/7,PaySwift,,4000,618.27,29634.45
+GL-59710,09/07/2026,CD-418093,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(142.67),29491.78
+GL-59711,09/07/2026,CR-603094,PaySwift payout 9/7,PaySwift,,4000,1036.55,30528.33
+GL-59712,09/07/2026,CR-933095,PaySwift payout 9/7,PaySwift,,4000,467.05,30995.38
+GL-59713,09/07/2026,CR-836096,Deposit - Two Rivers Market check 5856,Two Rivers Market,,1200,2256.79,33252.17
+GL-59714,09/07/2026,CR-585097,PaySwift payout 9/7,PaySwift,,4000,311.86,33564.03
+GL-59715,09/07/2026,CD-786098,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(71.03),33493.00
+GL-59716,09/07/2026,CR-345099,PaySwift payout 9/7,PaySwift,,4000,259.89,33752.89
+GL-59717,09/07/2026,CR-779100,PaySwift payout 9/7,PaySwift,,4000,110.64,33863.53
+GL-59718,09/07/2026,CD-937101,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(112.80),33750.73
+GL-59719,09/07/2026,CR-301102,Deposit - Rivera Catering check 2269,Rivera Catering,,1200,1629.56,35380.29
+GL-59720,09/07/2026,CD-954103,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(284.82),35095.47
+GL-59721,09/07/2026,CD-655104,Pacific Crest Dairy inv 84701,Pacific Crest Dairy,,2000,(621.95),34473.52
+GL-59722,09/08/2026,CD-365105,Accounting software - CloudLedger,CloudLedger,,6800,(151.34),34322.18
+GL-59723,09/08/2026,CR-233106,PaySwift payout 9/8,PaySwift,,4000,181.18,34503.36
+GL-59724,09/08/2026,CD-870107,Summit Paper Goods inv 3144,Summit Paper Goods,,2000,(256.20),34247.16
+GL-59725,09/08/2026,CD-586108,Check #2051 Summit Paper Goods,Summit Paper Goods,2051,2000,(264.09),33983.07
+GL-59726,09/08/2026,CR-364109,PaySwift payout 9/8,PaySwift,,4000,336.44,34319.51
+GL-59727,09/08/2026,CR-583110,PaySwift payout 9/8,PaySwift,,4000,109.81,34429.32
+GL-59728,09/08/2026,CD-445111,Sweetbay Sugar Supply inv 95649,Sweetbay Sugar Supply,,2000,(67.82),34361.50
+GL-59729,09/08/2026,CD-412112,Check #2062 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2062,2000,(378.79),33982.71
+GL-59730,09/08/2026,CD-736113,Check #2063 Golden Mill Flour,Golden Mill Flour,2063,2000,(942.29),33040.42
+GL-59731,09/08/2026,CR-758114,Deposit - Two Rivers Market check 2571,Two Rivers Market,,1200,2204.03,35244.45
+GL-59732,09/08/2026,CD-997115,Check #2072 Golden Mill Flour,Golden Mill Flour,2072,2000,(215.66),35028.79
+GL-59733,09/08/2026,CD-725116,Check #2073 Golden Mill Flour,Golden Mill Flour,2073,2000,(311.97),34716.82
+GL-59734,09/08/2026,CD-102117,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(281.60),34435.22
+GL-59735,09/08/2026,CR-913118,PaySwift payout 9/8,PaySwift,,4000,319.41,34754.63
+GL-59736,09/08/2026,CR-710119,Payment - Juniper Tech Labs INV-5552,Juniper Tech Labs,,1200,2249.27,37003.90
+GL-59737,09/08/2026,CD-285120,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(40.24),36963.66
+GL-59738,09/08/2026,CD-583121,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(50.23),36913.43
+GL-59739,09/08/2026,CR-786122,PaySwift payout 9/8,PaySwift,,4000,568.93,37482.36
+GL-59740,09/08/2026,CD-328123,Golden Mill Flour inv 19532,Golden Mill Flour,,2000,(520.11),36962.25
+GL-59741,09/09/2026,CD-108124,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(128.77),36833.48
+GL-59742,09/09/2026,CR-435125,PaySwift payout 9/9,PaySwift,,4000,212.58,37046.06
+GL-59743,09/09/2026,CD-980126,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(31.99),37014.07
+GL-59744,09/09/2026,CD-660127,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(161.54),36852.53
+GL-59745,09/09/2026,CR-887128,PaySwift payout 9/9,PaySwift,,4000,932.37,37784.90
+GL-59746,09/09/2026,CD-187129,Check #2058 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2058,2000,(431.68),37353.22
+GL-59747,09/09/2026,CD-219130,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(123.55),37229.67
+GL-59748,09/09/2026,CR-961131,PaySwift payout 9/9,PaySwift,,4000,997.88,38227.55
+GL-59749,09/09/2026,CR-411132,PaySwift payout 9/9,PaySwift,,4000,512.04,38739.59
+GL-59750,09/09/2026,CD-344133,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1940.98),36798.61
+GL-59751,09/09/2026,CR-555134,PaySwift payout 9/9,PaySwift,,4000,861.85,37660.46
+GL-59752,09/09/2026,CD-626135,Check #2078 Pacific Crest Dairy,Pacific Crest Dairy,2078,2000,(695.44),36965.02
+GL-59753,09/09/2026,CD-590136,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(109.02),36856.00
+GL-59754,09/09/2026,CR-743137,PaySwift payout 9/9,PaySwift,,4000,1023.29,37879.29
+GL-59755,09/09/2026,CD-765138,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(136.19),37743.10
+GL-59756,09/09/2026,CD-673139,Check #2082 Golden Mill Flour,Golden Mill Flour,2082,2000,(991.23),36751.87
+GL-59757,09/09/2026,CD-887140,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(242.02),36509.85
+GL-59758,09/09/2026,CD-986141,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(30.08),36479.77
+GL-59759,09/09/2026,CR-169142,PaySwift payout 9/9,PaySwift,,4000,648.82,37128.59
+GL-59760,09/09/2026,CR-676143,PaySwift payout 9/9,PaySwift,,4000,946.84,38075.43
+GL-59761,09/10/2026,CR-252144,PaySwift payout 9/10,PaySwift,,4000,153.09,38228.52
+GL-59762,09/10/2026,CR-547145,PaySwift payout 9/10,PaySwift,,4000,522.12,38750.64
+GL-59763,09/10/2026,CR-736146,PaySwift payout 9/10,PaySwift,,4000,775.67,39526.31
+GL-59764,09/10/2026,CD-876147,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(226.74),39299.57
+GL-59765,09/10/2026,CR-826148,PaySwift payout 9/10,PaySwift,,4000,159.81,39459.38
+GL-59766,09/10/2026,CR-782149,PaySwift payout 9/10,PaySwift,,4000,265.63,39725.01
+GL-59767,09/10/2026,CD-760150,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(152.11),39572.90
+GL-59768,09/10/2026,CD-920151,Check #2059 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2059,2000,(434.69),39138.21
+GL-59769,09/10/2026,CR-759152,Payment - Fairway Senior Living INV-9713,Fairway Senior Living,,1200,2468.32,41606.53
+GL-59770,09/10/2026,CR-995153,PaySwift payout 9/10,PaySwift,,4000,826.97,42433.50
+GL-59771,09/10/2026,CD-331154,Check #2081 Golden Mill Flour,Golden Mill Flour,2081,2000,(501.52),41931.98
+GL-59772,09/10/2026,CR-618155,PaySwift payout 9/10,PaySwift,,4000,429.54,42361.52
+GL-59773,09/10/2026,CD-729156,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(81.02),42280.50
+GL-59774,09/10/2026,CD-734157,Summit Paper Goods inv 48683,Summit Paper Goods,,2000,(387.48),41893.02
+GL-59775,09/10/2026,CD-916158,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(836.18),41056.84
+GL-59776,09/10/2026,CR-714159,PaySwift payout 9/10,PaySwift,,4000,237.65,41294.49
+GL-59777,09/10/2026,CR-672160,Deposit - Juniper Tech Labs check 7423,Juniper Tech Labs,,1200,240.57,41535.06
+GL-59778,09/10/2026,CR-216161,PaySwift payout 9/10,PaySwift,,4000,506.60,42041.66
+GL-59779,09/10/2026,CR-456162,PaySwift payout 9/10,PaySwift,,4000,94.05,42135.71
+GL-59780,09/10/2026,CR-703163,Deposit - Rivera Catering check 8875,Rivera Catering,,1200,2713.72,44849.43
+GL-59781,09/11/2026,CR-259164,PaySwift payout 9/11,PaySwift,,4000,1044.70,45894.13
+GL-59782,09/11/2026,CR-471165,PaySwift payout 9/11,PaySwift,,4000,966.82,46860.95
+GL-59783,09/11/2026,CD-884166,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(275.59),46585.36
+GL-59784,09/11/2026,CR-963167,PaySwift payout 9/11,PaySwift,,4000,584.11,47169.47
+GL-59785,09/11/2026,CD-694168,Check #2065 Summit Paper Goods,Summit Paper Goods,2065,2000,(140.24),47029.23
+GL-59786,09/11/2026,CR-111169,PaySwift payout 9/11,PaySwift,,4000,683.99,47713.22
+GL-59787,09/11/2026,CR-440170,PaySwift payout 9/11,PaySwift,,4000,246.74,47959.96
+GL-59788,09/11/2026,CD-153171,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(93.72),47866.24
+GL-59789,09/11/2026,CD-558172,Golden Mill Flour inv 28868,Golden Mill Flour,,2000,(885.88),46980.36
+GL-59790,09/11/2026,CD-973173,Golden Mill Flour inv 57671,Golden Mill Flour,,2000,(614.01),46366.35
+GL-59791,09/11/2026,CD-216174,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(106.75),46259.60
+GL-59792,09/12/2026,CD-510175,Summit Paper Goods inv 6059,Summit Paper Goods,,2000,(130.30),46129.30
+GL-59793,09/12/2026,CR-401176,PaySwift payout 9/12,PaySwift,,4000,374.41,46503.71
+GL-59794,09/12/2026,CD-605177,Check #2061 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2061,2000,(414.83),46088.88
+GL-59795,09/12/2026,CD-464178,Check #2066 Golden Mill Flour,Golden Mill Flour,2066,2000,(380.98),45707.90
+GL-59796,09/12/2026,CD-453179,Check #2068 Pacific Crest Dairy,Pacific Crest Dairy,2068,2000,(121.55),45586.35
+GL-59797,09/12/2026,CR-933180,PaySwift payout 9/12,PaySwift,,4000,391.03,45977.38
+GL-59798,09/12/2026,CD-869181,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(165.23),45812.15
+GL-59799,09/12/2026,CR-862182,PaySwift payout 9/12,PaySwift,,4000,192.14,46004.29
+GL-59800,09/12/2026,CD-843183,Check #2074 Pacific Crest Dairy,Pacific Crest Dairy,2074,2000,(197.72),45806.57
+GL-59801,09/12/2026,CD-841184,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(108.08),45698.49
+GL-59802,09/12/2026,CD-206185,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(2744.14),42954.35
+GL-59803,09/12/2026,CD-516186,Check #2077 Pacific Crest Dairy,Pacific Crest Dairy,2077,2000,(662.78),42291.57
+GL-59804,09/12/2026,CR-349187,PaySwift payout 9/12,PaySwift,,4000,577.44,42869.01
+GL-59805,09/12/2026,CD-362188,Summit Paper Goods inv 79775,Summit Paper Goods,,2000,(420.48),42448.53
+GL-59806,09/12/2026,CR-962189,PaySwift payout 9/12,PaySwift,,4000,416.55,42865.08
+GL-59807,09/12/2026,CR-551190,PaySwift payout 9/12,PaySwift,,4000,754.30,43619.38
+GL-59808,09/12/2026,CD-543191,Check #2086 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2086,2000,(470.11),43149.27
+GL-59809,09/13/2026,CD-470192,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1854.64),41294.63
+GL-59810,09/13/2026,CD-518193,Summit Paper Goods inv 68648,Summit Paper Goods,,2000,(303.67),40990.96
+GL-59811,09/13/2026,CD-284194,Pacific Crest Dairy inv 10850,Pacific Crest Dairy,,2000,(1084.30),39906.66
+GL-59812,09/13/2026,CD-453195,Check #2055 Summit Paper Goods,Summit Paper Goods,2055,2000,(226.42),39680.24
+GL-59813,09/13/2026,CD-990196,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(98.18),39582.06
+GL-59814,09/13/2026,CD-734197,Check #2069 Pacific Crest Dairy,Pacific Crest Dairy,2069,2000,(729.53),38852.53
+GL-59815,09/13/2026,CD-469198,Sweetbay Sugar Supply inv 68037,Sweetbay Sugar Supply,,2000,(67.96),38784.57
+GL-59816,09/13/2026,CR-236199,PaySwift payout 9/13,PaySwift,,4000,875.00,39659.57
+GL-59817,09/13/2026,CD-603200,Summit Paper Goods inv 74187,Summit Paper Goods,,2000,(199.84),39459.73
+GL-59818,09/13/2026,CR-423201,PaySwift payout 9/13,PaySwift,,4000,783.02,40242.75
+GL-59819,09/13/2026,CR-751202,PaySwift payout 9/13,PaySwift,,4000,689.37,40932.12
+GL-59820,09/13/2026,CD-231203,Golden Mill Flour inv 52249,Golden Mill Flour,,2000,(1530.18),39401.94
+GL-59821,09/13/2026,CR-579204,PaySwift payout 9/13,PaySwift,,4000,580.85,39982.79
+GL-59822,09/13/2026,CD-559205,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1704.35),38278.44
+GL-59823,09/13/2026,CD-718206,Sweetbay Sugar Supply inv 26515,Sweetbay Sugar Supply,,2000,(329.11),37949.33
+GL-59824,09/13/2026,CR-606207,Deposit - Two Rivers Market check 3188,Two Rivers Market,,1200,2389.51,40338.84
+GL-59825,09/13/2026,CR-659208,Payment - Two Rivers Market INV-7405,Two Rivers Market,,1200,811.09,41149.93
+GL-59826,09/13/2026,CD-712209,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(3315.59),37834.34
+GL-59827,09/14/2026,CD-324210,Utilities - Coastline Power and Water,Coastline Power and Water,,6050,(1572.49),36261.85
+GL-59828,09/14/2026,CD-549211,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(735.91),35525.94
+GL-59829,09/14/2026,CR-399212,PaySwift payout 9/14,PaySwift,,4000,658.72,36184.66
+GL-59830,09/14/2026,CD-675213,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1291.11),34893.55
+GL-59831,09/14/2026,CD-588214,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1401.48),33492.07
+GL-59832,09/14/2026,CD-275215,Golden Mill Flour inv 95864,Golden Mill Flour,,2000,(448.36),33043.71
+GL-59833,09/14/2026,CD-389216,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(60.71),32983.00
+GL-59834,09/14/2026,CD-317217,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(2800.67),30182.33
+GL-59835,09/14/2026,CD-463218,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1974.27),28208.06
+GL-59836,09/14/2026,CR-570219,PaySwift payout 9/14,PaySwift,,4000,316.05,28524.11
+GL-59837,09/14/2026,CD-809220,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(84.33),28439.78
+GL-59838,09/15/2026,PR-677221,Payroll run 9/15,Ledgerly Payroll,,6200,(6154.60),22285.18
+GL-59839,09/15/2026,CD-609222,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(75.66),22209.52
+GL-59840,09/15/2026,CR-207223,PaySwift payout 9/15,PaySwift,,4000,157.38,22366.90
+GL-59841,09/15/2026,CR-419224,PaySwift payout 9/15,PaySwift,,4000,882.81,23249.71
+GL-59842,09/15/2026,CD-549225,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(133.16),23116.55
+GL-59843,09/15/2026,CR-304226,PaySwift payout 9/15,PaySwift,,4000,655.42,23771.97
+GL-59844,09/15/2026,CD-800227,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(798.85),22973.12
+GL-59845,09/15/2026,CR-901228,PaySwift payout 9/15,PaySwift,,4000,603.20,23576.32
+GL-59846,09/15/2026,CD-163229,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(124.32),23452.00
+GL-59847,09/15/2026,CD-151230,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(96.47),23355.53
+GL-59848,09/15/2026,CR-608231,PaySwift payout 9/15,PaySwift,,4000,155.22,23510.75
+GL-59849,09/15/2026,CR-443232,PaySwift payout 9/15,PaySwift,,4000,452.62,23963.37
+GL-59850,09/15/2026,CR-368233,PaySwift payout 9/15,PaySwift,,4000,620.40,24583.77
+GL-59851,09/15/2026,CR-883234,PaySwift payout 9/15,PaySwift,,4000,771.88,25355.65
+GL-59852,09/15/2026,CR-337235,PaySwift payout 9/15,PaySwift,,4000,432.78,25788.43
+GL-59853,09/15/2026,CD-688236,Golden Mill Flour inv 71970,Golden Mill Flour,,2000,(660.08),25128.35
+GL-59854,09/15/2026,CD-898237,Pacific Crest Dairy inv 66654,Pacific Crest Dairy,,2000,(274.52),24853.83
+GL-59855,09/15/2026,CD-200238,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(2068.40),22785.43
+GL-59856,09/15/2026,CR-352239,PaySwift payout 9/15,PaySwift,,4000,166.62,22952.05
+GL-59857,09/15/2026,CD-470240,Golden Mill Flour inv 82671,Golden Mill Flour,,2000,(579.77),22372.28
+GL-59858,09/15/2026,CD-892241,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(2523.26),19849.02
+GL-59859,09/15/2026,CD-923242,Check #2087 Pacific Crest Dairy,Pacific Crest Dairy,2087,2000,(766.28),19082.74
+GL-59860,09/16/2026,CD-253243,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(57.46),19025.28
+GL-59861,09/16/2026,CD-958244,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(85.61),18939.67
+GL-59862,09/16/2026,CD-482245,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(42.80),18896.87
+GL-59863,09/16/2026,CD-212246,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(217.21),18679.66
+GL-59864,09/16/2026,CD-737247,Check #2056 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2056,2000,(157.23),18522.43
+GL-59865,09/16/2026,CD-227248,Check #2060 Pacific Crest Dairy,Pacific Crest Dairy,2060,2000,(678.59),17843.84
+GL-59866,09/16/2026,CD-135249,Golden Mill Flour inv 25542,Golden Mill Flour,,2000,(400.40),17443.44
+GL-59867,09/16/2026,CD-463250,Pacific Crest Dairy inv 43507,Pacific Crest Dairy,,2000,(777.54),16665.90
+GL-59868,09/16/2026,CR-392251,PaySwift payout 9/16,PaySwift,,4000,626.74,17292.64
+GL-59869,09/16/2026,CR-533252,PaySwift payout 9/16,PaySwift,,4000,1008.71,18301.35
+GL-59870,09/16/2026,CR-118253,Deposit - Juniper Tech Labs check 3387,Juniper Tech Labs,,1200,452.79,18754.14
+GL-59871,09/16/2026,CD-203254,Golden Mill Flour inv 83219,Golden Mill Flour,,2000,(1026.32),17727.82
+GL-59872,09/16/2026,CR-820255,PaySwift payout 9/16,PaySwift,,4000,940.12,18667.94
+GL-59873,09/16/2026,CD-258256,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(491.68),18176.26
+GL-59874,09/16/2026,CR-598257,PaySwift payout 9/16,PaySwift,,4000,114.31,18290.57
+GL-59875,09/16/2026,CR-671258,PaySwift payout 9/16,PaySwift,,4000,354.36,18644.93
+GL-59876,09/16/2026,CD-886259,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(882.30),17762.63
+GL-59877,09/16/2026,CD-998260,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(798.16),16964.47
+GL-59878,09/16/2026,CD-971261,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(111.77),16852.70
+GL-59879,09/17/2026,CD-304262,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(82.04),16770.66
+GL-59880,09/17/2026,CD-846263,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(69.63),16701.03
+GL-59881,09/17/2026,CR-989264,Deposit - Rivera Catering check 7670,Rivera Catering,,1200,1802.83,18503.86
+GL-59882,09/17/2026,CR-949265,PaySwift payout 9/17,PaySwift,,4000,900.25,19404.11
+GL-59883,09/17/2026,CR-774266,PaySwift payout 9/17,PaySwift,,4000,928.50,20332.61
+GL-59884,09/17/2026,CD-716267,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(454.54),19878.07
+GL-59885,09/17/2026,CD-625268,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(104.34),19773.73
+GL-59886,09/17/2026,CR-848269,PaySwift payout 9/17,PaySwift,,4000,853.04,20626.77
+GL-59887,09/17/2026,CR-108270,PaySwift payout 9/17,PaySwift,,4000,348.40,20975.17
+GL-59888,09/17/2026,CR-241271,PaySwift payout 9/17,PaySwift,,4000,1057.60,22032.77
+GL-59889,09/17/2026,CD-581272,Check #2079 Pacific Crest Dairy,Pacific Crest Dairy,2079,2000,(322.83),21709.94
+GL-59890,09/17/2026,CR-363273,PaySwift payout 9/17,PaySwift,,4000,108.50,21818.44
+GL-59891,09/17/2026,CR-284274,Payment - Rivera Catering INV-7223,Rivera Catering,,1200,2187.30,24005.74
+GL-59892,09/17/2026,CD-951275,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(179.32),23826.42
+GL-59893,09/17/2026,CD-186276,Summit Paper Goods inv 38960,Summit Paper Goods,,2000,(504.06),23322.36
+GL-59894,09/17/2026,CR-111277,PaySwift payout 9/17,PaySwift,,4000,828.21,24150.57
+GL-59895,09/18/2026,CR-288278,PaySwift payout 9/18,PaySwift,,4000,341.35,24491.92
+GL-59896,09/18/2026,CR-862279,Payment - Fairway Senior Living INV-7159,Fairway Senior Living,,1200,1384.51,25876.43
+GL-59897,09/18/2026,CR-571280,PaySwift payout 9/18,PaySwift,,4000,239.92,26116.35
+GL-59898,09/18/2026,CD-946281,Sweetbay Sugar Supply inv 60084,Sweetbay Sugar Supply,,2000,(129.00),25987.35
+GL-59899,09/18/2026,CR-318282,PaySwift payout 9/18,PaySwift,,4000,521.94,26509.29
+GL-59900,09/18/2026,CD-994283,Pacific Crest Dairy inv 65277,Pacific Crest Dairy,,2000,(400.87),26108.42
+GL-59901,09/18/2026,CD-565284,Check #2067 Summit Paper Goods,Summit Paper Goods,2067,2000,(153.86),25954.56
+GL-59902,09/18/2026,CD-407285,Golden Mill Flour inv 12177,Golden Mill Flour,,2000,(1273.85),24680.71
+GL-59903,09/18/2026,CR-390286,PaySwift payout 9/18,PaySwift,,4000,385.56,25066.27
+GL-59904,09/18/2026,CR-560287,PaySwift payout 9/18,PaySwift,,4000,557.73,25624.00
+GL-59905,09/18/2026,CR-437288,PaySwift payout 9/18,PaySwift,,4000,211.01,25835.01
+GL-59906,09/18/2026,CR-256289,PaySwift payout 9/18,PaySwift,,4000,666.53,26501.54
+GL-59907,09/18/2026,CR-505290,PaySwift payout 9/18,PaySwift,,4000,694.53,27196.07
+GL-59908,09/18/2026,CR-836291,PaySwift payout 9/18,PaySwift,,4000,584.86,27780.93
+GL-59909,09/18/2026,CR-540292,PaySwift payout 9/18,PaySwift,,4000,692.95,28473.88
+GL-59910,09/18/2026,CR-282293,PaySwift payout 9/18,PaySwift,,4000,547.59,29021.47
+GL-59911,09/18/2026,CR-708294,PaySwift payout 9/18,PaySwift,,4000,194.73,29216.20
+GL-59912,09/19/2026,CR-815295,PaySwift payout 9/19,PaySwift,,4000,422.21,29638.41
+GL-59913,09/19/2026,CR-875296,PaySwift payout 9/19,PaySwift,,4000,732.21,30370.62
+GL-59914,09/19/2026,CD-749297,Golden Mill Flour inv 8825,Golden Mill Flour,,2000,(922.93),29447.69
+GL-59915,09/19/2026,CD-400298,Check #2054 Golden Mill Flour,Golden Mill Flour,2054,2000,(1037.16),28410.53
+GL-59916,09/19/2026,CR-333299,Deposit - Rivera Catering check 9006,Rivera Catering,,1200,2069.00,30479.53
+GL-59917,09/19/2026,CD-820300,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(139.82),30339.71
+GL-59918,09/19/2026,CD-451301,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(65.47),30274.24
+GL-59919,09/19/2026,CD-751302,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(2517.70),27756.54
+GL-59920,09/19/2026,CR-937303,PaySwift payout 9/19,PaySwift,,4000,941.35,28697.89
+GL-59921,09/19/2026,CR-304304,PaySwift payout 9/19,PaySwift,,4000,636.44,29334.33
+GL-59922,09/19/2026,CR-699305,PaySwift payout 9/19,PaySwift,,4000,596.40,29930.73
+GL-59923,09/19/2026,CR-380306,Deposit - Delacroix Events check 8342,Delacroix Events,,1200,753.19,30683.92
+GL-59924,09/19/2026,CD-126307,Pacific Crest Dairy inv 58258,Pacific Crest Dairy,,2000,(573.05),30110.87
+GL-59925,09/19/2026,CD-133308,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(148.14),29962.73
+GL-59926,09/19/2026,CR-145309,PaySwift payout 9/19,PaySwift,,4000,558.74,30521.47
+GL-59927,09/19/2026,CR-602310,PaySwift payout 9/19,PaySwift,,4000,1048.42,31569.89
+GL-59928,09/20/2026,CD-276311,Loan payment - First Coast Bank,First Coast Bank,,2500,(2080.95),29488.94
+GL-59929,09/20/2026,CD-956312,Wire to Sweetbay Sugar Supply,Sweetbay Sugar Supply,,2000,(566.08),28922.86
+GL-59930,09/20/2026,CR-402313,PaySwift payout 9/20,PaySwift,,4000,699.63,29622.49
+GL-59931,09/20/2026,CR-269314,PaySwift payout 9/20,PaySwift,,4000,523.48,30145.97
+GL-59932,09/20/2026,CR-598315,PaySwift payout 9/20,PaySwift,,4000,286.61,30432.58
+GL-59933,09/20/2026,CR-512316,PaySwift payout 9/20,PaySwift,,4000,1030.32,31462.90
+GL-59934,09/21/2026,CD-174317,Summit Paper Goods inv 74956,Summit Paper Goods,,2000,(80.35),31382.55
+GL-59935,09/21/2026,CR-841318,PaySwift payout 9/21,PaySwift,,4000,341.87,31724.42
+GL-59936,09/21/2026,CD-386319,Sweetbay Sugar Supply inv 83888,Sweetbay Sugar Supply,,2000,(448.20),31276.22
+GL-59937,09/21/2026,CD-496320,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(54.49),31221.73
+GL-59938,09/21/2026,CD-727321,Wire to Golden Mill Flour,Golden Mill Flour,,2000,(2483.74),28737.99
+GL-59939,09/21/2026,CD-274322,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(76.54),28661.45
+GL-59940,09/21/2026,CR-859323,PaySwift payout 9/21,PaySwift,,4000,701.67,29363.12
+GL-59941,09/21/2026,CR-156324,PaySwift payout 9/21,PaySwift,,4000,961.54,30324.66
+GL-59942,09/21/2026,CR-394325,PaySwift payout 9/21,PaySwift,,4000,802.79,31127.45
+GL-59943,09/21/2026,CR-198326,PaySwift payout 9/21,PaySwift,,4000,765.23,31892.68
+GL-59944,09/21/2026,CR-477327,PaySwift payout 9/21,PaySwift,,4000,487.75,32380.43
+GL-59945,09/22/2026,CD-382328,Sales tax remittance Q3 installment,CA Dept of Tax and Fee Admin,,2300,(2222.09),30158.34
+GL-59946,09/22/2026,CD-578329,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(68.14),30090.20
+GL-59947,09/22/2026,CD-319330,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(222.36),29867.84
+GL-59948,09/22/2026,CD-258331,Summit Paper Goods inv 2248,Summit Paper Goods,,2000,(248.59),29619.25
+GL-59949,09/22/2026,CR-483332,PaySwift payout 9/22,PaySwift,,4000,117.66,29736.91
+GL-59950,09/22/2026,CD-195333,Pacific Crest Dairy inv 86727,Pacific Crest Dairy,,2000,(250.52),29486.39
+GL-59951,09/22/2026,CR-135334,PaySwift payout 9/22,PaySwift,,4000,658.36,30144.75
+GL-59952,09/22/2026,CD-814335,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(49.59),30095.16
+GL-59953,09/22/2026,CD-183336,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(84.07),30011.09
+GL-59954,09/22/2026,CD-477337,Summit Paper Goods inv 57590,Summit Paper Goods,,2000,(398.85),29612.24
+GL-59955,09/22/2026,CR-662338,PaySwift payout 9/22,PaySwift,,4000,509.54,30121.78
+GL-59956,09/22/2026,CR-231339,PaySwift payout 9/22,PaySwift,,4000,456.78,30578.56
+GL-59957,09/22/2026,CR-435340,PaySwift payout 9/22,PaySwift,,4000,883.02,31461.58
+GL-59958,09/22/2026,CD-973341,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(120.03),31341.55
+GL-59959,09/22/2026,CR-326342,PaySwift payout 9/22,PaySwift,,4000,483.86,31825.41
+GL-59960,09/22/2026,CD-893343,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(310.64),31514.77
+GL-59961,09/22/2026,CD-169344,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(58.05),31456.72
+GL-59962,09/23/2026,CD-586345,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(99.61),31357.11
+GL-59963,09/23/2026,CD-950346,Pacific Crest Dairy inv 7025,Pacific Crest Dairy,,2000,(601.46),30755.65
+GL-59964,09/23/2026,CD-725347,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(41.35),30714.30
+GL-59965,09/23/2026,CD-520348,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1190.85),29523.45
+GL-59966,09/23/2026,CR-443349,PaySwift payout 9/23,PaySwift,,4000,995.73,30519.18
+GL-59967,09/23/2026,CR-351350,Deposit - Kestrel Media check 2730,Kestrel Media,,1200,1133.97,31653.15
+GL-59968,09/23/2026,CR-212351,PaySwift payout 9/23,PaySwift,,4000,929.17,32582.32
+GL-59969,09/23/2026,CD-512352,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(213.87),32368.45
+GL-59970,09/23/2026,CR-592353,PaySwift payout 9/23,PaySwift,,4000,639.32,33007.77
+GL-59971,09/23/2026,CR-421354,PaySwift payout 9/23,PaySwift,,4000,804.97,33812.74
+GL-59972,09/23/2026,CD-249355,Check #2088 Sweetbay Sugar Supply,Sweetbay Sugar Supply,2088,2000,(126.25),33686.49
+GL-59973,09/24/2026,CD-409356,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1587.79),32098.70
+GL-59974,09/24/2026,CD-664357,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(122.29),31976.41
+GL-59975,09/24/2026,CD-156358,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(266.43),31709.98
+GL-59976,09/24/2026,CD-260359,Sweetbay Sugar Supply inv 93176,Sweetbay Sugar Supply,,2000,(67.70),31642.28
+GL-59977,09/24/2026,CD-971360,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1339.76),30302.52
+GL-59978,09/24/2026,CD-822361,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(1080.99),29221.53
+GL-59979,09/24/2026,CD-567362,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(256.90),28964.63
+GL-59980,09/24/2026,CR-594363,PaySwift payout 9/24,PaySwift,,4000,798.11,29762.74
+GL-59981,09/24/2026,CR-328364,Deposit - Hilltop Unified PTA check 7291,Hilltop Unified PTA,,1200,965.56,30728.30
+GL-59982,09/24/2026,CR-148365,Payment - Rivera Catering INV-5509,Rivera Catering,,1200,409.44,31137.74
+GL-59983,09/24/2026,CR-925366,Payment - Juniper Tech Labs INV-9053,Juniper Tech Labs,,1200,1886.19,33023.93
+GL-59984,09/24/2026,CR-617367,PaySwift payout 9/24,PaySwift,,4000,1032.82,34056.75
+GL-59985,09/24/2026,CD-117368,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(749.71),33307.04
+GL-59986,09/24/2026,CR-104369,PaySwift payout 9/24,PaySwift,,4000,360.49,33667.53
+GL-59987,09/24/2026,CR-293370,PaySwift payout 9/24,PaySwift,,4000,292.98,33960.51
+GL-59988,09/24/2026,CR-873371,PaySwift payout 9/24,PaySwift,,4000,1010.20,34970.71
+GL-59989,09/24/2026,CD-998372,Sweetbay Sugar Supply inv 60474,Sweetbay Sugar Supply,,2000,(361.85),34608.86
+GL-59990,09/25/2026,CR-109373,PaySwift payout 9/25,PaySwift,,4000,428.18,35037.04
+GL-59991,09/25/2026,CD-875374,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(139.90),34897.14
+GL-59992,09/25/2026,CR-825375,Deposit - Two Rivers Market check 2039,Two Rivers Market,,1200,1843.74,36740.88
+GL-59993,09/25/2026,CR-200376,PaySwift payout 9/25,PaySwift,,4000,744.29,37485.17
+GL-59994,09/25/2026,CR-446377,PaySwift payout 9/25,PaySwift,,4000,263.10,37748.27
+GL-59995,09/25/2026,CR-459378,PaySwift payout 9/25,PaySwift,,4000,400.07,38148.34
+GL-59996,09/25/2026,CD-856379,Wire to Summit Paper Goods,Summit Paper Goods,,2000,(1060.71),37087.63
+GL-59997,09/25/2026,CD-787380,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(131.29),36956.34
+GL-59998,09/25/2026,CR-689381,PaySwift payout 9/25,PaySwift,,4000,999.95,37956.29
+GL-59999,09/25/2026,CD-208382,Butter and dairy - Pacific Crest Dairy,Pacific Crest Dairy,,5000,(76.51),37879.78
+GL-60000,09/25/2026,CD-991383,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(37.23),37842.55
+GL-60001,09/25/2026,CD-699384,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(19.67),37822.88
+GL-60002,09/25/2026,CD-882385,Flour - Golden Mill Flour,Golden Mill Flour,,5000,(394.92),37427.96
+GL-60003,09/25/2026,CD-663386,Packaging - Summit Paper Goods,Summit Paper Goods,,6400,(167.87),37260.09
+GL-60004,09/25/2026,CR-781387,PaySwift payout 9/25,PaySwift,,4000,563.00,37823.09
+GL-60005,09/25/2026,CD-782388,Sugar - Sweetbay Sugar Supply,Sweetbay Sugar Supply,,5000,(155.70),37667.39
+GL-60006,09/26/2026,CD-581389,Sweetbay Sugar Supply inv 67230,Sweetbay Sugar Supply,,2000,(99.84),37567.55
+GL-60007,09/26/2026,CD-373390,Sweetbay Sugar Supply inv 20546,Sweetbay Sugar Supply,,2000,(258.13),37309.42
+GL-60008,09/26/2026,CD-111391,Pacific Crest Dairy inv 21807,Pacific Crest Dairy,,2000,(540.62),36768.80
+GL-60009,09/26/2026,CD-600392,Sweetbay Sugar Supply inv 30560,Sweetbay Sugar Supply,,2000,(243.13),36525.67
+GL-60010,09/27/2026,CD-689393,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1888.89),34636.78
+GL-60011,09/27/2026,CD-772394,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1384.67),33252.11
+GL-60012,09/27/2026,CD-720395,Wire to Pacific Crest Dairy,Pacific Crest Dairy,,2000,(1681.16),31570.95
+GL-60013,09/29/2026,PR-416396,Payroll run 9/29,Ledgerly Payroll,,6200,(4003.93),27567.02
+GL-60014,09/30/2026,CR-539397,Deposit - Delacroix Events check 1552,Delacroix Events,,1200,6751.81,34318.83
+GL-60015,09/30/2026,CR-633398,Deposit - Coastside Realty check 1300,Coastside Realty,,1200,4290.04,38608.87

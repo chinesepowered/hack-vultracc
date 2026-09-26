@@ -1,0 +1,96 @@
+{
+  "client_id": "ironwood-brewing",
+  "period": "2026-09",
+  "bank_opening_balance": "102447.26",
+  "bank_ending_balance": "105428.42",
+  "gl_opening_balance": "100847.21",
+  "gl_ending_balance": "104807.65",
+  "adjusted_bank_balance": "103217.47",
+  "adjusted_book_balance": "103217.47",
+  "difference": "0.00",
+  "bank_line_count": 588,
+  "gl_line_count": 587,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "30.00",
+      "effect": "-30.00",
+      "side": "book",
+      "bank_ref": "47536232625",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "MONTHLY MAINTENANCE FEE"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "889.19",
+      "effect": "889.19",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33212",
+      "date": "2026-09-30",
+      "description": "Deposit - Juniper Tech Labs check 3815"
+    },
+    {
+      "kind": "nsf_check",
+      "amount": "1560.18",
+      "effect": "-1560.18",
+      "side": "book",
+      "bank_ref": "59234699064",
+      "gl_ref": null,
+      "date": "2026-09-14",
+      "description": "RETURNED ITEM NSF CHK 9391",
+      "related_bank_ref": "25963917663"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "244.56",
+      "effect": "-244.56",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33209",
+      "check_no": "9214",
+      "date": "2026-09-27",
+      "description": "Check #9214 Brewline Lab Testing"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "258.85",
+      "effect": "-258.85",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33208",
+      "check_no": "9213",
+      "date": "2026-09-27",
+      "description": "Check #9213 Brewline Lab Testing"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "2596.73",
+      "effect": "-2596.73",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33211",
+      "check_no": "9212",
+      "date": "2026-09-29",
+      "description": "Check #9212 Hopyard Growers Co-op"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "30.00",
+      "kind": "bank_fee_unrecorded"
+    },
+    {
+      "debit_account": "1200",
+      "credit_account": "1010",
+      "amount": "1560.18",
+      "kind": "nsf_check"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "588 bank lines, 587 ledger lines, 6 planted exceptions, 2 bank lines expected unmatched"
+}

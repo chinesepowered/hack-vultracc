@@ -1,0 +1,85 @@
+{
+  "client_id": "alder-finch-law",
+  "period": "2026-09",
+  "bank_opening_balance": "212903.77",
+  "bank_ending_balance": "204983.74",
+  "gl_opening_balance": "216514.30",
+  "gl_ending_balance": "210787.56",
+  "adjusted_bank_balance": "213525.04",
+  "adjusted_book_balance": "213525.04",
+  "difference": "0.00",
+  "bank_line_count": 174,
+  "gl_line_count": 173,
+  "exceptions": [
+    {
+      "kind": "deposit_in_transit",
+      "amount": "4100.93",
+      "effect": "4100.93",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33816",
+      "date": "2026-09-30",
+      "description": "Deposit - Presidio Property Partners check 9485"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "5515.69",
+      "effect": "5515.69",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33817",
+      "date": "2026-09-30",
+      "description": "Deposit - Oakmont Hotel Group check 3346"
+    },
+    {
+      "kind": "interest_unrecorded",
+      "amount": "37.48",
+      "effect": "37.48",
+      "side": "book",
+      "bank_ref": "78304385000",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "INTEREST EARNED"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1075.32",
+      "effect": "-1075.32",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-33814",
+      "check_no": "8823",
+      "date": "2026-09-28",
+      "description": "Check #8823 Caselight Legal Research"
+    },
+    {
+      "kind": "transposition",
+      "amount": "2700.00",
+      "effect": "2700.00",
+      "side": "book",
+      "bank_ref": "92992544111",
+      "gl_ref": "GL-33746",
+      "date": "2026-09-14",
+      "description": "Deposit - Evergreen Charter School retainer",
+      "bank_amount": "4176.63",
+      "gl_amount": "1476.63"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "1010",
+      "credit_account": "4900",
+      "amount": "37.48",
+      "kind": "interest_unrecorded"
+    },
+    {
+      "debit_account": "1010",
+      "credit_account": "4100",
+      "amount": "2700.00",
+      "kind": "transposition"
+    }
+  ],
+  "status": "reconciled",
+  "injection_bank_refs": [],
+  "notes": "174 bank lines, 173 ledger lines, 5 planted exceptions, 2 bank lines expected unmatched"
+}

@@ -1,0 +1,78 @@
+{
+  "client_id": "saltbox-bakery",
+  "period": "2026-09",
+  "bank_opening_balance": "22981.34",
+  "bank_ending_balance": "24622.27",
+  "gl_opening_balance": "26875.80",
+  "gl_ending_balance": "38608.87",
+  "adjusted_bank_balance": "35537.87",
+  "adjusted_book_balance": "35537.87",
+  "difference": "0.00",
+  "bank_line_count": 402,
+  "gl_line_count": 399,
+  "exceptions": [
+    {
+      "kind": "deposit_in_transit",
+      "amount": "4290.04",
+      "effect": "4290.04",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-60015",
+      "date": "2026-09-30",
+      "description": "Deposit - Coastside Realty check 1300"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "6751.81",
+      "effect": "6751.81",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-60014",
+      "date": "2026-09-30",
+      "description": "Deposit - Delacroix Events check 1552"
+    },
+    {
+      "kind": "nsf_check",
+      "amount": "2713.72",
+      "effect": "-2713.72",
+      "side": "book",
+      "bank_ref": "B0207",
+      "gl_ref": null,
+      "date": "2026-09-14",
+      "description": "RETURNED ITEM NSF CHK 8875",
+      "related_bank_ref": "B0133"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "126.25",
+      "effect": "-126.25",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-59972",
+      "check_no": "2088",
+      "date": "2026-09-23",
+      "description": "Check #2088 Sweetbay Sugar Supply"
+    },
+    {
+      "kind": "unidentified",
+      "amount": "357.28",
+      "effect": "-357.28",
+      "side": "book",
+      "bank_ref": "B0278",
+      "gl_ref": null,
+      "date": "2026-09-18",
+      "description": "ACH DEBIT 1183516 WEB PMT"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "1200",
+      "credit_account": "1010",
+      "amount": "2713.72",
+      "kind": "nsf_check"
+    }
+  ],
+  "status": "needs_review",
+  "injection_bank_refs": [],
+  "notes": "402 bank lines, 399 ledger lines, 5 planted exceptions, 2 bank lines expected unmatched"
+}

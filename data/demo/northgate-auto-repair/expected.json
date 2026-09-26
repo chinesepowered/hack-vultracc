@@ -1,0 +1,78 @@
+{
+  "client_id": "northgate-auto-repair",
+  "period": "2026-09",
+  "bank_opening_balance": "28455.63",
+  "bank_ending_balance": "29016.22",
+  "gl_opening_balance": "32905.22",
+  "gl_ending_balance": "26158.26",
+  "adjusted_bank_balance": "26689.42",
+  "adjusted_book_balance": "26689.42",
+  "difference": "0.00",
+  "bank_line_count": 263,
+  "gl_line_count": 260,
+  "exceptions": [
+    {
+      "kind": "bank_fee_unrecorded",
+      "amount": "30.00",
+      "effect": "-30.00",
+      "side": "book",
+      "bank_ref": "82278753962",
+      "gl_ref": null,
+      "date": "2026-09-30",
+      "description": "SERVICE FEE"
+    },
+    {
+      "kind": "deposit_in_transit",
+      "amount": "1799.12",
+      "effect": "1799.12",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-56549",
+      "date": "2026-09-30",
+      "description": "Deposit - Fairway Senior Living check 3505"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "1981.78",
+      "effect": "-1981.78",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-56535",
+      "check_no": "4503",
+      "date": "2026-09-24",
+      "description": "Check #4503 Precision Tire Wholesale"
+    },
+    {
+      "kind": "outstanding_check",
+      "amount": "2144.14",
+      "effect": "-2144.14",
+      "side": "bank",
+      "bank_ref": null,
+      "gl_ref": "GL-56547",
+      "check_no": "4504",
+      "date": "2026-09-28",
+      "description": "Check #4504 Eastbay Parts Warehouse"
+    },
+    {
+      "kind": "unidentified",
+      "amount": "561.16",
+      "effect": "561.16",
+      "side": "book",
+      "bank_ref": "66390043978",
+      "gl_ref": null,
+      "date": "2026-09-14",
+      "description": "DEPOSIT 96810"
+    }
+  ],
+  "ajes": [
+    {
+      "debit_account": "6100",
+      "credit_account": "1010",
+      "amount": "30.00",
+      "kind": "bank_fee_unrecorded"
+    }
+  ],
+  "status": "needs_review",
+  "injection_bank_refs": [],
+  "notes": "263 bank lines, 260 ledger lines, 5 planted exceptions, 2 bank lines expected unmatched"
+}
