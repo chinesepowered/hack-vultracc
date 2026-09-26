@@ -363,6 +363,7 @@ export interface HealthCheck {
   ok: boolean;
   ms: number;
   detail: string;
+  label?: string;
 }
 
 export interface Health {

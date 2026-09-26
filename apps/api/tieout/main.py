@@ -171,6 +171,12 @@ async def compute_health() -> dict:
         return "; ".join(f"{h['host']}: runtime {h['runtime']}, {h['sandboxes']}/{h['max']} sandboxes, accepting={h['accepting']}" for h in hs)
 
     inf, db, obj, run = await asyncio.gather(timed(inference), timed(database), timed(object_storage), timed(runner))
+    db_host = settings.database_url.split("@")[-1]
+    inf["label"] = "Vultr Serverless Inference"
+    db["label"] = "Vultr Managed PostgreSQL" if "vultrdb" in db_host else "PostgreSQL" + (" (development)" if "127.0.0.1" in db_host or "localhost" in db_host else " (container on the control plane)")
+    obj["label"] = "Vultr Object Storage" if storage.backend == "vultr-object-storage" else "Local disk (development)"
+    n_hosts = len(orch.runners.clients)
+    run["label"] = "Sandbox runner (gVisor host)" if n_hosts == 1 else f"Sandbox runners ({n_hosts} gVisor hosts)"
     checks = {"inference": inf, "database": db, "object_storage": obj, "runner": run}
     return {"ok": all(c["ok"] for c in checks.values()), "checks": checks, "version": VERSION, "kill_switch": orch.kill_switch}
 

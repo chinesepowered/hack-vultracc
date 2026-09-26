@@ -81,7 +81,7 @@ export function HealthDot({ isAdmin }: { isAdmin: boolean }) {
               <li key={k} className="flex items-center justify-between gap-3">
                 <span className="flex items-center gap-2">
                   <ToneDot tone={c.ok ? "success" : "danger"} />
-                  {HEALTH_LABEL[k] ?? k}
+                  {c.label ?? HEALTH_LABEL[k] ?? k}
                 </span>
                 <span className="tnum text-gray-400">{c.ms} ms</span>
               </li>

@@ -284,7 +284,7 @@ export function AdminPage() {
                       <li key={k} className="rounded-lg border border-gray-100 px-3 py-2" data-testid={`health-${k}`} data-ok={String(c.ok)}>
                         <div className="flex items-center justify-between gap-2 text-[13px]">
                           <span className="flex items-center gap-2 font-medium text-gray-800">
-                            <ToneDot tone={c.ok ? "success" : "danger"} /> {HEALTH_LABEL[k] ?? k}
+                            <ToneDot tone={c.ok ? "success" : "danger"} /> {c.label ?? HEALTH_LABEL[k] ?? k}
                           </span>
                           <span className="tnum text-[12px] text-gray-500">{c.ms} ms</span>
                         </div>
