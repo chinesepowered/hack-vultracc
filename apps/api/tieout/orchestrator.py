@@ -228,11 +228,10 @@ class Orchestrator:
                                                   untrusted_json=untrusted)
                 self._publish_run(run_id, batch_id, summary)
                 for u in untrusted:
-                    await emit("untrusted_text", u)
                     await audit("control-plane", "untrusted_text_detected", run_id, u)
                 labels = {"arena.tenant": client_id, "arena.task": run_id, "arena.batch": batch_id or "", "arena.kind": "original"}
                 ag = agent_mod.Agent(run_id=run_id, profile=profile, inputs=inputs, emit=emit, llm=self.llm, runner=self.runners.pick(),
-                                     labels=labels, should_stop=self.should_stop)
+                                     labels=labels, should_stop=self.should_stop, start_events=[("untrusted_text", u) for u in untrusted])
                 out = await ag.run()
                 arts = []
                 if out.files:

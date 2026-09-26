@@ -150,7 +150,7 @@ class Agent:
     def __init__(self, *, run_id: str, profile: dict, inputs: dict[str, bytes], emit: Emit, llm: LLM | None = None,
                  runner: RunnerClient | None = None, labels: dict | None = None,
                  should_stop: Callable[[], Awaitable[str | None]] | None = None, max_tool_calls: int | None = None,
-                 run_timeout_s: int | None = None):
+                 run_timeout_s: int | None = None, start_events: list[tuple[str, dict]] | None = None):
         self.run_id = run_id
         self.profile = profile
         self.inputs = inputs
@@ -162,6 +162,7 @@ class Agent:
         self.max_tool_calls = max_tool_calls or settings.max_tool_calls
         self.run_timeout_s = run_timeout_s or settings.run_timeout_s
         self.out = AgentOutcome(model=self.llm.model)
+        self.start_events = start_events or []
         self.tool_calls = 0
         self.sid: str | None = None
 
@@ -346,6 +347,8 @@ class Agent:
         await self.emit("run_started", {"client_id": self.profile["client_id"], "model": self.llm.model,
                                         "fallback_model": self.llm.fallback_model, "max_tool_calls": self.max_tool_calls,
                                         "inputs": [{"name": k, "sha256": sha256(v), "bytes": len(v)} for k, v in sorted(self.inputs.items())]})
+        for etype, payload in self.start_events:  # e.g. untrusted_text findings from the control plane scan
+            await self.emit(etype, payload)
         try:
             await self._create_sandbox()
             await asyncio.wait_for(self._loop(), timeout=self.run_timeout_s)
