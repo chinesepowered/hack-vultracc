@@ -165,6 +165,7 @@ Runs
 - `GET /api/runs/{id}/events?after=0` -> `RunEvent[]`
 - `GET /api/runs/{id}/stream?after=<seq>` -> SSE. Events: `run_event` (data: `RunEvent`), `run_update` (data: `RunSummary`)
 - `GET /api/runs/{id}/lines` -> `Lines`
+- `GET /api/runs/{id}/inputs/{name}` -> the exact input file the sandbox could read (hash-verified), e.g. `bank_statement.csv`
 - `GET /api/runs/{id}/artifacts/{name}` -> file download (redirect to a short-lived presigned Object Storage URL). Names: `workpaper.xlsx`, `result.json`, `lines.json`. `ajes.csv` is refused here.
 - `GET /api/runs/{id}/ajes.csv` -> CSV download, only after a reviewer approved the run (403 before)
 - `POST /api/runs/{id}/replay` -> `RunSummary` of the new replay run (fresh sandbox, same code, same inputs, no LLM)

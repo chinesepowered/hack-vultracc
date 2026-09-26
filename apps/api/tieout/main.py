@@ -423,6 +423,27 @@ async def get_artifact(run_id: str, name: str, user: User = Depends(current_user
     return RedirectResponse(storage.presign(a.object_key, fname, expires=300), status_code=302)
 
 
+@app.get("/api/runs/{run_id}/inputs/{name}")
+async def get_input(run_id: str, name: str, user: User = Depends(current_user)):
+    """Download one of the files the sandbox could read (exactly the bytes it received, verified by hash)."""
+    from .db import InputFile
+
+    with session() as s:
+        run = get_run_or_404(s, run_id)
+        src = run.replay_of or run_id
+        f = s.execute(select(InputFile).where(InputFile.run_id == src, InputFile.name == name)).scalar_one_or_none()
+        if f is None:
+            raise HTTPException(404, "No such input file for this run")
+        key, digest = f.object_key, f.sha256
+    data = await asyncio.to_thread(storage.get, key)
+    import hashlib
+
+    if hashlib.sha256(data).hexdigest() != digest:
+        raise HTTPException(500, "Stored input does not match its recorded hash")
+    return Response(content=data, media_type="text/csv" if name.endswith(".csv") else "application/json",
+                    headers={"Content-Disposition": f'attachment; filename="{run.client_id}-{name}"', "X-Content-SHA256": digest})
+
+
 @app.get("/api/local-files")
 async def local_files(key: str, exp: int, fn: str, sig: str):
     if not isinstance(storage, LocalStorage) or not storage.verify_local(key, exp, fn, sig):
