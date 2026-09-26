@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tieout design tokens. Light theme only. One accent (deep indigo); green, amber and red are status colors. */
+:root {
+  --radius: 0.5rem;
+  --background: #f6f7f9;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #3730a3;
+  --primary-hover: #312e81;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1f2937;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #eef0fb;
+  --accent-foreground: #312e81;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #d7dbe1;
+  --ring: #6366f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --shadow-card: 0 1px 2px 0 rgb(16 24 40 / 0.04), 0 1px 3px 0 rgb(16 24 40 / 0.06);
+  --shadow-raised: 0 4px 12px -2px rgb(16 24 40 / 0.08), 0 2px 4px -2px rgb(16 24 40 / 0.05);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-feature-settings: "cv11", "ss03";
+    min-width: 1024px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  ::selection {
+    background: #e0e7ff;
+  }
+}
+
+@layer utilities {
+  .money {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum", "cv11";
+    white-space: nowrap;
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+  .mono {
+    font-family: var(--font-mono);
+    font-variant-ligatures: none;
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-raised {
+    box-shadow: var(--shadow-raised);
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+}
+
+/* Syntax highlighting for agent-written Python. */
+.tok-keyword { color: #4338ca; font-weight: 500; }
+.tok-builtin { color: #6d28d9; }
+.tok-string { color: #166534; }
+.tok-number { color: #b45309; }
+.tok-comment { color: #9ca3af; font-style: italic; }
+.tok-fn { color: #111827; font-weight: 600; }
+.tok-deco { color: #b45309; }
+
+/* Motion: only where it explains something. */
+@keyframes draw-curve {
+  to { stroke-dashoffset: 0; }
+}
+.curve-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-curve 520ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes glow-amber {
+  0%, 100% { box-shadow: inset 3px 0 0 #f59e0b, 0 0 0 0 rgb(245 158 11 / 0); }
+  50% { box-shadow: inset 3px 0 0 #f59e0b, 0 0 0 3px rgb(245 158 11 / 0.16); }
+}
+@keyframes glow-red {
+  0%, 100% { box-shadow: inset 3px 0 0 #ef4444, 0 0 0 0 rgb(239 68 68 / 0); }
+  50% { box-shadow: inset 3px 0 0 #ef4444, 0 0 0 3px rgb(239 68 68 / 0.14); }
+}
+@keyframes glow-slate {
+  0%, 100% { box-shadow: inset 3px 0 0 #94a3b8; }
+  50% { box-shadow: inset 3px 0 0 #64748b; }
+}
+.row-glow-amber { animation: glow-amber 2.4s ease-in-out infinite; }
+.row-glow-red { animation: glow-red 2.4s ease-in-out infinite; }
+.row-glow-slate { animation: glow-slate 2.4s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.stripe-running {
+  background: linear-gradient(90deg, #c7d2fe 0%, #4f46e5 50%, #c7d2fe 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+@keyframes tile-settle {
+  0% { transform: scale(1); box-shadow: var(--shadow-card); }
+  35% { transform: scale(1.012); box-shadow: 0 8px 24px -6px rgb(16 24 40 / 0.14); }
+  100% { transform: scale(1); box-shadow: var(--shadow-card); }
+}
+.tile-settle { animation: tile-settle 700ms ease-out; }
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(2px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.pop-in { animation: pop-in 280ms ease-out both; }
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 currentColor; }
+  70% { box-shadow: 0 0 0 5px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.pulse-dot { animation: pulse-dot 2s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .curve-draw { animation: none; stroke-dashoffset: 0; }
+  .row-glow-amber, .row-glow-red, .row-glow-slate, .stripe-running, .tile-settle, .pop-in, .pulse-dot { animation: none; }
+}

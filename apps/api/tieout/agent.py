@@ -234,7 +234,9 @@ class Agent:
         try:
             raw = await self.runner.get_out(self.sid, "result.json")
         except RunnerError as exc:
-            return False, {"ok": False, "errors": [f"/out/result.json not found or unreadable ({exc.detail}). Run write_outputs() first."]}
+            errs = [f"/out/result.json not found or unreadable ({exc.detail}). Run write_outputs() first."]
+            await self.emit("validation", {"ok": False, "errors": errs})
+            return False, {"ok": False, "errors": errs}
         res, errors = validate_result(raw)
         if res is not None:
             if res.client_id != self.profile["client_id"]:

@@ -20,3 +20,5 @@ media/work/
 *.db
 .secrets/
 infra/state.json
+test-results/
+playwright-report/
