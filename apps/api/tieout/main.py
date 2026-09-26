@@ -257,6 +257,35 @@ def get_batch(batch_id: str, user: User = Depends(current_user)):
         return batch_dict(s, b)
 
 
+def _exc_key(e: dict) -> tuple:
+    return (e["kind"], f"{float(e['amount']):.2f}", e.get("bank_ref") or None, e.get("gl_ref") or None)
+
+
+@app.get("/api/batches/{batch_id}/ground-truth")
+def ground_truth(batch_id: str, user: User = Depends(current_user)):
+    """Compare each run's exceptions with the planted ones (the generator's answer key, never shown to the model)."""
+    with session() as s:
+        if s.get(Batch, batch_id) is None:
+            raise HTTPException(404, "No such batch")
+        runs = s.execute(select(Run).where(Run.batch_id == batch_id).order_by(Run.client_id)).scalars().all()
+        rows, planted, found = [], 0, 0
+        for r in runs:
+            p = Path(settings.data_dir) / r.client_id / "expected.json"
+            if not p.exists():
+                continue
+            exp = json.loads(p.read_text())
+            want = {_exc_key(e) for e in exp["exceptions"]}
+            got = {_exc_key(e) for e in (r.result_json or {}).get("exceptions", [])}
+            planted += len(want)
+            found += len(want & got)
+            rows.append({"client_id": r.client_id, "run_id": r.id, "status": r.status, "planted": len(want), "found": len(want & got),
+                         "missing": sorted(" ".join(str(x) for x in k if x) for k in want - got),
+                         "extra": sorted(" ".join(str(x) for x in k if x) for k in got - want),
+                         "difference": (r.result_json or {}).get("difference"), "exact": want == got})
+        return {"batch_id": batch_id, "planted": planted, "found": found, "clients": rows,
+                "all_exact": bool(rows) and all(x["exact"] for x in rows)}
+
+
 def sse(event: str, data) -> str:
     return f"event: {event}\ndata: {json.dumps(data, default=str)}\n\n"
 

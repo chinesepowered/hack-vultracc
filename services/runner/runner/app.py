@@ -293,12 +293,22 @@ async def create(req: CreateReq):
         shutil.rmtree(root, ignore_errors=True)
         raise HTTPException(500, f"docker run failed: {exc}") from None
     sb = Sandbox(sid, req.image, labels, lim, container.id, root)
+    if not STATE["accepting"]:
+        # the kill switch was engaged while this container was starting
+        await asyncio.to_thread(_remove, sb)
+        raise HTTPException(503, "runner is not accepting new sandboxes (kill switch)")
     SANDBOXES[sid] = sb
     try:
         att = await asyncio.to_thread(_exec_sync, container.id, ["python", "/opt/attest.py"], 30)
         sb.attestation = json.loads(att["stdout"]) if att["exit_code"] == 0 else {"ok": False, "error": att["stderr"][-2000:]}
         sb.docker_summary = await asyncio.to_thread(summarize, container)
         sb.status = "ready"
+        if not STATE["accepting"] or sid not in SANDBOXES:
+            SANDBOXES.pop(sid, None)
+            await asyncio.to_thread(_remove, sb)
+            raise HTTPException(503, "runner is not accepting new sandboxes (kill switch)")
+    except HTTPException:
+        raise
     except Exception as exc:
         SANDBOXES.pop(sid, None)
         await asyncio.to_thread(_remove, sb)
