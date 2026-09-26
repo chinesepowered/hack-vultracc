@@ -73,6 +73,10 @@ def aio_mode(state: dict) -> bool:
     return "sbx1" not in state.get("instances", {})
 
 
+def sandbox_hosts(state: dict) -> list[str]:
+    return sorted(h for h in state.get("instances", {}) if h.startswith("sbx"))
+
+
 def env_files(state: dict, env: dict) -> tuple[str, str, str]:
     aio = aio_mode(state)
     sbx_ip = "127.0.0.1" if aio else state["instances"]["sbx1"]["vpc_ip"]
@@ -87,6 +91,7 @@ def env_files(state: dict, env: dict) -> tuple[str, str, str]:
         "DATABASE_URL": db_url, "S3_ENDPOINT": env["S3_ENDPOINT"], "S3_ACCESS_KEY": env["S3_ACCESS_KEY"],
         "S3_SECRET_KEY": env["S3_SECRET_KEY"], "S3_BUCKET": env["S3_BUCKET"], "S3_REGION": "us-east-1",
         "SANDBOX_RUNNER_URL": f"http://{sbx_ip}:7070", "SANDBOX_RUNNER_TOKEN": token, "SANDBOX_IMAGE": "tieout-sandbox:latest",
+        "SANDBOX_RUNNER_URLS": "" if aio else ",".join(f"http://{state['instances'][h]['vpc_ip']}:7070" for h in sandbox_hosts(state)),
         "APP_BASE_URL": f"https://{state['domain']}", "SESSION_SECRET": env["SESSION_SECRET"],
         "MAX_CONCURRENT_SANDBOXES": env.get("MAX_CONCURRENT_SANDBOXES", "16"),
         "MAX_CONCURRENT_RUNS": env.get("MAX_CONCURRENT_RUNS", "6" if aio else "12"),
@@ -137,10 +142,14 @@ def main() -> int:
                         timeout=1800, name=f"deploy all-in-one {rid}", wait=True, wait_s=2100)
         a.only = "none"
     if a.only in (None, "sbx1"):
-        rc |= opsctl.run("sbx1", f"set -e\nmkdir -p /tmp/rel && tar -xzf /opt/tieout/incoming/release.tar.gz -C /tmp/rel infra/deploy_sbx.sh\n"
-                                 f"bash /tmp/rel/infra/deploy_sbx.sh {rid}",
-                         [f"{tarball}:/opt/tieout/incoming/release.tar.gz:0600", f"{tmp / 'runner.env'}:/etc/tieout/runner.env:0600"],
-                         timeout=1500, name=f"deploy sandbox host {rid}", wait=True, wait_s=1800)
+        for h in sandbox_hosts(state):
+            renv = runner_env.replace(f"RUNNER_BIND={state['instances']['sbx1']['vpc_ip']}", f"RUNNER_BIND={state['instances'][h]['vpc_ip']}")
+            renv = renv.replace(f"RUNNER_HOST_LABEL={state['instances']['sbx1']['label']}", f"RUNNER_HOST_LABEL={state['instances'][h]['label']}")
+            (tmp / f"runner-{h}.env").write_text(renv)
+            rc |= opsctl.run(h, f"set -e\nmkdir -p /tmp/rel && tar -xzf /opt/tieout/incoming/release.tar.gz -C /tmp/rel infra/deploy_sbx.sh\n"
+                                f"bash /tmp/rel/infra/deploy_sbx.sh {rid}",
+                             [f"{tarball}:/opt/tieout/incoming/release.tar.gz:0600", f"{tmp / f'runner-{h}.env'}:/etc/tieout/runner.env:0600"],
+                             timeout=1500, name=f"deploy sandbox host {h} {rid}", wait=True, wait_s=1800)
     if a.only in (None, "cp"):
         rc |= opsctl.run("cp", f"set -e\nmkdir -p /tmp/rel && tar -xzf /opt/tieout/incoming/release.tar.gz -C /tmp/rel infra/deploy_cp.sh\n"
                                f"bash /tmp/rel/infra/deploy_cp.sh {rid} {state['domain']} {'localdb' if local_db else ''}",
@@ -149,7 +158,7 @@ def main() -> int:
                          timeout=1500, name=f"deploy control plane {rid}", wait=True, wait_s=1800)
     # remove secret env files from the bucket now that the hosts have them
     s3 = opsctl.s3()
-    for host in ("sbx1", "cp"):
+    for host in sandbox_hosts(state) + ["cp"]:
         resp = s3.list_objects_v2(Bucket=opsctl.bucket(), Prefix=f"ops/{host}/files/")
         for o in resp.get("Contents", []):
             if o["Key"].endswith(".env") or o["Key"].endswith(".tar.gz"):

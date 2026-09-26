@@ -298,7 +298,13 @@ def up() -> None:
     cp_plan = plans.get(os.environ.get("CP_PLAN", "vc2-2c-4gb")) or pick_plan(2, 4096)
     sbx_plan = plans.get(os.environ.get("SBX_PLAN", "")) or pick_plan(8, 16384)
     sbx_fallbacks = [sbx_plan] + [plans[p] for p in ("vc2-4c-8gb", "vc2-2c-4gb") if p in plans]
-    for label, role, host, choices, fw in (("tieout-cp", "all", "cp", [cp_plan], fw_cp), ("tieout-sbx-1", "sandbox", "sbx1", sbx_fallbacks, fw_sbx)):
+    targets = [("tieout-cp", "all", "cp", [cp_plan], fw_cp), ("tieout-sbx-1", "sandbox", "sbx1", sbx_fallbacks, fw_sbx)]
+    extra = max(0, int(os.environ.get("SANDBOX_HOSTS", "1")) - 1)
+    for n in range(2, 2 + extra):  # optional additional sandbox hosts: never block the deploy
+        if "tieout-sbx-1" in blocked:
+            break
+        targets.append((f"tieout-sbx-{n}", "sandbox", f"sbx{n}", [st.get("instances", {}).get("sbx1", {}).get("plan") and plans.get(st["instances"]["sbx1"]["plan"]) or sbx_plan], fw_sbx))
+    for label, role, host, choices, fw in targets:
         for plan in choices:
             try:
                 ensure_instance(st, label, role, host, plan, fw, vpc["id"])
@@ -309,7 +315,10 @@ def up() -> None:
                     raise
                 print(f"blocked by the account monthly fee limit: {label} ({plan['id']}, ${plan.get('monthly_cost')}/mo)")
         else:
-            blocked.append(label)
+            if host in ("cp", "sbx1"):
+                blocked.append(label)
+            else:
+                print(f"optional {label} skipped: does not fit the account limit")
     if "tieout-sbx-1" not in blocked:
         try:
             ensure_database(st, vpc["id"])
@@ -321,7 +330,7 @@ def up() -> None:
             print("blocked by the account monthly fee limit: tieout-pg")
     else:
         blocked.append("tieout-pg")
-    for h in [h for h in ("cp", "sbx1") if h in st.get("instances", {})]:
+    for h in [h for h in st.get("instances", {})]:
         wait_instance(st, h)
         save_state(st)
     if "cp" in st.get("instances", {}):

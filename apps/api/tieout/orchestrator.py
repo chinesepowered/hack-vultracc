@@ -21,7 +21,7 @@ from .db import Artifact, Batch, Client, InputFile, Run, SystemState, User, sess
 from .events import EventLog, audit, bus
 from .inputs import build_inputs, load_profile
 from .llm import LLM
-from .runner_client import RunnerClient
+from .runner_client import RunnerClient, RunnerPool
 from .serializers import batch_dict, run_summary
 from .storage import content_type, run_key, storage
 from .untrusted import classify, scan_inputs
@@ -51,7 +51,8 @@ class Orchestrator:
         self.kill_switch_until: datetime | None = None
         self.tokens_day = datetime.now(timezone.utc).date()
         self.tokens_today = 0
-        self.runner = RunnerClient()
+        self.runners = RunnerPool.from_settings()
+        self.runner = self.runners.clients[0]
         self.llm = LLM()
 
     # ------------------------------------------------------------- startup
@@ -94,7 +95,7 @@ class Orchestrator:
 
     async def _resume_runner(self) -> None:
         try:
-            await self.runner.resume()
+            await self.runners.resume()
             await audit("control-plane", "kill_switch_auto_resumed", "system", {})
         except Exception as exc:
             log.warning("auto-resume: runner resume failed: %s", exc)
@@ -230,7 +231,7 @@ class Orchestrator:
                     await emit("untrusted_text", u)
                     await audit("control-plane", "untrusted_text_detected", run_id, u)
                 labels = {"arena.tenant": client_id, "arena.task": run_id, "arena.batch": batch_id or "", "arena.kind": "original"}
-                ag = agent_mod.Agent(run_id=run_id, profile=profile, inputs=inputs, emit=emit, llm=self.llm, runner=self.runner,
+                ag = agent_mod.Agent(run_id=run_id, profile=profile, inputs=inputs, emit=emit, llm=self.llm, runner=self.runners.pick(),
                                      labels=labels, should_stop=self.should_stop)
                 out = await ag.run()
                 arts = []
@@ -353,7 +354,7 @@ class Orchestrator:
                 self._publish_run(rid, None, summary)
                 await emit("run_started", {"client_id": client_id, "replay_of": orig_id, "steps": len(steps),
                                            "inputs": [{"name": n, "sha256": d, "bytes": len(inputs[n])} for n, _, d in in_keys]})
-                res = await agent_mod.replay(steps=steps, inputs=inputs, emit=emit, runner=self.runner,
+                res = await agent_mod.replay(steps=steps, inputs=inputs, emit=emit, runner=self.runners.pick(),
                                              labels={"arena.tenant": client_id, "arena.task": rid, "arena.kind": "replay"})
                 files = [{"name": n, "original": orig_hashes.get(n), "replay": res.hashes.get(n),
                           "match": orig_hashes.get(n) == res.hashes.get(n) and res.hashes.get(n) is not None} for n in sorted(orig_hashes)]
@@ -403,12 +404,12 @@ class Orchestrator:
                     t.cancel()
                     cancelled += 1
             try:
-                destroyed = (await self.runner.kill()).get("destroyed", 0)
+                destroyed = (await self.runners.kill()).get("destroyed", 0)
             except Exception as exc:
                 log.warning("runner kill failed: %s", exc)
         else:
             try:
-                await self.runner.resume()
+                await self.runners.resume()
             except Exception as exc:
                 log.warning("runner resume failed: %s", exc)
         await audit(actor, "kill_switch_on" if enabled else "kill_switch_off", "system", {"destroyed": destroyed, "cancelled_runs": cancelled})
@@ -419,10 +420,13 @@ class Orchestrator:
         import time
 
         t0 = time.monotonic()
-        sb = await self.runner.create(image=settings.sandbox_image, labels={"arena.tenant": "warmup", "arena.task": "warmup"},
-                                      limits=agent_mod.SANDBOX_LIMITS, inputs={"probe.txt": b"warmup\n"})
-        await self.runner.delete(sb["id"])
-        return {"ok": True, "ms": int((time.monotonic() - t0) * 1000), "attestation_ok": (sb.get("attestation") or {}).get("ok")}
+        oks = []
+        for r in self.runners.clients:
+            sb = await r.create(image=settings.sandbox_image, labels={"arena.tenant": "warmup", "arena.task": "warmup"},
+                                limits=agent_mod.SANDBOX_LIMITS, inputs={"probe.txt": b"warmup\n"})
+            await r.delete(sb["id"])
+            oks.append(bool((sb.get("attestation") or {}).get("ok")))
+        return {"ok": True, "ms": int((time.monotonic() - t0) * 1000), "attestation_ok": all(oks), "hosts": len(oks)}
 
 
 orch = Orchestrator()

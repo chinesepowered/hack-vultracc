@@ -31,6 +31,8 @@ class Settings:
     s3_region: str = field(default_factory=lambda: _env("S3_REGION", "sjc1"))
     local_storage_dir: str = field(default_factory=lambda: _env("LOCAL_STORAGE_DIR", str(REPO_ROOT / ".local-storage")))
     runner_url: str = field(default_factory=lambda: _env("SANDBOX_RUNNER_URL", "http://127.0.0.1:7070"))
+    # optional: several sandbox hosts, comma separated; runs are spread across them
+    runner_urls: str = field(default_factory=lambda: _env("SANDBOX_RUNNER_URLS", ""))
     runner_token: str = field(default_factory=lambda: _env("SANDBOX_RUNNER_TOKEN"))
     sandbox_image: str = field(default_factory=lambda: _env("SANDBOX_IMAGE", "tieout-sandbox:latest"))
     app_base_url: str = field(default_factory=lambda: _env("APP_BASE_URL", "http://localhost:8000"))

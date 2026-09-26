@@ -164,10 +164,11 @@ async def compute_health() -> dict:
         return await asyncio.to_thread(storage.check)
 
     async def runner():
-        h = await orch.runner.health()
-        if not h.get("ok"):
-            raise RuntimeError(f"runner unhealthy: {h}")
-        return f"{h['host']}: runtime {h['runtime']}, {h['sandboxes']}/{h['max']} sandboxes, accepting={h['accepting']}"
+        hs = await orch.runners.health()
+        bad = [h for h in hs if not h.get("ok")]
+        if bad:
+            raise RuntimeError(f"runner unhealthy: {bad[0]}")
+        return "; ".join(f"{h['host']}: runtime {h['runtime']}, {h['sandboxes']}/{h['max']} sandboxes, accepting={h['accepting']}" for h in hs)
 
     inf, db, obj, run = await asyncio.gather(timed(inference), timed(database), timed(object_storage), timed(runner))
     checks = {"inference": inf, "database": db, "object_storage": obj, "runner": run}
@@ -563,7 +564,7 @@ class KillReq(BaseModel):
 @app.get("/api/admin/overview")
 async def admin_overview(user: User = Depends(require("admin"))):
     try:
-        rl = await orch.runner.list()
+        rl = await orch.runners.list()
     except Exception as exc:
         rl = {"host": None, "max": None, "accepting": None, "sandboxes": [], "error": str(exc)}
     health_data = await health()

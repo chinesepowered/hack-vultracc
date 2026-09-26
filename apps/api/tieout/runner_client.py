@@ -72,3 +72,57 @@ class RunnerClient:
 
     async def aclose(self) -> None:
         await self.http.aclose()
+
+
+class RunnerPool:
+    """One or more sandbox hosts. Runs are spread across hosts; control actions go to every host."""
+
+    def __init__(self, urls: list[str], token: str | None = None):
+        self.clients = [RunnerClient(u, token) for u in urls]
+        self._next = 0
+
+    @classmethod
+    def from_settings(cls) -> "RunnerPool":
+        urls = [u.strip() for u in (settings.runner_urls or "").split(",") if u.strip()] or [settings.runner_url]
+        return cls(urls)
+
+    def pick(self) -> RunnerClient:
+        c = self.clients[self._next % len(self.clients)]
+        self._next += 1
+        return c
+
+    async def health(self) -> list[dict]:
+        out = []
+        for c in self.clients:
+            try:
+                out.append(await c.health())
+            except Exception as exc:
+                out.append({"ok": False, "host": c.base_url, "error": str(exc)[:200]})
+        return out
+
+    async def list(self) -> dict:
+        sandboxes, hosts, accepting, cap = [], [], True, 0
+        for c in self.clients:
+            try:
+                r = await c.list()
+                sandboxes.extend(r.get("sandboxes", []))
+                hosts.append(r.get("host"))
+                accepting = accepting and bool(r.get("accepting"))
+                cap += int(r.get("max") or 0)
+            except Exception as exc:
+                hosts.append(f"{c.base_url} (unreachable: {str(exc)[:80]})")
+                accepting = False
+        return {"host": ", ".join(str(h) for h in hosts), "hosts": hosts, "max": cap, "accepting": accepting, "sandboxes": sandboxes}
+
+    async def kill(self) -> dict:
+        destroyed = 0
+        for c in self.clients:
+            try:
+                destroyed += (await c.kill()).get("destroyed", 0)
+            except Exception:
+                pass
+        return {"destroyed": destroyed}
+
+    async def resume(self) -> None:
+        for c in self.clients:
+            await c.resume()
