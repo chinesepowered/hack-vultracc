@@ -19,7 +19,9 @@ Tieout runs each client's reconciliation as real Python inside that client's own
 | ![Run detail: agent steps, matching view, approval](media/screenshots/run-detail.png) | ![Blast radius panel with the prompt-injection callout](media/screenshots/blast-radius.png) |
 | **Run detail.** The agent's real code and output, the matching view, signed approval. | **Blast radius.** Attested from inside the sandbox; the injected memo is flagged and treated as data. |
 
-![How it works](media/screenshots/how-it-works.png)
+| ![Why does this need a sandbox](media/screenshots/how-it-works.png) | ![Architecture](media/screenshots/architecture.png) |
+|---|---|
+| **How it works.** The containment story, with where to see each guarantee. | **Architecture.** Control plane, managed Vultr services, sandbox host. |
 
 ## Demo accounts
 
