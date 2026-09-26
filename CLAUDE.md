@@ -23,8 +23,9 @@ This repo is our entry for the Vultr "Agent Arena" hackathon: **Tieout**, AI mon
 - Python: use uv (never pip or poetry). Node: use pnpm.
 - No em dashes in any writing: docs, UI copy, commit messages, slides.
 - Never add Claude or any AI as a co-author on commits or PRs.
-- Never commit secrets. `.env` is gitignored; keep `.env.example` current.
+- Never commit secrets. The API keys and model IDs are already in `.env` (gitignored). Keep `.env.example` current with variable names only, never values.
 - Do not create, resize, or delete paid Vultr resources without explicit human approval. Any script that touches the Vultr API must print what it will do and require a `--yes` flag.
+- Another agent is building a different hackathon project on the same Vultr account at the same time, with the same API keys. Every Vultr resource you create must have a label starting with `tieout-` and the tag `tieout`. Never modify or delete a Vultr resource that lacks both, even if it looks unused. Never regenerate or change any API key.
 - Reliability beats features. The demo must not break on stage. Every user-visible feature needs a scripted end-to-end check.
 - When a Vultr fact matters, check the docs (see "Vultr platform notes") instead of guessing.
 - Build the P0 demo path end to end first. No P1 work until P0 runs on Vultr behind the public URL.
@@ -114,7 +115,7 @@ Team decision: the NetBird bonus has no cash prize, so it is the LAST priority.
 Use Silicon Valley (`sjc`) for everything, since the event is in San Francisco. Object Storage hostname there: `sjc1.vultrobjects.com`. If a product is unavailable in `sjc`, use `lax` or `sea` and note it in the README.
 
 ### Serverless Inference (mandatory for all LLM calls)
-- Provision: Console, Products, Serverless, Inference, Add Serverless Inference. Or `POST https://api.vultr.com/v2/inference` with `{"label": "..."}`, or `vultr-cli inference create --label ...`.
+- Already provisioned for this team; the key is in `.env`. Do not create another subscription. For reference, provisioning is: Console, Products, Serverless, Inference, Add Serverless Inference. Or `POST https://api.vultr.com/v2/inference` with `{"label": "..."}`, or `vultr-cli inference create --label ...`.
 - The subscription has its own API key, separate from the account API key. Find it on the subscription's Overview tab or via `GET https://api.vultr.com/v2/inference/{id}`.
 - Base URL `https://api.vultrinference.com/v1`, header `Authorization: Bearer $VULTR_INFERENCE_API_KEY`. OpenAI-compatible: use the official `openai` Python SDK with `base_url` pointed here.
 - Endpoints: `POST /v1/chat/completions` (tools, streaming), `POST /v1/chat/completions/RAG`, `POST /v1/messages`, `POST /v1/responses`, `POST /v1/rerank`, `POST /v1/audio/speech`, `GET /v1/audio/voices`, `POST /v1/images/generations`, vector store CRUD under `/v1/vector_store`, `GET /v1/models`, `GET /v1/usage`, `GET /v1/health`.
@@ -138,9 +139,9 @@ Use Silicon Valley (`sjc`) for everything, since the event is in San Francisco. 
   - Vultron Retriever Core 4.5B ($0.10 / $0.00)
   - Vultron Retriever Flash 0.8B ($0.05 / $0.00)
   - Z-Image Turbo ($0.00 / $0.00)
-- These are display names. Get exact model IDs from `GET /v1/models` and put them in env vars. Never hardcode model IDs.
+- Exact model IDs (from `GET /v1/models`, 2026-09-26): `glm-5.3`, `glm-5.3-flash`, `glm-5.2`, `glm-5.x-menthol` (GLM 5), `qwen3.8-27b`, `qwen3.8-flash-next`, `nemotron-3.5-content-safety`, `nemotron-3-nano-omni-30b-a3b-reasoning`, `deepseek-v4-flash-0731`, `deepseek-v4.1-flash`, `minimax-m3`, `mimo-v2.6-flash-rl`, `mimo-v2.6-pro-rl`, `muse-glimmer-30b`, `laguna-s-2.1`, `bge-reranker-v2-m3` (BGE M3), `vultron-retriever-core-qwen3.5-4.5b`, `vultron-retriever-flash-qwen3.5-0.8b`, `z-image-turbo`. Read them from env vars (already set in `.env`); never hardcode them in code.
 - Roles: GLM 5.3 is the main agent model (tool calls, coding). GLM 5.3 Flash for fast, cheap inner loops. Qwen 3.8 27B is multimodal (images, screenshots, video frames). Nemotron 3.5 Content Safety is a guardrail classifier (verify its input and output format before relying on it). BGE M3 and Vultron Retriever for embeddings and reranking. Z-Image Turbo for image generation.
-- The Vultr docs say tool calling only works on `kimi-k2-instruct`. That is outdated: Kimi is not even in our model list. In the first hour, verify GLM 5.3 tool calling with a tiny script (`scripts/smoke_inference.py`). Build the agent loop so it can fall back to a strict JSON action protocol (the model returns `{"tool": "...", "args": {...}}` as message content, validated with pydantic, one retry on parse failure) if native tool calls misbehave.
+- The Vultr docs say tool calling only works on `kimi-k2-instruct`. That is outdated. Verified on 2026-09-26: `glm-5.3` returns standard OpenAI-style `tool_calls` with `finish_reason: "tool_calls"`. It is a reasoning model that spends reasoning tokens before answering, so set `max_tokens` generously (4096 or more) or replies can come back truncated. Keep a tiny `scripts/smoke_inference.py` to re-check at the start of each session, and build the agent loop so it can fall back to a strict JSON action protocol (the model returns `{"tool": "...", "args": {...}}` as message content, validated with pydantic, one retry on parse failure) if native tool calls misbehave.
 - Snippet:
   ```python
   import os
@@ -163,7 +164,7 @@ Use Silicon Valley (`sjc`) for everything, since the event is in San Francisco. 
 ### Compute (VMs)
 - Cloud Compute instances. Ubuntu 24.04 LTS x64 is `os_id` 2284. Plan codes look like `vc2-2c-4gb`; list current ones with `GET /v2/plans`.
 - Create: `POST /v2/instances` with `region`, `plan`, `os_id` (or `snapshot_id`), `label`, `hostname`, plus optional tags, firewall group, VPC attachment, cloud-init `user_data` (base64), and SSH keys. Check exact field names on the Create Instance API page. Delete: `DELETE /v2/instances/{id}`. List: `GET /v2/instances`.
-- Tag every resource we create with `agent-arena` so a janitor can find and delete it.
+- Label every resource we create with the `tieout-` prefix and tag it `tieout`. Throwaway VMs also get the tag `ephemeral`. A janitor may only delete resources that carry both `tieout` and `ephemeral`.
 - Instances can be private (no public IP) behind a NAT Gateway in a VPC. Good fit for sandbox hosts.
 - Snapshots: once a sandbox host is set up (Docker, gVisor, runner, pre-pulled images), snapshot it so throwaway hosts boot ready.
 
