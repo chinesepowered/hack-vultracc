@@ -42,6 +42,8 @@ class Settings:
     run_timeout_s: int = field(default_factory=lambda: int(_env("AGENT_RUN_TIMEOUT_S", "300")))
     exec_timeout_s: int = field(default_factory=lambda: int(_env("AGENT_EXEC_TIMEOUT_S", "60")))
     batches_per_user_per_hour: int = field(default_factory=lambda: int(_env("BATCHES_PER_USER_PER_HOUR", "20")))
+    batches_per_ip_per_hour: int = field(default_factory=lambda: int(_env("BATCHES_PER_IP_PER_HOUR", "8")))
+    kill_switch_auto_resume_min: int = field(default_factory=lambda: int(_env("KILL_SWITCH_AUTO_RESUME_MIN", "0")))
     data_dir: str = field(default_factory=lambda: _env("DEMO_DATA_DIR", str(REPO_ROOT / "data" / "demo")))
     prompts_dir: str = field(default_factory=lambda: _env("PROMPTS_DIR", str(REPO_ROOT / "prompts")))
     web_dist: str = field(default_factory=lambda: _env("WEB_DIST", str(REPO_ROOT / "apps" / "web" / "dist")))

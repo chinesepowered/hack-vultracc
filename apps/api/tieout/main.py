@@ -129,6 +129,7 @@ def system(user: User = Depends(current_user)):
     return {"firm": "Harbor & Pine CPA", "period": "2026-09", "period_label": "September 2026", "region": settings.region_label,
             "version": VERSION, "git_sha": GIT_SHA, "models": {"main": settings.model_main, "fast": settings.model_fast},
             "kill_switch": orch.kill_switch, "storage_backend": storage.backend,
+            "kill_switch_auto_resume_at": orch.kill_switch_until.isoformat() if orch.kill_switch_until else None,
             "limits": {"max_concurrent_sandboxes": settings.max_concurrent_sandboxes, "max_concurrent_runs": settings.max_concurrent_runs,
                        "daily_token_budget": settings.daily_token_budget, "sandbox": SANDBOX_LIMITS}}
 
@@ -221,9 +222,12 @@ class BatchReq(BaseModel):
 
 
 @app.post("/api/batches")
-async def start_batch(req: BatchReq, user: User = Depends(require("preparer", "admin"))):
+async def start_batch(req: BatchReq, request: Request, user: User = Depends(require("preparer", "admin"))):
     if req.period != "2026-09":
         raise HTTPException(400, "Only the September 2026 close is available in this demo.")
+    ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "?").split(",")[0].strip()
+    if not limiter.allow(f"batch-ip:{ip}", settings.batches_per_ip_per_hour, 3600):
+        raise HTTPException(429, "Rate limit: too many closes started from your network this hour. Open a previous close instead.")
     if not limiter.allow(f"batch:{user.id}", settings.batches_per_user_per_hour, 3600):
         raise HTTPException(429, "Rate limit: too many closes started this hour.")
     try:
@@ -545,7 +549,9 @@ async def admin_overview(user: User = Depends(require("admin"))):
 
     by_model, recent, chain_ok, runs_today = await asyncio.to_thread(db_part)
     tokens_today = orch.tokens_today
-    return {"kill_switch": orch.kill_switch, "runner": rl,
+    orch.check_auto_resume()
+    return {"kill_switch": orch.kill_switch, "kill_switch_auto_resume_at": orch.kill_switch_until.isoformat() if orch.kill_switch_until else None,
+            "runner": rl,
             "usage": {"tokens_today": tokens_today, "budget": settings.daily_token_budget,
                       "cost_today_usd": round(sum(m["cost_usd"] for m in by_model), 4), "runs_today": runs_today, "by_model": by_model},
             "health": health_data, "audit": recent, "audit_chain_ok": chain_ok}

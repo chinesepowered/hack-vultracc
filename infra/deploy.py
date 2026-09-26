@@ -91,7 +91,8 @@ def env_files(state: dict, env: dict) -> tuple[str, str, str]:
         "MAX_CONCURRENT_SANDBOXES": env.get("MAX_CONCURRENT_SANDBOXES", "16"),
         "MAX_CONCURRENT_RUNS": env.get("MAX_CONCURRENT_RUNS", "6" if aio else "12"),
         "DAILY_TOKEN_BUDGET": env.get("DAILY_TOKEN_BUDGET", "8000000"), "REGION_LABEL": "Vultr Silicon Valley (sjc)",
-        "RUNNER_HOSTS": env.get("RUNNER_HOSTS", ""),
+        "KILL_SWITCH_AUTO_RESUME_MIN": env.get("KILL_SWITCH_AUTO_RESUME_MIN", "15"),
+        "BATCHES_PER_IP_PER_HOUR": env.get("BATCHES_PER_IP_PER_HOUR", "12"),
     }
     runner = {"RUNNER_TOKEN": token, "RUNNER_BIND": sbx_ip, "RUNNER_DATA_DIR": "/var/lib/tieout/sandboxes",
               "RUNNER_ALLOWED_IMAGES": "tieout-sandbox:latest", "RUNNER_MAX_SANDBOXES": "8" if aio else "16", "RUNNER_RUNTIME": "runsc",

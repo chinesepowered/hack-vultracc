@@ -48,6 +48,7 @@ class Orchestrator:
         self.sem = asyncio.Semaphore(settings.max_concurrent_runs)
         self.tasks: dict[str, asyncio.Task] = {}
         self.kill_switch = False
+        self.kill_switch_until: datetime | None = None
         self.tokens_day = datetime.now(timezone.utc).date()
         self.tokens_today = 0
         self.runner = RunnerClient()
@@ -80,7 +81,26 @@ class Orchestrator:
         self._roll_day()
         return settings.daily_token_budget - self.tokens_today
 
+    def check_auto_resume(self) -> None:
+        """Public demo safeguard: the kill switch can auto-resume so one visitor cannot lock everyone out."""
+        if self.kill_switch and self.kill_switch_until and datetime.now(timezone.utc) >= self.kill_switch_until:
+            self.kill_switch = False
+            self.kill_switch_until = None
+            with session() as s:
+                st = s.get(SystemState, "kill_switch") or SystemState(key="kill_switch", value_json={})
+                st.value_json = {"enabled": False, "by": "auto-resume", "at": utcnow().isoformat()}
+                s.merge(st)
+            asyncio.get_event_loop().create_task(self._resume_runner())
+
+    async def _resume_runner(self) -> None:
+        try:
+            await self.runner.resume()
+            await audit("control-plane", "kill_switch_auto_resumed", "system", {})
+        except Exception as exc:
+            log.warning("auto-resume: runner resume failed: %s", exc)
+
     async def should_stop(self) -> str | None:
+        self.check_auto_resume()
         if self.kill_switch:
             return "stopped by the admin kill switch"
         if self.budget_left() <= 0:
@@ -162,6 +182,7 @@ class Orchestrator:
 
     # --------------------------------------------------------------- batches
     async def start_batch(self, period: str, user: User) -> dict:
+        self.check_auto_resume()
         if self.kill_switch:
             raise PermissionError("The kill switch is on: new work is stopped.")
         if self.budget_left() <= 0:
@@ -262,6 +283,7 @@ class Orchestrator:
 
     # ---------------------------------------------------------------- replay
     async def start_replay(self, run_id: str, user: User) -> dict:
+        self.check_auto_resume()
         if self.kill_switch:
             raise PermissionError("The kill switch is on: new work is stopped.")
         with session() as s:
@@ -331,7 +353,11 @@ class Orchestrator:
 
     # ----------------------------------------------------------- kill switch
     async def set_kill_switch(self, enabled: bool, actor: str) -> dict:
+        from datetime import timedelta
+
         self.kill_switch = enabled
+        mins = settings.kill_switch_auto_resume_min
+        self.kill_switch_until = datetime.now(timezone.utc) + timedelta(minutes=mins) if (enabled and mins > 0) else None
         with session() as s:
             st = s.get(SystemState, "kill_switch") or SystemState(key="kill_switch", value_json={})
             st.value_json = {"enabled": enabled, "by": actor, "at": utcnow().isoformat()}
@@ -352,7 +378,8 @@ class Orchestrator:
             except Exception as exc:
                 log.warning("runner resume failed: %s", exc)
         await audit(actor, "kill_switch_on" if enabled else "kill_switch_off", "system", {"destroyed": destroyed, "cancelled_runs": cancelled})
-        return {"kill_switch": enabled, "destroyed": destroyed, "cancelled_runs": cancelled}
+        return {"kill_switch": enabled, "destroyed": destroyed, "cancelled_runs": cancelled,
+                "auto_resume_at": self.kill_switch_until.isoformat() if self.kill_switch_until else None}
 
     async def warmup(self) -> dict:
         import time
