@@ -78,7 +78,9 @@ flowchart TB
 
 ## Guardrails on the public URL
 
-Login with seeded demo accounts and roles; per-user rate limits; a global cap on concurrent sandboxes (runner returns 429 when full); sandbox TTL janitor and orphan cleanup; daily token budget; an admin kill switch that stops new work and destroys every running sandbox; a health page that checks inference, database, object storage and the runner. Sandboxes get no secrets, no credentials and no network; the runner only accepts an allowlisted image.
+Login with seeded demo accounts and roles; per-user and per-IP rate limits on starting closes; one close at a time; a global cap on concurrent sandboxes (runner returns 429 when full); sandbox TTL janitor and orphan cleanup; daily token budget; an admin kill switch that stops new work and destroys every running sandbox (in the public demo it auto-resumes after 15 minutes so one visitor cannot lock everyone out, and every use is in the hash-chained audit log); a health page that checks inference, database, object storage and the runner. A failed client can be re-run on its own without restarting the close. Sandboxes get no secrets, no credentials and no network; the runner only accepts an allowlisted image.
+
+Automated checks: `scripts/demo_check.py` (12 clients against ground truth, maker-checker, export gate, replay hashes), `scripts/check_guardrails.py` (roles, kill switch, health), `scripts/record_demo.py` (the full UI flow in a real browser), plus unit and integration tests in `sandbox/tests`, `services/runner/tests` and `apps/api/tests`.
 
 ## Repository layout
 
