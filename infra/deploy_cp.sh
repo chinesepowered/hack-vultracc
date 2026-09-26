@@ -3,6 +3,7 @@
 set -euo pipefail
 SHA="${1:?release id}"
 DOMAIN="${2:?domain}"
+PROFILE="${3:-}"
 test -f /var/lib/tieout-ops/bootstrap.done || { echo "bootstrap not finished yet"; exit 3; }
 REL=/opt/tieout/releases/$SHA
 rm -rf "$REL" && mkdir -p "$REL"
@@ -10,6 +11,11 @@ tar -xzf /opt/tieout/incoming/release.tar.gz -C "$REL"
 ln -sfn "$REL" /opt/tieout/current
 cd "$REL/infra"
 export GIT_SHA="$SHA" TIEOUT_DOMAIN="$DOMAIN"
+if [ "$PROFILE" = "localdb" ]; then
+  set -a; . /etc/tieout/aio.env; set +a
+  export COMPOSE_PROFILES=localdb LOCAL_PG_PASSWORD
+  echo "database: local Postgres container (managed database not available)"
+fi
 docker compose -f compose.cp.yml -p tieout build 2>&1 | tail -3
 docker compose -f compose.cp.yml -p tieout up -d --remove-orphans 2>&1 | tail -5
 for i in $(seq 1 60); do

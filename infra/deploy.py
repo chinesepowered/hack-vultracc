@@ -79,7 +79,8 @@ def env_files(state: dict, env: dict) -> tuple[str, str, str]:
     cp_ip = state["instances"]["cp"]["vpc_ip"] or "127.0.0.1"
     token = env["SANDBOX_RUNNER_TOKEN_VULTR"]
     pg_pw = env.get("LOCAL_PG_PASSWORD", "")
-    db_url = env.get("DATABASE_URL_VULTR") or f"postgresql+psycopg://tieout:{pg_pw}@127.0.0.1:5432/tieout"
+    pg_host = "127.0.0.1" if aio else "postgres"
+    db_url = env.get("DATABASE_URL_VULTR") or f"postgresql+psycopg://tieout:{pg_pw}@{pg_host}:5432/tieout"
     cp = {
         "VULTR_INFERENCE_API_KEY": env["VULTR_INFERENCE_API_KEY"], "VULTR_INFERENCE_BASE_URL": env["VULTR_INFERENCE_BASE_URL"],
         "LLM_MODEL_MAIN": env["LLM_MODEL_MAIN"], "LLM_MODEL_FAST": env["LLM_MODEL_FAST"], "LLM_MODEL_SAFETY": env.get("LLM_MODEL_SAFETY", ""),
@@ -114,7 +115,8 @@ def main() -> int:
     rid = f"{time.strftime('%Y%m%d%H%M%S')}-{git_sha()}"
     tarball = make_release(rid)
     print(f"release {rid}: {tarball.stat().st_size / 1e6:.1f} MB")
-    if aio_mode(state) and not env.get("LOCAL_PG_PASSWORD"):
+    local_db = not env.get("DATABASE_URL_VULTR")
+    if (aio_mode(state) or local_db) and not env.get("LOCAL_PG_PASSWORD"):
         import secrets as _s
         from dotenv import set_key
         env["LOCAL_PG_PASSWORD"] = _s.token_urlsafe(24)
@@ -140,8 +142,9 @@ def main() -> int:
                          timeout=1500, name=f"deploy sandbox host {rid}", wait=True, wait_s=1800)
     if a.only in (None, "cp"):
         rc |= opsctl.run("cp", f"set -e\nmkdir -p /tmp/rel && tar -xzf /opt/tieout/incoming/release.tar.gz -C /tmp/rel infra/deploy_cp.sh\n"
-                               f"bash /tmp/rel/infra/deploy_cp.sh {rid} {state['domain']}",
-                         [f"{tarball}:/opt/tieout/incoming/release.tar.gz:0600", f"{tmp / 'cp.env'}:/etc/tieout/cp.env:0600"],
+                               f"bash /tmp/rel/infra/deploy_cp.sh {rid} {state['domain']} {'localdb' if local_db else ''}",
+                         [f"{tarball}:/opt/tieout/incoming/release.tar.gz:0600", f"{tmp / 'cp.env'}:/etc/tieout/cp.env:0600",
+                          f"{tmp / 'aio.env'}:/etc/tieout/aio.env:0600"],
                          timeout=1500, name=f"deploy control plane {rid}", wait=True, wait_s=1800)
     # remove secret env files from the bucket now that the hosts have them
     s3 = opsctl.s3()

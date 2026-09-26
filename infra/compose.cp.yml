@@ -1,5 +1,21 @@
 # Control-plane VM: Caddy (public 80/443) and the API. The API never runs model-written code.
 services:
+  postgres:
+    # only when the managed database does not fit the account limit (COMPOSE_PROFILES=localdb)
+    profiles: ["localdb"]
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tieout
+      POSTGRES_DB: tieout
+      POSTGRES_PASSWORD: ${LOCAL_PG_PASSWORD:-unused}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tieout"]
+      interval: 5s
+      retries: 20
+
   api:
     build:
       context: ..
@@ -41,5 +57,6 @@ services:
       options: {max-size: "20m", max-file: "5"}
 
 volumes:
+  pgdata:
   caddy_data:
   caddy_config:

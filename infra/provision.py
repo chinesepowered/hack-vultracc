@@ -297,15 +297,19 @@ def up() -> None:
     plans = {p["id"]: p for p in list_all("/plans", "plans", {"type": "all"})}
     cp_plan = plans.get(os.environ.get("CP_PLAN", "vc2-2c-4gb")) or pick_plan(2, 4096)
     sbx_plan = plans.get(os.environ.get("SBX_PLAN", "")) or pick_plan(8, 16384)
-    for label, role, host, plan, fw in (("tieout-cp", "all", "cp", cp_plan, fw_cp), ("tieout-sbx-1", "sandbox", "sbx1", sbx_plan, fw_sbx)):
-        try:
-            ensure_instance(st, label, role, host, plan, fw, vpc["id"])
-            save_state(st)
-        except VultrError as exc:
-            if not _limit(exc):
-                raise
+    sbx_fallbacks = [sbx_plan] + [plans[p] for p in ("vc2-4c-8gb", "vc2-2c-4gb") if p in plans]
+    for label, role, host, choices, fw in (("tieout-cp", "all", "cp", [cp_plan], fw_cp), ("tieout-sbx-1", "sandbox", "sbx1", sbx_fallbacks, fw_sbx)):
+        for plan in choices:
+            try:
+                ensure_instance(st, label, role, host, plan, fw, vpc["id"])
+                save_state(st)
+                break
+            except VultrError as exc:
+                if not _limit(exc):
+                    raise
+                print(f"blocked by the account monthly fee limit: {label} ({plan['id']}, ${plan.get('monthly_cost')}/mo)")
+        else:
             blocked.append(label)
-            print(f"blocked by the account monthly fee limit: {label} ({plan['id']}, ${plan.get('monthly_cost')}/mo)")
     if "tieout-sbx-1" not in blocked:
         try:
             ensure_database(st, vpc["id"])
