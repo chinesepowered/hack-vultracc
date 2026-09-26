@@ -18,13 +18,31 @@ This repo is our entry for the Vultr "Agent Arena" hackathon: **Tieout**, AI mon
 - Sandbox runner: Python FastAPI plus the Docker SDK on the sandbox-host VM, gVisor runtime.
 - Deploy: Docker Compose on the control-plane VM (Caddy, API). Runner as a systemd service or Compose on the sandbox host.
 
+## Autonomy (the team is hands-off)
+
+The humans will not answer questions, approve steps, or test anything. You own the whole project end to end, from infrastructure to the submission materials.
+- Never stop to ask. Make the call yourself, pick the simplest option that keeps the demo reliable, and record notable decisions in `DECISIONS.md`.
+- If blocked, work around it or fall back to the simpler option described in PLAN.md. Never wait.
+- Keep going phase by phase until every acceptance criterion in PLAN.md passes, then keep polishing until the deadline. Commit and push after each phase.
+- You deploy, test, and verify everything yourself on Vultr, including the public URL.
+- Keep `STATUS.md` current: what works, the public URL, demo accounts, what is left, known issues.
+
+## Submission deliverables (you produce all of these)
+
+- Public URL working, with demo accounts shown on the login page.
+- `README.md`: pitch, the "why sandbox" answer, architecture diagram (Mermaid), how each Vultr product is used, setup and deploy steps, demo accounts.
+- `SUBMISSION.md`: project name, one-line pitch, 150 to 300 word description, problem statement(s) addressed, how each mandatory requirement is met, Vultr products used, links (public URL, repo, video). Written so a human can paste it straight into a submission form.
+- Narrated demo video, 2 to 3 minutes, made without humans: script the demo flow from PLAN.md section 3 with Playwright against the deployed URL and record it (Playwright video recording); generate narration from the "Say" column with Vultr text-to-speech (`POST /v1/audio/speech`, voices from `GET /v1/audio/voices`); combine with ffmpeg. Save it as `media/demo.mp4` (gitignore it if large), upload it to Object Storage with a public-read link, and put the link in `SUBMISSION.md`.
+- Slides (optional): a short HTML deck in `media/slides/`: problem, demo, why sandbox, architecture, Vultr usage.
+- At the feature freeze: scan the full git history for secrets (at minimum, search `git log -p --all` for every value in `.env`), then make the GitHub repo public with `gh repo edit --visibility public --accept-visibility-change-consequences`.
+
 ## House rules
 
 - Python: use uv (never pip or poetry). Node: use pnpm.
 - No em dashes in any writing: docs, UI copy, commit messages, slides.
 - Never add Claude or any AI as a co-author on commits or PRs.
 - Never commit secrets. The API keys and model IDs are already in `.env` (gitignored). Keep `.env.example` current with variable names only, never values.
-- Do not create, resize, or delete paid Vultr resources without explicit human approval. Any script that touches the Vultr API must print what it will do and require a `--yes` flag.
+- You have standing approval to create, resize, and delete Vultr resources for this project, within a total budget of $100 for the weekend (VMs, database, storage, inference). Scope: only resources carrying this project's prefix and tag (next rule). Log every create, resize, and delete with its hourly cost in `infra/RESOURCES.md`.
 - Another agent is building a different hackathon project on the same Vultr account at the same time, with the same API keys. Every Vultr resource you create must have a label starting with `tieout-` and the tag `tieout`. Never modify or delete a Vultr resource that lacks both, even if it looks unused. Never regenerate or change any API key.
 - Reliability beats features. The demo must not break on stage. Every user-visible feature needs a scripted end-to-end check.
 - When a Vultr fact matters, check the docs (see "Vultr platform notes") instead of guessing.
@@ -44,7 +62,7 @@ What we heard from Vultr (not in the written guide):
 - They gave an on-site demo about sandboxes for security and limiting blast radius. Expect judges to ask "why does this need a sandbox?" and to reward a crisp, visible containment story.
 - Expect to need a publicly accessible URL for judging.
 
-Unknown (check the participant guide or ask the organizers before the deadline): judging criteria and weights, submission format, where and when to submit. Prepare the usual: public URL, repo link, 2 to 3 minute demo video, short write-up, architecture diagram.
+Unknown: judging criteria and weights, submission format, where and when to submit. Nobody will answer questions, so produce everything a typical submission needs (see "Submission deliverables").
 
 Team decision: the NetBird bonus has no cash prize, so it is the LAST priority.
 
