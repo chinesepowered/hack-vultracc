@@ -1,0 +1,2784 @@
+{
+ "schema_version": "1",
+ "client_id": "cedar-ridge-landscaping",
+ "client_name": "Cedar Ridge Landscaping",
+ "period": "2026-09",
+ "period_end": "2026-09-30",
+ "run_id": "run_fixture_cedar",
+ "prepared_by": "Tieout agent",
+ "bank_opening_balance": "36877.40",
+ "bank_ending_balance": "36010.81",
+ "gl_opening_balance": "35798.41",
+ "gl_ending_balance": "31331.82",
+ "deposits_in_transit": [],
+ "outstanding_checks": [
+  {
+   "ref": "AUG-7431",
+   "date": "2026-08-28",
+   "description": "Check #2308 Greenleaf Nursery Wholesale",
+   "amount": "206.47",
+   "check_no": "2308",
+   "carried_from_prior": true
+  },
+  {
+   "ref": "GL-22055",
+   "date": "2026-09-23",
+   "description": "Check #2366 Greenleaf Nursery Wholesale",
+   "amount": "2383.39",
+   "check_no": "2366",
+   "carried_from_prior": false
+  },
+  {
+   "ref": "GL-22066",
+   "date": "2026-09-24",
+   "description": "Check #2367 Ridgeline Equipment Rental",
+   "amount": "1249.09",
+   "check_no": "2367",
+   "carried_from_prior": false
+  },
+  {
+   "ref": "GL-22088",
+   "date": "2026-09-28",
+   "description": "Check #2365 Greenleaf Nursery Wholesale",
+   "amount": "1570.90",
+   "check_no": "2365",
+   "carried_from_prior": false
+  }
+ ],
+ "adjusted_bank_balance": "30600.96",
+ "adjustments_total": "-57.00",
+ "unresolved_total": "-673.86",
+ "adjusted_book_balance": "30600.96",
+ "difference": "0.00",
+ "bank_line_count": 287,
+ "gl_line_count": 285,
+ "matched_count": 284,
+ "matches": [
+  {
+   "bank_ref": "62734215569",
+   "gl_ref": "GL-21811",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1312.53",
+   "bank_date": "2026-09-01",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "79712153949",
+   "gl_ref": "GL-21812",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "3004.77",
+   "bank_date": "2026-09-01",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "87293626000",
+   "gl_ref": "GL-21807",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "1853.03",
+   "bank_date": "2026-09-01",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "90146876368",
+   "gl_ref": "AUG-9879",
+   "method": "prior_outstanding",
+   "score": 100.0,
+   "amount": "2069.91",
+   "bank_date": "2026-09-01",
+   "gl_date": "2026-08-31"
+  },
+  {
+   "bank_ref": "14780672039",
+   "gl_ref": "GL-21806",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-595.32",
+   "bank_date": "2026-09-02",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "22636955078",
+   "gl_ref": "GL-21818",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "7291.92",
+   "bank_date": "2026-09-02",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "63857909606",
+   "gl_ref": "GL-21805",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-96.41",
+   "bank_date": "2026-09-02",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "72925676441",
+   "gl_ref": "GL-21808",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1971.76",
+   "bank_date": "2026-09-02",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "78291715335",
+   "gl_ref": "GL-21821",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-527.77",
+   "bank_date": "2026-09-02",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "15719086360",
+   "gl_ref": "GL-21816",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1829.22",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "26456385506",
+   "gl_ref": "GL-21819",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-480.92",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "31146971013",
+   "gl_ref": "GL-21827",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-188.08",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "38177722964",
+   "gl_ref": "GL-21826",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1259.52",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "41867316113",
+   "gl_ref": "GL-21809",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "3149.44",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "50486526872",
+   "gl_ref": "GL-21830",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "2661.33",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "63145943729",
+   "gl_ref": "GL-21810",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "1601.86",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "73554215002",
+   "gl_ref": "GL-21822",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-263.18",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "85530600147",
+   "gl_ref": "GL-21823",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "833.06",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "97771655041",
+   "gl_ref": "GL-21832",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-244.66",
+   "bank_date": "2026-09-03",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "16465596921",
+   "gl_ref": "GL-21841",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-900.77",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "24197042515",
+   "gl_ref": "GL-21836",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-520.35",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "26245962420",
+   "gl_ref": "GL-21824",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-107.70",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "30932625758",
+   "gl_ref": "GL-21829",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-3438.63",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "31039899673",
+   "gl_ref": "GL-21814",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2306.94",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "32673534650",
+   "gl_ref": "GL-21847",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "4659.58",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "37162427873",
+   "gl_ref": "GL-21820",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-36.00",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "46237766186",
+   "gl_ref": "GL-21848",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "4645.95",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "55501842816",
+   "gl_ref": "GL-21846",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "1599.14",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "57672909676",
+   "gl_ref": "GL-21845",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-966.27",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "61949659212",
+   "gl_ref": "GL-21828",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1360.22",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "70910386893",
+   "gl_ref": "GL-21849",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-430.22",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "81542893818",
+   "gl_ref": "GL-21837",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "2744.38",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "83179436063",
+   "gl_ref": "GL-21838",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "6780.35",
+   "bank_date": "2026-09-04",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "11886274465",
+   "gl_ref": "GL-21853",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-739.73",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-05"
+  },
+  {
+   "bank_ref": "12139747291",
+   "gl_ref": "GL-21864",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-2358.66",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "12805645287",
+   "gl_ref": "GL-21842",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-465.68",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "13008123664",
+   "gl_ref": "GL-21844",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-1385.67",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "19825632958",
+   "gl_ref": "GL-21857",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-285.15",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-05"
+  },
+  {
+   "bank_ref": "23153219495",
+   "gl_ref": "GL-21852",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-8994.57",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-05"
+  },
+  {
+   "bank_ref": "27915343550",
+   "gl_ref": "GL-21839",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-735.95",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "34230747314",
+   "gl_ref": "GL-21862",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "8719.48",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "35582458228",
+   "gl_ref": "GL-21873",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-537.89",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "35798467074",
+   "gl_ref": "GL-21855",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "6709.65",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-05"
+  },
+  {
+   "bank_ref": "38205877432",
+   "gl_ref": "GL-21840",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-189.05",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "41471862408",
+   "gl_ref": "GL-21860",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-361.03",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "47406790969",
+   "gl_ref": "GL-21859",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-262.36",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "49164726376",
+   "gl_ref": "GL-21835",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "1643.86",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "53951284429",
+   "gl_ref": "GL-21861",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-1165.96",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "61891481338",
+   "gl_ref": "GL-21868",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-8423.77",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "68181729742",
+   "gl_ref": "GL-21843",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "1721.20",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "68395305398",
+   "gl_ref": "GL-21863",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-2769.25",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "76452252307",
+   "gl_ref": "GL-21872",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-120.97",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "79651036124",
+   "gl_ref": "GL-21850",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-2653.61",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "81360327921",
+   "gl_ref": "GL-21879",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-392.51",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "82544577492",
+   "gl_ref": "GL-21866",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "5879.54",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "83969988579",
+   "gl_ref": "GL-21854",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-955.62",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-05"
+  },
+  {
+   "bank_ref": "87662884995",
+   "gl_ref": "GL-21878",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "5048.51",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "89506056600",
+   "gl_ref": "GL-21858",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-427.78",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "93825966187",
+   "gl_ref": "GL-21833",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "1804.03",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "96672921301",
+   "gl_ref": "GL-21869",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-1057.90",
+   "bank_date": "2026-09-07",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "12272895888",
+   "gl_ref": "GL-21871",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1355.08",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "16695393538",
+   "gl_ref": "GL-21885",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-757.64",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "25457840692",
+   "gl_ref": "GL-21882",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1238.27",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "33448061498",
+   "gl_ref": "GL-21876",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-597.88",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "34412677296",
+   "gl_ref": "GL-21883",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "3705.93",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "42130206780",
+   "gl_ref": "GL-21865",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "3603.20",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "45951658488",
+   "gl_ref": "GL-21896",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-8164.48",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "50174461839",
+   "gl_ref": "GL-21856",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2950.61",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-05"
+  },
+  {
+   "bank_ref": "63067965596",
+   "gl_ref": "GL-21892",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-921.50",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "67090375082",
+   "gl_ref": "GL-21825",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-3056.61",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "68845320834",
+   "gl_ref": "GL-21884",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "2048.95",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "77099559432",
+   "gl_ref": "GL-21894",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "317.94",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "78092758720",
+   "gl_ref": "GL-21831",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-192.28",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "90144058787",
+   "gl_ref": "GL-21888",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "6719.93",
+   "bank_date": "2026-09-08",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "10817564474",
+   "gl_ref": "GL-21891",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-32.33",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "13026019056",
+   "gl_ref": "AUG-7673",
+   "method": "prior_outstanding",
+   "score": 100.0,
+   "amount": "-2942.43",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-08-27"
+  },
+  {
+   "bank_ref": "35627203046",
+   "gl_ref": "GL-21817",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-160.47",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "37844599142",
+   "gl_ref": "GL-21813",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-832.86",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-01"
+  },
+  {
+   "bank_ref": "42595825275",
+   "gl_ref": "GL-21908",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1040.29",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "42946579950",
+   "gl_ref": "GL-21906",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "7431.87",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "52943535146",
+   "gl_ref": "GL-21903",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "7539.70",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "62961434831",
+   "gl_ref": "GL-21881",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-532.82",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "90591069406",
+   "gl_ref": "GL-21897",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "471.96",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "99614788808",
+   "gl_ref": "GL-21887",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-152.07",
+   "bank_date": "2026-09-09",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "10203729398",
+   "gl_ref": "GL-21917",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-2737.21",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "13772447622",
+   "gl_ref": "GL-21898",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "8496.46",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "23747884220",
+   "gl_ref": "GL-21899",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1568.48",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "43843359004",
+   "gl_ref": "GL-21907",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-829.97",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "67365556815",
+   "gl_ref": "GL-21913",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-7030.01",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "67711457497",
+   "gl_ref": "GL-21895",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-252.55",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "71399515661",
+   "gl_ref": "GL-21893",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-3003.50",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "74633570543",
+   "gl_ref": "GL-21851",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-680.07",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-04"
+  },
+  {
+   "bank_ref": "81531372617",
+   "gl_ref": "GL-21911",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-49.47",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "83500663720",
+   "gl_ref": "GL-21915",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "6026.93",
+   "bank_date": "2026-09-10",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "16310862330",
+   "gl_ref": "GL-21910",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-39.34",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "20682994279",
+   "gl_ref": "GL-21918",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-1105.94",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "23718756873",
+   "gl_ref": "GL-21815",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2042.04",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-02"
+  },
+  {
+   "bank_ref": "23746014755",
+   "gl_ref": "GL-21877",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2525.89",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "33550882704",
+   "gl_ref": "GL-21931",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-4512.17",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "46215840364",
+   "gl_ref": "GL-21934",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-3846.82",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "50678397774",
+   "gl_ref": "GL-21928",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "1690.77",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "63040607950",
+   "gl_ref": "GL-21921",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-3382.15",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "65893572897",
+   "gl_ref": "GL-21933",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1216.71",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "73596861941",
+   "gl_ref": "GL-21930",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "7973.52",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "75511620693",
+   "gl_ref": "GL-21834",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1304.55",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-03"
+  },
+  {
+   "bank_ref": "81111875286",
+   "gl_ref": "GL-21900",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-306.92",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "89096563170",
+   "gl_ref": "GL-21880",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-80.35",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "92731253726",
+   "gl_ref": "GL-21912",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "2089.76",
+   "bank_date": "2026-09-11",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "13265078352",
+   "gl_ref": "GL-21941",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-112.49",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "13762985308",
+   "gl_ref": "GL-21953",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-549.44",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "14714217452",
+   "gl_ref": "GL-21950",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "7793.54",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "16123981855",
+   "gl_ref": "GL-21889",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1617.61",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "20123991414",
+   "gl_ref": "GL-21967",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-498.46",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "25505105174",
+   "gl_ref": "GL-21951",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "5350.71",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "26314904694",
+   "gl_ref": "GL-21959",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-675.12",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "26585688975",
+   "gl_ref": "GL-21946",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "363.89",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "29769764240",
+   "gl_ref": "GL-21909",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "-1180.66",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "30583661932",
+   "gl_ref": "GL-21927",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-180.20",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "31623545518",
+   "gl_ref": "GL-21956",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "4720.46",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "33327977060",
+   "gl_ref": "GL-21943",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-1300.29",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "38034340505",
+   "gl_ref": "GL-21929",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-240.55",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "39526079875",
+   "gl_ref": "GL-21935",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-280.43",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "40147240090",
+   "gl_ref": "GL-21922",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-443.67",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "40257917083",
+   "gl_ref": "GL-21874",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2313.04",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "40500166122",
+   "gl_ref": "GL-21939",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-168.16",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "40709794723",
+   "gl_ref": "GL-21945",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-33.12",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "48206696409",
+   "gl_ref": "GL-21942",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-6955.55",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "58227157593",
+   "gl_ref": "GL-21968",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "1464.52",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "60675307907",
+   "gl_ref": "GL-21955",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-547.80",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "61543222778",
+   "gl_ref": "GL-21924",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-662.19",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "62642120080",
+   "gl_ref": "GL-21870",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-227.11",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "67246664167",
+   "gl_ref": "GL-21944",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-1155.41",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "70978981824",
+   "gl_ref": "GL-21954",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-7118.74",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "72332526295",
+   "gl_ref": "GL-21963",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-167.14",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "74665607535",
+   "gl_ref": "GL-21920",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2713.27",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "76498435095",
+   "gl_ref": "GL-21964",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-3198.96",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "80386056275",
+   "gl_ref": "GL-21940",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "1609.32",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "80611575103",
+   "gl_ref": "GL-21972",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "7213.48",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "83023251306",
+   "gl_ref": "GL-21938",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-161.76",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "85353544247",
+   "gl_ref": "GL-21949",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "8917.63",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "87159101227",
+   "gl_ref": "GL-21890",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-247.06",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-08"
+  },
+  {
+   "bank_ref": "89102497124",
+   "gl_ref": "GL-21937",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "3999.57",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "93427492397",
+   "gl_ref": "GL-21952",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-287.54",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "95770443845",
+   "gl_ref": "GL-21926",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "9384.99",
+   "bank_date": "2026-09-14",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "15640110098",
+   "gl_ref": "GL-21974",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-20297.27",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "18783740795",
+   "gl_ref": "GL-21867",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-473.12",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-06"
+  },
+  {
+   "bank_ref": "21370965898",
+   "gl_ref": "GL-21966",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "4070.97",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "29477907377",
+   "gl_ref": "GL-21961",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-364.86",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "40762838875",
+   "gl_ref": "GL-21904",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-934.47",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "56782919002",
+   "gl_ref": "GL-21979",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-6002.86",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "68802831192",
+   "gl_ref": "GL-21901",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1485.68",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "72950334730",
+   "gl_ref": "GL-21980",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-477.41",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "78722699075",
+   "gl_ref": "GL-21886",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-3961.85",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "79640822438",
+   "gl_ref": "GL-21962",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "4509.39",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "88166237274",
+   "gl_ref": "GL-21919",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-368.79",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "92787948810",
+   "gl_ref": "GL-21914",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1571.85",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "94337513953",
+   "gl_ref": "GL-21875",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-202.57",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-07"
+  },
+  {
+   "bank_ref": "95698563583",
+   "gl_ref": "GL-21969",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1655.88",
+   "bank_date": "2026-09-15",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "12911441064",
+   "gl_ref": "GL-21982",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "599.66",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "18842611089",
+   "gl_ref": "GL-21957",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-466.63",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "20396155534",
+   "gl_ref": "GL-21948",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1308.31",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "21744221593",
+   "gl_ref": "GL-21973",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "2488.56",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "25213350859",
+   "gl_ref": "GL-21970",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-655.89",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "30978161608",
+   "gl_ref": "GL-21983",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-445.84",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "31981415265",
+   "gl_ref": "GL-21978",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-416.64",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "42068035895",
+   "gl_ref": "GL-21958",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1270.47",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "45356364319",
+   "gl_ref": "GL-21988",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-2342.83",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "46353934425",
+   "gl_ref": "GL-21925",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-596.24",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "48030321345",
+   "gl_ref": "GL-21990",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-4969.81",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "77959159622",
+   "gl_ref": "GL-21916",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-673.76",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-10"
+  },
+  {
+   "bank_ref": "82886954098",
+   "gl_ref": "GL-21977",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-460.60",
+   "bank_date": "2026-09-16",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "22350466948",
+   "gl_ref": "GL-21986",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-2627.43",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "48036726525",
+   "gl_ref": "GL-21981",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "1601.08",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "67321002980",
+   "gl_ref": "GL-22002",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "2477.16",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "67751000003",
+   "gl_ref": "GL-21987",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-305.32",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "77388771658",
+   "gl_ref": "GL-21975",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "2471.92",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "91593753156",
+   "gl_ref": "GL-22001",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "6982.18",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "98855114744",
+   "gl_ref": "GL-21965",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2030.27",
+   "bank_date": "2026-09-17",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "10471250423",
+   "gl_ref": "GL-22006",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-134.32",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "17573909203",
+   "gl_ref": "GL-22000",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-425.26",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "30106269238",
+   "gl_ref": "GL-22005",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1294.86",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "34571214434",
+   "gl_ref": "GL-21932",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-662.00",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "38486914913",
+   "gl_ref": "GL-21999",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "3083.09",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "40800752827",
+   "gl_ref": "GL-21905",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2538.16",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "50604439403",
+   "gl_ref": "GL-22007",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-8521.16",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "59754626597",
+   "gl_ref": "GL-21985",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2108.04",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "65053937138",
+   "gl_ref": "GL-21902",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-453.14",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-09"
+  },
+  {
+   "bank_ref": "76692254919",
+   "gl_ref": "GL-21991",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "1439.48",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "81737873957",
+   "gl_ref": "GL-21989",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-141.77",
+   "bank_date": "2026-09-18",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "10810996720",
+   "gl_ref": "GL-22022",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "656.55",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "10988873811",
+   "gl_ref": "GL-22019",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "971.18",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "13686478791",
+   "gl_ref": "GL-22038",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-512.36",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "18622553537",
+   "gl_ref": "GL-22037",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-487.30",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "26625455216",
+   "gl_ref": "GL-22020",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-6765.33",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "29555339573",
+   "gl_ref": "GL-22011",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-545.36",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "30761254182",
+   "gl_ref": "GL-22030",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-270.99",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "33188363410",
+   "gl_ref": "GL-22012",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-774.90",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "33221467244",
+   "gl_ref": "GL-22004",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "2484.11",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "35194326787",
+   "gl_ref": "GL-22009",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-2871.36",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "42258806894",
+   "gl_ref": "GL-22021",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "760.03",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "44176555210",
+   "gl_ref": "GL-21947",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1247.03",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-13"
+  },
+  {
+   "bank_ref": "48575526661",
+   "gl_ref": "GL-22017",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-786.94",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "54911706352",
+   "gl_ref": "GL-22039",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "561.63",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "56109957709",
+   "gl_ref": "GL-22010",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "1705.96",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "57063165591",
+   "gl_ref": "GL-22013",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "574.59",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "57904425262",
+   "gl_ref": "GL-22028",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-8937.94",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "58378296206",
+   "gl_ref": "GL-21992",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-860.71",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "64584817714",
+   "gl_ref": "GL-21993",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "-44.39",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "67997420643",
+   "gl_ref": "GL-21971",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2172.10",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "68382309582",
+   "gl_ref": "GL-21976",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-110.79",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-15"
+  },
+  {
+   "bank_ref": "72524556194",
+   "gl_ref": "GL-22023",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-2367.78",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "74095617056",
+   "gl_ref": "GL-22034",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1843.14",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "75580424743",
+   "gl_ref": "GL-22025",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "2712.99",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "77403680778",
+   "gl_ref": "GL-22016",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "4036.13",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "78392064097",
+   "gl_ref": "GL-21996",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "-311.63",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "79223985845",
+   "gl_ref": "GL-22008",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "2332.71",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-18"
+  },
+  {
+   "bank_ref": "84058279754",
+   "gl_ref": "GL-22015",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "1547.83",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "85288721021",
+   "gl_ref": "GL-22029",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-1168.38",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "89125967586",
+   "gl_ref": "GL-22014",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-838.25",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "92925155306",
+   "gl_ref": "GL-22035",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "5295.36",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "95348048775",
+   "gl_ref": "GL-22003",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-619.88",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "95452829269",
+   "gl_ref": "GL-21936",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1485.96",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-12"
+  },
+  {
+   "bank_ref": "97726003510",
+   "gl_ref": "GL-21923",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-160.87",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-11"
+  },
+  {
+   "bank_ref": "98124632970",
+   "gl_ref": "GL-22027",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-1858.94",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "98760444434",
+   "gl_ref": "GL-21994",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2654.95",
+   "bank_date": "2026-09-21",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "11123198258",
+   "gl_ref": "GL-22042",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-4927.70",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "19738218001",
+   "gl_ref": "GL-22024",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "3577.83",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "23218384031",
+   "gl_ref": "GL-22031",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "1928.06",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "41436459505",
+   "gl_ref": "GL-22043",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-626.44",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "45707694777",
+   "gl_ref": "GL-22033",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-231.44",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "48872947915",
+   "gl_ref": "GL-21995",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-2062.62",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "56181505979",
+   "gl_ref": "GL-22026",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-96.46",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-20"
+  },
+  {
+   "bank_ref": "83626490177",
+   "gl_ref": "GL-22032",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-83.46",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "94225090074",
+   "gl_ref": "GL-22040",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "2742.25",
+   "bank_date": "2026-09-22",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "13438854620",
+   "gl_ref": "GL-21997",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1541.37",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "22957777583",
+   "gl_ref": "GL-22052",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-25.96",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "37013908460",
+   "gl_ref": "GL-21998",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1616.34",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-17"
+  },
+  {
+   "bank_ref": "50400936919",
+   "gl_ref": "GL-22036",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "364.18",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-21"
+  },
+  {
+   "bank_ref": "60558806035",
+   "gl_ref": "GL-22041",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-4086.71",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "79992318493",
+   "gl_ref": "GL-21960",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-271.33",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-14"
+  },
+  {
+   "bank_ref": "85859307556",
+   "gl_ref": "GL-22046",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-540.69",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "87295808623",
+   "gl_ref": "GL-22044",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-1150.21",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "88817584646",
+   "gl_ref": "GL-22047",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-687.16",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "97992196328",
+   "gl_ref": "GL-22045",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "4527.90",
+   "bank_date": "2026-09-23",
+   "gl_date": "2026-09-22"
+  },
+  {
+   "bank_ref": "29829014187",
+   "gl_ref": "GL-22051",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-278.88",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "40773359261",
+   "gl_ref": "GL-22048",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-3126.16",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "42755199607",
+   "gl_ref": "GL-22063",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1742.51",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "46765731832",
+   "gl_ref": "GL-22054",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-912.55",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "52018390951",
+   "gl_ref": "GL-22058",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "7176.67",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "52169853150",
+   "gl_ref": "GL-22059",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-7830.97",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "93754735803",
+   "gl_ref": "GL-22061",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "1121.91",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "95513084683",
+   "gl_ref": "GL-22050",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "2619.73",
+   "bank_date": "2026-09-24",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "10272883243",
+   "gl_ref": "GL-22056",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "3203.40",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "10493989304",
+   "gl_ref": "GL-22062",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-467.64",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "18331778044",
+   "gl_ref": "GL-22076",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-2133.71",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "27980837997",
+   "gl_ref": "GL-22057",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "973.29",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "29951519342",
+   "gl_ref": "GL-22074",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-1265.70",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "61942459967",
+   "gl_ref": "GL-22065",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "3532.63",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "66862887095",
+   "gl_ref": "GL-22053",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "3559.02",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "67642946365",
+   "gl_ref": "GL-21984",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1817.20",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-16"
+  },
+  {
+   "bank_ref": "67662212614",
+   "gl_ref": "GL-22073",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-582.23",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "69843058640",
+   "gl_ref": "GL-22018",
+   "method": "check_number",
+   "score": 100.0,
+   "amount": "-1349.38",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-19"
+  },
+  {
+   "bank_ref": "72852412838",
+   "gl_ref": "GL-22068",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "8856.86",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "84157422678",
+   "gl_ref": "GL-22049",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "2194.68",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-23"
+  },
+  {
+   "bank_ref": "85197735058",
+   "gl_ref": "GL-22077",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-257.12",
+   "bank_date": "2026-09-25",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "10784049743",
+   "gl_ref": "GL-22086",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "8313.64",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "12839267591",
+   "gl_ref": "GL-22078",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-3549.91",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "15454445928",
+   "gl_ref": "GL-22072",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-494.72",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "20604337687",
+   "gl_ref": "GL-22064",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "3190.72",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "24321315937",
+   "gl_ref": "GL-22085",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "6064.68",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "25275739909",
+   "gl_ref": "GL-22069",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "5167.27",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "28784629315",
+   "gl_ref": "GL-22082",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-1914.85",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "38990005778",
+   "gl_ref": "GL-22083",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "5602.65",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "39165973302",
+   "gl_ref": "GL-22081",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-1354.39",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "39971846798",
+   "gl_ref": "GL-22075",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "2165.18",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "44434749133",
+   "gl_ref": "GL-22080",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-5062.96",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "49254676448",
+   "gl_ref": "GL-22084",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-3802.97",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "52117282201",
+   "gl_ref": "GL-22070",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "3005.47",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "69144788054",
+   "gl_ref": "GL-22060",
+   "method": "exact",
+   "score": 80.0,
+   "amount": "1209.61",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-24"
+  },
+  {
+   "bank_ref": "71077208951",
+   "gl_ref": "GL-22087",
+   "method": "exact",
+   "score": 95.0,
+   "amount": "-8585.52",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-27"
+  },
+  {
+   "bank_ref": "82210623548",
+   "gl_ref": "GL-22079",
+   "method": "exact",
+   "score": 90.0,
+   "amount": "-1450.79",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-26"
+  },
+  {
+   "bank_ref": "85331439046",
+   "gl_ref": "GL-22067",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-1703.52",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "95062827730",
+   "gl_ref": "GL-22071",
+   "method": "exact",
+   "score": 85.0,
+   "amount": "-151.00",
+   "bank_date": "2026-09-28",
+   "gl_date": "2026-09-25"
+  },
+  {
+   "bank_ref": "44911697763",
+   "gl_ref": "GL-22089",
+   "method": "exact",
+   "score": 100.0,
+   "amount": "-12187.44",
+   "bank_date": "2026-09-29",
+   "gl_date": "2026-09-29"
+  }
+ ],
+ "exceptions": [
+  {
+   "kind": "outstanding_check",
+   "amount": "206.47",
+   "effect": "-206.47",
+   "side": "bank",
+   "bank_ref": null,
+   "gl_ref": "AUG-7431",
+   "check_no": "2308",
+   "date": "2026-08-28",
+   "description": "Check #2308 Greenleaf Nursery Wholesale",
+   "aje_id": null,
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": false,
+   "note": "carried from the prior period (2026-08-28); still not cleared"
+  },
+  {
+   "kind": "outstanding_check",
+   "amount": "2383.39",
+   "effect": "-2383.39",
+   "side": "bank",
+   "bank_ref": null,
+   "gl_ref": "GL-22055",
+   "check_no": "2366",
+   "date": "2026-09-23",
+   "description": "Check #2366 Greenleaf Nursery Wholesale",
+   "aje_id": null,
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": false,
+   "note": "issued, not yet cleared by the bank"
+  },
+  {
+   "kind": "outstanding_check",
+   "amount": "1249.09",
+   "effect": "-1249.09",
+   "side": "bank",
+   "bank_ref": null,
+   "gl_ref": "GL-22066",
+   "check_no": "2367",
+   "date": "2026-09-24",
+   "description": "Check #2367 Ridgeline Equipment Rental",
+   "aje_id": null,
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": false,
+   "note": "issued, not yet cleared by the bank"
+  },
+  {
+   "kind": "outstanding_check",
+   "amount": "1570.90",
+   "effect": "-1570.90",
+   "side": "bank",
+   "bank_ref": null,
+   "gl_ref": "GL-22088",
+   "check_no": "2365",
+   "date": "2026-09-28",
+   "description": "Check #2365 Greenleaf Nursery Wholesale",
+   "aje_id": null,
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": false,
+   "note": "issued, not yet cleared by the bank"
+  },
+  {
+   "kind": "bank_fee_unrecorded",
+   "amount": "22.00",
+   "effect": "-22.00",
+   "side": "book",
+   "bank_ref": "40808451950",
+   "gl_ref": null,
+   "check_no": null,
+   "date": "2026-09-28",
+   "description": "OUTGOING WIRE TRANSFER FEE",
+   "aje_id": "AJE-01",
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": false,
+   "note": "bank charge not yet recorded in the ledger"
+  },
+  {
+   "kind": "bank_fee_unrecorded",
+   "amount": "35.00",
+   "effect": "-35.00",
+   "side": "book",
+   "bank_ref": "30484184274",
+   "gl_ref": null,
+   "check_no": null,
+   "date": "2026-09-30",
+   "description": "ACCOUNT ANALYSIS CHARGE",
+   "aje_id": "AJE-02",
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": false,
+   "note": "bank charge not yet recorded in the ledger"
+  },
+  {
+   "kind": "unidentified",
+   "amount": "673.86",
+   "effect": "-673.86",
+   "side": "book",
+   "bank_ref": "19053379122",
+   "gl_ref": null,
+   "check_no": null,
+   "date": "2026-09-09",
+   "description": "ACH DEBIT 7701656 WEB PMT",
+   "aje_id": null,
+   "offset_account": null,
+   "related_bank_ref": null,
+   "needs_review": true,
+   "note": "on the bank statement with no ledger match and no obvious cause; investigate"
+  }
+ ],
+ "ajes": [
+  {
+   "id": "AJE-01",
+   "date": "2026-09-30",
+   "debit_account": "6100",
+   "debit_account_name": "Bank Fees",
+   "credit_account": "1010",
+   "credit_account_name": "Cash - Operating",
+   "amount": "22.00",
+   "memo": "Record bank charge: OUTGOING WIRE TRANSFER FEE",
+   "exception_kind": "bank_fee_unrecorded",
+   "bank_ref": "40808451950",
+   "gl_ref": null
+  },
+  {
+   "id": "AJE-02",
+   "date": "2026-09-30",
+   "debit_account": "6100",
+   "debit_account_name": "Bank Fees",
+   "credit_account": "1010",
+   "credit_account_name": "Cash - Operating",
+   "amount": "35.00",
+   "memo": "Record bank charge: ACCOUNT ANALYSIS CHARGE",
+   "exception_kind": "bank_fee_unrecorded",
+   "bank_ref": "30484184274",
+   "gl_ref": null
+  }
+ ],
+ "inputs": [
+  {
+   "name": "bank_statement.csv",
+   "sha256": "f7701173a96aec68ff54ce513dcb266475c29cb7504805824e83ab8424166814",
+   "bytes": 21867
+  },
+  {
+   "name": "client_profile.json",
+   "sha256": "a983dbdf0201801a09c850ec80a73cfc357b4c832f292505f6b56016a97cf9f4",
+   "bytes": 2165
+  },
+  {
+   "name": "gl_cash_detail.csv",
+   "sha256": "73a55617c1c54cc17ce847da602948194da75a27a3c1cd2a4bc49ebf41ba6bcc",
+   "bytes": 30796
+  },
+  {
+   "name": "prior_outstanding.csv",
+   "sha256": "5b1016f7b92adac1d2ea11509d4ba691053e5464476bba7f209987a3f41ecfa8",
+   "bytes": 295
+  },
+  {
+   "name": "run_context.json",
+   "sha256": "83b6552cdce6cddf51f5a6e1a33b356834e1cc3cdd30647b56c34c61e4638f7c",
+   "bytes": 134
+  }
+ ],
+ "status": "needs_review"
+}
