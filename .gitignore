@@ -18,3 +18,4 @@ media/work/
 .local-runs/
 .local-storage/
 *.db
+.secrets/

@@ -1,0 +1,11 @@
+**/.venv
+**/node_modules
+**/__pycache__
+.git
+.local-runs
+.local-storage
+media
+apps/web/src
+.env
+.env.*
+.secrets

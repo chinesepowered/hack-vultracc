@@ -1,0 +1,45 @@
+# Control-plane VM: Caddy (public 80/443) and the API. The API never runs model-written code.
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: apps/api/Dockerfile
+      args:
+        GIT_SHA: ${GIT_SHA:-dev}
+    image: tieout-api:${GIT_SHA:-dev}
+    restart: unless-stopped
+    env_file: /etc/tieout/cp.env
+    environment:
+      COOKIE_SECURE: "1"
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/demo-accounts', timeout=5)"]
+      interval: 15s
+      timeout: 6s
+      retries: 5
+    logging:
+      driver: json-file
+      options: {max-size: "20m", max-file: "5"}
+
+  caddy:
+    image: caddy:2.8
+    restart: unless-stopped
+    depends_on: [api]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      TIEOUT_DOMAIN: ${TIEOUT_DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ../apps/web/dist:/srv/web:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    logging:
+      driver: json-file
+      options: {max-size: "20m", max-file: "5"}
+
+volumes:
+  caddy_data:
+  caddy_config:

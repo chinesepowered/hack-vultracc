@@ -1,0 +1,102 @@
+#!/bin/bash
+# Tieout VM bootstrap (cloud-init user_data). Role: __ROLE__, host: __HOST__.
+# Installs the signed ops agent first (so the operator can reach the host
+# without inbound SSH), then the base packages for the role.
+set -uo pipefail
+exec > >(tee -a /var/log/tieout-bootstrap.log) 2>&1
+echo "bootstrap start $(date -Is) role=__ROLE__"
+export DEBIAN_FRONTEND=noninteractive
+mkdir -p /etc/tieout /opt/tieout/incoming /var/lib/tieout-ops
+chmod 700 /etc/tieout
+
+cat > /etc/tieout/ops_pub.pem <<'PUBEOF'
+__PUBKEY_PEM__
+PUBEOF
+
+cat > /etc/tieout/ops.json <<'CONFEOF'
+{"host": "__HOST__", "cmd_url": "__CMD_URL__", "interval": 4}
+CONFEOF
+chmod 600 /etc/tieout/ops.json
+
+base64 -d > /usr/local/bin/tieout-ops-agent <<'AGENTEOF'
+__AGENT_B64__
+AGENTEOF
+chmod 755 /usr/local/bin/tieout-ops-agent
+
+cat > /etc/systemd/system/tieout-ops.service <<'UNITEOF'
+[Unit]
+Description=Tieout signed ops agent (pull-based, no inbound ports)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/tieout-ops-agent
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+UNITEOF
+systemctl daemon-reload
+systemctl enable --now tieout-ops.service
+
+upload_log() {
+  curl -sS -m 60 -X PUT -H "Content-Type: text/plain" --data-binary @/var/log/tieout-bootstrap.log "__BOOTLOG_URL__" || true
+}
+upload_log
+
+# ---- private VPC interface (configure it if the image did not)
+META=$(curl -s -m 10 http://169.254.169.254/v1.json || true)
+if [ -n "$META" ]; then
+  python3 - "$META" <<'PYEOF' || true
+import json, subprocess, sys
+meta = json.loads(sys.argv[1])
+for itf in meta.get("interfaces", []):
+    if itf.get("network-type") != "private" or not itf.get("ipv4", {}).get("address"):
+        continue
+    ip, mask, mac = itf["ipv4"]["address"], itf["ipv4"].get("netmask", "255.255.255.0"), itf["mac"].lower()
+    have = subprocess.run(["ip", "-o", "-4", "addr"], capture_output=True, text=True).stdout
+    if f" {ip}/" in have:
+        print("private ip already configured", ip)
+        continue
+    dev = None
+    for line in subprocess.run(["ip", "-o", "link"], capture_output=True, text=True).stdout.splitlines():
+        if mac in line.lower():
+            dev = line.split(":")[1].strip().split("@")[0]
+    prefix = sum(bin(int(x)).count("1") for x in mask.split("."))
+    if dev:
+        open("/etc/netplan/60-tieout-vpc.yaml", "w").write(
+            f"network:\n  version: 2\n  ethernets:\n    {dev}:\n      match:\n        macaddress: \"{mac}\"\n      addresses: [\"{ip}/{prefix}\"]\n      mtu: 1450\n")
+        subprocess.run(["chmod", "600", "/etc/netplan/60-tieout-vpc.yaml"])
+        subprocess.run(["netplan", "apply"])
+        print("configured private ip", ip, "on", dev)
+PYEOF
+fi
+
+# ---- base packages
+for i in 1 2 3; do apt-get update -q && break; sleep 5; done
+apt-get install -y -q ca-certificates curl gnupg jq nftables docker.io docker-compose-v2 docker-buildx || \
+  apt-get install -y -q ca-certificates curl gnupg jq nftables docker.io
+systemctl enable --now docker
+if ! command -v uv >/dev/null; then
+  curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR=/usr/local/bin INSTALLER_NO_MODIFY_PATH=1 sh
+fi
+
+if [ "__ROLE__" = "sandbox" ]; then
+  curl -fsSL https://gvisor.dev/archive.key | gpg --dearmor -o /usr/share/keyrings/gvisor-archive-keyring.gpg
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/gvisor-archive-keyring.gpg] https://storage.googleapis.com/gvisor/releases release main" > /etc/apt/sources.list.d/gvisor.list
+  apt-get update -q && apt-get install -y -q runsc
+  runsc install && systemctl restart docker
+  docker run --rm --runtime=runsc hello-world && echo "gvisor hello-world OK"
+  docker pull python:3.12-slim || true
+  mkdir -p /var/lib/tieout/sandboxes && chmod 711 /var/lib/tieout /var/lib/tieout/sandboxes
+fi
+
+if [ "__ROLE__" = "control" ]; then
+  docker pull caddy:2.8 || true
+  docker pull python:3.12-slim || true
+fi
+
+echo "bootstrap done $(date -Is)"
+touch /var/lib/tieout-ops/bootstrap.done
+upload_log

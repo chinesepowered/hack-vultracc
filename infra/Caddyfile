@@ -1,0 +1,33 @@
+# Public entry point on the control-plane VM. Automatic HTTPS (Let's Encrypt).
+{
+	email {$ACME_EMAIL:ops@harborpine.example}
+}
+
+{$TIEOUT_DOMAIN} {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		Referrer-Policy same-origin
+		-Server
+	}
+
+	# API and server-sent events (no buffering for SSE)
+	handle /api/* {
+		reverse_proxy api:8000 {
+			flush_interval -1
+			transport http {
+				read_timeout 10m
+			}
+		}
+	}
+
+	# Static web app with SPA fallback
+	handle {
+		root * /srv/web
+		@assets path /assets/*
+		header @assets Cache-Control "public, max-age=31536000, immutable"
+		try_files {path} /index.html
+		file_server
+	}
+}
