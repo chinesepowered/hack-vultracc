@@ -195,6 +195,30 @@ def main() -> int:
     cmd = [ff, "-y", "-loglevel", "error", *inputs, "-filter_complex", graph, "-map", "[vout]", "-map", "[aout]", "-c:v", "libx264",
            "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
+    # captions: one cue per scene, split into two-sentence chunks timed by length
+    def ts(x: float) -> str:
+        h, rem = divmod(x, 3600)
+        m, sec = divmod(rem, 60)
+        return f"{int(h):02d}:{int(m):02d}:{int(sec):02d},{int((sec - int(sec)) * 1000):03d}"
+
+    cues, t = [], 0.0
+    for sg in segs:
+        sentences = [x.strip() for x in sg["text"].replace("? ", "?|").replace(". ", ".|").split("|") if x.strip()]
+        chunks = [" ".join(sentences[i:i + 2]) for i in range(0, len(sentences), 2)]
+        total_chars = sum(len(c) for c in chunks) or 1
+        speak = sg["target"] - 0.7
+        tt = t
+        for c in chunks:
+            d = speak * len(c) / total_chars
+            cues.append((tt, tt + d, c))
+            tt += d
+        t += sg["target"]
+    srt = out.with_suffix(".srt")
+    srt.write_text("\n".join(f"{i}\n{ts(a)} --> {ts(b)}\n{c}\n" for i, (a, b, c) in enumerate(cues, start=1)))
+    muxed = out.with_name(out.stem + ".subs.mp4")
+    subprocess.run([ff, "-y", "-loglevel", "error", "-i", str(out), "-i", str(srt), "-c", "copy", "-c:s", "mov_text",
+                    "-metadata:s:s:0", "language=eng", "-movflags", "+faststart", str(muxed)], check=True)
+    muxed.replace(out)
     total = sum(s["target"] for s in segs)
     (work / "narration.txt").write_text("\n\n".join(f"[{s['engine']}] {s['text']}" for s in segs) + "\n")
     print(f"wrote {out} ({total:.0f}s, {out.stat().st_size / 1e6:.1f} MB)")
