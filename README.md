@@ -6,7 +6,7 @@
 
 Tieout runs each client's reconciliation as real Python inside that client's own gVisor sandbox: no network, read-only inputs, no access to the ledger. A human approves every adjusting entry, and every number can be replayed and verified by hash.
 
-- **Live app:** see [STATUS.md](STATUS.md) for the public URL (demo accounts are on the login page)
+- **Live app:** https://144-202-108-57.sslip.io (demo accounts are on the login page)
 - **Hackathon:** Vultr "The Agent Arena", problem statement 1, Blast Radius Zero
 - **Submission text:** [SUBMISSION.md](SUBMISSION.md)
 
@@ -82,7 +82,7 @@ flowchart TB
 | Product | Use |
 |---|---|
 | Cloud Compute (control-plane VM, `vc2-2c-4gb`) | Caddy + FastAPI orchestrator, agent loop, auth, SSE. Public 80/443 only |
-| Cloud Compute (sandbox-host VM, `vhp-8c-16gb-amd`) | sandbox-runner and one gVisor container per client run. No inbound from the internet; runner reachable only from the control plane over the VPC |
+| Cloud Compute (sandbox-host VM, `vc2-4c-8gb`) | sandbox-runner and one gVisor container per client run. No inbound from the internet; runner reachable only from the control plane over the VPC |
 | VPC Network | private network between control plane and sandbox host |
 | Firewall Groups | control plane: 80 and 443 only; sandbox host: no inbound rules at all |
 | Serverless Inference | every LLM call (GLM 5.3 main, GLM 5.3 Flash fallback); token usage recorded per run, daily budget enforced |

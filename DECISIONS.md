@@ -22,3 +22,4 @@ Notable calls made while building Tieout, newest last. The team is hands-off, so
 18. **Model text follows house style.** Model-written memos, summaries and step notes are normalized to remove em dashes before they are stored and shown.
 19. **Narration fallback.** Vultr text-to-speech is the narration engine; while it returns errors for every voice, the video pipeline falls back to a local Piper voice for the affected lines and records which engine voiced each line.
 20. **No NetBird.** The bonus has no cash prize (team decision: last priority) and needs a self-hosted management server or an interactive account signup; skipped in favor of demo reliability.
+21. **Sandbox host is 4 vCPU / 8 GB, not 8 / 16.** When the fee limit eased, the 8 vCPU plan still did not fit; provisioning fell back to `vc2-4c-8gb`. A close of 12 clients still finishes in about 54 s on it (12 sandboxes, 1 GiB cap each, real usage about 200 MB).

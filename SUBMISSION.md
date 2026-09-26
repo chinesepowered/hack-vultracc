@@ -37,7 +37,7 @@ Cloud Compute (control-plane VM and sandbox-host VM), VPC Network, Firewall Grou
 
 ## Links
 
-- Public URL: _(see STATUS.md; updated at deploy)_
+- Public URL: https://144-202-108-57.sslip.io
 - Repository: https://github.com/chinesepowered/hack-vultracc
 - Demo video: _(Object Storage link added after recording)_
 
