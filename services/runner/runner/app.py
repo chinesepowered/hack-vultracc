@@ -38,6 +38,7 @@ ALLOWED_IMAGES = {i.strip() for i in os.environ.get("RUNNER_ALLOWED_IMAGES", "ti
 MAX_SANDBOXES = int(os.environ.get("RUNNER_MAX_SANDBOXES", "16"))
 RUNTIME = os.environ.get("RUNNER_RUNTIME", "runsc")
 HOST_LABEL = os.environ.get("RUNNER_HOST_LABEL", socket.gethostname())
+INSTANCE = os.environ.get("RUNNER_INSTANCE", "tieout")  # orphan cleanup only touches this instance's containers
 SANDBOX_UID = 10001
 MAX_STDOUT = 64 * 1024
 LIMIT_CAPS = {"cpus": 2.0, "memory_mb": 2048, "pids": 512, "exec_timeout_s": 300, "ttl_s": 3600}
@@ -181,14 +182,14 @@ def cleanup_orphans() -> int:
     n = 0
     try:
         for c in dock().containers.list(all=True, filters={"label": "arena.sandbox=1"}):
-            if c.labels.get("arena.runner") == "tieout" and c.id not in {s.container_id for s in SANDBOXES.values()}:
+            if c.labels.get("arena.runner") == INSTANCE and c.id not in {s.container_id for s in SANDBOXES.values()}:
                 c.remove(force=True)
                 n += 1
     except Exception as exc:
         log.warning("orphan cleanup failed: %s", exc)
     if DATA_DIR.exists():
         for d in DATA_DIR.iterdir():
-            if d.name not in SANDBOXES:
+            if d.name not in SANDBOXES and d.name.startswith("sbx_"):
                 shutil.rmtree(d, ignore_errors=True)
     return n
 
@@ -277,7 +278,7 @@ async def create(req: CreateReq):
             raise HTTPException(413, "inputs too large")
         write_file(din, check_name(f.path), data, mode=0o444)
     labels = {k: str(v)[:128] for k, v in req.labels.items() if k.startswith("arena.")}
-    labels.update({"arena.sandbox": "1", "arena.runner": "tieout", "arena.sandbox_id": sid})
+    labels.update({"arena.sandbox": "1", "arena.runner": INSTANCE, "arena.sandbox_id": sid})
     kwargs = dict(
         command=["sleep", "infinity"], detach=True, name=f"tieout-{sid}", runtime=RUNTIME, network_mode="none",
         read_only=True, tmpfs={"/tmp": "rw,size=64m,mode=1777"}, cap_drop=["ALL"], security_opt=["no-new-privileges"],

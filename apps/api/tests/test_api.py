@@ -111,3 +111,22 @@ def test_untrusted_text_detector_finds_the_injection():
     assert len(hits) == 1 and "AI ASSISTANT" in hits[0]["preview"]
     clean = DATA / "juniper-lane-dental"
     assert scan_inputs({"bank_statement.csv": (clean / "bank_statement.csv").read_bytes()}) == []
+
+
+def test_daily_budget_blocks_new_closes(app_client, monkeypatch):
+    from tieout.orchestrator import orch
+
+    monkeypatch.setattr(orch, "tokens_today", 10**12)
+    prep = login(app_client, "preparer")
+    r = prep.post("/api/batches", json={"period": "2026-09"})
+    assert r.status_code == 409 and "budget" in r.json()["detail"]
+
+
+def test_kill_switch_blocks_new_closes(app_client, monkeypatch):
+    from tieout.orchestrator import orch
+
+    monkeypatch.setattr(orch, "kill_switch", True)
+    monkeypatch.setattr(orch, "kill_switch_until", None)
+    prep = login(app_client, "preparer")
+    r = prep.post("/api/batches", json={"period": "2026-09"})
+    assert r.status_code == 409 and "kill switch" in r.json()["detail"]

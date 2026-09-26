@@ -14,6 +14,7 @@ import pytest
 os.environ.setdefault("RUNNER_TOKEN", "test-token")
 os.environ.setdefault("RUNNER_DATA_DIR", "/tmp/tieout-runner-test")
 os.environ.setdefault("RUNNER_RUNTIME", "runsc")
+os.environ.setdefault("RUNNER_INSTANCE", "tieout-test")  # never touch a real runner's sandboxes on the same host
 
 from fastapi.testclient import TestClient  # noqa: E402
 
@@ -100,3 +101,34 @@ def test_network_is_blocked_and_timeout_enforced(client, sandbox):
 def test_image_allowlist(client):
     r = client.post("/v1/sandboxes", headers=H, json={"image": "alpine:latest"})
     assert r.status_code == 400
+
+
+def test_capacity_cap_returns_429(client, monkeypatch):
+    import runner.app as ra
+
+    monkeypatch.setattr(ra, "MAX_SANDBOXES", 1)
+    first = client.post("/v1/sandboxes", headers=H, json={"image": "tieout-sandbox:latest", "limits": {"ttl_s": 60}})
+    assert first.status_code == 200, first.text
+    try:
+        second = client.post("/v1/sandboxes", headers=H, json={"image": "tieout-sandbox:latest", "limits": {"ttl_s": 60}})
+        assert second.status_code == 429
+    finally:
+        client.delete(f"/v1/sandboxes/{first.json()['id']}", headers=H)
+
+
+def test_ttl_janitor_reaps_expired_sandboxes(client):
+    import time as _t
+
+    import runner.app as ra
+
+    r = client.post("/v1/sandboxes", headers=H, json={"image": "tieout-sandbox:latest", "limits": {"ttl_s": 30}})
+    assert r.status_code == 200, r.text
+    sid = r.json()["id"]
+    ra.SANDBOXES[sid].expires_at = _t.time() - 1  # pretend the TTL passed
+    deadline = _t.time() + 25
+    while _t.time() < deadline and client.get(f"/v1/sandboxes/{sid}", headers=H).status_code == 200:
+        _t.sleep(1)
+    assert client.get(f"/v1/sandboxes/{sid}", headers=H).status_code == 404
+    import docker as _d
+
+    assert not _d.from_env().containers.list(all=True, filters={"label": f"arena.sandbox_id={sid}"})
