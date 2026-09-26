@@ -155,7 +155,9 @@ Firm and clients
 Batches ("Close September")
 - `POST /api/batches` `{period: "2026-09"}` -> `Batch` (preparer or admin; rate limited; 409 if the kill switch is on; 429 on limits)
 - `GET /api/batches/latest` -> `Batch | null` (most recent batch)
-- `GET /api/batches/{id}` -> `Batch`
+- `GET /api/batches` -> recent batches (without runs)
+- `GET /api/batches/{id}` -> `Batch` (newest run per client)
+- `GET /api/batches/{id}/ground-truth` -> planted vs found per client (answer key never shown to the model)
 - `GET /api/batches/{id}/stream` -> SSE. Events: `run_update` (data: `RunSummary`), `run_event` (data: `{run_id, client_id, seq, ts, type, payload}` with large fields trimmed), `batch_update` (data: `Batch` without runs). Comment heartbeats every 15 s.
 
 Runs
@@ -166,6 +168,7 @@ Runs
 - `GET /api/runs/{id}/artifacts/{name}` -> file download (redirect to a short-lived presigned Object Storage URL). Names: `workpaper.xlsx`, `result.json`, `lines.json`. `ajes.csv` is refused here.
 - `GET /api/runs/{id}/ajes.csv` -> CSV download, only after a reviewer approved the run (403 before)
 - `POST /api/runs/{id}/replay` -> `RunSummary` of the new replay run (fresh sandbox, same code, same inputs, no LLM)
+- `POST /api/runs/{id}/rerun` -> `RunSummary` of a new run for the same client in the same batch (preparer or admin; for failed or stopped runs; the batch then shows the newest run per client)
 - `POST /api/runs/{id}/approve` `{decision: "approved" | "rejected", comment}` -> `Approval` (reviewer or admin; the approver must not be the user who started the batch: maker-checker, 403 with a clear message)
 - `GET /api/runs/{id}/evidence.zip` -> zip (P1)
 

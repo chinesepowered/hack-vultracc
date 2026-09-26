@@ -67,8 +67,16 @@ def batch_totals(runs: list[Run]) -> dict:
     return t
 
 
+def latest_per_client(runs: list[Run]) -> list[Run]:
+    """A client re-run replaces the earlier run of that client in the batch view."""
+    latest: dict[str, Run] = {}
+    for r in sorted(runs, key=lambda r: r.created_at):
+        latest[r.client_id] = r
+    return list(latest.values())
+
+
 def batch_dict(s: Session, batch: Batch, with_runs: bool = True) -> dict:
-    runs = s.execute(select(Run).where(Run.batch_id == batch.id).order_by(Run.created_at, Run.client_id)).scalars().all()
+    runs = latest_per_client(s.execute(select(Run).where(Run.batch_id == batch.id).order_by(Run.created_at, Run.client_id)).scalars().all())
     clients = {c.id: c for c in s.execute(select(Client)).scalars().all()}
     creator = s.get(User, batch.created_by)
     dur = int((batch.finished_at - batch.created_at).total_seconds() * 1000) if batch.finished_at else None

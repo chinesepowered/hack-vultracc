@@ -271,7 +271,9 @@ def ground_truth(batch_id: str, user: User = Depends(current_user)):
     with session() as s:
         if s.get(Batch, batch_id) is None:
             raise HTTPException(404, "No such batch")
-        runs = s.execute(select(Run).where(Run.batch_id == batch_id).order_by(Run.client_id)).scalars().all()
+        from .serializers import latest_per_client
+
+        runs = latest_per_client(s.execute(select(Run).where(Run.batch_id == batch_id).order_by(Run.client_id)).scalars().all())
         rows, planted, found = [], 0, 0
         for r in runs:
             p = Path(settings.data_dir) / r.client_id / "expected.json"
@@ -449,6 +451,19 @@ async def replay_run(run_id: str, user: User = Depends(require("preparer", "revi
         raise HTTPException(429, "Rate limit: too many replays this hour.")
     try:
         return await orch.start_replay(run_id, user)
+    except PermissionError as exc:
+        raise HTTPException(409, str(exc)) from None
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from None
+
+
+@app.post("/api/runs/{run_id}/rerun")
+async def rerun(run_id: str, request: Request, user: User = Depends(require("preparer", "admin"))):
+    ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "?").split(",")[0].strip()
+    if not limiter.allow(f"rerun-ip:{ip}", 30, 3600):
+        raise HTTPException(429, "Rate limit: too many re-runs this hour.")
+    try:
+        return await orch.rerun_client(run_id, user)
     except PermissionError as exc:
         raise HTTPException(409, str(exc)) from None
     except ValueError as exc:

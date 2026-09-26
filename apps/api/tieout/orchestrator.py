@@ -272,13 +272,47 @@ class Orchestrator:
                 await asyncio.to_thread(self._maybe_finish_batch, batch_id)
                 self._publish_batch(batch_id)
 
+    async def rerun_client(self, run_id: str, user: User) -> dict:
+        """Re-run one client of a batch (after a failure or stop) as a new run in the same batch."""
+        self.check_auto_resume()
+        if self.kill_switch:
+            raise PermissionError("The kill switch is on: new work is stopped.")
+        if self.budget_left() <= 0:
+            raise PermissionError("The daily token budget is used up.")
+        with session() as s:
+            old = s.get(Run, run_id)
+            if old is None or old.kind != "original" or not old.batch_id:
+                raise ValueError("Only a client run from a close can be re-run.")
+            if old.status in ("queued", "running"):
+                raise ValueError("This client is still running.")
+            busy = s.execute(select(func.count()).select_from(Run).where(Run.batch_id == old.batch_id, Run.client_id == old.client_id,
+                                                                           Run.status.in_(["queued", "running"]))).scalar()
+            if busy:
+                raise ValueError("A re-run for this client is already in progress.")
+            rid = new_id("run")
+            s.add(Run(id=rid, batch_id=old.batch_id, client_id=old.client_id, period=old.period, kind="original", status="queued",
+                      created_by=user.id))
+            b = s.get(Batch, old.batch_id)
+            b.status, b.finished_at = "running", None
+            batch_id, client_id, period = old.batch_id, old.client_id, old.period
+            s.flush()
+            summary = run_summary(s.get(Run, rid), s.get(Client, client_id), user)
+        await audit(user.email, "client_rerun_started", rid, {"rerun_of": run_id, "batch": batch_id})
+        self.tasks[rid] = asyncio.create_task(self._run_original(rid, batch_id, client_id, period))
+        self._publish_run(rid, batch_id, summary)
+        self._publish_batch(batch_id)
+        return summary
+
     def _maybe_finish_batch(self, batch_id: str) -> None:
+        from .serializers import latest_per_client
+
         with session() as s:
             b = s.get(Batch, batch_id)
-            left = s.execute(select(func.count()).select_from(Run).where(Run.batch_id == batch_id, Run.status.in_(["queued", "running"]))).scalar()
-            if left == 0 and b.status == "running":
-                stopped = s.execute(select(func.count()).select_from(Run).where(Run.batch_id == batch_id, Run.status == "stopped")).scalar()
-                b.status = "stopped" if stopped else "completed"
+            runs = s.execute(select(Run).where(Run.batch_id == batch_id)).scalars().all()
+            if any(r.status in ("queued", "running") for r in runs):
+                return
+            if b.status == "running":
+                b.status = "stopped" if any(r.status == "stopped" for r in latest_per_client(runs)) else "completed"
                 b.finished_at = utcnow()
 
     # ---------------------------------------------------------------- replay
