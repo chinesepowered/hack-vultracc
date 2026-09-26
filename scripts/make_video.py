@@ -84,6 +84,28 @@ def wav_seconds(path: Path) -> float:
     return 0.0
 
 
+PIPER_VOICE = "en_US-ryan-high"
+
+
+def piper_tts(text: str, cache: Path) -> Path:
+    """Local fallback voice (only if Vultr text-to-speech is unavailable)."""
+    key = hashlib.sha256(f"piper|{PIPER_VOICE}|{text}".encode()).hexdigest()[:16]
+    wav = cache / f"piper_{key}.wav"
+    if wav.exists():
+        return wav
+    model = cache / f"{PIPER_VOICE}.onnx"
+    for suffix in (".onnx", ".onnx.json"):
+        dst = cache / f"{PIPER_VOICE}{suffix}"
+        if not dst.exists():
+            url = f"https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/{PIPER_VOICE}{suffix}"
+            dst.write_bytes(httpx.get(url, follow_redirects=True, timeout=600).content)
+    raw = cache / f"piper_{key}.raw.wav"
+    subprocess.run(["uv", "run", "--with", "piper-tts", "python", "-m", "piper", "--model", str(model), "--output_file", str(raw)],
+                   input=text.encode(), check=True, capture_output=True)
+    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(raw), "-ar", "44100", "-ac", "1", str(wav)], check=True)
+    return wav
+
+
 def tts(text: str, cache: Path, model: str, voice: str) -> Path:
     key = hashlib.sha256(f"{model}|{voice}|{text}".encode()).hexdigest()[:16]
     raw = cache / f"tts_{key}.bin"
@@ -127,6 +149,7 @@ def main() -> int:
     ap.add_argument("--out", default=str(ROOT / "media" / "demo.mp4"))
     ap.add_argument("--tts-model", default=os.environ.get("TTS_MODEL", "xtts"))
     ap.add_argument("--voice", default=os.environ.get("TTS_VOICE", "Claribel Dervla"))
+    ap.add_argument("--allow-fallback", action="store_true", help="use a local Piper voice for lines Vultr TTS cannot synthesize")
     a = ap.parse_args()
     work = Path(a.work)
     marks = {m["scene"]: m["t"] for m in json.loads((work / "marks.json").read_text())}
@@ -138,11 +161,17 @@ def main() -> int:
             print(f"skip scene {start}->{end}: mark missing")
             continue
         line = text.format(**nums)
-        wav = tts(line, work, a.tts_model, a.voice)
+        try:
+            wav, engine = tts(line, work, a.tts_model, a.voice), f"vultr:{a.tts_model}:{a.voice}"
+        except Exception as exc:
+            if not a.allow_fallback:
+                raise
+            print(f"  Vultr TTS failed ({str(exc)[:80]}); using local Piper voice")
+            wav, engine = piper_tts(line, work), f"piper:{PIPER_VOICE}"
         audio = wav_seconds(wav)
         raw_len = marks[end] - marks[start]
         target = max(audio + 0.7, 3.0)
-        segs.append({"start": marks[start], "end": marks[end], "raw": raw_len, "target": target, "wav": wav, "text": line})
+        segs.append({"start": marks[start], "end": marks[end], "raw": raw_len, "target": target, "wav": wav, "text": line, "engine": engine})
         print(f"{start:>14s} -> {end:<14s} raw {raw_len:6.1f}s audio {audio:5.1f}s -> {target:5.1f}s (x{raw_len / target:.2f})")
     ff = ffmpeg()
     inputs = ["-i", str(work / "raw.webm")]
@@ -167,7 +196,7 @@ def main() -> int:
            "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
     total = sum(s["target"] for s in segs)
-    (work / "narration.txt").write_text("\n\n".join(s["text"] for s in segs) + "\n")
+    (work / "narration.txt").write_text("\n\n".join(f"[{s['engine']}] {s['text']}" for s in segs) + "\n")
     print(f"wrote {out} ({total:.0f}s, {out.stat().st_size / 1e6:.1f} MB)")
     return 0
 
