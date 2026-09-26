@@ -21,6 +21,9 @@ systemctl enable tieout-runner.service
 systemctl restart tieout-runner.service
 
 echo "== host firewall (nftables)"
+# Vultr's Ubuntu image ships ufw (deny incoming, allow SSH). Our nftables table below is the single,
+# stricter host firewall: nothing inbound except the runner port from the control plane (no SSH at all).
+ufw --force disable >/dev/null 2>&1 || true
 sed "s/\${CP_VPC_IP}/$CP_VPC_IP/" "$REL/infra/nftables-sbx.conf" > /etc/nftables.d-tieout.conf
 nft -f /etc/nftables.d-tieout.conf
 grep -q "nftables.d-tieout.conf" /etc/nftables.conf || echo 'include "/etc/nftables.d-tieout.conf"' >> /etc/nftables.conf

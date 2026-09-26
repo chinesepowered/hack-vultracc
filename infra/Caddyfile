@@ -1,7 +1,4 @@
-# Public entry point on the control-plane VM. Automatic HTTPS (Let's Encrypt).
-{
-	email {$ACME_EMAIL:ops@harborpine.example}
-}
+# Public entry point on the control-plane VM. Automatic HTTPS (Let's Encrypt, no contact email needed).
 
 {$TIEOUT_DOMAIN} {
 	encode zstd gzip
