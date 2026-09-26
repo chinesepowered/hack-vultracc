@@ -137,7 +137,11 @@ def main() -> int:
     results = []
     streak = 0
     for i in range(1, args.runs + 1):
-        ok, info = one_iteration(args.base_url.rstrip("/"), args.replays, args.max_batch_seconds)
+        try:
+            ok, info = one_iteration(args.base_url.rstrip("/"), args.replays, args.max_batch_seconds)
+        except Exception as exc:  # a crash is a failed iteration, not the end of the check
+            ok, info = False, {"failures": [f"{type(exc).__name__}: {str(exc)[:300]}"]}
+            time.sleep(10)
         streak = streak + 1 if ok else 0
         results.append({"iteration": i, "ok": ok, **info})
         print(f"[{i}/{args.runs}] {'PASS' if ok else 'FAIL'} batch={info.get('batch_id')} {info.get('batch_s')}s "
