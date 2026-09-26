@@ -117,6 +117,13 @@ def user_brief(profile: dict, inputs: dict[str, bytes]) -> str:
     )
 
 
+def tidy_text(text: str) -> str:
+    """House style for model-written text shown in the product: no em dashes."""
+    text = re.sub(r"\s*\u2014\s*", ", ", text or "")
+    text = re.sub(r"(?<=\d)\u2013(?=\d)", "-", text)
+    return re.sub(r"\s*\u2013\s*", ", ", text)
+
+
 def _clip(s: str, n: int, tail: bool = False) -> str:
     if len(s) <= n:
         return s
@@ -251,8 +258,8 @@ class Agent:
         self.out.recon_status = res.status
         self.out.files = files
         self.out.hashes = {k: sha256(v) for k, v in files.items()}
-        self.out.summary = str(args.get("summary", ""))[:500]
-        self.out.memo = str(args.get("memo_markdown", ""))[:6000]
+        self.out.summary = tidy_text(str(args.get("summary", "")))[:500]
+        self.out.memo = tidy_text(str(args.get("memo_markdown", "")))[:6000]
         return True, {"ok": True}
 
     # ---------------------------------------------------------------- loop
@@ -260,7 +267,7 @@ class Agent:
         self.tool_calls += 1
         n = len(self.out.steps) + 1
         await self.emit("tool_call", {"n": n if name != "finish" else None, "tool": name,
-                                      "args": {k: (v if k != "memo_markdown" else v[:6000]) for k, v in args.items()}})
+                                      "args": {k: (tidy_text(v)[:6000] if k in ("memo_markdown", "summary", "purpose") else v) for k, v in args.items()}})
         if name == "sniff_file":
             return False, await self.tool_sniff(args)
         if name == "run_python":
@@ -294,7 +301,8 @@ class Agent:
             await self.emit("llm", {"call": self.out.llm_calls, "model": reply.model, "tokens_in": reply.tokens_in,
                                     "tokens_out": reply.tokens_out, "latency_ms": reply.latency_ms, "finish_reason": reply.finish_reason})
             if content.strip() or reply.reasoning:
-                await self.emit("thought", {"text": _clip(content.strip(), 3000), "reasoning": _clip((reply.reasoning or "").strip(), 3000)})
+                await self.emit("thought", {"text": tidy_text(_clip(content.strip(), 3000)),
+                                            "reasoning": tidy_text(_clip((reply.reasoning or "").strip(), 3000))})
             calls = msg.tool_calls or []
             if calls:
                 messages.append({"role": "assistant", "content": content or None, "tool_calls": [

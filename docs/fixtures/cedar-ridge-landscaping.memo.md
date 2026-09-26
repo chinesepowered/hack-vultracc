@@ -1,4 +1,4 @@
-**Cedar Ridge Landscaping — September 2026 bank reconciliation (account 1010)**
+**Cedar Ridge Landscaping, September 2026 bank reconciliation (account 1010)**
 
 **Result:** difference **0.00**, status **needs_review**. Adjusted bank 30,600.96 vs. adjusted book 30,600.96.
 
@@ -7,9 +7,9 @@
 **Matching:** 284/287 bank lines matched (54 by check number, 228 exact, 2 prior-period). Prior check #2309 and the Oakmont deposit-in-transit cleared; check #2308 (206.47) remains open.
 
 **Exceptions (7):**
-- Outstanding checks, no AJE: #2308 206.47 (prior period), #2366 2,383.39, #2367 1,249.09, #2365 1,570.90 — total 5,409.85.
+- Outstanding checks, no AJE: #2308 206.47 (prior period), #2366 2,383.39, #2367 1,249.09, #2365 1,570.90, total 5,409.85.
 - Bank fees unrecorded: outgoing wire transfer fee 22.00 and account analysis charge 35.00.
-- **Unidentified — needs human review:** ACH DEBIT 7701656 WEB PMT of **673.86** on 2026-09-09. No ledger match exists, no transposition candidate (no digit-permutation amount in the GL), no duplicate entry, and no corresponding deposit suggesting an NSF return. It exceeds the 300.00 materiality threshold.
+- **Unidentified, needs human review:** ACH DEBIT 7701656 WEB PMT of **673.86** on 2026-09-09. No ledger match exists, no transposition candidate (no digit-permutation amount in the GL), no duplicate entry, and no corresponding deposit suggesting an NSF return. It exceeds the 300.00 materiality threshold.
 
 **Proposed AJEs (pending human approval):** AJE-01 Dr 6100 Bank Fees / Cr 1010 Cash 22.00; AJE-02 Dr 6100 / Cr 1010 Cash 35.00.
 
