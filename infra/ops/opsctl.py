@@ -133,7 +133,19 @@ def main() -> int:
     r.add_argument("--name", default="")
     r.add_argument("--no-wait", action="store_true")
     r.add_argument("--wait-seconds", type=int, default=1200)
+    b = sub.add_parser("bootlog")
+    b.add_argument("--host", required=True)
+    b.add_argument("--tail", type=int, default=40)
     a = ap.parse_args()
+    if a.cmd == "bootlog":
+        try:
+            text = s3().get_object(Bucket=bucket(), Key=f"ops/{a.host}/boot.log")["Body"].read().decode("utf-8", "replace")
+        except Exception as exc:
+            print(f"no boot log yet for {a.host} ({type(exc).__name__})")
+            return 1
+        lines = text.splitlines()
+        print("\n".join(lines[-a.tail:]))
+        return 0 if "bootstrap done" in text else 2
     if a.cmd == "keygen":
         keygen()
     elif a.cmd == "cmd-url":
