@@ -15,3 +15,6 @@ media/*.mp4
 media/work/
 *.egg-info/
 .coverage
+.local-runs/
+.local-storage/
+*.db
