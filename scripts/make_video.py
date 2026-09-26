@@ -34,13 +34,11 @@ SCENES = [
     ("login", "close_clicked",
      "This is Tieout: AI month-end close for accounting firms. Firms close the books for dozens of clients every month, and the worst "
      "part is bank reconciliation. AI could do it, but no firm lets an AI run code on client data unless it is contained."),
-    ("close_clicked", "tiles_running",
+    ("close_clicked", "batch_done",
      "One click closes September for all twelve clients. Each client gets its own sealed sandbox on Vultr: gVisor, no network, "
-     "read-only inputs, one CPU."),
-    ("tiles_running", "batch_done",
-     "The agent runs on GLM 5.3 through Vultr Serverless Inference. For every client it inspects the bank export, writes Python, runs "
-     "it in the sandbox, and investigates whatever does not match. Tiles fill in live. Clients with an item nobody can explain turn "
-     "amber for review."),
+     "read-only inputs, one CPU. The agent runs on GLM 5.3 through Vultr Serverless Inference. For every client it inspects the bank "
+     "export, writes Python, runs it in the sandbox, and investigates whatever does not match. Clients with an item nobody can explain "
+     "turn amber for review."),
     ("run_detail", "matching",
      "Here is Blue Harbor Coffee. The agent noticed day-first dates and a three-line bank header, loaded the file correctly, and matched "
      "{matched} of {total} bank lines. This is real code, executed in the sandbox, with its real output. Not a description of what it "

@@ -119,7 +119,7 @@ def run(base: str, out: Path, headless: bool, reuse_batch: bool) -> int:
                 r.pause(1)
             r.mark("timeline_code")
             r.smooth_scroll(r.tid("timeline"), 900, steps=20, delay_ms=120)
-            r.pause(6)
+            r.pause(8)
 
             # ---- matching view and exceptions
             r.tid("matching-view").scroll_into_view_if_needed()
@@ -136,12 +136,12 @@ def run(base: str, out: Path, headless: bool, reuse_batch: bool) -> int:
             # ---- blast radius
             r.tid("blast-radius").scroll_into_view_if_needed()
             r.mark("blast_radius")
-            r.pause(7)
+            r.pause(9)
             callout = r.tid("untrusted-text-callout")
             if callout.count():
                 callout.scroll_into_view_if_needed()
                 r.mark("untrusted_text")
-                r.pause(7)
+                r.pause(10)
 
             # ---- switch to the reviewer and approve
             r.tid("user-menu").click()
@@ -171,6 +171,8 @@ def run(base: str, out: Path, headless: bool, reuse_batch: bool) -> int:
             r.tid("replay-result").scroll_into_view_if_needed()
             r.mark("replay_done")
             r.pause(7)
+            page.keyboard.press("Escape")  # close the replay result dialog
+            r.pause(1)
 
             # ---- architecture
             r.tid("nav-how").click()
