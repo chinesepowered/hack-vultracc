@@ -40,6 +40,7 @@ Cloud Compute (control-plane VM and sandbox-host VM), VPC Network, Firewall Grou
 - Public URL: https://144-202-108-57.sslip.io
 - Repository: https://github.com/chinesepowered/hack-vultracc (until the work is merged into `main`, the code is on the `claude/modest-gauss-mcbllz` branch: https://github.com/chinesepowered/hack-vultracc/tree/claude/modest-gauss-mcbllz)
 - Demo video: https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4
+- Pitch deck: `slides.html` in the repository root (4 slides, self-contained; open it in a browser)
 
 ## Demo accounts
 

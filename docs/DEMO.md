@@ -20,7 +20,7 @@ Open the public URL (see STATUS.md) in a browser at 1440x900 or larger. Before g
 - **"A close is already running":** someone started one; open it from the dashboard (it is live) or wait.
 - **Kill switch is on:** sign in as Sam, Admin, turn it off (it also auto-resumes after 15 minutes in the public demo).
 - **Rate limit message:** open a previous close instead of starting a new one.
-- **Whole site down:** play the narrated video (`media/demo.mp4`, link in SUBMISSION.md) and use the slides (`media/slides/index.html`).
+- **Whole site down:** play the narrated video (`media/demo.mp4`, link in SUBMISSION.md) and use the 4-slide pitch deck (`slides.html` in the repo root; open it in a browser, arrow keys to move).
 
 ## Judge Q&A (short answers)
 - **Why a sandbox?** The code may be wrong and the data is untrusted (a bank memo in the demo tries to instruct the AI). No network, read-only inputs, no ledger access, one sandbox per client.
