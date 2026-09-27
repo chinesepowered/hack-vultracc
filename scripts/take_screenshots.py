@@ -51,8 +51,9 @@ def main() -> int:
         page.wait_for_timeout(2500)  # matching curves animate in
         page.screenshot(path=str(out / "run-detail.png"))
 
-        tid("blast-radius").scroll_into_view_if_needed()
-        page.mouse.wheel(0, -120)
+        # put the top of the blast radius panel just below the sticky header
+        page.evaluate("el => window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 76)",
+                      tid("blast-radius").element_handle())
         page.wait_for_timeout(800)
         page.screenshot(path=str(out / "blast-radius.png"))
 
