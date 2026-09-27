@@ -6,13 +6,13 @@
 
 **Problem statement addressed:** 1. Blast Radius Zero: Safe Agent Execution on Vultr (it also fits 2. Future of Work: an enterprise AI workflow for accounting firms).
 
-## Description (290 words)
+## Description (298 words)
 
 Accounting firms close the books for dozens of clients every month, and the grind is bank reconciliation: matching hundreds of bank lines to the ledger, chasing leftovers, booking adjustments and writing the workpaper. AI could do it, but no firm lets a model run code on client data unless it is contained, reviewable and provable.
 
-Tieout is that control layer. A preparer clicks "Close September" and the orchestrator on a Vultr VM starts one run per client, in parallel. For each client the runner creates a fresh gVisor container on a separate sandbox host: no network, read-only inputs, read-only root, no capabilities, non-root, strict CPU, memory and time limits. The agent (GLM 5.3 on Vultr Serverless Inference) inspects that client's messy bank export, writes Python, runs it in the sandbox, investigates the leftovers and drafts adjusting entries. Every number comes from executed code, validated by the control plane; the reconciliation ties to 0.00.
+Tieout is that control layer. A preparer clicks "Close September" and the orchestrator on a Vultr VM starts one run per client, in parallel. For each client the runner creates a fresh gVisor container on a separate sandbox host: no network, read-only inputs and root, no capabilities, non-root, strict limits. The agent (GLM 5.3 on Vultr Serverless Inference) inspects that client's messy bank export, writes Python, runs it in the sandbox, investigates the leftovers and drafts adjusting entries. Every number comes from executed code, validated by the control plane; the reconciliation ties to 0.00. On the live site all 12 clients close in about 41 seconds, with all 68 planted discrepancies found.
 
-The containment is visible, not claimed: each run shows an attestation produced inside the sandbox (only loopback, outbound connection refused, write tests), the Docker inspect summary, the files it could read and the files that left, with SHA-256 hashes. One client's bank memo contains a prompt injection aimed at the AI; the agent treats it as data and the sandbox had nowhere to send anything anyway.
+The containment is visible, not claimed: each run shows an attestation produced inside the sandbox (only loopback, outbound connection refused, write tests) and the files it could read and that left, with SHA-256 hashes. One client's bank memo contains a prompt injection aimed at the AI; the agent treats it as data, and the sandbox has nowhere to send anything.
 
 A reviewer approves every entry (maker-checker) before the AJE file exports for QuickBooks, Xero or NetSuite. Replay re-runs the recorded code in a fresh sandbox and proves the outputs are identical by hash. Judges can also upload their own bank export and ledger: the agent works out the format in a fresh sandbox. Every event is stored in a hash chain in Vultr Managed PostgreSQL; artifacts live in Vultr Object Storage.
 
