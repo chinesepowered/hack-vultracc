@@ -359,8 +359,8 @@ class Agent:
             self.out.status = "succeeded"
         except asyncio.TimeoutError:
             self.out.error = f"run exceeded {self.run_timeout_s} s"
-        except asyncio.CancelledError:
-            self.out.error = "run cancelled"
+        except asyncio.CancelledError:  # only the kill switch (or a shutdown) cancels a run
+            self.out.status, self.out.error = "stopped", "run cancelled"
             raise
         except RunStopped as exc:
             self.out.status, self.out.error = "stopped", str(exc)
