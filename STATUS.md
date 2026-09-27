@@ -1,6 +1,6 @@
 # Status
 
-_Last updated: 2026-09-26 23:58 UTC (16:58 PDT)_
+_Last updated: 2026-09-27 00:12 UTC (17:12 PDT)_
 
 ## Public URL
 **https://144-202-108-57.sslip.io** (Let's Encrypt certificate via Caddy). Health page: all green (Vultr Serverless Inference, Vultr Managed PostgreSQL, Vultr Object Storage, gVisor sandbox runner).
@@ -25,12 +25,13 @@ Total about $0.13/hour. Inference spend so far about $5. Every create is logged 
 Verified exposure: from the control plane, the sandbox host's public IP refuses 22, 80, 443, 7070 and 8000; from the sandbox host, the control plane's public IP answers only on 80 and 443 (22, 5432, 7070, 8000 blocked).
 
 ## Acceptance
-- `demo_check.py` against the public URL: first run PASS (12 clients in 53.7 s, 68 of 68 planted discrepancies, 2 replays reproducible). The 10-run check is in progress; results land in `media/demo_check_report.json`.
+- `demo_check.py --runs 10` against the public URL: **10 of 10 PASS in a row** (00:09 UTC). Every run: 12 of 12 clients succeeded, difference 0.00, 68 of 68 planted discrepancies found with the right kind, amount and references, clean sandbox attestation (gVisor, network none), maker-checker and the AJE export gate enforced, 2 random replays reproduced byte for byte (20 of 20 overall). Close times 51.4 to 79.4 s (mean 66.1 s, target under 90 s). Report: `media/demo_check_report.json`.
 - Local: every test suite passes (`scripts/check_all.sh`), guardrails check passes, workpaper formulas recompute in LibreOffice.
 
 ## Left
-- Finish the 10 consecutive public runs; run `check_guardrails.py` against the public URL.
+- Run `check_guardrails.py` against the public URL.
 - Narrated video against the public URL (Vultr text-to-speech returns errors for every voice; the pipeline falls back to a local Piper voice and records which engine voiced each line), upload to Object Storage with a public link, add to SUBMISSION.md.
+- Optional second sandbox host (`SANDBOX_HOSTS=2`, runner pool code is ready): Vultr refused it at 00:05 UTC because the shared account is at its monthly fee limit (about $195 of about $200 committed across both projects); a `vc2-4c-8gb` needs about $40/month of headroom. One host passes every check.
 - Make the GitHub repo public: needs a human (Settings > General > Change visibility); this environment has no tool that changes visibility. History secret scan is clean.
 
 ## Operating it

@@ -236,9 +236,12 @@ def cloud_init(role: str, host: str) -> str:
     return base64.b64encode(out.encode()).decode()
 
 
-def ensure_instance(st: dict, label: str, role: str, host: str, plan: dict, fw_id: str, vpc_id: str, extra_tags: list[str] | None = None) -> dict:
+def ensure_instance(st: dict, label: str, role: str, host: str, plan: dict, fw_id: str, vpc_id: str, extra_tags: list[str] | None = None,
+                    plans: dict | None = None) -> dict:
     assert_ours(label)
     inst = next((i for i in list_all("/instances", "instances", {"label": label}) if i.get("label") == label), None)
+    if inst is not None:  # already exists: record the plan it really has, not the one we would pick today
+        plan = (plans or {}).get(inst.get("plan")) or plan
     if inst is None:
         body = {"region": REGION, "plan": plan["id"], "os_id": OS_UBUNTU_2404, "label": label, "hostname": label, "tags": [TAG] + (extra_tags or []),
                 "firewall_group_id": fw_id, "enable_ipv6": False, "backups": "disabled", "user_data": cloud_init(role, host),
@@ -307,7 +310,7 @@ def up() -> None:
     for label, role, host, choices, fw in targets:
         for plan in choices:
             try:
-                ensure_instance(st, label, role, host, plan, fw, vpc["id"])
+                ensure_instance(st, label, role, host, plan, fw, vpc["id"], plans=plans)
                 save_state(st)
                 break
             except VultrError as exc:
@@ -340,10 +343,12 @@ def up() -> None:
     if "database" in st and "tieout-pg" not in blocked:
         db = wait_database(st)
         if "cp" in st.get("instances", {}):
-            try:
-                api("PUT", f"/databases/{st['database']['id']}", json={"trusted_ips": [f"{st['instances']['cp']['main_ip']}/32", st["vpc"]["subnet"]]})
-            except VultrError as exc:
-                print("warning: could not set trusted IPs:", exc)
+            want = [f"{st['instances']['cp']['main_ip']}/32", st["vpc"]["subnet"]]
+            if sorted(db.get("trusted_ips") or []) != sorted(want):  # only touch the database when the list changes
+                try:
+                    api("PUT", f"/databases/{st['database']['id']}", json={"trusted_ips": want})
+                except VultrError as exc:
+                    print("warning: could not set trusted IPs:", exc)
         print(f"database host: {db.get('host')} public: {db.get('public_host')}")
     for k in ("SESSION_SECRET", "SANDBOX_RUNNER_TOKEN_VULTR"):
         if not os.environ.get(k):

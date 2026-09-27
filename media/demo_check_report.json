@@ -1,0 +1,198 @@
+{
+  "base_url": "https://144-202-108-57.sslip.io",
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "iteration": 1,
+      "ok": true,
+      "batch_id": "bat_09262353722f50",
+      "batch_s": 66.3,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "brightwater-pt",
+          true
+        ],
+        [
+          "tidewater-veterinary",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 2,
+      "ok": true,
+      "batch_id": "bat_0926235546cb45",
+      "batch_s": 70.6,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "blue-harbor-coffee",
+          true
+        ],
+        [
+          "juniper-lane-dental",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 3,
+      "ok": true,
+      "batch_id": "bat_09262356cf2eb0",
+      "batch_s": 75.1,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "saltbox-bakery",
+          true
+        ],
+        [
+          "blue-harbor-coffee",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 4,
+      "ok": true,
+      "batch_id": "bat_0926235871ef68",
+      "batch_s": 62.0,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "lumen-architecture",
+          true
+        ],
+        [
+          "northgate-auto-repair",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 5,
+      "ok": true,
+      "batch_id": "bat_0927000088b2ae",
+      "batch_s": 67.2,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "lumen-architecture",
+          true
+        ],
+        [
+          "juniper-lane-dental",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 6,
+      "ok": true,
+      "batch_id": "bat_092700012ba7d3",
+      "batch_s": 79.4,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "brightwater-pt",
+          true
+        ],
+        [
+          "northgate-auto-repair",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 7,
+      "ok": true,
+      "batch_id": "bat_09270003ff8a97",
+      "batch_s": 51.7,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "copperline-electric",
+          true
+        ],
+        [
+          "stillwater-yoga",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 8,
+      "ok": true,
+      "batch_id": "bat_09270004c6fde4",
+      "batch_s": 77.0,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "juniper-lane-dental",
+          true
+        ],
+        [
+          "lumen-architecture",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 9,
+      "ok": true,
+      "batch_id": "bat_092700066b7bb3",
+      "batch_s": 51.4,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "saltbox-bakery",
+          true
+        ],
+        [
+          "copperline-electric",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 10,
+      "ok": true,
+      "batch_id": "bat_09270007c08a6e",
+      "batch_s": 60.0,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "brightwater-pt",
+          true
+        ],
+        [
+          "northgate-auto-repair",
+          true
+        ]
+      ],
+      "failures": []
+    }
+  ],
+  "at": "2026-09-27T00:09:13Z"
+}
