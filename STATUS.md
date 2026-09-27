@@ -7,6 +7,8 @@ _Last updated: 2026-09-27 03:30 UTC (20:30 PDT)_
 
 **Demo video (2:38, narrated):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo2.mp4 (public-read object; the bucket itself stays private). Recorded automatically against the public URL at 08:37 UTC on the final build (two sandbox hosts; the close of 12 took 24 s on camera, and the Blue Harbor replay ran on the other host and matched), narrated by ElevenLabs (voice Sarah, `eleven_multilingual_v2`) at the team's request because Vultr text-to-speech still returns errors. The first cut (2:11, Piper voice, earlier build) stays at https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4.
 
+**Pitch deck (4 slides, web):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/slides.html (public-read copy of `slides.html`, which is self-contained; re-publish after edits with `uv run scripts/publish_slides.py`).
+
 ## Demo accounts (also shown on the login page)
 | Role | Email | Password |
 |---|---|---|
