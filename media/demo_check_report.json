@@ -6,17 +6,17 @@
     {
       "iteration": 1,
       "ok": true,
-      "batch_id": "bat_092701166a9d26",
-      "batch_s": 41.0,
+      "batch_id": "bat_0927031782265d",
+      "batch_s": 25.9,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "cedar-ridge-landscaping",
+          "brightwater-pt",
           true
         ],
         [
-          "juniper-lane-dental",
+          "blue-harbor-coffee",
           true
         ]
       ],
@@ -25,17 +25,17 @@
     {
       "iteration": 2,
       "ok": true,
-      "batch_id": "bat_09270118b2b4e0",
-      "batch_s": 44.9,
+      "batch_id": "bat_09270318da9166",
+      "batch_s": 45.0,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "tidewater-veterinary",
+          "saltbox-bakery",
           true
         ],
         [
-          "lumen-architecture",
+          "juniper-lane-dental",
           true
         ]
       ],
@@ -44,17 +44,17 @@
     {
       "iteration": 3,
       "ok": true,
-      "batch_id": "bat_09270119c4201d",
-      "batch_s": 40.8,
+      "batch_id": "bat_0927031920f782",
+      "batch_s": 25.9,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "copperline-electric",
+          "cedar-ridge-landscaping",
           true
         ],
         [
-          "lumen-architecture",
+          "alder-finch-law",
           true
         ]
       ],
@@ -63,17 +63,17 @@
     {
       "iteration": 4,
       "ok": true,
-      "batch_id": "bat_09270120f4f8f1",
-      "batch_s": 40.8,
+      "batch_id": "bat_09270320c9c072",
+      "batch_s": 28.2,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "stillwater-yoga",
+          "lumen-architecture",
           true
         ],
         [
-          "brightwater-pt",
+          "alder-finch-law",
           true
         ]
       ],
@@ -82,70 +82,13 @@
     {
       "iteration": 5,
       "ok": true,
-      "batch_id": "bat_09270121c47509",
-      "batch_s": 38.6,
+      "batch_id": "bat_09270321b202b7",
+      "batch_s": 32.4,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "stillwater-yoga",
-          true
-        ],
-        [
-          "juniper-lane-dental",
-          true
-        ]
-      ],
-      "failures": []
-    },
-    {
-      "iteration": 6,
-      "ok": true,
-      "batch_id": "bat_0927012212d5c6",
-      "batch_s": 40.7,
-      "planted": 68,
-      "found": 68,
-      "replays": [
-        [
-          "saltbox-bakery",
-          true
-        ],
-        [
-          "stillwater-yoga",
-          true
-        ]
-      ],
-      "failures": []
-    },
-    {
-      "iteration": 7,
-      "ok": true,
-      "batch_id": "bat_09270123493766",
-      "batch_s": 38.6,
-      "planted": 68,
-      "found": 68,
-      "replays": [
-        [
-          "juniper-lane-dental",
-          true
-        ],
-        [
-          "saltbox-bakery",
-          true
-        ]
-      ],
-      "failures": []
-    },
-    {
-      "iteration": 8,
-      "ok": true,
-      "batch_id": "bat_09270124f94053",
-      "batch_s": 38.8,
-      "planted": 68,
-      "found": 68,
-      "replays": [
-        [
-          "brightwater-pt",
+          "ironwood-brewing",
           true
         ],
         [
@@ -156,15 +99,34 @@
       "failures": []
     },
     {
-      "iteration": 9,
+      "iteration": 6,
       "ok": true,
-      "batch_id": "bat_09270125f0dbef",
-      "batch_s": 42.9,
+      "batch_id": "bat_092703225b88b0",
+      "batch_s": 27.9,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "copperline-electric",
+          "saltbox-bakery",
+          true
+        ],
+        [
+          "ironwood-brewing",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 7,
+      "ok": true,
+      "batch_id": "bat_092703233554c2",
+      "batch_s": 28.1,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "northgate-auto-repair",
           true
         ],
         [
@@ -175,24 +137,62 @@
       "failures": []
     },
     {
-      "iteration": 10,
+      "iteration": 8,
       "ok": true,
-      "batch_id": "bat_092701267187ad",
-      "batch_s": 42.7,
+      "batch_id": "bat_092703245418ca",
+      "batch_s": 30.1,
       "planted": 68,
       "found": 68,
       "replays": [
         [
-          "juniper-lane-dental",
+          "blue-harbor-coffee",
           true
         ],
         [
-          "northgate-auto-repair",
+          "stillwater-yoga",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 9,
+      "ok": true,
+      "batch_id": "bat_09270324c91ca8",
+      "batch_s": 30.1,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "ironwood-brewing",
+          true
+        ],
+        [
+          "cedar-ridge-landscaping",
+          true
+        ]
+      ],
+      "failures": []
+    },
+    {
+      "iteration": 10,
+      "ok": true,
+      "batch_id": "bat_09270325dc2eb5",
+      "batch_s": 34.4,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "saltbox-bakery",
+          true
+        ],
+        [
+          "juniper-lane-dental",
           true
         ]
       ],
       "failures": []
     }
   ],
-  "at": "2026-09-27T01:27:56Z"
+  "at": "2026-09-27T03:26:52Z"
 }

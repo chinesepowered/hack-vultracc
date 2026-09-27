@@ -347,7 +347,7 @@ export function HowItWorksPage() {
       <div className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white px-6 py-5">
         <div>
           <div className="text-[15px] font-semibold text-gray-900">See it on a real close</div>
-          <div className="text-[13px] text-gray-500">Twelve clients, twelve sandboxes, one reviewer. About 40 seconds end to end.</div>
+          <div className="text-[13px] text-gray-500">Twelve clients, twelve sandboxes, one reviewer. About 30 seconds end to end.</div>
         </div>
         <Link
           to={me.data ? "/" : "/login"}

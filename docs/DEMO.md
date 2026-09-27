@@ -6,7 +6,7 @@ Open the public URL (see STATUS.md) in a browser at 1440x900 or larger. Before g
 |---|---|---|
 | 0:00 | Login page. Click **Sign in as Alex** (preparer). Dashboard shows the last close. | "Accounting firms close the books for dozens of clients every month. The worst part is bank reconciliation. AI could do it, but no firm lets an AI run code on client data unless it's contained." |
 | 0:20 | Click **Close September**. Tiles switch to running and show gVisor, No network, Read-only, 1 CPU. | "Each client gets its own sealed sandbox on Vultr." |
-| 0:35 | Tiles fill in live: steps, matched count, exceptions. Some turn amber (needs review). | (let it run; about 40 seconds) |
+| 0:35 | Tiles fill in live: steps, matched count, exceptions. Some turn amber (needs review). | (let it run; about 30 seconds) |
 | 0:50 | Click the **Blue Harbor Coffee Roasters** tile. Show the timeline: the sniff step found DD/MM dates and a 3-line header; expand a Run Python step to show code and real output. | "This is real code, executed in the sandbox. Not a description of what it would do." |
 | 1:15 | Matching view (curves), then the **Exceptions** tab and the reconciliation card: bank fee, NSF check, the 1,520.00 vs 1,250.00 transposition, outstanding checks, deposit in transit; difference 0.00. | "Every leftover is explained, and the reconciliation ties to the penny." |
 | 1:40 | Scroll to the **Blast radius** panel and the orange **instruction-like text** callout. | "Whoever paid this client wrote the memo text on their transaction. If that text tries to steer the agent, it doesn't matter: no network, read-only inputs, no ledger access." |
