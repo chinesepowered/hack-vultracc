@@ -10,7 +10,7 @@ Open the public URL (see STATUS.md) in a browser at 1440x900 or larger. Before g
 | 0:50 | Click the **Blue Harbor Coffee Roasters** tile. Show the timeline: the sniff step found DD/MM dates and a 3-line header; expand a Run Python step to show code and real output. | "This is real code, executed in the sandbox. Not a description of what it would do." |
 | 1:15 | Matching view (curves), then the **Exceptions** tab and the reconciliation card: bank fee, NSF check, the 1,520.00 vs 1,250.00 transposition, outstanding checks, deposit in transit; difference 0.00. | "Every leftover is explained, and the reconciliation ties to the penny." |
 | 1:40 | Scroll to the **Blast radius** panel and the orange **instruction-like text** callout. | "Whoever paid this client wrote the memo text on their transaction. If that text tries to steer the agent, it doesn't matter: no network, read-only inputs, no ledger access." |
-| 2:05 | User menu, **Switch to Jordan (Reviewer)**. Add a comment, **Approve**. Click **Download AJE CSV**. | "A human approves every entry. The agent never posts." |
+| 2:05 | In the review panel, click **Switch to Jordan (Reviewer)** (one click, stays on this run). Add a comment, **Approve**. Click **Download AJE CSV**. | "A human approves every entry. The agent never posts." |
 | 2:25 | Click **Replay**. Wait for the green **Reproducible** badge (about 15 s). | "Every number is reproducible. An auditor can re-run it." |
 | 2:45 | Open **How it works** (architecture and the ground-truth card: 68 of 68 planted discrepancies found). | "All on Vultr: VM control plane, sandbox hosts on a private network, Serverless Inference, Managed Postgres, Object Storage." |
 
