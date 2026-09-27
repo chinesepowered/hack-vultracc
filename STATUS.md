@@ -1,6 +1,6 @@
 # Status
 
-_Last updated: 2026-09-27 02:25 UTC (19:25 PDT)_
+_Last updated: 2026-09-27 02:45 UTC (19:45 PDT)_
 
 ## Public URL
 **https://144-202-108-57.sslip.io** (Let's Encrypt certificate via Caddy). Health page: all green (Vultr Serverless Inference, Vultr Managed PostgreSQL, Vultr Object Storage, gVisor sandbox runner).
@@ -28,6 +28,7 @@ Verified exposure: from the control plane, the sandbox host's public IP refuses 
 
 ## Acceptance
 - `demo_check.py --runs 10` against the public URL on the current build (uploads, runner failover, Caddy fix, medium reasoning): **10 of 10 PASS in a row** (01:28 UTC). Every run: 12 of 12 clients succeeded, difference 0.00, 68 of 68 planted discrepancies found with the right kind, amount and references, clean sandbox attestation (gVisor, network none), maker-checker and the AJE export gate enforced, 2 random replays reproduced byte for byte (20 of 20 overall). Close times 38.6 to 44.9 s (mean 41.0 s, target under 90 s). Report: `media/demo_check_report.json`. (An earlier 10 of 10 on the first build ran 51 to 79 s.)
+- Phones and tablets (02:40 UTC): the app no longer forces a 1024 px desktop width; sign-in, dashboard, run detail, How it works and admin work at 390 px (no horizontal overflow at 390, 768, 1024, 1280 or 1440 px on the public URL; dashboard shows 1, 2, 3 or 4 tile columns by width).
 - Full review at 02:00 to 02:25 UTC: every page and state for each role at 1440, 1280 and 1024 px, no console errors or failed requests. Fixed and deployed: memo markdown mangling names with underscores, the injection label now says 'line 241', stopped runs read as stopped everywhere (timeline, banner, model, final states instead of loading bars), one Reproducible badge on replays, the approval banner layout, 3 dashboard columns below 1360 px, the match rate labeled, natural names for check uploads, current timing on How it works, `/api/me` without a 401. The deployed suite passes on the polished build (02:09) and again after the kill-switch fix (guardrails and a close of 12 in 38.9 s, 02:17).
 - Full deployed suite `scripts/check_deployed.sh` against the public URL at 01:50 UTC: all PASS (health, live events, guardrails with the kill switch, a close of 12 in 42.8 s with 68 of 68 and replays, uploads through the API and in a real browser).
 - `check_guardrails.py` against the public URL: PASS (00:10 UTC). 10 live sandboxes, kill switch destroyed all 10 and stopped 12 runs, new work refused, resume brings health back to green.
