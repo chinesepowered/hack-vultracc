@@ -172,7 +172,8 @@ def main() -> int:
         segs.append({"start": marks[start], "end": marks[end], "raw": raw_len, "target": target, "wav": wav, "text": line, "engine": engine})
         print(f"{start:>14s} -> {end:<14s} raw {raw_len:6.1f}s audio {audio:5.1f}s -> {target:5.1f}s (x{raw_len / target:.2f})")
     ff = ffmpeg()
-    inputs = ["-i", str(work / "raw.webm")]
+    raw = work / "raw.mp4" if (work / "raw.mp4").exists() else work / "raw.webm"  # raw.mp4: screencast capture in step with the marks
+    inputs = ["-i", str(raw)]
     for s in segs:
         inputs += ["-i", str(s["wav"])]
     parts = []

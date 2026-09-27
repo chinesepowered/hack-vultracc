@@ -1,23 +1,30 @@
 # /// script
 # requires-python = ">=3.11"
-# dependencies = ["playwright==1.56.0", "httpx>=0.27"]
+# dependencies = ["playwright==1.56.0", "httpx>=0.27", "imageio-ffmpeg>=0.5"]
 # ///
 """Record the Tieout demo flow (PLAN.md section 3) with Playwright video.
 
     uv run scripts/record_demo.py --base-url https://<host> --out media/work
 
-Writes media/work/raw.webm and media/work/marks.json (scene start times in
+Writes media/work/raw.mp4 and media/work/marks.json (scene start times in
 seconds from the start of the recording). scripts/make_video.py turns them
 into the narrated media/demo.mp4. Also usable as a UI end-to-end check:
 it fails loudly if any step of the demo does not work.
+
+The raw video is built from Chrome's DevTools screencast, frame by frame at
+the time each frame was painted. (Playwright's built-in video writes every
+frame at least once at a fixed rate, so busy stretches come out longer than
+they were and the scene marks drift out of step with the picture.)
 """
 
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import shutil
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -33,6 +40,60 @@ def chromium_path() -> str | None:
         if os.path.exists(c):
             return c
     return None
+
+
+def ffmpeg() -> str:
+    import imageio_ffmpeg
+
+    return imageio_ffmpeg.get_ffmpeg_exe()
+
+
+class Screencast:
+    """Frames from Chrome's DevTools screencast, each kept with the time it was painted."""
+
+    def __init__(self, page, out: Path, t0_epoch: float):
+        self.dir = out / "frames"
+        shutil.rmtree(self.dir, ignore_errors=True)
+        self.dir.mkdir(parents=True)
+        self.t0 = t0_epoch
+        self.frames: list[tuple[float, str]] = []
+        self.cdp = page.context.new_cdp_session(page)
+        self.cdp.on("Page.screencastFrame", self._on_frame)
+        self.cdp.send("Page.startScreencast", {"format": "jpeg", "quality": 82, "maxWidth": 1440, "maxHeight": 900, "everyNthFrame": 2})
+
+    def _on_frame(self, params: dict) -> None:
+        ts = (params.get("metadata") or {}).get("timestamp") or time.time()
+        name = f"f{len(self.frames):06d}.jpg"
+        (self.dir / name).write_bytes(base64.b64decode(params["data"]))
+        self.frames.append((ts - self.t0, name))
+        try:
+            self.cdp.send("Page.screencastFrameAck", {"sessionId": params["sessionId"]})
+        except Exception:
+            pass
+
+    def stop(self) -> None:
+        try:
+            self.cdp.send("Page.stopScreencast")
+        except Exception:
+            pass
+
+    def build(self, dest: Path, end_t: float) -> None:
+        """H.264 at 30 fps where every frame stays on screen until the next one was painted."""
+        frames = sorted(self.frames)
+        if not frames:
+            raise RuntimeError("the screencast produced no frames")
+        lines = []
+        for i, (t, name) in enumerate(frames):
+            start = 0.0 if i == 0 else t
+            nxt = frames[i + 1][0] if i + 1 < len(frames) else max(end_t, t + 0.04)
+            lines += [f"file '{name}'", f"duration {max(nxt - start, 0.001):.4f}"]
+        lines.append(f"file '{frames[-1][1]}'")  # the concat demuxer applies a duration only when another entry follows
+        (self.dir / "list.txt").write_text("\n".join(lines) + "\n")
+        vf = "fps=30,scale=1440:900:force_original_aspect_ratio=decrease,pad=1440:900:(ow-iw)/2:(oh-ih)/2,format=yuv420p"
+        subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(self.dir / "list.txt"),
+                        "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", str(dest)], check=True)
+        print(f"raw video: {dest} ({len(frames)} frames over {end_t:.1f}s)")
+        shutil.rmtree(self.dir, ignore_errors=True)
 
 
 class Recorder:
@@ -63,14 +124,13 @@ class Recorder:
 
 def run(base: str, out: Path, headless: bool, reuse_batch: bool) -> int:
     out.mkdir(parents=True, exist_ok=True)
-    vid_dir = out / "video"
-    shutil.rmtree(vid_dir, ignore_errors=True)
+    shutil.rmtree(out / "video", ignore_errors=True)  # left over from Playwright-video captures
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=headless, executable_path=chromium_path(), args=["--disable-dev-shm-usage"])
-        ctx = browser.new_context(viewport={"width": 1440, "height": 900}, device_scale_factor=1, record_video_dir=str(vid_dir),
-                                  record_video_size={"width": 1440, "height": 900}, accept_downloads=True)
+        ctx = browser.new_context(viewport={"width": 1440, "height": 900}, device_scale_factor=1, accept_downloads=True)
         page = ctx.new_page()
-        t0 = time.monotonic()
+        t0, t0_epoch = time.monotonic(), time.time()
+        cast = Screencast(page, out, t0_epoch)
         r = Recorder(page, t0)
         try:
             # ---- login
@@ -186,17 +246,19 @@ def run(base: str, out: Path, headless: bool, reuse_batch: bool) -> int:
             r.mark("error", detail=str(exc)[:300])
             page.screenshot(path=str(out / "error.png"))
             print("FAILED:", exc, file=sys.stderr)
+            cast.stop()
             ctx.close()
             browser.close()
             return 1
         finally:
             (out / "marks.json").write_text(json.dumps(r.marks, indent=2))
-        video = page.video.path() if page.video else None
+        page.wait_for_timeout(500)
+        end_t = time.monotonic() - t0
+        cast.stop()
         ctx.close()
         browser.close()
-    if video:
-        shutil.move(video, out / "raw.webm")
-        print(f"video: {out / 'raw.webm'}")
+    (out / "raw.webm").unlink(missing_ok=True)  # an older Playwright-video capture would be picked up by make_video.py
+    cast.build(out / "raw.mp4", end_t)
     return 0
 
 

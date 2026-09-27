@@ -125,8 +125,10 @@ export function ReplayDialog({ replayId, original, open, onOpenChange }: { repla
     if (done && !refreshed.current) {
       refreshed.current = true;
       void qc.invalidateQueries({ queryKey: qk.run(original.id), exact: true });
+      // pick up any step events the live stream did not deliver, so the progress row ends complete
+      if (replayId) void qc.invalidateQueries({ queryKey: qk.runEvents(replayId), exact: true });
     }
-  }, [done, qc, original.id]);
+  }, [done, qc, original.id, replayId]);
 
   const files: CompareFile[] | null = compared?.payload?.files
     ? (compared.payload.files as CompareFile[])
@@ -160,16 +162,16 @@ export function ReplayDialog({ replayId, original, open, onOpenChange }: { repla
               )}
               {!replayId
                 ? "Starting replay"
-                : !sandbox
-                  ? "Creating a fresh sandbox"
-                  : done
-                    ? status === "succeeded"
-                      ? "Replay finished"
-                      : `Replay ${status}`
+                : done
+                  ? status === "succeeded"
+                    ? "Replay finished"
+                    : `Replay ${status}`
+                  : !sandbox
+                    ? "Creating a fresh sandbox"
                     : `Re-running step ${Math.min(steps.length + 1, total || 1)} of ${total || "?"}`}
             </div>
             <span className="tnum text-[12px] text-gray-500">
-              {steps.length} of {total || "?"} steps
+              {done && status === "succeeded" ? Math.max(steps.length, total) : steps.length} of {total || "?"} steps
             </span>
           </div>
           <div className="mt-2.5 h-1.5 overflow-hidden rounded-full bg-gray-100">

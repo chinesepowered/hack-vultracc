@@ -1,7 +1,12 @@
 # Public entry point on the control-plane VM. Automatic HTTPS (Let's Encrypt, no contact email needed).
 
 {$TIEOUT_DOMAIN} {
-	encode zstd gzip
+	# Compress everything except the server-sent event streams: encode buffers small
+	# text/event-stream writes, so a browser would see no live events at all.
+	@compressible {
+		not path_regexp ^/api/(batches|runs)/[^/]+/stream$
+	}
+	encode @compressible zstd gzip
 	header {
 		Strict-Transport-Security "max-age=31536000"
 		X-Content-Type-Options nosniff
