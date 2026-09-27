@@ -5,7 +5,7 @@ _Last updated: 2026-09-27 03:30 UTC (20:30 PDT)_
 ## Public URL
 **https://144-202-108-57.sslip.io** (Let's Encrypt certificate via Caddy). Health page: all green (Vultr Serverless Inference, Vultr Managed PostgreSQL, Vultr Object Storage, gVisor sandbox runner).
 
-**Demo video (2:11, narrated):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4 (public-read object; the bucket itself stays private). Recorded automatically against the public URL; narrated by the Piper voice because Vultr text-to-speech returned errors (HTTP 500 or "Voice Not Found") for every voice and model all evening.
+**Demo video (2:38, narrated):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo2.mp4 (public-read object; the bucket itself stays private). Recorded automatically against the public URL at 08:37 UTC on the final build (two sandbox hosts; the close of 12 took 24 s on camera, and the Blue Harbor replay ran on the other host and matched), narrated by ElevenLabs (voice Sarah, `eleven_multilingual_v2`) at the team's request because Vultr text-to-speech still returns errors. The first cut (2:11, Piper voice, earlier build) stays at https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4.
 
 ## Demo accounts (also shown on the login page)
 | Role | Email | Password |

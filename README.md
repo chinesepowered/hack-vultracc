@@ -2,7 +2,7 @@
 
 Tieout is AI month-end close for accounting firms: one click reconciles every client's bank account, with an agent that writes and runs real Python for each client. Every action the agent takes runs inside that client's own sealed gVisor sandbox on Vultr, with no network, read-only inputs and no access to the ledger. A human approves every adjusting entry, and every number can be replayed and proven by hash.
 
-**Try it:** https://144-202-108-57.sslip.io (one-click demo accounts on the login page) · **Demo video (2:11):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4 · **Pitch deck:** [slides.html](slides.html) (open in a browser)
+**Try it:** https://144-202-108-57.sslip.io (one-click demo accounts on the login page) · **Demo video (2:38):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo2.mp4 · **Pitch deck:** [slides.html](slides.html) (open in a browser)
 
 | Role | Email | Password | Can |
 |---|---|---|---|
@@ -91,7 +91,7 @@ flowchart TB
 **Object Storage.** One private bucket.
 - Client inputs and outputs live under `clients/{client}/runs/{run}/in|out`, alongside evidence packs and uploaded files. Output downloads are short-lived presigned links; input files are re-hashed against their recorded SHA-256 whenever they are downloaded.
 - The bucket also carries the signed operations channel for the VMs.
-- The demo video is the only public object.
+- The demo videos and their caption files are the only public objects.
 
 **VPC Network.** A private network (`10.66.0.0/24`) between the control plane and the sandbox hosts. The runner listens only on its private address, and the host firewall accepts the runner port only from the control plane's private address.
 

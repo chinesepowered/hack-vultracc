@@ -39,7 +39,7 @@ Cloud Compute (control-plane VM and two sandbox-host VMs), VPC Network, Firewall
 
 - Public URL: https://144-202-108-57.sslip.io
 - Repository: https://github.com/chinesepowered/hack-vultracc
-- Demo video: https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4
+- Demo video: https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo2.mp4
 - Pitch deck: `slides.html` in the repository root (4 slides, self-contained; open it in a browser)
 
 ## Demo accounts

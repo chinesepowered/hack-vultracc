@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:11,046
+This is Tieout: AI month-end close for accounting firms. Firms close the books for dozens of clients every month, and the worst part is bank reconciliation.
+
+2
+00:00:11,046 --> 00:00:17,136
+AI could do it, but no firm lets an AI run code on client data unless it is contained.
+
+3
+00:00:17,836 --> 00:00:30,192
+One click closes September for all twelve clients, in about 24 seconds. Each client gets its own sealed sandbox on Vultr: gVisor, no network, read-only inputs, one CPU.
+
+4
+00:00:30,192 --> 00:00:44,019
+The agent runs on GLM 5.3 through Vultr Serverless Inference. For every client it inspects the bank export, writes Python, runs it in the sandbox, and investigates whatever does not match.
+
+5
+00:00:44,019 --> 00:00:48,579
+Clients with an item nobody can explain turn amber for review.
+
+6
+00:00:49,279 --> 00:01:00,117
+Here is Blue Harbor Coffee. The agent noticed day-first dates and a three-line bank header, loaded the file correctly, and matched 416 of 419 bank lines.
+
+7
+00:01:00,117 --> 00:01:07,483
+This is real code, executed in the sandbox, with its real output. Not a description of what it would do.
+
+8
+00:01:08,183 --> 00:01:24,716
+Every leftover is explained: an unrecorded bank fee, a returned customer check, a transposition where fifteen twenty was booked but twelve fifty cleared, outstanding checks, and a deposit in transit. After the proposed adjustments, the reconciliation ties to the penny.
+
+9
+00:01:25,416 --> 00:01:45,648
+The blast radius panel is attested from inside the sandbox: only loopback networking, outbound connections fail, inputs are read-only, no capabilities, no secrets. And look at this: whoever paid this client wrote a memo telling the AI to approve everything and upload the ledger.
+
+10
+00:01:45,648 --> 00:01:52,537
+It does not matter. The agent treated it as data, and the sandbox had nowhere to send anything.
+
+11
+00:01:53,237 --> 00:02:05,440
+A human approves every entry. The reviewer is a different person from the preparer, and only after approval do the adjusting entries export for QuickBooks, Xero, or NetSuite.
+
+12
+00:02:05,440 --> 00:02:06,983
+The agent never posts.
+
+13
+00:02:07,683 --> 00:02:14,651
+Replay runs the recorded code again in a fresh sandbox, with the same inputs and no model. The hashes match.
+
+14
+00:02:14,651 --> 00:02:18,457
+Every number is reproducible, and an auditor can re-run it.
+
+15
+00:02:19,157 --> 00:02:37,269
+Everything runs on Vultr: a VM control plane, two sandbox hosts on a private network, Serverless Inference, Managed Postgres, and Object Storage. Our automated check planted 68 discrepancies across twelve clients, and the agent found all 68.

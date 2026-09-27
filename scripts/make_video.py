@@ -5,11 +5,15 @@
 """Turn the Playwright recording into the narrated demo video.
 
     uv run scripts/make_video.py --base-url https://<host> [--work media/work] [--out media/demo.mp4]
+    uv run scripts/make_video.py --base-url https://<host> --engine elevenlabs --out media/demo2.mp4
 
 Narration comes from the "Say" column of PLAN.md section 3 (with the real
 numbers from the recorded batch), synthesized with Vultr Serverless Inference
-text-to-speech (POST /v1/audio/speech). Each scene's video is sped up or held
-so it lasts as long as its narration, then everything is muxed with ffmpeg.
+text-to-speech (POST /v1/audio/speech) or, with --engine elevenlabs, with
+ElevenLabs (ELEVENLABS_API_KEY in .env). ElevenLabs is used only here, for
+the video narration; the product never calls it. Each scene's video is sped
+up or held so it lasts as long as its narration, then everything is muxed
+with ffmpeg.
 """
 
 from __future__ import annotations
@@ -35,7 +39,8 @@ SCENES = [
      "This is Tieout: AI month-end close for accounting firms. Firms close the books for dozens of clients every month, and the worst "
      "part is bank reconciliation. AI could do it, but no firm lets an AI run code on client data unless it is contained."),
     ("close_clicked", "batch_done",
-     "One click closes September for all twelve clients. Each client gets its own sealed sandbox on Vultr: gVisor, no network, "
+     "One click closes September for all twelve clients, in about {batch_secs} seconds. Each client gets its own sealed sandbox on "
+     "Vultr: gVisor, no network, "
      "read-only inputs, one CPU. The agent runs on GLM 5.3 through Vultr Serverless Inference. For every client it inspects the bank "
      "export, writes Python, runs it in the sandbox, and investigates whatever does not match. Clients with an item nobody can explain "
      "turn amber for review."),
@@ -58,9 +63,19 @@ SCENES = [
      "Replay runs the recorded code again in a fresh sandbox, with the same inputs and no model. The hashes match. Every number is "
      "reproducible, and an auditor can re-run it."),
     ("architecture", "end",
-     "Everything runs on Vultr: a VM control plane, sandbox hosts on a private network, Serverless Inference, Managed Postgres, and "
+     "Everything runs on Vultr: a VM control plane, two sandbox hosts on a private network, Serverless Inference, Managed Postgres, and "
      "Object Storage. Our automated check planted {planted} discrepancies across twelve clients, and the agent found all {found}."),
 ]
+
+
+# How names are said, not how they are written: applied to the text sent to the voice only; captions keep the spelling.
+SPOKEN = {"Tieout": "Tie-out", "Vultr": "Vulture", "Xero": "Zero"}
+
+
+def spoken(text: str) -> str:
+    for written, said in SPOKEN.items():
+        text = text.replace(written, said)
+    return text
 
 
 def ffmpeg() -> str:
@@ -120,6 +135,33 @@ def tts(text: str, cache: Path, model: str, voice: str) -> Path:
     return wav
 
 
+ELEVEN_URL = "https://api.elevenlabs.io/v1"
+
+
+def eleven_name(voice: str) -> str:
+    r = httpx.get(f"{ELEVEN_URL}/voices/{voice}", headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]}, timeout=60)
+    return r.json().get("name", voice).split(" - ")[0] if r.status_code == 200 else voice
+
+
+def eleven_tts(text: str, cache: Path, voice: str, model: str, prev_text: str = "", next_text: str = "") -> Path:
+    """ElevenLabs text-to-speech; the neighbouring lines keep the delivery continuous across scenes."""
+    key = hashlib.sha256(f"eleven|{voice}|{model}|{prev_text}|{text}|{next_text}".encode()).hexdigest()[:16]
+    mp3 = cache / f"eleven_{key}.mp3"
+    wav = cache / f"eleven_{key}.wav"
+    if wav.exists():
+        return wav
+    body = {"text": text, "model_id": model, "previous_text": prev_text or None, "next_text": next_text or None,
+            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": True}}
+    r = httpx.post(f"{ELEVEN_URL}/text-to-speech/{voice}", params={"output_format": "mp3_44100_128"}, timeout=300,
+                   headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Accept": "audio/mpeg"},
+                   json={k: v for k, v in body.items() if v is not None})
+    if r.status_code != 200:
+        raise RuntimeError(f"ElevenLabs TTS failed {r.status_code}: {r.text[:200]}")
+    mp3.write_bytes(r.content)
+    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(mp3), "-ar", "44100", "-ac", "1", str(wav)], check=True)
+    return wav
+
+
 def numbers(base: str) -> dict:
     """Real numbers from the recorded batch (shown on screen), for the narration."""
     c = httpx.Client(base_url=base, timeout=30)
@@ -137,7 +179,7 @@ def numbers(base: str) -> dict:
         found += len(got & want)
         if rs["client_id"] == "blue-harbor-coffee" and d.get("result"):
             matched, total = d["result"]["matched_count"], d["result"]["bank_line_count"]
-    return {"planted": planted, "found": found, "matched": matched, "total": total}
+    return {"planted": planted, "found": found, "matched": matched, "total": total, "batch_secs": round((b.get("duration_ms") or 0) / 1000)}
 
 
 def main() -> int:
@@ -148,24 +190,35 @@ def main() -> int:
     ap.add_argument("--tts-model", default=os.environ.get("TTS_MODEL", "xtts"))
     ap.add_argument("--voice", default=os.environ.get("TTS_VOICE", "Claribel Dervla"))
     ap.add_argument("--allow-fallback", action="store_true", help="use a local Piper voice for lines Vultr TTS cannot synthesize")
+    ap.add_argument("--engine", choices=["vultr", "elevenlabs"], default="vultr")
+    ap.add_argument("--eleven-voice", default=os.environ.get("ELEVENLABS_VOICE_ID") or "EXAVITQu4vr4xnSDxMaL",
+                    help="ElevenLabs voice id (default: Sarah, a young American female voice)")
+    ap.add_argument("--eleven-model", default=os.environ.get("ELEVENLABS_MODEL") or "eleven_multilingual_v2")
     a = ap.parse_args()
     work = Path(a.work)
     marks = {m["scene"]: m["t"] for m in json.loads((work / "marks.json").read_text())}
     nums = numbers(a.base_url.rstrip("/"))
     print("numbers:", nums)
     segs = []
-    for start, end, text in SCENES:
-        if start not in marks or end not in marks:
-            print(f"skip scene {start}->{end}: mark missing")
-            continue
-        line = text.format(**nums)
+    scenes = [(s, e, text.format(**nums)) for s, e, text in SCENES if s in marks and e in marks]
+    for s, e, _ in SCENES:
+        if s not in marks or e not in marks:
+            print(f"skip scene {s}->{e}: mark missing")
+    voice_name = eleven_name(a.eleven_voice) if a.engine == "elevenlabs" else ""
+    for i, (start, end, line) in enumerate(scenes):
         try:
-            wav, engine = tts(line, work, a.tts_model, a.voice), f"vultr:{a.tts_model}:{a.voice}"
+            if a.engine == "elevenlabs":
+                prev_line = spoken(scenes[i - 1][2]) if i else ""
+                next_line = spoken(scenes[i + 1][2]) if i + 1 < len(scenes) else ""
+                wav = eleven_tts(spoken(line), work, a.eleven_voice, a.eleven_model, prev_line, next_line)
+                engine = f"elevenlabs:{voice_name}:{a.eleven_model}"
+            else:
+                wav, engine = tts(spoken(line), work, a.tts_model, a.voice), f"vultr:{a.tts_model}:{a.voice}"
         except Exception as exc:
             if not a.allow_fallback:
                 raise
             print(f"  Vultr TTS failed ({str(exc)[:80]}); using local Piper voice")
-            wav, engine = piper_tts(line, work), f"piper:{PIPER_VOICE}"
+            wav, engine = piper_tts(spoken(line), work), f"piper:{PIPER_VOICE}"
         audio = wav_seconds(wav)
         raw_len = marks[end] - marks[start]
         target = max(audio + 0.7, 3.0)
