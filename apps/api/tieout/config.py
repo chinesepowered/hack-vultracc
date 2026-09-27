@@ -43,6 +43,8 @@ class Settings:
     uploads_per_ip_per_hour: int = field(default_factory=lambda: int(_env("UPLOADS_PER_IP_PER_HOUR", "6")))
     daily_token_budget: int = field(default_factory=lambda: int(_env("DAILY_TOKEN_BUDGET", "5000000")))
     max_tool_calls: int = field(default_factory=lambda: int(_env("AGENT_MAX_TOOL_CALLS", "14")))
+    # low | medium | high; empty keeps the model's default. GLM 5.3 on Vultr honors it (measured: far fewer reasoning tokens).
+    reasoning_effort: str = field(default_factory=lambda: _env("LLM_REASONING_EFFORT", ""))
     run_timeout_s: int = field(default_factory=lambda: int(_env("AGENT_RUN_TIMEOUT_S", "300")))
     exec_timeout_s: int = field(default_factory=lambda: int(_env("AGENT_EXEC_TIMEOUT_S", "60")))
     batches_per_user_per_hour: int = field(default_factory=lambda: int(_env("BATCHES_PER_USER_PER_HOUR", "20")))

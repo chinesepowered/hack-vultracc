@@ -109,6 +109,7 @@ def env_files(state: dict, env: dict) -> tuple[str, str, str]:
     cp = {
         "VULTR_INFERENCE_API_KEY": env["VULTR_INFERENCE_API_KEY"], "VULTR_INFERENCE_BASE_URL": env["VULTR_INFERENCE_BASE_URL"],
         "LLM_MODEL_MAIN": env["LLM_MODEL_MAIN"], "LLM_MODEL_FAST": env["LLM_MODEL_FAST"], "LLM_MODEL_SAFETY": env.get("LLM_MODEL_SAFETY", ""),
+        "LLM_REASONING_EFFORT": env.get("LLM_REASONING_EFFORT", "medium"),
         "DATABASE_URL": db_url, "S3_ENDPOINT": env["S3_ENDPOINT"], "S3_ACCESS_KEY": env["S3_ACCESS_KEY"],
         "S3_SECRET_KEY": env["S3_SECRET_KEY"], "S3_BUCKET": env["S3_BUCKET"], "S3_REGION": "us-east-1",
         "SANDBOX_RUNNER_URL": f"http://{sbx_ip}:7070", "SANDBOX_RUNNER_TOKEN": token, "SANDBOX_IMAGE": "tieout-sandbox:latest",

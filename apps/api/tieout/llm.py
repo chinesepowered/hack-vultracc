@@ -48,6 +48,8 @@ class LLM:
                     kwargs = dict(model=m, messages=messages, temperature=temperature, max_tokens=max_tokens)
                     if tools:
                         kwargs.update(tools=tools, tool_choice="auto")
+                    if settings.reasoning_effort and m == self.model:
+                        kwargs["extra_body"] = {"reasoning_effort": settings.reasoning_effort}
                     resp = await self.client.chat.completions.create(**kwargs)
                     choice = resp.choices[0]
                     usage = resp.usage
