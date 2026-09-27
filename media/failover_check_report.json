@@ -1,0 +1,40 @@
+{
+  "base_url": "https://144-202-108-57.sslip.io",
+  "passed": 1,
+  "total": 1,
+  "results": [
+    {
+      "iteration": 1,
+      "ok": true,
+      "batch_id": "bat_09270357a38037",
+      "batch_s": 40.9,
+      "planted": 68,
+      "found": 68,
+      "replays": [
+        [
+          "alder-finch-law",
+          true
+        ],
+        [
+          "blue-harbor-coffee",
+          true
+        ]
+      ],
+      "failures": []
+    }
+  ],
+  "at": "2026-09-27T03:58:27Z",
+  "condition": {
+    "what": "live failover test: the sandbox runner on tieout-sbx-2 was stopped (systemctl stop) through the signed ops channel, then started again",
+    "runner_stopped_utc": "2026-09-27T03:56:01Z",
+    "runner_started_utc": "2026-09-27T03:59:02Z",
+    "health_while_stopped": "ok; runner check: tieout-sbx-1 accepting, http://10.66.0.6:7070 DOWN, runs fail over to the other hosts",
+    "runs_per_host": {
+      "tieout-sbx-1": 12
+    },
+    "replays_per_host": {
+      "tieout-sbx-1": 2
+    },
+    "after_restart": "both hosts accepting, orphans_removed=0, check_sse PASS"
+  }
+}

@@ -28,7 +28,7 @@ The containment is visible in the product, not just claimed:
 | Nothing crosses clients | One sandbox per client per run, separate workspaces and storage prefixes, tenant labels | Dashboard tiles, blast radius panel |
 | Everything is reproducible | Replay re-executes the recorded code in a fresh sandbox and compares SHA-256 hashes | Replay result, "Reproducible" badge |
 
-**Proven on the live URL:** 10 of 10 acceptance runs in a row, each finding all 68 planted discrepancies across the 12 clients with every difference at 0.00; 20 of 20 replays byte-identical; about 30 seconds and about $0.25 of inference (2 cents a client) to close all 12 clients. The injected memo is flagged, treated as data, and has nowhere to go.
+**Proven on the live URL:** 10 of 10 acceptance runs in a row, each finding all 68 planted discrepancies across the 12 clients with every difference at 0.00; 20 of 20 replays byte-identical; about 30 seconds and about $0.25 of inference (2 cents a client) to close all 12 clients; and with one sandbox host's runner stopped, a close of 12 still finished on the other host in 41 seconds. The injected memo is flagged, treated as data, and has nowhere to go.
 
 | | |
 |---|---|

@@ -23,11 +23,12 @@ _Last updated: 2026-09-27 03:30 UTC (20:30 PDT)_
 | `tieout-pg` Managed PostgreSQL 16 | startup, 1 node | 0.041 |
 | `tieout-objects` Object Storage, private bucket | archival tier | 0.008 |
 | `tieout-vpc`, `tieout-cp-fw` (80/443 only), `tieout-sbx-fw` (no inbound) | | 0 |
-Total about $0.19/hour. Inference spend so far about $15. Every create is logged in `infra/RESOURCES.md`.
+Total about $0.19/hour. Inference spend so far about $18 (Vultr usage endpoint, 04:00 UTC Sep 27). Every create is logged in `infra/RESOURCES.md`.
 
 Verified exposure: from the control plane, the sandbox host's public IP refuses 22, 80, 443, 7070 and 8000; from the sandbox host, the control plane's public IP answers only on 80 and 443 (22, 5432, 7070, 8000 blocked).
 
 ## Acceptance
+- Live failover on the public URL (03:56 to 03:59 UTC): the runner on `tieout-sbx-2` was stopped through the signed ops channel. Health stayed green and named sbx-2 as down; one `demo_check.py` close of 12 passed in 40.9 s on `tieout-sbx-1` alone (all 12 runs and both replays on sbx-1, 68 of 68 found, replays byte-identical). sbx-2 was started again (0 orphans), and health shows both hosts accepting. Report: `media/failover_check_report.json`.
 - Second sandbox host: done at 03:15 UTC. `tieout-sbx-2` runs the same image as `tieout-sbx-1` (same image ID), public ports refused (22, 80, 443, 7070, 8000), runs split 6/6 across the hosts, replays that land on the other host match byte for byte, closes of 12 take about 30 s.
 - `demo_check.py --runs 10` against the public URL on the final setup (two sandbox hosts, uploads, failover, medium reasoning): **10 of 10 PASS in a row** (03:27 UTC). Every run: 12 of 12 clients succeeded, difference 0.00, 68 of 68 planted discrepancies found with the right kind, amount and references, clean sandbox attestation, maker-checker and the AJE export gate enforced, 2 random replays reproduced byte for byte (20 of 20). Close times 25.9 to 45.0 s (median 29.2 s, mean 30.8 s, target under 90 s). Report: `media/demo_check_report.json`. (Earlier: 10 of 10 on one host at about 41 s, and on the first build at 51 to 79 s.)
 - Phones and tablets (02:40 UTC): the app no longer forces a 1024 px desktop width; sign-in, dashboard, run detail, How it works and admin work at 390 px (no horizontal overflow at 390, 768, 1024, 1280 or 1440 px on the public URL; dashboard shows 1, 2, 3 or 4 tile columns by width).
@@ -47,3 +48,4 @@ Verified exposure: from the control plane, the sandbox host's public IP refuses 
 - Redeploy: `uv run infra/deploy.py` (sandbox hosts, then control plane); `--only cp` or `--only sbx2` for one host
 - Every end-to-end check against the public URL: `scripts/check_deployed.sh https://144-202-108-57.sslip.io`
 - Stage runbook: `docs/DEMO.md`
+- Take a misbehaving sandbox host out of service: `uv run infra/ops/opsctl.py run --host sbx2 --script "systemctl stop tieout-runner.service"` (runs fail over to the other host within one request); bring it back with `systemctl start tieout-runner.service`.

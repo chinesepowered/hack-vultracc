@@ -10,6 +10,8 @@ EnvironmentFile=/etc/tieout/runner.env
 WorkingDirectory=/opt/tieout/current/services/runner
 ExecStart=/usr/local/bin/uv run --frozen --no-dev uvicorn runner.app:app --host ${RUNNER_BIND} --port 7070 --timeout-keep-alive 75
 Restart=always
+# uv exits 143 after forwarding SIGTERM; a clean stop is not a failure
+SuccessExitStatus=143
 RestartSec=3
 Environment=UV_CACHE_DIR=/var/cache/uv
 LimitNOFILE=65536
