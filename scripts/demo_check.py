@@ -106,7 +106,7 @@ def one_iteration(base: str, n_replays: int, max_batch_s: float) -> tuple[bool, 
             failures.append("AJE export was not blocked before approval")
         if prep.post(f"/api/runs/{rid}/approve", json={"decision": "approved", "comment": "self"}).status_code != 403:
             failures.append("preparer could approve (role check failed)")
-        ra = rev.post(f"/api/runs/{rid}/approve", json={"decision": "approved", "comment": "demo_check: ties to the penny"})
+        ra = rev.post(f"/api/runs/{rid}/approve", json={"decision": "approved", "comment": "Reviewed: the fee, NSF and transposition entries agree to support. Approved."})
         if ra.status_code != 200:
             failures.append(f"reviewer approve failed: {ra.status_code} {ra.text[:200]}")
         csv = rev.get(f"/api/runs/{rid}/ajes.csv")
