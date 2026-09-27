@@ -146,7 +146,7 @@ Auth
 - `GET /api/demo-accounts` -> `DemoAccount[]` (public; shown on the login page)
 - `POST /api/auth/login` `{email, password}` -> `User` (sets cookie)
 - `POST /api/auth/logout` -> `{ok}`
-- `GET /api/me` -> `User` (401 when signed out)
+- `GET /api/me` -> `User`, or `null` when signed out
 
 Firm and clients
 - `GET /api/system` -> `{firm, period, period_label, region, version, git_sha, models: {main, fast}, kill_switch, limits: {max_concurrent_sandboxes, max_concurrent_runs, daily_token_budget, sandbox: {cpus, memory_mb, pids, exec_timeout_s, ttl_s}}}`

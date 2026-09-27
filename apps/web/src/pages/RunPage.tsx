@@ -22,7 +22,7 @@ import { Difference } from "@/components/money";
 import { BlastRadius } from "@/components/run/BlastRadius";
 import { MatchingView } from "@/components/run/MatchingView";
 import { ReconSummary } from "@/components/run/ReconSummary";
-import { filesFromHashes, ReplayComparison, ReplayDialog, ReproducibleBadge, type CompareFile } from "@/components/run/Replay";
+import { filesFromHashes, ReplayComparison, ReplayDialog, type CompareFile } from "@/components/run/Replay";
 import { ReviewPanel, useDownloadAjes } from "@/components/run/ReviewPanel";
 import { RunTabs } from "@/components/run/RunTabs";
 import { Timeline } from "@/components/run/Timeline";
@@ -126,7 +126,6 @@ function RunHeader({ run, onReplay, replayPending }: { run: RunDetail; onReplay:
                 {approval.label}
               </StatusPill>
             )}
-            {run.kind === "replay" && run.replay_match !== null && <ReproducibleBadge match={run.replay_match} testId="replay-header-badge" size="lg" />}
           </div>
           <div className="mt-1 text-[13px] text-gray-500">
             {run.industry} · {periodLabel(run.period)} · <span className="mono text-[12px]">{run.id}</span>
@@ -195,7 +194,7 @@ function RunHeader({ run, onReplay, replayPending }: { run: RunDetail; onReplay:
           {run.duration_ms ? <span className="money">{formatDuration(run.duration_ms)}</span> : <span className="font-normal text-gray-400">{running ? `Step ${run.step_count}` : "n/a"}</span>}
         </Stat>
         <Stat label="Model">
-          <span className="mono text-[13px]">{run.model_id ?? (run.kind === "replay" ? "none (replay)" : "pending")}</span>
+          <span className="mono text-[13px]">{run.model_id ?? (run.kind === "replay" ? "none (replay)" : isTerminal(run.status) ? "none" : "pending")}</span>
         </Stat>
         <Stat label="Sandbox" className="flex-1">
           {run.sandbox_id ? (
@@ -226,6 +225,14 @@ function fromEvents(events: RunEvent[]) {
     stored: stored?.artifacts ?? [],
     compared: compared ? { match: !!compared.match, files: compared.files as CompareFile[] } : null,
   };
+}
+
+/** Backend reasons arrive as fragments ("stopped by the admin kill switch"); show them as sentences. */
+function asSentence(text: string | null | undefined, fallback: string): string {
+  const t = (text ?? "").trim();
+  if (!t) return fallback;
+  const s = t[0].toUpperCase() + t.slice(1);
+  return /[.!?]$/.test(s) ? s : `${s}.`;
 }
 
 export function RunPage() {
@@ -295,6 +302,8 @@ export function RunPage() {
   }
 
   const live = !isTerminal(detail.status);
+
+  const ended = !!detail && isTerminal(detail.status) && !detail.result; // stopped or failed without a result
   const attestation = detail.attestation ?? derived.attestation;
   const docker = detail.docker ?? derived.docker;
   const limits = detail.limits ?? derived.limits;
@@ -313,12 +322,12 @@ export function RunPage() {
 
       {detail.status === "failed" && (
         <Alert tone="danger" icon={<CircleAlertIcon />} title="The run failed" className="mt-4">
-          {detail.error ?? "The agent did not produce a valid result."} The sandbox was destroyed; nothing was exported.
+          {asSentence(detail.error, "The agent did not produce a valid result.")} The sandbox was destroyed; nothing was exported.
         </Alert>
       )}
       {detail.status === "stopped" && (
         <Alert tone="danger" icon={<OctagonAlertIcon />} title="Stopped" className="mt-4">
-          {detail.error ?? "Stopped by the admin kill switch."} Its sandbox was destroyed.
+          {asSentence(detail.error, "Stopped by the admin kill switch.")} Its sandbox was destroyed; nothing was exported.
         </Alert>
       )}
 
@@ -389,6 +398,8 @@ export function RunPage() {
                     Lines connect as soon as the run finishes.
                     {detail.matched_count !== null && detail.bank_line_count ? ` Matched so far: ${formatInt(detail.matched_count)} of ${formatInt(detail.bank_line_count)}.` : ""}
                   </>
+                ) : ended ? (
+                  "No matching view: the run ended before its outputs left the sandbox."
                 ) : lines.isError ? (
                   "lines.json is not available for this run."
                 ) : undefined
@@ -398,7 +409,7 @@ export function RunPage() {
         </div>
         <div className="space-y-4">
           <ReviewPanel run={detail} />
-          <ReconSummary result={detail.result} loading={live} />
+          <ReconSummary result={detail.result} loading={live} ended={ended} />
           <BlastRadius
             attestation={attestation}
             docker={docker}
@@ -411,6 +422,7 @@ export function RunPage() {
             imageDigest={detail.image_digest}
             untrusted={detail.untrusted_text ?? []}
             running={live}
+            ended={ended}
           />
         </div>
       </div>

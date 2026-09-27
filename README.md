@@ -16,7 +16,7 @@ Every month, accounting firms close the books for dozens of clients, and the gri
 
 ## Our solution
 
-A preparer clicks **Close September**. The control plane, on a Vultr VM, starts one agent run per client, all 12 in parallel. For each client, GLM 5.3 on Vultr Serverless Inference inspects that client's messy bank export, writes Python, and runs it in a fresh gVisor sandbox on a separate Vultr VM. It matches the lines, investigates the leftovers and drafts the adjusting entries. The control plane checks every result (schema, arithmetic, difference 0.00) and stores the SHA-256 of every output. A reviewer, who must be a different person from the preparer, approves before the entries export to QuickBooks, Xero or NetSuite. **Replay** re-runs the recorded code in a fresh sandbox, without the model, and proves the outputs are byte-identical. Judges can also **upload their own bank export and ledger**, or edit the sample files, and watch the agent reconcile them.
+A preparer clicks **Close September**. The control plane, on a Vultr VM, starts one agent run per client, all 12 in parallel. For each client, GLM 5.3 on Vultr Serverless Inference works out that client's messy bank export (every bank formats it differently: day-first dates, preamble lines, debit and credit columns, newest-first files), writes Python, and runs it in a fresh gVisor sandbox on a separate Vultr VM. It matches the lines, investigates the leftovers and drafts the adjusting entries. The control plane checks every result (schema, arithmetic, difference 0.00) and stores the SHA-256 of every output. A reviewer, who must be a different person from the preparer, approves before the entries export to QuickBooks, Xero or NetSuite. **Replay** re-runs the recorded code in a fresh sandbox, without the model, and proves the outputs are byte-identical. Judges can also **upload their own bank export and ledger**, or edit the sample files, and watch the agent reconcile them.
 
 The containment is visible in the product, not just claimed:
 
@@ -28,7 +28,7 @@ The containment is visible in the product, not just claimed:
 | Nothing crosses clients | One sandbox per client per run, separate workspaces and storage prefixes, tenant labels | Dashboard tiles, blast radius panel |
 | Everything is reproducible | Replay re-executes the recorded code in a fresh sandbox and compares SHA-256 hashes | Replay result, "Reproducible" badge |
 
-**Proven on the live URL:** 10 of 10 acceptance runs in a row, each finding all 68 planted discrepancies across the 12 clients with every difference at 0.00; 20 of 20 replays byte-identical; about 41 seconds to close all 12 clients. The injected memo is flagged, treated as data, and has nowhere to go.
+**Proven on the live URL:** 10 of 10 acceptance runs in a row, each finding all 68 planted discrepancies across the 12 clients with every difference at 0.00; 20 of 20 replays byte-identical; about 41 seconds and about $0.25 of inference (2 cents a client) to close all 12 clients. The injected memo is flagged, treated as data, and has nowhere to go.
 
 | | |
 |---|---|

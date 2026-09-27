@@ -211,7 +211,7 @@ function EventRow({ item, last }: { item: Exclude<TimelineItem, StepItem>; last:
       title = "Instruction-like text found in the inputs";
       body = (
         <>
-          {p.file} row {p.row}: <span className="italic">"{String(p.preview ?? "").slice(0, 90)}..."</span> Flagged by the control plane before the run. Treated as data.
+          {p.file}, line {p.row}: <span className="italic">"{String(p.preview ?? "").slice(0, 90)}..."</span> Flagged by the control plane before the run. Treated as data.
           {p.classifier?.verdict === "unsafe" && <> Second opinion: {modelName(p.classifier.model)} flagged it as unsafe.</>}
         </>
       );
@@ -326,7 +326,9 @@ export function Timeline({ events, live, loading }: { events: RunEvent[]; live: 
         <div>
           <div className="text-[14px] font-semibold text-gray-900">Agent steps</div>
           <div className="text-[12px] text-gray-500">
-            {model.steps.filter((s) => s.tool !== "finish").length} sandbox steps
+            {model.steps.length === 0 && events.some((e) => e.type === "replay_step")
+              ? `${events.filter((e) => e.type === "replay_step").length} replayed steps · no model`
+              : `${model.steps.filter((s) => s.tool !== "finish").length} sandbox steps`}
             {model.llmCalls ? ` · ${model.llmCalls} LLM calls · ${formatCompact(model.tokensIn + model.tokensOut)} tokens` : ""}
           </div>
         </div>

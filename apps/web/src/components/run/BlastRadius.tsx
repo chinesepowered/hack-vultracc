@@ -88,7 +88,7 @@ export function UntrustedCallout({ items }: { items: UntrustedText[] }) {
             <AlertTriangleIcon className="mt-0.5 size-4 shrink-0 text-amber-600" />
             <div className="min-w-0 text-[12.5px] leading-relaxed text-amber-950">
               <div className="font-semibold">
-                Instruction-like text found in {u.file} row {u.row}
+                Instruction-like text found in {u.file}, line {u.row}
               </div>
               <blockquote className="mono mt-1.5 rounded border border-amber-200 bg-white/70 px-2 py-1.5 text-[11px] leading-relaxed break-words text-gray-800">
                 {u.preview}
@@ -132,6 +132,7 @@ export function BlastRadius({
   imageDigest,
   untrusted,
   running,
+  ended,
 }: {
   attestation: Attestation | null;
   docker: DockerSummary | null;
@@ -144,6 +145,7 @@ export function BlastRadius({
   imageDigest: string | null;
   untrusted: UntrustedText[];
   running: boolean;
+  ended?: boolean;
 }) {
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const [raw, setRaw] = useState(false);
@@ -157,7 +159,7 @@ export function BlastRadius({
         <Header passed={null} total={null} onRaw={undefined} />
         <UntrustedCallout items={untrusted} />
         <div className={cn("rounded-lg border border-dashed border-gray-300 px-4 py-6 text-center text-[12.5px] text-gray-500", untrusted.length && "mt-3")}>
-          The blast radius appears when the sandbox starts and attests itself.
+          {ended ? "This run ended before a sandbox was created, so there was nothing to attest." : "The blast radius appears when the sandbox starts and attests itself."}
         </div>
       </Card>
     );

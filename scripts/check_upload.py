@@ -69,7 +69,7 @@ def main() -> int:
     files["bank_statement"] = add_fee(files["bank_statement"].decode()).encode()
 
     t0 = time.time()
-    r = c.post("/api/uploads", json={"name": "Upload check: Ironwood plus one fee", "period_end": "2026-09-30",
+    r = c.post("/api/uploads", json={"name": "Ironwood Brewing (edited sample)", "period_end": "2026-09-30",
                                      "files": {k: base64.b64encode(v).decode() for k, v in files.items()}})
     if r.status_code != 200:
         print(f"upload refused: {r.status_code} {r.text[:300]}")

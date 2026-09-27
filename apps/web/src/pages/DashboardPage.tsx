@@ -415,7 +415,7 @@ export function DashboardPage() {
           />
         </Card>
       ) : (
-        <div className="mt-3 grid grid-cols-2 gap-3.5 lg:grid-cols-3 xl:grid-cols-4" data-testid="client-grid">
+        <div className="mt-3 grid grid-cols-2 gap-3.5 lg:grid-cols-3 min-[1360px]:grid-cols-4" data-testid="client-grid">
           {clients.isLoading && latest.isLoading
             ? Array.from({ length: 12 }).map((_, i) => <Skeleton key={i} className="h-[164px] rounded-xl" />)
             : tiles.map(({ client, run }) => (

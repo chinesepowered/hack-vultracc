@@ -98,6 +98,7 @@ const GUARDRAILS = [
 const PRODUCTS = [
   { icon: <ServerIcon />, name: "Cloud Compute", role: "Two VMs: the public control plane (Caddy, API, orchestrator) and the private sandbox host running gVisor containers." },
   { icon: <NetworkIcon />, name: "VPC", role: "Private network between them. The sandbox runner listens only on its VPC address, behind a bearer token." },
+  { icon: <ShieldCheckIcon />, name: "Firewall Groups", role: "Only 80 and 443 open on the control plane; the sandbox host accepts nothing from the internet." },
   { icon: <BotIcon />, name: "Serverless Inference", role: "Every LLM call: GLM 5.3 plans each step, GLM 5.3 Flash is the fallback, Nemotron 3.5 Content Safety gives a second opinion on flagged text." },
   { icon: <DatabaseIcon />, name: "Managed PostgreSQL", role: "System of record: runs, hash-chained event logs, signed approvals and the audit log." },
   { icon: <HardDriveIcon />, name: "Object Storage", role: "Inputs and every output, per client and run, in a private bucket with short-lived presigned downloads." },
@@ -346,7 +347,7 @@ export function HowItWorksPage() {
       <div className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white px-6 py-5">
         <div>
           <div className="text-[15px] font-semibold text-gray-900">See it on a real close</div>
-          <div className="text-[13px] text-gray-500">Twelve clients, twelve sandboxes, one reviewer. About a minute end to end.</div>
+          <div className="text-[13px] text-gray-500">Twelve clients, twelve sandboxes, one reviewer. About 40 seconds end to end.</div>
         </div>
         <Link
           to={me.data ? "/" : "/login"}

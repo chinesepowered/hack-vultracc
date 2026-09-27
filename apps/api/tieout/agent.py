@@ -69,6 +69,10 @@ class Step:
     timed_out: bool = False
 
 
+class RunStopped(RuntimeError):
+    """The admin kill switch or the daily budget ended the run."""
+
+
 @dataclass
 class AgentOutcome:
     status: str = "failed"
@@ -287,7 +291,7 @@ class Agent:
             if self.should_stop:
                 reason = await self.should_stop()
                 if reason:
-                    raise RuntimeError(reason)
+                    raise RunStopped(reason)
             if self.tool_calls >= self.max_tool_calls:
                 ok, _ = await self.tool_finish({"summary": "Tool budget reached", "memo_markdown": ""})
                 if ok:
@@ -358,9 +362,15 @@ class Agent:
         except asyncio.CancelledError:
             self.out.error = "run cancelled"
             raise
+        except RunStopped as exc:
+            self.out.status, self.out.error = "stopped", str(exc)
         except Exception as exc:
-            log.exception("run %s failed", self.run_id)
-            self.out.error = str(exc)[:1000]
+            reason = await self.should_stop() if self.should_stop else None
+            if reason:  # the kill switch (or budget) ended the run mid-step: a stop, not a failure
+                self.out.status, self.out.error = "stopped", reason
+            else:
+                log.exception("run %s failed", self.run_id)
+                self.out.error = str(exc)[:1000]
         finally:
             await self._destroy_sandbox()
             await self.emit("run_finished", {

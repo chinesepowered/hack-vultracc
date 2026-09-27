@@ -244,7 +244,7 @@ class Orchestrator:
                     await emit("stored", {"artifacts": [{k: a[k] for k in ("name", "sha256", "bytes", "object_key")} for a in arts],
                                           "backend": storage.backend})
                 res = out.result or {}
-                stopped = bool(out.error and ("kill switch" in out.error or "budget" in out.error or "cancelled" in out.error))
+                stopped = out.status == "stopped" or bool(out.error and ("kill switch" in out.error or "budget" in out.error or "cancelled" in out.error))
                 summary = await asyncio.to_thread(
                     self._update_run, run_id,
                     status="succeeded" if out.status == "succeeded" else ("stopped" if stopped else "failed"),

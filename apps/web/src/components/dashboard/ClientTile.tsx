@@ -167,7 +167,7 @@ export function ClientTile({
                   {run.step_count} step{run.step_count === 1 ? "" : "s"}
                 </span>
                 {run.duration_ms ? <span className="text-gray-400"> · {formatDuration(run.duration_ms)}</span> : null}
-                {matched !== null && total ? <span className="text-gray-400"> · {formatPercent(matched, total)}</span> : null}
+                {matched !== null && total ? <span className="text-gray-400"> · {formatPercent(matched, total)} matched</span> : null}
               </>
             )}
           </span>

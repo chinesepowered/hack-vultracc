@@ -5,7 +5,8 @@ import type { ReactNode } from "react";
 
 function renderInline(text: string, keyBase: string): ReactNode[] {
   const nodes: ReactNode[] = [];
-  const re = /(\*\*([^*]+)\*\*)|(`([^`]+)`)|(\*([^*\s][^*]*)\*)|(_([^_\s][^_]*)_)|(\[([^\]]+)\]\((https?:\/\/[^)\s]+)\))/g;
+  // Underscores only emphasize at word boundaries (CommonMark), so names like bank_statement.csv stay intact.
+  const re = /(\*\*([^*]+)\*\*)|(`([^`]+)`)|(\*([^*\s][^*]*)\*)|((?<![\p{L}\p{N}_])_([^_\s][^_]*)_(?![\p{L}\p{N}_]))|(\[([^\]]+)\]\((https?:\/\/[^)\s]+)\))/gu;
   let last = 0;
   let m: RegExpExecArray | null;
   let k = 0;

@@ -120,8 +120,12 @@ def logout(response: Response):
 
 
 @app.get("/api/me")
-def me(user: User = Depends(current_user)):
-    return user_dict(user)
+def me(request: Request):
+    """The signed-in user, or null when signed out (a normal answer, not an error)."""
+    try:
+        return user_dict(current_user(request))
+    except HTTPException:
+        return None
 
 
 # ---------------------------------------------------------------- system

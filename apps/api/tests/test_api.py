@@ -51,7 +51,8 @@ def make_succeeded_run(created_by: str) -> str:
 
 
 def test_login_required(app_client):
-    assert app_client.get("/api/me").status_code == 401
+    r = app_client.get("/api/me")
+    assert r.status_code == 200 and r.json() is None  # signed out is an answer, not an error
     assert app_client.get("/api/clients").status_code == 401
     r = app_client.post("/api/auth/login", json={"email": "alex@harborpine.example", "password": "wrong"})
     assert r.status_code == 401

@@ -164,7 +164,7 @@ export function UploadsCard() {
         <p className="text-[12.5px] text-gray-500">Reconciled outside the monthly close, each in its own sandbox.</p>
       </div>
       <ul className="divide-y divide-gray-100">
-        {uploads.data.slice(0, 6).map((r) => {
+        {uploads.data.slice(0, 4).map((r) => {
           const d = runStatusDisplay(r.status, r.recon_status, r.sandbox_state);
           return (
             <li key={r.id}>

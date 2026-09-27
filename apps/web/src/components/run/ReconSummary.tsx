@@ -68,7 +68,15 @@ function itemRows(list: OutstandingItem[]) {
   }));
 }
 
-export function ReconSummary({ result, loading }: { result: ReconResult | null | undefined; loading?: boolean }) {
+export function ReconSummary({ result, loading, ended }: { result: ReconResult | null | undefined; loading?: boolean; ended?: boolean }) {
+  if (!result && ended) {
+    return (
+      <Card className="p-5" data-testid="recon-summary" data-state="none">
+        <div className="text-[14px] font-semibold text-gray-900">Reconciliation</div>
+        <div className="mt-1 text-[12.5px] text-gray-500">No reconciliation for this run: it ended before result.json validated. Nothing was proposed or exported.</div>
+      </Card>
+    );
+  }
   if (!result) {
     return (
       <Card className="p-5" data-testid="recon-summary" data-state={loading ? "loading" : "pending"}>

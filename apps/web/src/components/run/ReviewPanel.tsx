@@ -36,8 +36,9 @@ export function ApprovalBanner({ run }: { run: RunDetail }) {
         {approved ? <CheckCircle2Icon className="mt-0.5 size-5 shrink-0 text-emerald-600" /> : <XCircleIcon className="mt-0.5 size-5 shrink-0 text-red-600" />}
         <div className="min-w-0">
           <div className={cn("text-[14px] font-semibold", approved ? "text-emerald-900" : "text-red-900")}>
-            {approved ? "Approved" : "Rejected"} by {approval.reviewer_name} at {formatDateTime(approval.ts)}
+            {approved ? "Approved" : "Rejected"} by {approval.reviewer_name}
           </div>
+          <div className={cn("text-[12px]", approved ? "text-emerald-800/80" : "text-red-800/80")}>{formatDateTime(approval.ts)}</div>
           {approval.comment && <div className={cn("mt-1 text-[13px] leading-relaxed", approved ? "text-emerald-900/80" : "text-red-900/80")}>"{approval.comment}"</div>}
         </div>
       </div>
