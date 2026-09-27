@@ -181,7 +181,7 @@ export function DashboardPage() {
         : null;
 
   return (
-    <div className="mx-auto max-w-[1560px] px-6 pt-5 pb-12">
+    <div className="mx-auto max-w-[1560px] px-4 sm:px-6 pt-5 pb-12">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <h1 className="text-[24px] font-semibold tracking-tight text-gray-900">September 2026 close</h1>
@@ -189,7 +189,7 @@ export function DashboardPage() {
             {system.data?.firm ?? "Harbor & Pine CPA"} · {totalClients} clients · each bank reconciliation runs in its own sealed sandbox on Vultr
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="lg" data-testid="previous-closes" className="text-gray-600">
@@ -322,7 +322,7 @@ export function DashboardPage() {
         </Alert>
       )}
 
-      <div className="mt-5 grid grid-cols-2 gap-4 xl:grid-cols-4">
+      <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard
           label="September close"
           testId="batch-progress"
@@ -388,7 +388,7 @@ export function DashboardPage() {
             </span>
           )}
         </div>
-        <div className="flex items-center gap-4 text-[12px] text-gray-500">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[12px] text-gray-500">
           <Legend cls="bg-emerald-500" label="Reconciled" />
           <Legend cls="bg-amber-500" label="Needs review" />
           <Legend cls="bg-indigo-500" label="Running" />
@@ -415,7 +415,7 @@ export function DashboardPage() {
           />
         </Card>
       ) : (
-        <div className="mt-3 grid grid-cols-2 gap-3.5 lg:grid-cols-3 min-[1360px]:grid-cols-4" data-testid="client-grid">
+        <div className="mt-3 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3 min-[85rem]:grid-cols-4" data-testid="client-grid">
           {clients.isLoading && latest.isLoading
             ? Array.from({ length: 12 }).map((_, i) => <Skeleton key={i} className="h-[164px] rounded-xl" />)
             : tiles.map(({ client, run }) => (

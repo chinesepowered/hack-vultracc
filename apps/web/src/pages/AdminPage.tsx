@@ -117,7 +117,7 @@ export function AdminPage() {
 
   if (me.data && !isAdmin) {
     return (
-      <div className="mx-auto max-w-[1560px] px-6 pt-10">
+      <div className="mx-auto max-w-[1560px] px-4 sm:px-6 pt-10">
         <Card>
           <EmptyState
             icon={<ShieldXIcon />}
@@ -141,7 +141,7 @@ export function AdminPage() {
   const sandboxes = o?.runner.sandboxes ?? [];
 
   return (
-    <div className="mx-auto max-w-[1560px] px-6 pt-6 pb-12">
+    <div className="mx-auto max-w-[1560px] px-4 sm:px-6 pt-6 pb-12">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <div className="text-[12px] font-medium text-indigo-700">Operations</div>

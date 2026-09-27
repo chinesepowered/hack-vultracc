@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 
 export function NotFoundPage() {
   return (
-    <div className="mx-auto max-w-[1560px] px-6 pt-10">
+    <div className="mx-auto max-w-[1560px] px-4 sm:px-6 pt-10">
       <Card>
         <EmptyState
           icon={<CompassIcon />}

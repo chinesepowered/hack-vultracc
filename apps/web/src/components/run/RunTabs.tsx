@@ -344,7 +344,7 @@ export function RunTabs({ run }: { run: RunDetail }) {
             </TabsContent>
             <TabsContent value="memo" data-testid="panel-memo">
               {run.memo_md ? (
-                <div className="grid grid-cols-[1fr_260px] gap-6 px-6 py-5">
+                <div className="grid grid-cols-1 gap-6 px-4 py-5 sm:px-6 lg:grid-cols-[1fr_260px]">
                   <Markdown source={run.memo_md} className="max-w-3xl text-[13.5px] text-gray-700" />
                   <div className="h-fit rounded-lg border border-gray-200 bg-gray-50 p-4 text-[12px] leading-relaxed text-gray-600">
                     <div className="mb-1 font-semibold text-gray-800">About this memo</div>

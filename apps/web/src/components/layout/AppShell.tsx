@@ -36,8 +36,8 @@ function NavItem({ to, children, testId, end }: { to: string; children: ReactNod
       data-testid={testId}
       className={({ isActive }) =>
         cn(
-          "relative inline-flex h-14 items-center px-3 text-[13px] font-medium transition-colors",
-          isActive ? "text-gray-900 after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:rounded-full after:bg-primary" : "text-gray-500 hover:text-gray-900",
+          "relative inline-flex h-14 shrink-0 items-center px-2 text-[13px] font-medium transition-colors sm:px-3",
+          isActive ? "text-gray-900 after:absolute after:inset-x-2 after:bottom-0 sm:after:inset-x-3 after:h-0.5 after:rounded-full after:bg-primary" : "text-gray-500 hover:text-gray-900",
         )
       }
     >
@@ -137,7 +137,7 @@ export function UserMenu() {
               {ROLE_LABEL[user.role]} · {user.title}
             </span>
           </span>
-          <ChevronDownIcon className="size-4 text-gray-400" />
+          <ChevronDownIcon className="hidden size-4 text-gray-400 sm:block" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-72">
@@ -186,7 +186,7 @@ function KillSwitchBanner() {
   if (!on) return null;
   return (
     <div className="border-b border-red-200 bg-red-50" data-testid="kill-switch-banner">
-      <div className="mx-auto flex max-w-[1560px] items-center gap-2 px-6 py-2 text-[13px] text-red-800">
+      <div className="mx-auto flex max-w-[1560px] flex-wrap items-center gap-x-2 gap-y-1 px-4 py-2 text-[13px] text-red-800 sm:px-6">
         <OctagonAlertIcon className="size-4 text-red-600" />
         <span className="font-semibold">Kill switch is on.</span>
         <span>New work is stopped and running sandboxes were destroyed.</span>
@@ -211,16 +211,16 @@ export function TopBar() {
   const isAdmin = me.data?.role === "admin";
   return (
     <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="mx-auto flex h-14 max-w-[1560px] items-center gap-6 px-6">
-        <Link to="/" className="flex items-center gap-3" aria-label="Tieout home">
-          <Logo />
+      <div className="mx-auto flex h-14 max-w-[1560px] items-center gap-3 px-4 sm:gap-6 sm:px-6">
+        <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Tieout home">
+          <Logo className="max-sm:[&_.logo-text]:hidden" />
         </Link>
         <div className="hidden h-6 w-px bg-gray-200 md:block" />
         <div className="hidden items-center gap-2 md:flex">
           <span className="text-[13px] font-medium text-gray-800">{system.data?.firm ?? "Harbor & Pine CPA"}</span>
           <span className="rounded-md border border-gray-200 bg-gray-50 px-2 py-0.5 text-[12px] text-gray-600">{system.data?.period_label ?? "September 2026"}</span>
         </div>
-        <nav className="ml-2 flex items-center">
+        <nav className="flex min-w-0 items-center overflow-x-auto sm:ml-2">
           <NavItem to="/" end testId="nav-close">
             Close
           </NavItem>
@@ -233,7 +233,7 @@ export function TopBar() {
             </NavItem>
           )}
         </nav>
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
           {isMock && (
             <span className="rounded-md border border-dashed border-amber-300 bg-amber-50 px-2 py-0.5 text-[11px] font-medium text-amber-800" title="VITE_MOCK=1: data comes from recorded fixtures">
               Mock data
@@ -261,11 +261,11 @@ export function PublicShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-[1560px] items-center gap-6 px-6">
+        <div className="mx-auto flex h-14 max-w-[1560px] items-center gap-3 px-4 sm:gap-6 sm:px-6">
           <Link to="/login" aria-label="Tieout">
             <Logo />
           </Link>
-          <div className="ml-auto flex items-center gap-3">
+          <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
             <span className="hidden items-center gap-1.5 text-[12px] text-gray-500 md:flex">
               <ShieldCheckIcon className="size-3.5 text-indigo-600" /> Demo accounts are listed on the sign-in page
             </span>

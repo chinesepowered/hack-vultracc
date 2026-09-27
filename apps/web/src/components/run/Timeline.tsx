@@ -384,7 +384,7 @@ export function Timeline({ events, live, loading }: { events: RunEvent[]; live: 
                   {expanded.thought.payload.text}
                 </div>
               )}
-              <div className={cn("grid gap-3", expanded.call.payload.args?.code ? "grid-cols-2" : "grid-cols-1")}>
+              <div className={cn("grid gap-3", expanded.call.payload.args?.code ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1")}>
                 {expanded.call.payload.args?.code && <CodeBlock code={expanded.call.payload.args.code} maxHeight={560} title={`/work/step_${expanded.n}.py`} />}
                 {expanded.result && <OutputBlock stdout={expanded.result.payload.stdout} stderr={expanded.result.payload.stderr} maxHeight={560} />}
               </div>

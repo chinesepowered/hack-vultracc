@@ -141,9 +141,9 @@ export function ArchitectureDiagram() {
     { icon: <HardDriveIcon />, title: "Vultr Object Storage", sub: "Inputs, outputs, evidence; presigned downloads" },
   ];
   return (
-    <div className="rounded-2xl border border-gray-200 bg-gradient-to-b from-white to-gray-50/80 p-6" data-testid="architecture-diagram">
+    <div className="rounded-2xl border border-gray-200 bg-gradient-to-b from-white to-gray-50/80 p-4 sm:p-6" data-testid="architecture-diagram">
       <div className="mx-auto max-w-[1080px]">
-        <div className="grid grid-cols-[minmax(0,1fr)_64px_300px] items-start">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_64px_300px] lg:gap-0 items-start">
           <div className="flex flex-col items-center">
             <Box className="w-[360px] px-4 py-3">
               <BoxTitle icon={<GlobeIcon />} title="Browser" sub="Preparers, reviewers, admins and judges" />
@@ -151,10 +151,10 @@ export function ArchitectureDiagram() {
             <DownArrow label="HTTPS 443, Caddy with automatic TLS" />
           </div>
           <div />
-          <div className="flex h-full items-end justify-center pb-3 text-[11px] font-semibold tracking-wide text-gray-400 uppercase">Managed by Vultr</div>
+          <div className="hidden h-full items-end justify-center pb-3 text-[11px] font-semibold tracking-wide text-gray-400 uppercase lg:flex">Managed by Vultr</div>
         </div>
 
-        <div className="grid grid-cols-[minmax(0,1fr)_64px_300px] items-stretch">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_64px_300px] lg:gap-0 items-stretch">
           <Box className="border-indigo-200 px-5 py-4 ring-4 ring-indigo-50">
             <BoxTitle icon={<ServerIcon />} title="Control-plane VM" tag="Public" sub="Vultr Cloud Compute, Silicon Valley (sjc)" />
             <div className="mt-3 grid grid-cols-2 gap-2 text-[12px]">
@@ -173,7 +173,7 @@ export function ArchitectureDiagram() {
               ))}
             </div>
           </Box>
-          <div className="flex flex-col justify-around py-3">
+          <div className="hidden flex-col justify-around py-3 lg:flex">
             {services.map((s) => (
               <div key={s.title} className="flex items-center">
                 <div className="h-px flex-1 bg-indigo-300" />
@@ -190,13 +190,13 @@ export function ArchitectureDiagram() {
           </div>
         </div>
 
-        <div className="grid grid-cols-[minmax(0,1fr)_64px_300px]">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_64px_300px] lg:gap-0">
           <div className="flex flex-col items-center">
             <DownArrow label="Private Vultr VPC only, bearer token" />
           </div>
         </div>
 
-        <div className="grid grid-cols-[minmax(0,1fr)_64px_300px]">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_64px_300px] lg:gap-0">
           <Box className="col-span-3 px-5 py-4">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <BoxTitle icon={<ContainerIcon />} title="Sandbox-host VM" tag="No public inbound" sub="Vultr Cloud Compute · sandbox-runner (FastAPI + Docker SDK) · gVisor runtime" />
@@ -208,7 +208,7 @@ export function ArchitectureDiagram() {
                 ))}
               </div>
             </div>
-            <div className="mt-3 grid grid-cols-6 gap-2">
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
               {CLIENT_CHIPS.map((c) => (
                 <div key={c} className="flex items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50/50 px-2 py-2 text-[11.5px] font-medium text-indigo-900">
                   <ShieldCheckIcon className="size-3.5 shrink-0 text-indigo-600" />
@@ -251,7 +251,7 @@ export function HowItWorksPage() {
   const me = useMe();
   const system = useSystem(!!me.data);
   return (
-    <div className="mx-auto max-w-[1240px] px-6 pt-8 pb-16" data-testid="how-it-works">
+    <div className="mx-auto max-w-[1240px] px-4 pt-8 pb-16 sm:px-6" data-testid="how-it-works">
       <div className="max-w-4xl">
         <div className="text-[12px] font-semibold tracking-wide text-indigo-700 uppercase">How Tieout contains the agent</div>
         <h1 className="mt-2 text-[34px] leading-tight font-semibold tracking-tight text-gray-900">Why does this need a sandbox?</h1>
@@ -314,7 +314,7 @@ export function HowItWorksPage() {
         <div>
           <h2 className="text-[18px] font-semibold text-gray-900">Guardrails on a public URL</h2>
           <p className="mt-1 text-[14px] text-gray-500">A public page that runs code is a blast-radius risk of its own. These keep it contained.</p>
-          <div className="mt-4 grid grid-cols-2 gap-3">
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {GUARDRAILS.map((g) => (
               <div key={g.title} className="rounded-xl border border-gray-200 bg-white p-3.5">
                 <div className="flex items-center gap-2 text-[13px] font-semibold text-gray-900 [&_svg]:size-4 [&_svg]:text-indigo-600">

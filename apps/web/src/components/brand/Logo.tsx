@@ -17,7 +17,7 @@ export function Logo({ className, subtitle }: { className?: string; subtitle?: s
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
       <LogoMark />
-      <div className="leading-none">
+      <div className="logo-text leading-none">
         <div className="text-[17px] font-semibold tracking-tight text-gray-900">Tieout</div>
         {subtitle && <div className="mt-0.5 text-[11px] text-gray-500">{subtitle}</div>}
       </div>

@@ -196,7 +196,7 @@ function RunHeader({ run, onReplay, replayPending }: { run: RunDetail; onReplay:
         <Stat label="Model">
           <span className="mono text-[13px]">{run.model_id ?? (run.kind === "replay" ? "none (replay)" : isTerminal(run.status) ? "none" : "pending")}</span>
         </Stat>
-        <Stat label="Sandbox" className="flex-1">
+        <Stat label="Sandbox" className="flex-1 max-sm:mt-2 max-sm:basis-full max-sm:border-l-0 max-sm:pl-0">
           {run.sandbox_id ? (
             <Hint label={<span className="mono">{run.sandbox_id}</span>}>
               <span className="mono text-[13px]">
@@ -266,9 +266,9 @@ export function RunPage() {
 
   if (run.isLoading) {
     return (
-      <div className="mx-auto max-w-[1560px] space-y-4 px-6 pt-5">
+      <div className="mx-auto max-w-[1560px] space-y-4 px-4 sm:px-6 pt-5">
         <Skeleton className="h-[132px] rounded-xl" />
-        <div className="grid grid-cols-[360px_1fr_340px] gap-4">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[360px_1fr_340px]">
           <Skeleton className="h-[560px] rounded-xl" />
           <Skeleton className="h-[560px] rounded-xl" />
           <Skeleton className="h-[560px] rounded-xl" />
@@ -279,7 +279,7 @@ export function RunPage() {
   if (run.isError || !detail) {
     const notFound = run.error instanceof ApiError && run.error.status === 404;
     return (
-      <div className="mx-auto max-w-[1560px] px-6 pt-10">
+      <div className="mx-auto max-w-[1560px] px-4 sm:px-6 pt-10">
         <Card>
           {notFound ? (
             <EmptyState
@@ -317,7 +317,7 @@ export function RunPage() {
       : null;
 
   return (
-    <div className="mx-auto max-w-[1560px] px-6 pt-5 pb-12">
+    <div className="mx-auto max-w-[1560px] px-4 sm:px-6 pt-5 pb-12">
       <RunHeader run={detail} onReplay={() => replay.mutate()} replayPending={replay.isPending} />
 
       {detail.status === "failed" && (
@@ -362,7 +362,7 @@ export function RunPage() {
         </div>
       )}
 
-      <div className="mt-4 grid grid-cols-[clamp(280px,24vw,340px)_minmax(0,1fr)_clamp(290px,23vw,330px)] items-start gap-4">
+      <div className="mt-4 grid grid-cols-1 items-start gap-4 lg:grid-cols-[clamp(280px,24vw,340px)_minmax(0,1fr)_clamp(290px,23vw,330px)]">
         <Card className="p-4">
           <Timeline events={evs} live={live} loading={events.isLoading} />
           {verify.data && (
@@ -385,7 +385,7 @@ export function RunPage() {
             </div>
           )}
         </Card>
-        <div className="sticky top-[72px]">
+        <div className="lg:sticky lg:top-[72px]">
           <Card className="p-4">
             <MatchingView
               lines={lines.data}

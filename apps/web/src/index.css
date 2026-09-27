@@ -67,7 +67,6 @@
   body {
     @apply bg-background font-sans text-foreground antialiased;
     font-feature-settings: "cv11", "ss03";
-    min-width: 1024px;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
