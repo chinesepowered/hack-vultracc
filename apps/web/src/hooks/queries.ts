@@ -18,6 +18,7 @@ export const qk = {
   runEvents: (id: string) => ["run", id, "events"] as const,
   lines: (id: string) => ["run", id, "lines"] as const,
   admin: ["admin", "overview"] as const,
+  uploads: ["uploads"] as const,
 };
 
 export const isTerminal = (s: RunStatus | undefined | null) => s === "succeeded" || s === "failed" || s === "stopped";

@@ -202,4 +202,7 @@ export const realApi: Api = {
     // Artifacts redirect to a short-lived presigned Object Storage URL; let the browser follow it.
     clickDownload(realApi.downloadUrl(runId, name), filename);
   },
+  uploads: () => request<RunSummary[]>("/uploads"),
+  upload: (req) => post<RunSummary>("/uploads", req),
+  sampleUrl: (name) => `/api/samples/${encodeURIComponent(name)}`,
 };

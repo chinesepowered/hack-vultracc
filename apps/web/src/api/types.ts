@@ -65,6 +65,17 @@ export interface RunSummary {
   duration_ms: number | null;
   created_by_name: string | null;
   replay_match: boolean | null;
+  /** "upload": reconciled from files a user uploaded, outside the monthly close. */
+  source?: "close" | "upload";
+}
+
+export type UploadField = "bank_statement" | "gl_cash_detail" | "prior_outstanding";
+
+export interface UploadRequest {
+  name: string;
+  period_end: string;
+  /** Base64 file contents by field. */
+  files: Partial<Record<UploadField, string>>;
 }
 
 export interface BatchTotals {
@@ -534,4 +545,10 @@ export interface Api {
   download(runId: string, name: DownloadName, filename: string): Promise<void>;
   /** A plain URL for the file (used as the href of download links). */
   downloadUrl(runId: string, name: DownloadName): string;
+  /** Recent runs started from uploaded files (newest first). */
+  uploads(): Promise<RunSummary[]>;
+  /** Reconcile uploaded files in a fresh sandbox, outside the monthly close. */
+  upload(req: UploadRequest): Promise<RunSummary>;
+  /** Download URL of a sample input file to edit and upload back. */
+  sampleUrl(name: string): string;
 }

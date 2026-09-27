@@ -19,7 +19,7 @@ from . import agent as agent_mod
 from .config import settings
 from .db import Artifact, Batch, Client, InputFile, Run, SystemState, User, session, utcnow
 from .events import EventLog, audit, bus
-from .inputs import build_inputs, load_profile
+from .inputs import UPLOAD_PREFIX, build_inputs, load_profile, upload_key
 from .llm import LLM
 from .runner_client import RunnerClient, RunnerPool
 from .serializers import batch_dict, run_summary
@@ -47,6 +47,7 @@ class Orchestrator:
     def __init__(self) -> None:
         self.sem = asyncio.Semaphore(settings.max_concurrent_runs)
         self.tasks: dict[str, asyncio.Task] = {}
+        self.upload_runs: set[str] = set()  # runs started from uploaded files (not part of a close)
         self.kill_switch = False
         self.kill_switch_until: datetime | None = None
         self.tokens_day = datetime.now(timezone.utc).date()
@@ -188,12 +189,12 @@ class Orchestrator:
             raise PermissionError("The kill switch is on: new work is stopped.")
         if self.budget_left() <= 0:
             raise PermissionError("The daily token budget is used up.")
-        busy = [t for t in self.tasks.values() if not t.done()]
+        busy = [rid for rid, t in self.tasks.items() if not t.done() and rid not in self.upload_runs]
         if busy:
             raise RuntimeError("A close is already running. Wait for it to finish.")
         batch_id = new_id("bat")
         with session() as s:
-            clients = s.execute(select(Client).order_by(Client.id)).scalars().all()
+            clients = s.execute(select(Client).where(Client.id.not_like(f"{UPLOAD_PREFIX}%")).order_by(Client.id)).scalars().all()
             s.add(Batch(id=batch_id, period=period, created_by=user.id, status="running"))
             s.flush()
             run_ids = []
@@ -215,8 +216,8 @@ class Orchestrator:
                 reason = await self.should_stop()
                 if reason:
                     raise asyncio.CancelledError(reason)
-                profile = load_profile(client_id)
-                inputs = build_inputs(client_id, run_id, period)
+                profile = await asyncio.to_thread(load_profile, client_id)
+                inputs = await asyncio.to_thread(build_inputs, client_id, run_id, period)
                 refs = await self._store_files(client_id, run_id, "in", inputs)
                 with session() as s:
                     for r in refs:
@@ -268,9 +269,35 @@ class Orchestrator:
             self._publish_run(run_id, batch_id, summary)
         finally:
             self.tasks.pop(run_id, None)
+            self.upload_runs.discard(run_id)
             if batch_id:
                 await asyncio.to_thread(self._maybe_finish_batch, batch_id)
                 self._publish_batch(batch_id)
+
+    async def start_upload(self, client_id: str, profile: dict, files: dict[str, bytes], user: User) -> dict:
+        """Reconcile uploaded files: one run, outside any close, in its own fresh sandbox."""
+        self.check_auto_resume()
+        if self.kill_switch:
+            raise PermissionError("The kill switch is on: new work is stopped.")
+        if self.budget_left() <= 0:
+            raise PermissionError("The daily token budget is used up.")
+        if sum(1 for rid in self.upload_runs if rid in self.tasks and not self.tasks[rid].done()) >= settings.max_concurrent_uploads:
+            raise PermissionError("Too many uploaded files are being reconciled right now. Try again in a minute.")
+        await asyncio.gather(*(asyncio.to_thread(storage.put, upload_key(client_id, n), d, content_type(n)) for n, d in files.items()))
+        rid = new_id("run")
+        with session() as s:
+            s.add(Client(id=client_id, slug=client_id, name=profile["name"], industry=profile["industry"],
+                         gl_cash_account=profile["gl_cash_account"], materiality=profile["materiality"], profile_json=profile))
+            s.flush()
+            s.add(Run(id=rid, batch_id=None, client_id=client_id, period=profile["period"], kind="original", status="queued",
+                      created_by=user.id))
+            s.flush()
+            summary = run_summary(s.get(Run, rid), s.get(Client, client_id), user)
+        await audit(user.email, "upload_started", rid, {"client": client_id, "name": profile["name"], "files": [
+            {"name": n, "bytes": len(d), "sha256": agent_mod.sha256(d)} for n, d in sorted(files.items())]})
+        self.upload_runs.add(rid)
+        self.tasks[rid] = asyncio.create_task(self._run_original(rid, None, client_id, profile["period"]))
+        return summary
 
     async def rerun_client(self, run_id: str, user: User) -> dict:
         """Re-run one client of a batch (after a failure or stop) as a new run in the same batch."""

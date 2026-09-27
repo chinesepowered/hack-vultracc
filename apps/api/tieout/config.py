@@ -39,6 +39,8 @@ class Settings:
     session_secret: str = field(default_factory=lambda: _env("SESSION_SECRET", "dev-only-secret-change-me"))
     max_concurrent_sandboxes: int = field(default_factory=lambda: int(_env("MAX_CONCURRENT_SANDBOXES", "16")))
     max_concurrent_runs: int = field(default_factory=lambda: int(_env("MAX_CONCURRENT_RUNS", "12")))
+    max_concurrent_uploads: int = field(default_factory=lambda: int(_env("MAX_CONCURRENT_UPLOADS", "3")))
+    uploads_per_ip_per_hour: int = field(default_factory=lambda: int(_env("UPLOADS_PER_IP_PER_HOUR", "6")))
     daily_token_budget: int = field(default_factory=lambda: int(_env("DAILY_TOKEN_BUDGET", "5000000")))
     max_tool_calls: int = field(default_factory=lambda: int(_env("AGENT_MAX_TOOL_CALLS", "14")))
     run_timeout_s: int = field(default_factory=lambda: int(_env("AGENT_RUN_TIMEOUT_S", "300")))

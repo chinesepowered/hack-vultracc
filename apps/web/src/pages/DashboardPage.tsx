@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { CalendarDaysIcon, CheckIcon, ChevronDownIcon, HistoryIcon, InfoIcon, Loader2Icon, OctagonAlertIcon, PlayIcon } from "lucide-react";
+import { CalendarDaysIcon, CheckIcon, ChevronDownIcon, HistoryIcon, InfoIcon, Loader2Icon, OctagonAlertIcon, PlayIcon, UploadIcon } from "lucide-react";
 import { api, ApiError } from "@/api";
 import type { Batch, Client, RunSummary } from "@/api/types";
 import { ClientTile, type TileClient } from "@/components/dashboard/ClientTile";
 import { GroundTruthCard } from "@/components/dashboard/GroundTruthCard";
+import { UploadDialog, UploadsCard } from "@/components/dashboard/UploadDialog";
 import { Alert, ErrorState } from "@/components/states";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -103,6 +104,7 @@ export function DashboardPage() {
   }, [viewingPast, selected.isError]);
 
   const role = me.data?.role;
+  const [uploadOpen, setUploadOpen] = useState(false);
   const running = batch?.status === "running";
   const killSwitch = !!system.data?.kill_switch;
 
@@ -265,6 +267,13 @@ export function DashboardPage() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          {(role === "preparer" || role === "admin") && (
+            <Hint label="Reconcile a bank export and ledger of your own, in a fresh sandbox, outside the monthly close.">
+              <Button variant="outline" size="lg" data-testid="upload-open" onClick={() => setUploadOpen(true)}>
+                <UploadIcon className="text-gray-500" /> Upload files
+              </Button>
+            </Hint>
+          )}
           <Hint label={disabledReason} wrap={!!disabledReason}>
             <Button
               size="lg"
@@ -421,6 +430,8 @@ export function DashboardPage() {
               ))}
         </div>
       )}
+      <UploadsCard />
+      <UploadDialog open={uploadOpen} onOpenChange={setUploadOpen} />
     </div>
   );
 }

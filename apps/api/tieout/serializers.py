@@ -44,6 +44,7 @@ def run_summary(run: Run, client: Client | None, created_by: User | None = None)
         "tokens_in": run.tokens_in or 0, "tokens_out": run.tokens_out or 0,
         "started_at": _iso(run.started_at), "finished_at": _iso(run.finished_at), "duration_ms": dur,
         "created_by_name": created_by.name if created_by else None, "replay_match": run.replay_match,
+        "source": "upload" if run.client_id.startswith("upload-") else "close",
     }
 
 

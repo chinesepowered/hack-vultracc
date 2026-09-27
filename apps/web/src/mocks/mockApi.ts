@@ -1158,6 +1158,22 @@ export function createMockApi(): Api {
       return `#mock-download/${runId}/${name}`;
     },
 
+    async uploads() {
+      await latency();
+      requireUser();
+      return [];
+    },
+
+    async upload() {
+      await latency();
+      requireRole("preparer", "admin");
+      throw new ApiError(400, "Uploading files needs the live API; the offline demo only has the 12 sample clients.");
+    },
+
+    sampleUrl(name) {
+      return `#mock-sample/${name}`;
+    },
+
     async download(runId, name, filename) {
       await latency();
       const u = requireUser();

@@ -24,6 +24,9 @@ from .security import SESSION_COOKIE, SESSION_TTL_S, limiter, make_session, read
 from .seed import DEMO_ACCOUNTS, seed
 from .serializers import approval_dict, batch_dict, run_detail, run_summary
 from .storage import LocalStorage, storage
+from .uploads import UploadError
+from .uploads import prepare as prepare_upload
+from .uploads import sample as upload_sample
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -210,7 +213,8 @@ def client_dict(c: Client, latest: Run | None, s) -> dict:
 def clients(user: User = Depends(current_user)):
     with session() as s:
         latest = _latest_runs(s)
-        return [client_dict(c, latest.get(c.id), s) for c in s.execute(select(Client).order_by(Client.id)).scalars()]
+        rows = s.execute(select(Client).where(Client.id.not_like("upload-%")).order_by(Client.id)).scalars()
+        return [client_dict(c, latest.get(c.id), s) for c in rows]
 
 
 @app.get("/api/clients/{client_id}")
@@ -498,6 +502,56 @@ async def rerun(run_id: str, request: Request, user: User = Depends(require("pre
         raise HTTPException(409, str(exc)) from None
     except ValueError as exc:
         raise HTTPException(400, str(exc)) from None
+
+
+# --------------------------------------------------------------- uploads
+class UploadReq(BaseModel):
+    name: str
+    period_end: str = "2026-09-30"
+    files: dict[str, str]  # field name -> base64 file content (bank_statement, gl_cash_detail, prior_outstanding)
+
+
+@app.post("/api/uploads")
+async def upload(req: UploadReq, request: Request, user: User = Depends(require("preparer", "admin"))):
+    """Reconcile a client's own bank and ledger exports in a fresh sandbox (outside the monthly close)."""
+    import base64
+    import binascii
+
+    ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "?").split(",")[0].strip()
+    try:
+        files = {k: base64.b64decode(v, validate=True) for k, v in req.files.items() if v}
+    except (binascii.Error, ValueError):
+        raise HTTPException(400, "Files must be base64 encoded.") from None
+    try:
+        client_id, profile, inputs = prepare_upload(files, req.name, req.period_end, user.name)
+    except UploadError as exc:
+        raise HTTPException(400, str(exc)) from None
+    if not limiter.allow(f"upload-ip:{ip}", settings.uploads_per_ip_per_hour, 3600):
+        raise HTTPException(429, "Rate limit: too many uploads from your network this hour.")
+    if not limiter.allow(f"upload:{user.id}", settings.uploads_per_ip_per_hour, 3600):
+        raise HTTPException(429, "Rate limit: too many uploads this hour.")
+    try:
+        return await orch.start_upload(client_id, profile, inputs, user)
+    except PermissionError as exc:
+        raise HTTPException(409, str(exc)) from None
+
+
+@app.get("/api/uploads")
+def list_uploads(user: User = Depends(current_user)):
+    with session() as s:
+        runs = s.execute(select(Run).where(Run.client_id.like("upload-%"), Run.kind == "original")
+                         .order_by(Run.created_at.desc()).limit(20)).scalars().all()
+        return [run_summary(r, s.get(Client, r.client_id), s.get(User, r.created_by) if r.created_by else None) for r in runs]
+
+
+@app.get("/api/samples/{name}")
+def sample_file(name: str, user: User = Depends(current_user)):
+    """A demo client's input file, to edit and upload back ("start from a sample")."""
+    try:
+        data = upload_sample(name)
+    except FileNotFoundError:
+        raise HTTPException(404, "No such sample") from None
+    return Response(data, media_type="text/csv", headers={"Content-Disposition": f'attachment; filename="sample-{name}"'})
 
 
 class ApproveReq(BaseModel):
