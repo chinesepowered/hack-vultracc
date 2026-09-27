@@ -12,3 +12,4 @@ Every create, resize and delete, with its hourly cost. All labels start with `ti
 | 2026-09-26 23:39 | create | Instance | tieout-cp | `e7c2d87e-5e74-4189-b82f-ca887af64616` | 0.0274 | vc2-2c-4gb (2 vCPU, 4096 MB), Ubuntu 24.04, role all |
 | 2026-09-26 23:39 | create | Instance | tieout-sbx-1 | `ce80a289-4137-42a4-bbe6-248ad57dee74` | 0.0548 | vc2-4c-8gb (4 vCPU, 8192 MB), Ubuntu 24.04, role sandbox |
 | 2026-09-26 23:39 | create | Managed PostgreSQL | tieout-pg | `1b79ba58-90dc-492a-9a27-2fa3bfd14de4` | 0.0411 | plan vultr-dbaas-startup-cc-1-55-2, pg 16 |
+| 2026-09-27 03:08 | create | Instance | tieout-sbx-2 | `bd2e9cc2-bc82-4b94-b102-be4ee47206a7` | 0.0548 | vc2-4c-8gb (4 vCPU, 8192 MB), Ubuntu 24.04, role sandbox |
