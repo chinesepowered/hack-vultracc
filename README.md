@@ -7,6 +7,7 @@
 Tieout runs each client's reconciliation as real Python inside that client's own gVisor sandbox: no network, read-only inputs, no access to the ledger. A human approves every adjusting entry, and every number can be replayed and verified by hash.
 
 - **Live app:** https://144-202-108-57.sslip.io (demo accounts are on the login page)
+- **Demo video (2:11, narrated):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4 (captions: [demo.srt](https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.srt)). Recorded automatically against the live URL (`scripts/record_demo.py`, `scripts/make_video.py`); the narration is the open-source Piper voice because Vultr text-to-speech returned errors for every voice during the event (the pipeline tries it first on every line).
 - **Hackathon:** Vultr "The Agent Arena", problem statement 1, Blast Radius Zero
 - **Submission text:** [SUBMISSION.md](SUBMISSION.md)
 
@@ -22,6 +23,8 @@ Tieout runs each client's reconciliation as real Python inside that client's own
 | ![Why does this need a sandbox](media/screenshots/how-it-works.png) | ![Architecture](media/screenshots/architecture.png) |
 |---|---|
 | **How it works.** The containment story, with where to see each guarantee. | **Architecture.** Control plane, managed Vultr services, sandbox host. |
+| ![Upload your own bank export and ledger](media/screenshots/upload-dialog.png) | ![An uploaded client, reconciled in its own sandbox](media/screenshots/upload-run.png) |
+| **Upload files.** Reconcile your own bank export and ledger (or edit a sample) in a fresh sandbox. | **Uploaded client.** The agent worked out the format; the extra fee added to the sample is found and adjusted. |
 
 ## Demo accounts
 
@@ -76,6 +79,7 @@ flowchart TB
 6. Outputs (result.json, workpaper.xlsx with live formulas, ajes.csv, lines.json) are pulled out by the runner (no symlinks, size caps), hashed, and stored in Object Storage. Every event is persisted in a per-run hash chain.
 7. A reviewer approves (maker-checker: a different person than the preparer). Only then does the AJE CSV export for QuickBooks, Xero or NetSuite import.
 8. **Replay** re-runs the recorded scripts in a fresh sandbox without the model and compares hashes.
+9. **Upload files** (preparer or admin): reconcile your own bank export and cash ledger detail, or download a sample client's files, change something, and upload them back. Uploads are checked (512 KB, 5,000 lines, text, delimited), stored in the private bucket with each file's SHA-256 in the audit log, and reconciled in a fresh sandbox outside the monthly close; the agent works out the column layout and date format.
 
 ## Vultr products used
 
@@ -85,15 +89,15 @@ flowchart TB
 | Cloud Compute (sandbox-host VM, `vc2-4c-8gb`) | sandbox-runner and one gVisor container per client run. No inbound from the internet; runner reachable only from the control plane over the VPC |
 | VPC Network | private network between control plane and sandbox host |
 | Firewall Groups | control plane: 80 and 443 only; sandbox host: no inbound rules at all |
-| Serverless Inference | every LLM call (GLM 5.3 main, GLM 5.3 Flash fallback); token usage recorded per run, daily budget enforced |
+| Serverless Inference | every LLM call: GLM 5.3 plans and writes the code, GLM 5.3 Flash is the fallback, Nemotron 3.5 Content Safety gives a second opinion on instruction-like text in the inputs; token usage recorded per run, daily budget enforced |
 | Managed PostgreSQL | system of record: users, clients, batches, runs, hash-chained run events, approvals, audit log |
-| Object Storage | client inputs, outputs and evidence under `clients/{client}/runs/{run}/`; private bucket, presigned downloads; also the signed ops channel |
+| Object Storage | client inputs, outputs and evidence under `clients/{client}/runs/{run}/`, uploaded files under `uploads/`; private bucket, presigned downloads; the signed ops channel; the demo video (the only public objects) |
 
 ## Guardrails on the public URL
 
-Login with seeded demo accounts and roles; per-user and per-IP rate limits on starting closes; one close at a time; a global cap on concurrent sandboxes (runner returns 429 when full); sandbox TTL janitor and orphan cleanup; daily token budget; an admin kill switch that stops new work and destroys every running sandbox (in the public demo it auto-resumes after 15 minutes so one visitor cannot lock everyone out, and every use is in the hash-chained audit log); a health page that checks inference, database, object storage and the runner. A failed client can be re-run on its own without restarting the close. Sandboxes get no secrets, no credentials and no network; the runner only accepts an allowlisted image.
+Login with seeded demo accounts and roles; per-user and per-IP rate limits on starting closes; one close at a time; a global cap on concurrent sandboxes (runner returns 429 when full); sandbox TTL janitor and orphan cleanup; daily token budget; an admin kill switch that stops new work and destroys every running sandbox (in the public demo it auto-resumes after 15 minutes so one visitor cannot lock everyone out, and every use is in the hash-chained audit log); a health page that checks inference, database, object storage and the runner. A failed client can be re-run on its own without restarting the close. Uploads are limited to 6 per hour per network and per user and 3 at once, and never join the monthly close. Sandboxes get no secrets, no credentials and no network; the runner only accepts an allowlisted image.
 
-Automated checks: `scripts/demo_check.py` (12 clients against ground truth, maker-checker, export gate, replay hashes), `scripts/check_guardrails.py` (roles, kill switch, health), `scripts/record_demo.py` (the full UI flow in a real browser), plus unit and integration tests in `sandbox/tests`, `services/runner/tests` and `apps/api/tests`.
+Automated checks, all run against the public URL by `scripts/check_deployed.sh <url>`: `scripts/demo_check.py` (12 clients against ground truth, maker-checker, export gate, replay hashes; passed 10 runs in a row), `scripts/check_guardrails.py` (roles, kill switch, health), `scripts/check_upload.py` and `scripts/check_ui_upload.py` (upload the sample with one added fee, through the API and through the dialog in a real browser; the agent must find the planted items plus that fee), `scripts/check_sse.py` (live events reach a browser), and `scripts/record_demo.py` (the full demo flow in a real browser, which also records the video). Unit and integration tests live in `sandbox/tests`, `services/runner/tests` and `apps/api/tests` (`scripts/check_all.sh` runs them all).
 
 ## Repository layout
 

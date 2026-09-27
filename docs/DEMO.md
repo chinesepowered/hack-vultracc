@@ -27,4 +27,6 @@ Open the public URL (see STATUS.md) in a browser at 1440x900 or larger. Before g
 - **Why an LLM if you have a library?** The library does the math; the agent adapts to each client's messy export, investigates leftovers, decides timing versus error, drafts entries and writes the memo. Numbers come only from executed code.
 - **Hallucinated numbers?** Every number is computed in the sandbox, validated by the control plane, reproducible by Replay, and approved by a human before export.
 - **Is the public URL safe?** Login, roles, per-user and per-IP limits, sandbox cap, TTL janitor, kill switch, token budget, no secrets in sandboxes, sandbox host with no inbound traffic from the internet.
-- **How does it scale?** Add sandbox hosts behind the same runner contract; high-sensitivity clients could get a dedicated throwaway VM.
+- **How does it scale?** Add sandbox hosts behind the same runner contract (the control plane already spreads runs across hosts and fails over if one is down); high-sensitivity clients could get a dedicated throwaway VM.
+- **Is it hardcoded for the 12 demo clients?** No. Click **Upload files**, download the sample files from the dialog, change an amount or add a bank fee, and upload them back (or upload your own export). The agent works out the format in a fresh sandbox and finds what you changed, usually in about 25 s.
+- **What if an upload contains something malicious?** It is data in a read-only mount of a sandbox with no network; instruction-like text is flagged and treated as data, and each file's SHA-256 is in the audit log.

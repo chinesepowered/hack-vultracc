@@ -1,9 +1,11 @@
 # Status
 
-_Last updated: 2026-09-27 00:12 UTC (17:12 PDT)_
+_Last updated: 2026-09-27 01:10 UTC (18:10 PDT)_
 
 ## Public URL
 **https://144-202-108-57.sslip.io** (Let's Encrypt certificate via Caddy). Health page: all green (Vultr Serverless Inference, Vultr Managed PostgreSQL, Vultr Object Storage, gVisor sandbox runner).
+
+**Demo video (2:11, narrated):** https://sjc1.vultrobjects.com/tieout-artifacts-4f2389/public/demo.mp4 (public-read object; the bucket itself stays private). Recorded automatically against the public URL; narrated by the Piper voice because Vultr text-to-speech returned errors (HTTP 500 or "Voice Not Found") for every voice and model all evening.
 
 ## Demo accounts (also shown on the login page)
 | Role | Email | Password |
@@ -26,15 +28,19 @@ Verified exposure: from the control plane, the sandbox host's public IP refuses 
 
 ## Acceptance
 - `demo_check.py --runs 10` against the public URL: **10 of 10 PASS in a row** (00:09 UTC). Every run: 12 of 12 clients succeeded, difference 0.00, 68 of 68 planted discrepancies found with the right kind, amount and references, clean sandbox attestation (gVisor, network none), maker-checker and the AJE export gate enforced, 2 random replays reproduced byte for byte (20 of 20 overall). Close times 51.4 to 79.4 s (mean 66.1 s, target under 90 s). Report: `media/demo_check_report.json`.
-- Local: every test suite passes (`scripts/check_all.sh`), guardrails check passes, workpaper formulas recompute in LibreOffice.
+- `check_guardrails.py` against the public URL: PASS (00:10 UTC). 10 live sandboxes, kill switch destroyed all 10 and stopped 12 runs, new work refused, resume brings health back to green.
+- Reconcile your own files, on the public URL: `check_upload.py` (API) PASS and `check_ui_upload.py` (real browser, dialog to finished run) PASS: the sample client with one added bank fee, 7 of 7 items found (6 planted + the fee), difference 0.00, about 22 to 32 s.
+- Live events: `check_sse.py` PASS after the Caddy fix (first event in 0.15 to 0.5 s, uncompressed).
+- The 10-run check is being repeated on the current build (uploads, runner failover, Caddy fix); results replace `media/demo_check_report.json`.
+- Local: every test suite passes (`scripts/check_all.sh`: 26 sandbox, 8 runner, 30 API tests, 2 browser e2e), workpaper formulas recompute in LibreOffice; runner failover proven with two runners (split 6/6; one stopped, all 12 on the other, PASS).
 
 ## Left
-- Run `check_guardrails.py` against the public URL.
-- Narrated video against the public URL (Vultr text-to-speech returns errors for every voice; the pipeline falls back to a local Piper voice and records which engine voiced each line), upload to Object Storage with a public link, add to SUBMISSION.md.
-- Optional second sandbox host (`SANDBOX_HOSTS=2`, runner pool code is ready): Vultr refused it at 00:05 UTC because the shared account is at its monthly fee limit (about $195 of about $200 committed across both projects); a `vc2-4c-8gb` needs about $40/month of headroom. One host passes every check.
+- Merge `claude/modest-gauss-mcbllz` into `main` (all work is on that branch; `main` has only the planning commits). Needs a human or explicit permission for a PR.
+- Optional second sandbox host (`SANDBOX_HOSTS=2`; runner pool with failover is deployed and tested, the deploy ships the same image to every host; a retry loop creates the host as soon as the account allows): Vultr refused it at 00:05 UTC because the shared account is at its monthly fee limit (about $195 of about $200 committed across both projects); a `vc2-4c-8gb` needs about $40/month of headroom. One host passes every check.
 - Make the GitHub repo public: needs a human (Settings > General > Change visibility); this environment has no tool that changes visibility. History secret scan is clean.
 
 ## Operating it
 - Diagnostics: `uv run infra/ops/opsctl.py run --host cp|sbx1 --script-file infra/ops/status.sh`
-- Redeploy: `uv run infra/deploy.py` (sandbox host, then control plane)
+- Redeploy: `uv run infra/deploy.py` (sandbox hosts, then control plane); `--only cp` or `--only sbx2` for one host
+- Every end-to-end check against the public URL: `scripts/check_deployed.sh https://144-202-108-57.sslip.io`
 - Stage runbook: `docs/DEMO.md`

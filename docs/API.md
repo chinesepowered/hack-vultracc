@@ -41,6 +41,7 @@ interface RunSummary {
   started_at: string | null; finished_at: string | null; duration_ms: number | null;
   created_by_name: string | null;
   replay_match: boolean | null;            // replays only
+  source?: "close" | "upload";             // "upload": started from uploaded files, outside the monthly close
 }
 
 interface BatchTotals { clients: number; queued: number; running: number; succeeded: number; failed: number;
@@ -158,7 +159,7 @@ Batches ("Close September")
 - `GET /api/batches` -> recent batches (without runs)
 - `GET /api/batches/{id}` -> `Batch` (newest run per client)
 - `GET /api/batches/{id}/ground-truth` -> planted vs found per client (answer key never shown to the model)
-- `GET /api/batches/{id}/stream` -> SSE. Events: `run_update` (data: `RunSummary`), `run_event` (data: `{run_id, client_id, seq, ts, type, payload}` with large fields trimmed), `batch_update` (data: `Batch` without runs). Comment heartbeats every 15 s.
+- `GET /api/batches/{id}/stream` -> SSE (never compressed by the proxy: compression buffers small event writes). Events: `run_update` (data: `RunSummary`), `run_event` (data: `{run_id, client_id, seq, ts, type, payload}` with large fields trimmed), `batch_update` (data: `Batch` without runs). Comment heartbeats every 15 s.
 
 Runs
 - `GET /api/runs/{id}` -> `RunDetail`
@@ -173,10 +174,15 @@ Runs
 - `POST /api/runs/{id}/approve` `{decision: "approved" | "rejected", comment}` -> `Approval` (reviewer or admin; the approver must not be the user who started the batch: maker-checker, 403 with a clear message)
 - `GET /api/runs/{id}/evidence.zip` -> zip (P1)
 
+Reconcile your own files
+- `POST /api/uploads` `{name, period_end: "2026-09-30", files: {bank_statement, gl_cash_detail, prior_outstanding?}}` (base64 file contents) -> `RunSummary` of a new run with `batch_id: null` and `source: "upload"` (preparer or admin). Each file at most 512 KB and 5,000 lines, text, delimited; Windows-1252 is converted to UTF-8. 400 with a clear message on bad input, 409 if the kill switch is on or 3 uploads are already running, 429 past 6 per hour per network or per user. Upload clients get ids `upload-<hex>` and never join a close or `GET /api/clients`.
+- `GET /api/uploads` -> `RunSummary[]` (the 20 most recent upload runs)
+- `GET /api/samples/{name}` -> a demo client's input file to edit and upload back: `bank_statement.csv`, `gl_cash_detail.csv`, `prior_outstanding.csv` (signed in; the answer key is never served)
+
 Admin (admin role)
 - `GET /api/admin/overview` -> `{kill_switch, runner: {host, max, accepting, sandboxes: {id, status, labels, limits, created_at, expires_at, exec_count, host}[]}, usage: {tokens_today, budget, cost_today_usd, runs_today, by_model: {model, tokens_in, tokens_out, cost_usd}[]}, health: Health, audit: AuditEntry[], audit_chain_ok: boolean}`
 - `POST /api/admin/kill-switch` `{enabled: boolean}` -> `{kill_switch, destroyed, cancelled_runs}`
-- `POST /api/admin/warmup` -> `{ok, ms, attestation_ok}`
+- `POST /api/admin/warmup` -> `{ok, ms, attestation_ok, hosts, failed_hosts}` (warms every sandbox host; succeeds while at least one host works)
 
 Health
 - `GET /api/health` -> `Health` (public)

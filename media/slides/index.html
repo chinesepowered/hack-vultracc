@@ -180,9 +180,9 @@
     <table>
       <tr><th>Product</th><th>Use in Tieout</th></tr>
       <tr><td><b>Cloud Compute</b></td><td>Control-plane VM (orchestrator, agent loop, API) and a dedicated sandbox-host VM running one gVisor container per client run</td></tr>
-      <tr><td><b>Serverless Inference</b></td><td>Every LLM call: GLM 5.3 with native tool calls, GLM 5.3 Flash fallback, Nemotron 3.5 Content Safety second opinion, text-to-speech for the demo narration. Tokens metered per run, daily budget enforced</td></tr>
+      <tr><td><b>Serverless Inference</b></td><td>Every LLM call: GLM 5.3 with native tool calls, GLM 5.3 Flash fallback, Nemotron 3.5 Content Safety second opinion on instruction-like input text. Tokens metered per run, daily budget enforced</td></tr>
       <tr><td><b>Managed PostgreSQL</b></td><td>System of record: users, clients, batches, runs, hash-chained events, approvals, audit log</td></tr>
-      <tr><td><b>Object Storage</b></td><td>Inputs, outputs and evidence packs under per-client prefixes; private bucket, presigned downloads; also the signed operations channel</td></tr>
+      <tr><td><b>Object Storage</b></td><td>Inputs, outputs, evidence packs and uploaded files under per-client prefixes; private bucket, presigned downloads; the signed operations channel; the demo video</td></tr>
       <tr><td><b>VPC and Firewall Groups</b></td><td>Private network to the sandbox host; public 80/443 only on the control plane; no inbound rules at all on the sandbox host</td></tr>
     </table>
     <div class="footer"><span>No other cloud and no other LLM provider anywhere in the code</span><span>7</span></div>
@@ -199,7 +199,8 @@
           <li>Admin kill switch: stops new work and destroys every running sandbox</li>
           <li>Health page: inference, database, object storage, runner</li>
           <li>Evidence pack per run: input hashes, every step's code, event log, attestation, approvals</li>
-          <li>Automated acceptance check: 12 clients, planted discrepancies, replay hashes</li>
+          <li>Automated acceptance check: 12 clients, planted discrepancies, replay hashes; 10 of 10 runs in a row on the public URL</li>
+          <li>Try it with your own files: upload a bank export and ledger (or edit a sample) and watch the agent find what you changed, in a fresh sandbox</li>
         </ul>
       </div>
       <div class="card">
