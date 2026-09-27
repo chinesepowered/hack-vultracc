@@ -42,7 +42,7 @@ Verified exposure: from the control plane, the sandbox host's public IP refuses 
 - Local: every test suite passes (`scripts/check_all.sh`: 26 sandbox, 8 runner, 30 API tests, 2 browser e2e), workpaper formulas recompute in LibreOffice; runner failover proven with two runners (split 6/6; one stopped, all 12 on the other, PASS).
 
 ## Left
-- Make the GitHub repo public: needs a human (Settings > General > Change visibility); this environment has no tool that changes visibility. History secret scan is clean.
+- Nothing. The GitHub repo is public (anonymous access verified 23:34 UTC Sep 27), `main` carries all the work, and the history secret scan is clean.
 
 ## Operating it
 - Diagnostics: `uv run infra/ops/opsctl.py run --host cp|sbx1 --script-file infra/ops/status.sh`
