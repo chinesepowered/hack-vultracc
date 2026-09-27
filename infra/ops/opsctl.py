@@ -80,6 +80,18 @@ def sign(payload: bytes) -> bytes:
 
 
 def run(host: str, script: str, files: list[str], timeout: int, name: str, wait: bool, wait_s: int) -> int:
+    res = run_result(host, script, files, timeout, name, wait, wait_s)
+    if res is None:
+        return 0 if not wait else 2
+    print(res.get("stdout", ""))
+    if res.get("stderr"):
+        print("--- stderr ---\n" + res["stderr"][-8000:])
+    print(f"[exit {res['exit_code']} in {res['finished'] - res['started']:.1f}s]")
+    return 0 if res["exit_code"] == 0 else 1
+
+
+def run_result(host: str, script: str, files: list[str], timeout: int, name: str, wait: bool = True, wait_s: int = 1200) -> dict | None:
+    """Queue a signed command for a host and return its result (None if not waiting or no result in time)."""
     cid = int(time.time() * 1000)
     fspecs = []
     for spec in files:
@@ -96,21 +108,16 @@ def run(host: str, script: str, files: list[str], timeout: int, name: str, wait:
     s3().put_object(Bucket=bucket(), Key=f"ops/{host}/cmd.json", Body=json.dumps(cmd).encode(), ContentType="application/json")
     print(f"queued command {cid} for {host}: {name}", flush=True)
     if not wait:
-        return 0
+        return None
     t0 = time.time()
     client = s3()
     while time.time() - t0 < wait_s:
         try:
-            res = json.loads(client.get_object(Bucket=bucket(), Key=result_key)["Body"].read())
-            print(res.get("stdout", ""))
-            if res.get("stderr"):
-                print("--- stderr ---\n" + res["stderr"][-8000:])
-            print(f"[exit {res['exit_code']} in {res['finished'] - res['started']:.1f}s]")
-            return 0 if res["exit_code"] == 0 else 1
+            return json.loads(client.get_object(Bucket=bucket(), Key=result_key)["Body"].read())
         except client.exceptions.NoSuchKey:
             time.sleep(3)
     print(f"no result after {wait_s}s")
-    return 2
+    return None
 
 
 def main() -> int:

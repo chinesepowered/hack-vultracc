@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import time
 
 import httpx
 
@@ -74,22 +75,93 @@ class RunnerClient:
         await self.http.aclose()
 
 
+# A host that answers with one of these gets skipped for this sandbox; the next host is tried.
+# 503 is not here on purpose: it means the kill switch is on, and that stops new work everywhere.
+FAILOVER_STATUSES = {429, 500, 502, 504}
+DOWN_SECONDS = 30
+
+
+class RunnerLease:
+    """One run's handle on the pool. create() places the sandbox on a healthy host, failing over to the
+    next host if one is unreachable, erroring or full; every later call goes to the host holding it."""
+
+    def __init__(self, pool: "RunnerPool"):
+        self.pool = pool
+        self.client: RunnerClient | None = None
+
+    async def create(self, **kw) -> dict:
+        last: Exception | None = None
+        for c in self.pool.candidates():
+            try:
+                sb = await c.create(**kw)
+            except httpx.TransportError as exc:
+                self.pool.mark_down(c)
+                last = exc
+                continue
+            except RunnerError as exc:
+                if exc.status not in FAILOVER_STATUSES:
+                    raise
+                if exc.status != 429:  # full is not broken
+                    self.pool.mark_down(c)
+                last = exc
+                continue
+            self.client = c
+            return sb
+        raise last or RunnerError(503, "no sandbox host available")
+
+    def _bound(self) -> RunnerClient:
+        if self.client is None:
+            raise RuntimeError("no sandbox has been created on this lease")
+        return self.client
+
+    async def put_file(self, sid: str, name: str, data: bytes) -> dict:
+        return await self._bound().put_file(sid, name, data)
+
+    async def exec(self, sid: str, argv: list[str], timeout_s: int) -> dict:
+        return await self._bound().exec(sid, argv, timeout_s)
+
+    async def get_out(self, sid: str, name: str) -> bytes:
+        return await self._bound().get_out(sid, name)
+
+    async def get(self, sid: str) -> dict:
+        return await self._bound().get(sid)
+
+    async def delete(self, sid: str) -> None:
+        await self._bound().delete(sid)
+
+
 class RunnerPool:
-    """One or more sandbox hosts. Runs are spread across hosts; control actions go to every host."""
+    """One or more sandbox hosts. Runs are spread across hosts (a host that just failed is tried last);
+    control actions go to every host."""
 
     def __init__(self, urls: list[str], token: str | None = None):
         self.clients = [RunnerClient(u, token) for u in urls]
         self._next = 0
+        self._down_until: dict[str, float] = {}
 
     @classmethod
     def from_settings(cls) -> "RunnerPool":
         urls = [u.strip() for u in (settings.runner_urls or "").split(",") if u.strip()] or [settings.runner_url]
         return cls(urls)
 
-    def pick(self) -> RunnerClient:
-        c = self.clients[self._next % len(self.clients)]
+    def mark_down(self, c: RunnerClient) -> None:
+        self._down_until[c.base_url] = time.monotonic() + DOWN_SECONDS
+
+    def is_down(self, c: RunnerClient) -> bool:
+        return self._down_until.get(c.base_url, 0.0) > time.monotonic()
+
+    def candidates(self) -> list[RunnerClient]:
+        """Every host, round-robin from the next one, with hosts that recently failed moved to the end."""
+        start = self._next % len(self.clients)
         self._next += 1
-        return c
+        order = self.clients[start:] + self.clients[:start]
+        return [c for c in order if not self.is_down(c)] + [c for c in order if self.is_down(c)]
+
+    def pick(self) -> RunnerClient:
+        return self.candidates()[0]
+
+    def lease(self) -> RunnerLease:
+        return RunnerLease(self)
 
     async def health(self) -> list[dict]:
         out = []
@@ -97,6 +169,7 @@ class RunnerPool:
             try:
                 out.append(await c.health())
             except Exception as exc:
+                self.mark_down(c)
                 out.append({"ok": False, "host": c.base_url, "error": str(exc)[:200]})
         return out
 

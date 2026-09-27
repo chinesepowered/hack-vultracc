@@ -4,11 +4,14 @@
 # ///
 """Build a release and deploy it to the Tieout VMs through the signed ops channel.
 
-    uv run infra/deploy.py [--only sbx1|cp] [--skip-web-build]
+    uv run infra/deploy.py [--only sbx|sbx1|sbx2|cp|none] [--skip-web-build]
 
 Steps: build the web app, tar the release, upload it to Object Storage,
 render per-host env files from .env and infra/state.json, then run the role
-deploy script on the sandbox host first and the control plane second.
+deploy script on the sandbox hosts first and the control plane second.
+`--only sbx` deploys every sandbox host, `--only sbx2` just that one.
+The sandbox image is built once, on the first sandbox host; other sandbox
+hosts load that exact image (same image ID) from Object Storage.
 Secret env files are deleted from the bucket after the host has read them.
 """
 
@@ -69,6 +72,24 @@ def git_sha() -> str:
     return sha + ("-dirty" if dirty else "")
 
 
+def ship_image(first: str, rid: str) -> tuple[str, str, str]:
+    """Save the sandbox image from the first sandbox host into Object Storage; returns (GET url, sha256, image id)."""
+    key = f"ops/images/tieout-sandbox-{rid}.tar.gz"
+    put = opsctl.s3().generate_presigned_url("put_object", Params={"Bucket": opsctl.bucket(), "Key": key}, ExpiresIn=3600)
+    script = (f"set -euo pipefail\n"
+              f"docker save tieout-sandbox:latest | gzip -1 > /tmp/tieout-sandbox.tar.gz\n"
+              f"sha256sum /tmp/tieout-sandbox.tar.gz | cut -d' ' -f1\n"
+              f"docker image inspect tieout-sandbox:latest --format '{{{{.Id}}}}'\n"
+              f"curl -fsS -X PUT -T /tmp/tieout-sandbox.tar.gz '{put}'\n"
+              f"rm -f /tmp/tieout-sandbox.tar.gz\n")
+    res = opsctl.run_result(first, script, [], 900, f"ship sandbox image {rid}", True, 1200)
+    if not res or res.get("exit_code") != 0:
+        raise SystemExit(f"could not ship the sandbox image from {first}: {(res or {}).get('stderr', 'no result')[-500:]}")
+    sha, image_id = res["stdout"].split()[:2]
+    print(f"sandbox image {image_id} shipped from {first} (sha256 {sha[:16]}...)")
+    return opsctl.presign_get(key, 3600), sha, image_id
+
+
 def aio_mode(state: dict) -> bool:
     return "sbx1" not in state.get("instances", {})
 
@@ -108,7 +129,7 @@ def env_files(state: dict, env: dict) -> tuple[str, str, str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--only", choices=["sbx1", "cp", "none"])
+    ap.add_argument("--only", help="sbx (every sandbox host), sbx1, sbx2, ..., cp or none")
     ap.add_argument("--skip-web-build", action="store_true")
     a = ap.parse_args()
     import json
@@ -141,13 +162,22 @@ def main() -> int:
                          f"{tmp / 'runner.env'}:/etc/tieout/runner.env:0600", f"{tmp / 'aio.env'}:/etc/tieout/aio.env:0600"],
                         timeout=1800, name=f"deploy all-in-one {rid}", wait=True, wait_s=2100)
         a.only = "none"
-    if a.only in (None, "sbx1"):
-        for h in sandbox_hosts(state):
+    hosts = sandbox_hosts(state)
+    if a.only and a.only not in ("sbx", "cp", "none") and a.only not in hosts:
+        raise SystemExit(f"--only {a.only}: not a host in infra/state.json ({', '.join(hosts + ['cp'])})")
+    targets = hosts if a.only in (None, "sbx") else [h for h in hosts if h == a.only]
+    image = None
+    if a.only in (None, "sbx", *hosts):
+        for h in targets:
+            args = ""
+            if h != hosts[0]:  # same image as the first sandbox host, not a fresh build
+                image = image or ship_image(hosts[0], rid)
+                args = f" '{image[0]}' {image[1]}"
             renv = runner_env.replace(f"RUNNER_BIND={state['instances']['sbx1']['vpc_ip']}", f"RUNNER_BIND={state['instances'][h]['vpc_ip']}")
             renv = renv.replace(f"RUNNER_HOST_LABEL={state['instances']['sbx1']['label']}", f"RUNNER_HOST_LABEL={state['instances'][h]['label']}")
             (tmp / f"runner-{h}.env").write_text(renv)
             rc |= opsctl.run(h, f"set -e\nmkdir -p /tmp/rel && tar -xzf /opt/tieout/incoming/release.tar.gz -C /tmp/rel infra/deploy_sbx.sh\n"
-                                f"bash /tmp/rel/infra/deploy_sbx.sh {rid}",
+                                f"bash /tmp/rel/infra/deploy_sbx.sh {rid}{args}",
                              [f"{tarball}:/opt/tieout/incoming/release.tar.gz:0600", f"{tmp / f'runner-{h}.env'}:/etc/tieout/runner.env:0600"],
                              timeout=1500, name=f"deploy sandbox host {h} {rid}", wait=True, wait_s=1800)
     if a.only in (None, "cp"):
@@ -158,8 +188,8 @@ def main() -> int:
                          timeout=1500, name=f"deploy control plane {rid}", wait=True, wait_s=1800)
     # remove secret env files from the bucket now that the hosts have them
     s3 = opsctl.s3()
-    for host in sandbox_hosts(state) + ["cp"]:
-        resp = s3.list_objects_v2(Bucket=opsctl.bucket(), Prefix=f"ops/{host}/files/")
+    for prefix in [f"ops/{host}/files/" for host in hosts + ["cp"]] + ["ops/images/"]:
+        resp = s3.list_objects_v2(Bucket=opsctl.bucket(), Prefix=prefix)
         for o in resp.get("Contents", []):
             if o["Key"].endswith(".env") or o["Key"].endswith(".tar.gz"):
                 s3.delete_object(Bucket=opsctl.bucket(), Key=o["Key"])

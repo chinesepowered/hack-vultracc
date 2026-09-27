@@ -230,7 +230,7 @@ class Orchestrator:
                 for u in untrusted:
                     await audit("control-plane", "untrusted_text_detected", run_id, u)
                 labels = {"arena.tenant": client_id, "arena.task": run_id, "arena.batch": batch_id or "", "arena.kind": "original"}
-                ag = agent_mod.Agent(run_id=run_id, profile=profile, inputs=inputs, emit=emit, llm=self.llm, runner=self.runners.pick(),
+                ag = agent_mod.Agent(run_id=run_id, profile=profile, inputs=inputs, emit=emit, llm=self.llm, runner=self.runners.lease(),
                                      labels=labels, should_stop=self.should_stop, start_events=[("untrusted_text", u) for u in untrusted])
                 out = await ag.run()
                 arts = []
@@ -353,7 +353,7 @@ class Orchestrator:
                 self._publish_run(rid, None, summary)
                 await emit("run_started", {"client_id": client_id, "replay_of": orig_id, "steps": len(steps),
                                            "inputs": [{"name": n, "sha256": d, "bytes": len(inputs[n])} for n, _, d in in_keys]})
-                res = await agent_mod.replay(steps=steps, inputs=inputs, emit=emit, runner=self.runners.pick(),
+                res = await agent_mod.replay(steps=steps, inputs=inputs, emit=emit, runner=self.runners.lease(),
                                              labels={"arena.tenant": client_id, "arena.task": rid, "arena.kind": "replay"})
                 files = [{"name": n, "original": orig_hashes.get(n), "replay": res.hashes.get(n),
                           "match": orig_hashes.get(n) == res.hashes.get(n) and res.hashes.get(n) is not None} for n in sorted(orig_hashes)]
@@ -419,13 +419,19 @@ class Orchestrator:
         import time
 
         t0 = time.monotonic()
-        oks = []
-        for r in self.runners.clients:
-            sb = await r.create(image=settings.sandbox_image, labels={"arena.tenant": "warmup", "arena.task": "warmup"},
-                                limits=agent_mod.SANDBOX_LIMITS, inputs={"probe.txt": b"warmup\n"})
-            await r.delete(sb["id"])
-            oks.append(bool((sb.get("attestation") or {}).get("ok")))
-        return {"ok": True, "ms": int((time.monotonic() - t0) * 1000), "attestation_ok": all(oks), "hosts": len(oks)}
+        oks, failed = [], []
+        for r in self.runners.clients:  # warm every host; one unreachable host does not fail the warm-up
+            try:
+                sb = await r.create(image=settings.sandbox_image, labels={"arena.tenant": "warmup", "arena.task": "warmup"},
+                                    limits=agent_mod.SANDBOX_LIMITS, inputs={"probe.txt": b"warmup\n"})
+                await r.delete(sb["id"])
+                oks.append(bool((sb.get("attestation") or {}).get("ok")))
+            except Exception as exc:
+                failed.append(f"{r.base_url}: {str(exc)[:120]}")
+        if not oks:
+            raise RuntimeError("no sandbox host could start a sandbox: " + "; ".join(failed))
+        return {"ok": True, "ms": int((time.monotonic() - t0) * 1000), "attestation_ok": all(oks), "hosts": len(oks),
+                "failed_hosts": failed}
 
 
 orch = Orchestrator()

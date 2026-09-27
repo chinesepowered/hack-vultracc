@@ -2,6 +2,8 @@
 # Deploy a release on the sandbox host. Expects /opt/tieout/incoming/release.tar.gz and /etc/tieout/runner.env.
 set -euo pipefail
 SHA="${1:?release id}"
+IMAGE_URL="${2:-}"      # optional: the sandbox image saved on the first sandbox host (presigned GET)
+IMAGE_SHA256="${3:-}"
 test -f /var/lib/tieout-ops/bootstrap.done || { echo "bootstrap not finished yet"; exit 3; }
 REL=/opt/tieout/releases/$SHA
 rm -rf "$REL" && mkdir -p "$REL"
@@ -10,7 +12,15 @@ ln -sfn "$REL" /opt/tieout/current
 set -a; . /etc/tieout/runner.env; set +a
 
 echo "== sandbox image"
-docker build --network host -t tieout-sandbox:latest --build-arg GIT_SHA="$SHA" "$REL/sandbox" 2>&1 | tail -5
+if [ -n "$IMAGE_URL" ]; then
+  # Every sandbox host runs the same image, byte for byte: built once on the first host, shipped here.
+  curl -fsS -o /tmp/tieout-sandbox.tar.gz "$IMAGE_URL"
+  echo "$IMAGE_SHA256  /tmp/tieout-sandbox.tar.gz" | sha256sum -c -
+  gunzip -c /tmp/tieout-sandbox.tar.gz | docker load
+  rm -f /tmp/tieout-sandbox.tar.gz
+else
+  docker build --network host -t tieout-sandbox:latest --build-arg GIT_SHA="$SHA" "$REL/sandbox" 2>&1 | tail -5
+fi
 docker image inspect tieout-sandbox:latest --format 'image {{.Id}}'
 
 echo "== runner"

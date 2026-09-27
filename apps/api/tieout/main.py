@@ -165,10 +165,12 @@ async def compute_health() -> dict:
 
     async def runner():
         hs = await orch.runners.health()
-        bad = [h for h in hs if not h.get("ok")]
-        if bad:
-            raise RuntimeError(f"runner unhealthy: {bad[0]}")
-        return "; ".join(f"{h['host']}: runtime {h['runtime']}, {h['sandboxes']}/{h['max']} sandboxes, accepting={h['accepting']}" for h in hs)
+        good = [h for h in hs if h.get("ok")]
+        if not good:  # with several hosts, runs fail over, so the check stays green while any host is healthy
+            raise RuntimeError(f"runner unhealthy: {hs[0]}")
+        parts = [f"{h['host']}: runtime {h['runtime']}, {h['sandboxes']}/{h['max']} sandboxes, accepting={h['accepting']}" for h in good]
+        parts += [f"{h.get('host')}: DOWN, runs fail over to the other hosts ({str(h.get('error', ''))[:80]})" for h in hs if not h.get("ok")]
+        return "; ".join(parts)
 
     inf, db, obj, run = await asyncio.gather(timed(inference), timed(database), timed(object_storage), timed(runner))
     db_host = settings.database_url.split("@")[-1]
