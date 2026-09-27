@@ -41,12 +41,12 @@ The containment is visible in the product, not just claimed:
 
 | Sponsor | Product | What it does in Tieout |
 |---|---|---|
-| Vultr | Cloud Compute | The control-plane VM (orchestrator, agent loop, API, web app) and a dedicated sandbox-host VM that runs one gVisor container per client run |
+| Vultr | Cloud Compute | The control-plane VM (orchestrator, agent loop, API, web app) and two sandbox-host VMs that run one gVisor container per client run, with failover |
 | Vultr | Serverless Inference | Every LLM call: GLM 5.3 writes the code, GLM 5.3 Flash is the fallback, Nemotron 3.5 Content Safety gives a second opinion on suspicious input text |
 | Vultr | Managed PostgreSQL | System of record: runs, hash-chained run events, signed approvals, audit log |
 | Vultr | Object Storage | Client inputs, outputs, evidence packs and uploads in a private bucket; the operations channel; the demo video |
-| Vultr | VPC Network | Private network between the control plane and the sandbox host |
-| Vultr | Firewall Groups | Only 80 and 443 open on the control plane; nothing inbound on the sandbox host |
+| Vultr | VPC Network | Private network between the control plane and the sandbox hosts |
+| Vultr | Firewall Groups | Only 80 and 443 open on the control plane; nothing inbound on the sandbox hosts |
 
 Vultr is the host and sponsor of the Agent Arena, and Tieout runs entirely on it: one provider, one region (Silicon Valley, `sjc`), no other cloud and no other LLM provider anywhere in the code. We did not use the NetBird bonus challenge; the time went into demo reliability instead ([DECISIONS.md](DECISIONS.md), item 20).
 
@@ -66,19 +66,19 @@ flowchart TB
     api -->|"system of record, hash-chained events, approvals"| pg[("Vultr Managed PostgreSQL")]
     api -->|"inputs, outputs, evidence, uploads"| s3[("Vultr Object Storage")]
     api -->|"Vultr VPC only, bearer token"| runner
-    subgraph sbx["Sandbox-host VM (Vultr Cloud Compute, no inbound from the internet)"]
+    subgraph sbx["Sandbox-host VMs x2 (Vultr Cloud Compute, no inbound from the internet)"]
         runner["sandbox-runner (FastAPI + Docker SDK)"] --> g1["gVisor sandbox: client A"]
         runner --> g2["gVisor sandbox: client B"]
         runner --> g3["... one per client"]
     end
 ```
 
-**Cloud Compute.** Two VMs in `sjc`.
+**Cloud Compute.** Three VMs in `sjc`.
 - `tieout-cp` (`vc2-2c-4gb`) runs Caddy with automatic HTTPS and the FastAPI control plane: auth and roles, the orchestrator, the agent loop, live progress events, and the web app. The API process never executes model-written code.
-- `tieout-sbx-1` (`vc2-4c-8gb`) runs the sandbox runner. Each client run gets a fresh Docker container under the gVisor runtime (`runsc`) with no network, a read-only root, read-only inputs in `/in`, writable `/work` and `/out`, all capabilities dropped, no privilege escalation, uid 10001, and 1 CPU, 1 GiB, 256 processes, 60 s per step and a 15 minute lifetime.
+- `tieout-sbx-1` and `tieout-sbx-2` (`vc2-4c-8gb` each) run the sandbox runner. Each client run gets a fresh Docker container under the gVisor runtime (`runsc`) with no network, a read-only root, read-only inputs in `/in`, writable `/work` and `/out`, all capabilities dropped, no privilege escalation, uid 10001, and 1 CPU, 1 GiB, 256 processes, 60 s per step and a 15 minute lifetime.
 - An attestation script runs inside every sandbox at start; its results, with the Docker inspect summary, become the blast radius panel. Everything a sandbox writes is treated as hostile when it is read back (no symlinks, regular files only, size caps).
 - A TTL janitor, a capacity cap and an admin kill switch that destroys every running sandbox complete the runner.
-- The VMs are operated without SSH: each host runs a small agent that executes only commands signed with the operator's Ed25519 key, fetched through Object Storage. The control plane can spread runs across more sandbox hosts and fail over if one is down; a second host is ready to add when the account allows.
+- The VMs are operated without SSH: each host runs a small agent that executes only commands signed with the operator's Ed25519 key, fetched through Object Storage. The control plane spreads runs across both sandbox hosts and fails over if one is down, and every host runs the same sandbox image, byte for byte.
 
 **Serverless Inference.** Every LLM call goes to `api.vultrinference.com` through the OpenAI SDK.
 - **GLM 5.3** is the agent. It uses native tool calls (`sniff_file`, `run_python`, `finish`) at medium reasoning effort, which gives the same answers with about 4x less model time than the default.
@@ -93,9 +93,9 @@ flowchart TB
 - The bucket also carries the signed operations channel for the VMs.
 - The demo video is the only public object.
 
-**VPC Network.** A private network (`10.66.0.0/24`) between the control plane and the sandbox host. The runner listens only on its private address, and the host firewall accepts the runner port only from the control plane's private address.
+**VPC Network.** A private network (`10.66.0.0/24`) between the control plane and the sandbox hosts. The runner listens only on its private address, and the host firewall accepts the runner port only from the control plane's private address.
 
-**Firewall Groups.** `tieout-cp-fw` opens only 80 and 443 on the control plane. `tieout-sbx-fw` has no rules, so the sandbox host accepts nothing from the internet. Verified by port probes: the sandbox host refuses 22, 80, 443, 7070 and 8000; the control plane answers only on 80 and 443.
+**Firewall Groups.** `tieout-cp-fw` opens only 80 and 443 on the control plane. `tieout-sbx-fw` has no rules, so the sandbox hosts accept nothing from the internet. Verified by port probes: each sandbox host refuses 22, 80, 443, 7070 and 8000; the control plane answers only on 80 and 443.
 
 ## More
 

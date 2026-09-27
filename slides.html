@@ -153,7 +153,7 @@
         <div class="check"><div class="c">✓</div><div><b>No secrets in the environment</b><span>No keys or credentials ever reach a sandbox.</span></div></div>
       </div>
     </div>
-    <div class="footer"><span>Sandboxes run on a separate Vultr VM, never inside the app process</span><span>3 / 4</span></div>
+    <div class="footer"><span>Sandboxes run on separate Vultr VMs, never inside the app process</span><span>3 / 4</span></div>
   </section>
 
   <!-- 4. Vultr and proof -->
@@ -162,12 +162,12 @@
     <h2>Vultr is the system of control and record, and it works on the live URL today.</h2>
     <div class="four">
       <div class="products">
-        <div class="card product"><b>Cloud Compute</b><p>A control-plane VM (orchestrator, agent loop, API) and a dedicated sandbox-host VM running one gVisor container per client run.</p></div>
+        <div class="card product"><b>Cloud Compute</b><p>A control-plane VM (orchestrator, agent loop, API) and two sandbox-host VMs running one gVisor container per client run, with failover.</p></div>
         <div class="card product"><b>Serverless Inference</b><p>Every LLM call: GLM 5.3 plans and writes the code, GLM 5.3 Flash is the fallback, Nemotron 3.5 Content Safety checks suspicious input text.</p></div>
         <div class="card product"><b>Managed PostgreSQL</b><p>System of record: clients, runs, hash-chained run events, signed approvals, audit log.</p></div>
         <div class="card product"><b>Object Storage</b><p>Inputs, outputs, evidence packs and uploads in a private bucket, served by short-lived links.</p></div>
         <div class="card product"><b>VPC Network</b><p>The sandbox runner listens only on its private address, reachable only from the control plane.</p></div>
-        <div class="card product"><b>Firewall Groups</b><p>Control plane: 80 and 443 only. Sandbox host: nothing inbound from the internet.</p></div>
+        <div class="card product"><b>Firewall Groups</b><p>Control plane: 80 and 443 only. Sandbox hosts: nothing inbound from the internet.</p></div>
       </div>
       <div>
         <div class="stats">

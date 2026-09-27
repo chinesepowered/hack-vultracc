@@ -92,11 +92,11 @@ const GUARDRAILS = [
   { icon: <CpuIcon />, title: "Daily token budget", body: "Runs stop when the day's Serverless Inference budget is spent." },
   { icon: <OctagonAlertIcon />, title: "Kill switch", body: "One admin action stops new work and destroys every running sandbox." },
   { icon: <KeyRoundIcon />, title: "No secrets in sandboxes", body: "Keys live on the control plane only; sandboxes get none." },
-  { icon: <NetworkIcon />, title: "No public inbound", body: "The sandbox host is reachable only from the control plane over the VPC." },
+  { icon: <NetworkIcon />, title: "No public inbound", body: "The sandbox hosts are reachable only from the control plane over the VPC." },
 ];
 
 const PRODUCTS = [
-  { icon: <ServerIcon />, name: "Cloud Compute", role: "Two VMs: the public control plane (Caddy, API, orchestrator) and the private sandbox host running gVisor containers." },
+  { icon: <ServerIcon />, name: "Cloud Compute", role: "Three VMs: the public control plane (Caddy, API, orchestrator) and two private sandbox hosts running gVisor containers. Runs are spread across them and fail over if one is down." },
   { icon: <NetworkIcon />, name: "VPC", role: "Private network between them. The sandbox runner listens only on its VPC address, behind a bearer token." },
   { icon: <ShieldCheckIcon />, name: "Firewall Groups", role: "Only 80 and 443 open on the control plane; the sandbox host accepts nothing from the internet." },
   { icon: <BotIcon />, name: "Serverless Inference", role: "Every LLM call: GLM 5.3 plans each step, GLM 5.3 Flash is the fallback, Nemotron 3.5 Content Safety gives a second opinion on flagged text." },
@@ -199,7 +199,7 @@ export function ArchitectureDiagram() {
         <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_64px_300px] lg:gap-0">
           <Box className="col-span-3 px-5 py-4">
             <div className="flex flex-wrap items-start justify-between gap-3">
-              <BoxTitle icon={<ContainerIcon />} title="Sandbox-host VM" tag="No public inbound" sub="Vultr Cloud Compute · sandbox-runner (FastAPI + Docker SDK) · gVisor runtime" />
+              <BoxTitle icon={<ContainerIcon />} title="Sandbox hosts (2 VMs)" tag="No public inbound" sub="Vultr Cloud Compute · sandbox-runner (FastAPI + Docker SDK) · gVisor runtime · runs spread across both, with failover" />
               <div className="flex flex-wrap gap-1.5 text-[11px]">
                 {["network none", "read-only rootfs", "inputs read-only", "1 CPU, 1 GiB", "uid 10001, no caps", "60 s per step", "15 min TTL"].map((t) => (
                   <span key={t} className="rounded-md border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-gray-600">

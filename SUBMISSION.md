@@ -21,7 +21,7 @@ A reviewer approves every entry (maker-checker) before the AJE file exports for 
 | Requirement | How Tieout meets it |
 |---|---|
 | Web-based agent doing real work | The agent writes and executes Python that reconciles bank and ledger files (12 synthetic clients, or files a user uploads) and produces a workpaper, AJE file and result.json |
-| Every action contained in a sandbox on Vultr | Every tool call runs in a per-client gVisor container (`--network none`, read-only root and inputs, no capabilities, uid 10001, 1 CPU, 1 GiB, 60 s per step) on a dedicated sandbox-host VM |
+| Every action contained in a sandbox on Vultr | Every tool call runs in a per-client gVisor container (`--network none`, read-only root and inputs, no capabilities, uid 10001, 1 CPU, 1 GiB, 60 s per step) on dedicated sandbox-host VMs (two, with failover) |
 | Centralized control layer: plan, dispatch, verifiable output | The control plane plans with the LLM, dispatches each step to the runner over the private VPC, validates outputs (schema, arithmetic, input hashes) and stores hashes; Replay verifies |
 | Multi-step agentic workflow | Inspect bank file, inspect ledger file, load and match, investigate leftovers, classify and write outputs, finish; errors from validation go back to the model |
 | Real executed results | Outputs are files produced by executed code, downloadable with their SHA-256 |
@@ -33,7 +33,7 @@ A reviewer approves every entry (maker-checker) before the AJE file exports for 
 
 ## Vultr products used
 
-Cloud Compute (control-plane VM and sandbox-host VM), VPC Network, Firewall Groups, Serverless Inference (GLM 5.3 agent, GLM 5.3 Flash fallback, Nemotron 3.5 Content Safety second opinion on suspicious input text), Managed Databases for PostgreSQL, Object Storage (also hosts the demo video).
+Cloud Compute (control-plane VM and two sandbox-host VMs), VPC Network, Firewall Groups, Serverless Inference (GLM 5.3 agent, GLM 5.3 Flash fallback, Nemotron 3.5 Content Safety second opinion on suspicious input text), Managed Databases for PostgreSQL, Object Storage (also hosts the demo video).
 
 ## Links
 
