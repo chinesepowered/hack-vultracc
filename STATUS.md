@@ -1,6 +1,9 @@
 # Status
 
-_Last updated: 2026-09-27 03:30 UTC (20:30 PDT)_
+_Last updated: 2026-09-28 00:12 UTC (Sep 27, 17:12 PDT)_
+
+## Shut down after the hackathon
+At the team's request, every Vultr resource Tieout created was deleted on 2026-09-28 at 00:07 to 00:08 UTC with `uv run infra/teardown.py --yes`: the three VMs (`tieout-cp`, `tieout-sbx-1`, `tieout-sbx-2`), the managed database `tieout-pg`, the Object Storage subscription `tieout-objects` with its bucket, the VPC and both firewall groups (each delete is logged in `infra/RESOURCES.md`). The account now has no instances, databases, storage, firewalls or VPCs. The public URL, the demo video and deck links below no longer work (the bucket's public objects are removed by Vultr's cleanup of the deleted subscription). Left in place because Tieout did not create it: the shared Serverless Inference subscription (`hackathon`). The sections below describe the system as it ran during the event.
 
 ## Public URL
 **https://144-202-108-57.sslip.io** (Let's Encrypt certificate via Caddy). Health page: all green (Vultr Serverless Inference, Vultr Managed PostgreSQL, Vultr Object Storage, gVisor sandbox runner).
